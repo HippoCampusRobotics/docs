@@ -43,3 +43,10 @@ Now you can build the documentation by running
 .. code-block:: bash
 
    make html
+
+.. note:: Always make sure to have the virtual environment activated when executing the ``make html`` command.
+
+View the HTML output
+********************
+
+You can view the HTML output by opening :file:`_build/html/index.html` with a webbrowser.
