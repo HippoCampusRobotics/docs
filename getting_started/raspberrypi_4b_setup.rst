@@ -152,7 +152,7 @@ This command created the devel directory inside your catkin workspace. To source
 
 .. code-block:: bash
    
-   echo '$HOME/catkin_ws/devel/setup.bash' >> ~/.bashrc
+   echo 'source $HOME/catkin_ws/devel/setup.bash' >> ~/.bashrc
 
 For this change of the :file:`.bashrc` to take effect immediately execute:
 
