@@ -11,6 +11,7 @@ Welcome to HippoCampusDocs's documentation!
    :caption: Contents:
    
    getting_started
+   bluerov
    contributing
    workflow_and_style_guide
 
