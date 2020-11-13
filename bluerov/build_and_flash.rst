@@ -10,15 +10,15 @@ We replaced the original FCU with the Pixhawk4, which is a 5th generation board.
 
    make px4_fmu-v5_default
 
-If you get an error message, that tells you, the :code:`gcc-arm-none-eabi` could not be found, make sure you have installed it (for example via the :file:`Tools/setup/ubuntu.sh` convinience script). In some cases, the path is not correctly extended, so it might be necessary to copy the line similiar to
+If you get an error message that tells you, the :code:`gcc-arm-none-eabi` could not be found, make sure you have installed it (for example via the :file:`Tools/setup/ubuntu.sh` convenience script). In some cases, the path is not correctly extended, so it might be necessary to copy the line similiar to
 
 .. code-block:: sh
 
    export PATH=/opt/gcc-arm-none-eabi-9-2020-q2-update/bin:$PATH
 
-from :file:`~/.profile` to :file:`~/.bashrc` (or in case you use :code:`zsh` to :file:`~/.zshrc`.
+from :file:`~/.profile` to :file:`~/.bashrc` (or in case you use :code:`zsh` to :file:`~/.zshrc`).
 
-.. attention:: The version of :code:`gcc-arm-none-eabi` might change, so it is necessary, that you copy the line from your :file:`~/.profile` and not the one in this docs.
+.. attention:: The version of :code:`gcc-arm-none-eabi` might change, so it is necessary that you copy the line from your :file:`~/.profile` and not the one in this docs.
 
 Flash The Firmware
 ==================
@@ -37,7 +37,7 @@ You need to be able to reach the BlueROV's Raspberry Pi via ssh. The most conven
    EOF
 
 
-For even more convinience, copy your ssh-key to the BlueROV to enable passwordless login and create an entry in your :file:`~/.ssh/config` for the BlueROV similiar to:
+For even more convenience, copy your ssh-key to the BlueROV to enable passwordless login and create an entry in your :file:`~/.ssh/config` for the BlueROV similiar to:
 
 .. code-block:: sh
    :linenos:
