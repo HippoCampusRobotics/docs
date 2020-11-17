@@ -30,6 +30,7 @@ author = 'Thies Lennart Alff'
 # ones.
 extensions = [
         "sphinx.ext.githubpages",
+        "sphinx.ext.todo",
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -60,4 +61,5 @@ html_context = {
 
 
 [extensions]
-show_authors=True
+show_authors = True
+todo_include_todos = True
