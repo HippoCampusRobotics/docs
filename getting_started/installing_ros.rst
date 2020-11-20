@@ -1,6 +1,8 @@
 Installing ROS
 ##############
 
+The following installations steps work for a Ubuntu 18.04 amd64 version **and** for the Ubuntu 18.04 server image for the Raspberry Pi.
+
 Preparation
 ===========
 
@@ -25,11 +27,19 @@ Preparation
 Installation
 ============
 
+.. note:: Choose the installation option depending on your needs. Probably it's not reasonable to install :code:`ros-melodic-desktop-full` on an Ubuntu server image for the Raspberry Pi.
+
 #. Install ROS
 
-   .. code-block:: sh
+   * Full installation
+      .. code-block:: sh
 
-      sudo apt install ros-melodic-desktop-full
+         sudo apt install ros-melodic-desktop-full
+   * Base (no GUI)
+      .. code-block:: sh
+
+         sudo apt install ros-melodic-ros-base
+
 
 #. Install build dependencies
 
