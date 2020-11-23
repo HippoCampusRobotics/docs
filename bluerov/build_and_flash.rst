@@ -45,7 +45,7 @@ For even more convenience, copy your ssh-key to the BlueROV to enable passwordle
    Host klopsi
        User ubuntu
        Hostname ubuntu.local
-       IdentitiyFile "$HOME/.ssh/id_ed25519"
+       IdentitiyFile "~/.ssh/id_ed25519"
 
 .. note:: Replace the path for the identity file with the name of your key.
 
