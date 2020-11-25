@@ -31,6 +31,7 @@ author = 'Thies Lennart Alff'
 extensions = [
         "sphinx.ext.githubpages",
         "sphinx.ext.todo",
+        "sphinx.ext.autosectionlabel",
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -63,3 +64,5 @@ html_context = {
 [extensions]
 show_authors = True
 todo_include_todos = True
+autosectionlabel_prefix_document = True
+

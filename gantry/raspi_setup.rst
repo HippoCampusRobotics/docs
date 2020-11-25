@@ -1,6 +1,8 @@
 Raspberry Pi Setup
 ##################
 
+.. sectionauthor:: Lennart Alff <thies.lennart.alff@tuhh.de>
+
 Requirements
 ============
 
@@ -8,10 +10,12 @@ Requirements
 
 * Ubuntu 18.04 Server image installed on Raspberry
 
+* A ROS installation (no GUI dependencies, so the :code:`ros-melodic-ros-base` would suffice, see the :ref:`getting_started/installing_ros:Installing ROS` instructions).
+
 Enable UART
 ===========
 
-Either pre-boot directly on the :file:`/boot` partition or from the running Raspberry Pi in the :file:`/boot/firmware` directory, modify the :file:`usercfg.txt` and add the following lines:
+Modify the :file:`usercfg.txt`, either pre-boot directly on the :file:`/boot` partition or from the running Raspberry Pi in the :file:`/boot/firmware` directory,  and add the following lines:
 
 .. code-block:: sh
 
@@ -23,7 +27,7 @@ Either pre-boot directly on the :file:`/boot` partition or from the running Rasp
 UDEV Rules
 ==========
 
-The Raspberry Pi uses it's UARTs to communicate with the Faulhaber motors. The name of the UART ports depends on the number of activated UART devices on the dtoverlay. So it is hard to identify which of the :file:`/dev/ttyAMAn` devices corresponds to which physical UART device.
+The Raspberry Pi uses its UARTs to communicate with the Faulhaber motors. The name of the UART ports depend on the number of activated UART devices on the dtoverlay. So it is hard to identify which of the :file:`/dev/ttyAMAn` devices corresponds to which physical UART device.
 
 To simplify things you can add UDEV rules.
 
@@ -62,9 +66,11 @@ produces the following output:
      SUBSYSTEMS==""
      DRIVERS==""
 
-The identifier of the physical interface is defined by line 7 :code:`KERNELS=="fe201800.serial"`
+The identifier of the physical interface is defined by line 7 :code:`KERNELS=="fe201800.serial"`.
 
 Since the value is defined in the parent device, you can not apply the UDEV rule to the :code:`/dev/ttyAMAn` device, but you have to use an environment variable.
+
+.. note:: In case the string for :code:`KERNELS` changes in the future, please change the value for the following UDEV rule in the following part!
 
 * Motor X-Axis
    UART3
@@ -119,5 +125,7 @@ The output should show symbolic links for the three motor axes.
    lrwxrwxrwx 1 root root 7 Aug  7 01:00 /dev/motor_x -> ttyAMA2
    lrwxrwxrwx 1 root root 7 Aug  7 01:00 /dev/motor_y -> ttyAMA3
    lrwxrwxrwx 1 root root 7 Aug  7 01:00 /dev/motor_z -> ttyAMA4
+
+.. note:: The :file:`ttyAMA` numbers might differ.
 
 
