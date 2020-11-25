@@ -12,6 +12,7 @@ Welcome to HippoCampusDocs's documentation!
    
    getting_started
    bluerov
+   gantry
    contributing
    workflow_and_style_guide
 
