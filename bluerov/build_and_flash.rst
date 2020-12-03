@@ -25,7 +25,7 @@ Flash The Firmware
 
 You need to be able to reach the BlueROV's Raspberry Pi via ssh. The most convenient way is to create a :code:`bash` script.
 
-.. note:: Please update the following code block in case the BlueROV's host or username changes.
+.. attention:: Please update the following code block in case the BlueROV's host or username changes.
 
 .. code-block:: sh
    :linenos:
@@ -44,9 +44,9 @@ For even more convenience, copy your ssh-key to the BlueROV to enable passwordle
 
    Host klopsi
        User ubuntu
-       Hostname ubuntu.local
+       Hostname klopsi.local
        IdentitiyFile "~/.ssh/id_ed25519"
 
 .. note:: Replace the path for the identity file with the name of your key.
 
-This entry allows you to use :file:`klopsi` instead of :file:`ubuntu@ubuntu.local`.
+This entry allows you to use :file:`klopsi` instead of :file:`ubuntu@klopsi.local`.
