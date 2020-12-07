@@ -41,7 +41,7 @@ You need to create the :file:`pigpiod.service` file at :file:`/etc/systemd/syste
    [Service]
    Type=forking
    PIDFile=pigpio.pid
-   ExecStart=/usr/bin/pigpiod
+   ExecStart=/usr/local/bin/pigpiod
 
    [Install]
    WantedBy=multi-user.target
