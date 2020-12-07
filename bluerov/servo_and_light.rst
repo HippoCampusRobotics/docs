@@ -24,3 +24,41 @@ Ubuntu
    cd pigpio-master
    make
    sudo make install
+
+Enable The Daemon
+=================
+
+Ubuntu only
+***********
+
+You need to create the :file:`pigpiod.service` file at :file:`/etc/systemd/system`.
+
+.. code-block:: sh
+
+   [Unit]
+   Description=Pigpio daemon
+
+   [Service]
+   Type=forking
+   PIDFile=pigpio.pid
+   ExecStart=/usr/bin/pigpiod
+
+   [Install]
+   WantedBy=multi-user.target
+
+
+
+Raspbian and Ubuntu
+*******************
+
+Enable the service
+
+.. code-block:: sh
+
+   sudo systemctl enable pigpiod.service
+
+and run the service
+
+.. code-block:: sh
+
+   sudo systemctl start pigpiod.service
