@@ -248,7 +248,7 @@ First of all identify your KERNELS value for UART4 and UART5 by the following co
 
       Tx/Rx <-> GPIO12/GPIO13 (KERNELS=="fe201a00.serial")
 
-The resulting UDEV rule in /etc/udev/rules.d/50-serial.rules is:
+The resulting UDEV rule in :file:`/etc/udev/rules.d/50-serial.rules` is:
 
 .. code-block:: sh
    :linenos:
