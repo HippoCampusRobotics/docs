@@ -5,7 +5,7 @@ Pre-Boot Configuration
 **********************
 #. Flash an Raspbian Buster image to an SD card with the tool of your choice (for example `Raspberry Pi Imager <https://www.raspberrypi.org/downloads/>`_).
 
-#. Do not eject the SD card yet. Download the :download:`Boot partition files <https://gist.github.com/lennartalff/5cf69169edcca7bc6bfc7909a567f67d/archive/97462d0b6cd6a0e98dcd437f9db0c2aa28134702.zip>` and move them to the :file:`boot` partition of the SD card.
+#. Do not eject the SD card yet. Download the :download:`Boot partition files <https://gist.github.com/lennartalff/5cf69169edcca7bc6bfc7909a567f67d>` and move them to the :file:`boot` partition of the SD card.
 
    ssh
       Empty file that enables the SSH server on the Raspberry Pi.
@@ -14,14 +14,20 @@ Pre-Boot Configuration
    config.txt
       Added some lines to enable the serial console, camera, etc.
    wpa_supplicant.conf
-      Configuration file for setting up Wifi. Modify or complement if your Wifi setup requires it.
+      Configuration file for setting up Wifi. Modify or complement, if your Wifi setup requires it.
+
+.. attention:: Please replace the password in the :file:`wpa_supplicant.conf` with the correct one!
+
+Also change your hostname before the first boot, by editing :file:`etc/hosts` and :file:`etc/hostname` on the :file:`rootfs` partition of the SD card. Replace the default hostname :file:`raspberrypi` with the new hostname.
+
+Naming scheme is :file:`hippo-main-nn` for the Raspberry Pi connected with the FCU and :file:`hippo-buddy-nn` if it is the secondary Raspberry Pi. Replace :file:`nn` by a two digit long number with leading zero.
 
 System Configuration
 ********************
 
 Insert SD card into Raspberry Pi. If your network is configured appropriately you can SSH into the Raspberry Pi. Otherwise connect your computer with the TX/RX pins of the Raspberry Pi via an USB-serial-converter.
 
-Login with default credentials, i.e. :code:`pi:raspberry`. Change the hostname via :code:`sudo raspi-config` to a meaningful and unique one to avoid hostname resolution conflicts, for instance :code:`visionmodule01`. Also change the password by typing :code:`passwd`.
+Login with default credentials, i.e. :code:`pi:raspberry`. Change the password by typing :code:`passwd`.
 
 Perform a system update:
 
@@ -55,7 +61,7 @@ Preparations
 
 #. Update source lists
 
-   .. code-block: sh
+   .. code-block:: sh
 
       sudo apt update
 
@@ -131,37 +137,150 @@ Initialize User Workspace
 
 #. Source your ROS installation
 
-   .. code-block:: bash
+   .. tabs::
 
-      source /opt/ros/melodic/setup.bash
+      .. code-tab:: sh zsh
+
+         source /opt/ros/melodic/setup.zsh
+
+      .. code-tab:: sh bash
+
+         source /opt/ros/melodic/setup.bash
+
 
 #. Create workspace
 
-   .. code-block:: bash
+   .. code-block:: sh
 
       mkdir -p ~/catkin_ws/src && cd ~/catkin_ws
 
 #. Initialize workspace
 
-   .. code-block:: bash
+   .. code-block:: sh
 
       catkin init
 
 #. Build empty workspace
 
-   .. code-block:: bash
+   .. code-block:: sh
 
       catkin build
 
 
 This command created the devel directory inside your catkin workspace. To source your workspace you can either source it manually for each terminal session by executing :code:`source ~/catkin_ws/devel/setup.bash`. A better way to handle this automatically is to append this command to your :file:`.bashrc` file.
 
-.. code-block:: bash
+.. tabs::
+
+   .. code-tab:: sh zsh
+
+      echo 'source $HOME/catkin_ws/devel/setup.zsh' >> ~/.zshrc
    
-   echo 'source $HOME/catkin_ws/devel/setup.bash' >> ~/.bashrc
+   .. code-tab:: sh bash
+      
+      echo 'source $HOME/catkin_ws/devel/setup.bash' >> ~/.bashrc
 
 For this change of the :file:`.bashrc` to take effect immediately execute:
 
-.. code-block:: bash
+.. tabs::
 
-   source ~/.bashrc
+   .. code-tab:: sh zsh
+
+      source ~/.zshrc
+
+   .. code-tab:: sh bash
+
+      source ~/.bashrc
+
+Configure UART
+==============
+
+We have made the decision, to use UART5 for the telemetry communication with the FCU and UART4 is connected to the debug port of the FCU.
+
+To keep things simple, you can create a UDEV rule to create more meaningful names than the default :file:`ttyAMAx` naming convention.
+
+First of all identify your KERNELS value for UART4 and UART5 by the following command:
+
+.. code-block:: sh
+
+   udevadm info --name=/dev/ttyAMA1 --attribute-walk
+
+
+.. code-block:: sh
+   :linenos:
+
+   looking at device '/devices/platform/soc/fe201800.serial/tty/ttyAMA1':
+   KERNEL=="ttyAMA1"
+   SUBSYSTEM=="tty"
+   DRIVER==""
+
+   looking at parent device '/devices/ platform/soc/fe201800.serial':
+   KERNELS=="fe201800.serial"
+   SUBSYSTEMS=="amba"
+   DRIVERS=="uart-pl011"
+   ATTRS{driver_override}=="(null)"
+   ATTRS{id}=="00241011"
+   ATTRS{irq0}=="14"
+
+   looking at parent device '/devices/ platform/soc':
+   KERNELS=="soc"
+   SUBSYSTEMS=="platform"
+   DRIVERS==""
+   ATTRS{driver_override}=="(null)"
+
+   looking at parent device '/devices/ platform':
+   KERNELS=="platform"
+   SUBSYSTEMS==""
+   DRIVERS==""
+
+.. attention:: The :file:`ttyAMAx` number is not specific for the UART device and depends on how many UARTs are activated. 
+
+* Debug Port
+   UART4
+
+   .. code-block:: sh
+
+      Tx/Rx <-> GPIO8/GPIO9 (KERNELS=="fe201800.serial")
+
+* Telemetry
+   UART5
+
+   .. code-block:: sh
+
+      Tx/Rx <-> GPIO12/GPIO13 (KERNELS=="fe201a00.serial")
+
+The resulting UDEV rule in /etc/udev/rules.d/50-serial.rules is:
+
+.. code-block:: sh
+   :linenos:
+
+   KERNEL=="ttyAMA[0-9]*", GROUP="dialout", ENV{MOTOR_SERIAL}="fcu_serial"
+
+   ENV{MOTOR_SERIAL}=="fcu_serial",  SUBSYSTEM=="tty", KERNELS=="fe201800.serial", SYMLINK+="fcu_debug"
+   ENV{MOTOR_SERIAL}=="fcu_serial",  SUBSYSTEM=="tty", KERNELS=="fe201a00.serial", SYMLINK+="fcu_tele"
+
+You can apply these changes by
+
+.. code-block:: sh
+
+   sudo udevadm control --reload-rules && sudo udevadm trigger
+
+To check, that the rule is applied correctly, you can execute
+
+.. code-block:: sh
+
+   ls /dev/fcu* -l
+
+The output should show symbolic links for the serial devices:
+
+.. code-block:: sh
+
+   lrwxrwxrwx 1 root root 7 Dec 11 14:57 /dev/fcu_debug -> ttyAMA1               
+   lrwxrwxrwx 1 root root 7 Dec 11 14:57 /dev/fcu_tele -> ttyAMA2 
+
+.. note:: The :file:`ttyAMA` numbers might differ.
+
+
+Ethernet Configuration
+======================
+
+.. todo:: Todo
