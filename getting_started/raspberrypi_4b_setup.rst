@@ -191,6 +191,99 @@ For this change of the :file:`.bashrc` to take effect immediately execute:
 
       source ~/.bashrc
 
+ROS Network
+***********
+
+   .. tabs:: 
+
+      .. tab:: hippo-main
+
+         .. tabs::
+
+            .. code-tab:: sh zsh
+
+               echo 'export ROS_MASTER_URI="http://$(hostname --short).local:11311"' >> ~/.zshrc
+               echo 'export ROS_HOSTNAME="$(hostname --short).local"' >> ~/.zshrc
+
+            .. code-tab:: sh bash
+
+               echo 'export ROS_MASTER_URI="http://$(hostname --short).local:11311"' >> ~/.bashrc
+               echo 'export ROS_HOSTNAME="$(hostname --short).local"' >> ~/.bashrc
+
+      .. tab:: hippo-buddy
+
+         .. attention:: Replace the number for hippo-main with the actual one.
+
+         .. tabs::
+
+            .. code-tab:: sh zsh
+
+               HIPPO_MAIN="hippo-main-01"
+               echo "export ROS_MASTER_URI=\"http://$HIPPO_MAIN.local:11311\"" >> ~/.zshrc
+               echo 'export ROS_HOSTNAME="$(hostname --short).local"' >> ~/.zshrc
+
+            .. code-tab:: sh bash
+
+               HIPPO_MAIN="hippo-main-01"
+               echo "export ROS_MASTER_URI=\"http://$HIPPO_MAIN.local:11311\"" >> ~/.bashrc
+               echo 'export ROS_HOSTNAME="$(hostname --short).local"' >> ~/.bashrc
+
+
+
+Install ROS Packages
+====================
+
+If you want to install a new package, for example :file:`apriltag_ros` you can generate a new :file:`.rosinstall` file and merge it with your current workspace with :code:`wstool`.
+
+#. Change directory
+
+   .. code-block:: sh
+
+      cd ~/ros_catkin_ws
+
+#. New :file:`.rosinstall` file
+
+   .. code-block:: sh
+
+      rosinstall_generator apriltag apriltag_ros > apriltag_ros.rosinstall
+
+#. Merge
+
+   .. code-block:: sh
+
+      wstool merge -t src apriltag_ros.rosinstall
+
+#. Update
+
+   .. code-block:: sh
+
+      wstool update -t src
+
+#. Install dependencies
+
+   .. code-block:: sh
+
+      rosdep install -y --from-paths src --ignore-src -r
+
+#. Build
+
+   .. code-block:: sh
+
+      sudo catkin build --cmake-args -DCMAKE_BUILD_TYPE=Release
+
+Camera
+======
+
+If the Raspberry Pi uses an OV9281 camera, you will have to install the MIPI camera library by Arducam.
+
+.. code-block:: sh
+
+   git clone https://github.com/ArduCAM/MIPI_Camera.git
+
+.. code-block:: sh
+
+   cd ~/MIPI_Camera/RPI && make install
+
 Configure UART
 ==============
 
