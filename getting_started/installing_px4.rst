@@ -24,18 +24,17 @@ Export Environment Variables
 
 Choose the option depending on your shell:
 
-* Bash
-    .. code-block:: sh
+.. tabs::
+
+    .. tab:: zsh
+
+        .. todo:: Adapt the steps. Probably just change :file:`~/.bashrc` to :file:`~/.zshrc`.
+
+    .. code-tab:: sh bash
 
         echo "source $PX4_DIR/Tools/setup_gazebo.bash $PX4_DIR $PX4_DIR/build/px4_sitl_default > /dev/null" >> ~/.bashrc
         echo "export ROS_PACKAGE_PATH=\$ROS_PACKAGE_PATH:$PX4_DIR" >> ~/.bashrc
         echo "export ROS_PACKAGE_PATH=\$ROS_PACKAGE_PATH:$PX4_DIR/Tools/sitl_gazebo" >> ~/.bashrc
-
-* Zsh
-
-   .. todo:: Adapt the steps. Probably just change :file:`~/.bashrc` to :file:`~/.zshrc`.
-
-
 
 Sensible Modifications
 ======================

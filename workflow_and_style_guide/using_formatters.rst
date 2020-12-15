@@ -35,6 +35,6 @@ To apply changes on all files run:
    yapf -i --recursive .
 
 
-.. hint:: A more detailed description on how to use :code:`yapf` can be found in it's `README <https://github.com/google/yapf>`_.
+.. hint:: A more detailed description on how to use :code:`yapf` can be found in its `README <https://github.com/google/yapf>`_.
 
 

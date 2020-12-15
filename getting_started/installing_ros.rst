@@ -31,12 +31,12 @@ Installation
 
 #. Install ROS
 
-   * Full installation
-      .. code-block:: sh
+   .. tabs::
+      .. code-tab:: sh desktop-full
 
          sudo apt install ros-melodic-desktop-full
-   * Base (no GUI)
-      .. code-block:: sh
+      
+      .. code-tab:: sh base (no GUI)
 
          sudo apt install ros-melodic-ros-base
 
@@ -67,15 +67,16 @@ Catkin Initialization
 
 Depending on the shell you use, choose one of the following two options:
 
-* Bash
-   .. code-block:: sh
+
+.. tabs:: 
+   .. code-tab:: sh zsh
+
+      source /opt/ros/melodic/setup.zsh
+
+   .. code-tab:: sh bash
 
       source /opt/ros/melodic/setup.bash
 
-* Zsh
-   .. code-block:: sh
-
-      source /opt/ros/melodic/setup.zsh
 
 Create workspace directories
 
@@ -91,17 +92,16 @@ Initialize your workspace
 
 Automatically source your Catkin workspace, choose the option according to your shell:
 
-* Bash
-   .. code-block:: sh
-
-      echo "source /opt/ros/melodic/setup.bash" >> ~/.bashrc
-      echo "source \$HOME/catkin_ws/devel/setup.bash" >> ~/.bashrc
-
-* Zsh
-   .. code-block:: sh
+.. tabs:: 
+   .. code-tab:: sh zsh
 
       echo "source /opt/ros/melodic/setup.zsh" >> ~/.zshrc
       echo "source \$HOME/catkin_ws/devel/setup.zsh" >> ~/.zshrc
+
+   .. code-tab:: sh bash
+
+      echo "source /opt/ros/melodic/setup.bash" >> ~/.bashrc
+      echo "source \$HOME/catkin_ws/devel/setup.bash" >> ~/.bashrc
 
 
 Installation of HippoCampus Packages
