@@ -2,7 +2,7 @@ Raspberry Pi 4B Setup
 #####################
 
 Pre-Boot Configuration
-**********************
+======================
 #. Flash an Raspbian Buster image to an SD card with the tool of your choice (for example `Raspberry Pi Imager <https://www.raspberrypi.org/downloads/>`_).
 
 #. Do not eject the SD card yet. Download the :download:`Boot partition files <https://gist.github.com/lennartalff/5cf69169edcca7bc6bfc7909a567f67d>` and move them to the :file:`boot` partition of the SD card.
@@ -23,7 +23,7 @@ Also change your hostname before the first boot, by editing :file:`etc/hosts` an
 Naming scheme is :file:`hippo-main-nn` for the Raspberry Pi connected with the FCU and :file:`hippo-buddy-nn` if it is the secondary Raspberry Pi. Replace :file:`nn` by a two digit long number with leading zero.
 
 System Configuration
-********************
+====================
 
 Insert SD card into Raspberry Pi. If your network is configured appropriately you can SSH into the Raspberry Pi. Otherwise connect your computer with the TX/RX pins of the Raspberry Pi via an USB-serial-converter.
 
@@ -42,12 +42,12 @@ Reboot the Pi.
    sudo reboot
 
 ROS Installation
-****************
+================
 
 In general you can follow the official instruction in the `ROS wiki <http://wiki.ros.org/ROSberryPi/Installing%20ROS%20Melodic%20on%20the%20Raspberry%20Pi>`_ to install ROS under Raspbian Buster on the Raspberry Pi. But the following instructions will use :code:`catkin` instead of :code:`catkin_make` or :code:`catkin_make_isolated`. 
 
 Preparations
-============
+************
 
 #. Adding keys
 
@@ -82,7 +82,7 @@ Preparations
       rosdep update
 
 Setup Workspace
-===============
+***************
 
 #. Create workspace
 
@@ -110,7 +110,7 @@ Setup Workspace
       rosdep install -y --from-paths src --ignore-src --rosdistro melodic -r --os=debian:buster
 
 Build the Code
-==============
+**************
 
 #. Set the install space
 
@@ -133,7 +133,7 @@ Build the Code
       sudo catkin build --cmake-args -DCMAKE_BUILD_TYPE=Release
 
 Initialize User Workspace
-=========================
+*************************
 
 #. Source your ROS installation
 
@@ -283,4 +283,33 @@ The output should show symbolic links for the serial devices:
 Ethernet Configuration
 ======================
 
-.. todo:: Todo
+The Raspberry Pis are connected with each other via Ethernet. To have a flexible solution, we define a fallback profile in :file:`/etc/dhcpcd.conf`. So in case you connect the Raspberry Pi directly to the Router, it uses DHCP. If no DHCP server is available, the Raspberry Pis use the static IP address defined in the fallback profile.
+
+Either uncomment the existing lines or add them, so :file:`dhcpcd.conf` contains the following:
+
+.. tabs:: 
+
+   .. code-tab:: sh hippo-main
+
+      # It is possible to fall back to a static IP if DHCP fails:
+      # define static profile
+      profile static_eth0
+      static ip_address=10.0.0.1/24
+
+      # fallback to static profile on eth0
+      interface eth0
+      fallback static_eth0
+
+
+   .. code-tab:: sh hippo-buddy
+
+      # It is possible to fall back to a static IP if DHCP fails:
+      # define static profile
+      profile static_eth0
+      static ip_address=10.0.0.2/24
+
+      # fallback to static profile on eth0
+      interface eth0
+      fallback static_eth0
+
+You might want to restart the Raspberry Pis.
