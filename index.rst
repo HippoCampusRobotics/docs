@@ -11,6 +11,7 @@ Welcome to HippoCampusDocs's documentation!
    :caption: Contents:
    
    getting_started
+   raspberry_pi_4b_setup
    bluerov
    gantry
    contributing
