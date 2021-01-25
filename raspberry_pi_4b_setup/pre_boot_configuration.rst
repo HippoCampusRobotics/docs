@@ -6,8 +6,6 @@ Pre-Boot Configuration
 
    ssh
       Empty file that enables the SSH server on the Raspberry Pi.
-   cmdline.txt
-      Removed :code:`plymouth.ignore-serial-consoles` to enable output during boot process if connected via serial console.
    config.txt
       Added some lines to enable the serial console, camera, etc.
    wpa_supplicant.conf
@@ -15,6 +13,7 @@ Pre-Boot Configuration
 
 .. attention:: Please replace the password in the :file:`wpa_supplicant.conf` with the correct one!
 
-Also change your hostname before the first boot, by editing :file:`etc/hosts` and :file:`etc/hostname` on the :file:`rootfs` partition of the SD card. Replace the default hostname :file:`raspberrypi` with the new hostname.
+To enable output during boot process if connected via serial console, disable using a splash screen via the Plymouth module, by editing :file:`boot/cmdline.txt`. Remove :code:`splash` and :code:`plymouth.ignore-serial-consoles`.
 
+Also change your hostname before the first boot, by editing :file:`etc/hosts` and :file:`etc/hostname` on the :file:`rootfs` partition of the SD card. Replace the default hostname :file:`raspberrypi` with the new hostname.
 Naming scheme is :file:`hippo-main-nn` for the Raspberry Pi connected with the FCU and :file:`hippo-buddy-nn` if it is the secondary Raspberry Pi. Replace :file:`nn` by a two digit long number with leading zero.
