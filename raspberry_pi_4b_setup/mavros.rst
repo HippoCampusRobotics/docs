@@ -54,7 +54,7 @@ rerun :code:`rosdep install` and make sure all dependecies get resolved.
 
 .. note:: It might be necessary to do some iterations of :code:`rosdep install` and the manual installation of dependecies until everything compiles successfully.
 
-Build the the code:
+Build the code:
 
 .. code-block:: sh
 

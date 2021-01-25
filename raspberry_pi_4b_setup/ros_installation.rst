@@ -1,7 +1,7 @@
 ROS Installation
 ################
 
-In general you can follow the official instruction in the `ROS wiki <http://wiki.ros.org/ROSberryPi/Installing%20ROS%20Melodic%20on%20the%20Raspberry%20Pi>`_ to install ROS under Raspbian Buster on the Raspberry Pi. But the following instructions will use :code:`catkin` instead of :code:`catkin_make` or :code:`catkin_make_isolated`. 
+In general you can follow the official instruction in the `ROS wiki <http://wiki.ros.org/ROSberryPi/Installing%20ROS%20Melodic%20on%20the%20Raspberry%20Pi>`_ to install ROS under Raspbian Buster on the Raspberry Pi. But the following instructions will use :code:`catkin tools` instead of :code:`catkin_make` or :code:`catkin_make_isolated`. 
 
 Workspace Concept
 =================
@@ -9,7 +9,7 @@ Workspace Concept
 Since ROS is not availabe as binary packages for Raspbian, all the ROS packages have to be installed from source. To not flood our `normal` Catkin workspace, we create two seperate workspaces. 
 
 ~/ros_catkin_ws
-   This is the workspace, where the source code of the packages we just want to install live. We will configure Catkin to install these packages in :file:`/opt/ros/melodic`. This is the directory, where the installation via prebuilt packages would also create its files. It is not very likely you get in touch with this workspace often after the initial installation.
+   This is the workspace, where the source code of the packages we just want to install lives. We will configure Catkin to install these packages in :file:`/opt/ros/melodic`. This is the directory, where the installation via prebuilt packages would also create its files. It is not very likely you get in touch with this workspace often after the initial installation.
 
 ~/catkin_ws
    Your normal workspace directory. All the Hippocampus specific packages should be in here. Also other packages that you want to modify should be in this workspace. 

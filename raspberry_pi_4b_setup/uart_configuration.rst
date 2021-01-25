@@ -3,7 +3,7 @@ UART Configuration
 
 .. attention:: By default UART0 is used as a login terminal. Do not change this, unless there is a compelling reason to do so.
 
-We have made the decision, to use UART5 for the telemetry communication with the FCU and UART4 is connected to the debug port of the FCU.
+We have made the decision to use UART5 for the telemetry communication with the FCU. UART4 is connected to the debug port of the FCU.
 
 UART-KERNELS-Pin Mapping
 ========================
