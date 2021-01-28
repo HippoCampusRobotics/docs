@@ -107,4 +107,28 @@ Automatically source your Catkin workspace, choose the option according to your 
 Installation of HippoCampus Packages
 ====================================
 
-.. todo:: Adding list of :code:`git clone` commands.
+.. attention:: Make sure you are in your Catkin workspace's :file:`src` directory.
+
+This is a collection of usually needed packages on your personal computer. Feel free to skip unwanted packages and visit `GitHub <https://github.com/hippocampusrobotics>`__ to see a full list of our packages.
+
+.. code-block:: sh
+
+   git clone git@github.com:HippoCampusRobotics/hippocampus_common.git
+   git clone git@github.com:HippoCampusRobotics/hippocampus_msgs.git
+   git clone git@github.com:HippoCampusRobotics/hippocampus_sim.git
+   git clone git@github.com:HippoCampusRobotics/mu_auv_localization.git
+   git clone git@github.com:HippoCampusRobotics/control.git
+   git clone git@github.com:HippoCampusRobotics/path_planning.git
+
+If you want to interact with the gantry you would also want to have the following packages.
+
+.. code-block:: sh
+
+   git clone git@github.com:HippoCampusRobotics/rqt_gantry.git
+   git clone git@github.com:HippoCampusRobotics/gantry_control.git
+
+
+   
+
+
+
