@@ -2,7 +2,7 @@
     "restructuredtext.confPath": "${workspaceFolder}",
     "python.pythonPath": "${workspaceFolder}/venv/bin/python",
     "editor.wordWrap": "on",
-    "restructuredtext.languageServer.disabled": false,
+    "restructuredtext.languageServer.disabled": true,
     // parallel scrolling is not working correctly, so it's deactivated
     "restructuredtext.preview.scrollEditorWithPreview": false,
     "restructuredtext.preview.scrollPreviewWithEditor": false

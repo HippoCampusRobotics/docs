@@ -50,3 +50,17 @@ View the HTML output
 ********************
 
 You can view the HTML output by opening :file:`_build/html/index.html` with a webbrowser.
+
+Autogenerate Documentation
+**************************
+
+To generate API documentation for Python packages add the them as submodule under the :file:`src` directory.
+
+.. code-block:: sh
+
+   PKG_NAME="insert-your-package-name-here"
+   git submodule add https://github.com/HippoCampusRobotics/$PKG_NAME.git src/$PKG_NAME
+
+Add the package name to the :code:`packages` list in :file:`conf.py`.
+
+Then add the package in :file:`src.rst`. If you get errors/warning telling you that something related to your newly added package could not be imported, make sure you add all external modules imported in your package/modules to the :code:`autodoc_mock_imports` list in :file:`conf.py`.

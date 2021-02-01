@@ -6,6 +6,7 @@
 Welcome to HippoCampusDocs's documentation!
 ===========================================
 
+
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
@@ -16,6 +17,7 @@ Welcome to HippoCampusDocs's documentation!
    gantry
    contributing
    workflow_and_style_guide
+   src
 
 
 

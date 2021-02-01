@@ -1,0 +1,9 @@
+[submodule "src/hippocampus_common"]
+	path = src/hippocampus_common
+	url = https://github.com/HippoCampusRobotics/hippocampus_common.git
+[submodule "src/control"]
+	path = src/control
+	url = https://github.com/HippoCampusRobotics/control.git
+[submodule "src/mu_auv_localization"]
+	path = src/mu_auv_localization
+	url = https://github.com/HippoCampusRobotics/mu_auv_localization.git
