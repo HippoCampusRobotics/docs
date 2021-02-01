@@ -12,6 +12,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@master
+        with:
+          submodules: true
 
       - name: Build
         uses: ammaraskar/sphinx-action@master
@@ -21,6 +23,6 @@ jobs:
       - name: Upload Artifacts
         uses: actions/upload-artifact@v1
         with:
-          name: "DocumnetationHTML"
+          name: "DocumentationHTML"
           path: _build/html/
  

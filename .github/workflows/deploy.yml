@@ -9,6 +9,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@master
+        with:
+          submodules: true
 
       - name: Build
         uses: ammaraskar/sphinx-action@master
