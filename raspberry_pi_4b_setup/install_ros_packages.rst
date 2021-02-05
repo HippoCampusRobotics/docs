@@ -3,6 +3,11 @@ Install ROS Packages
 
 If you want to install a new package, for example :file:`apriltag_ros` you can generate a new :file:`.rosinstall` file and merge it with your current workspace with :code:`wstool`.
 
+.. todo:: 
+
+   Updating a catkin workspace were packages have been added this way will not work by following :ref:`raspberry_pi_4b_setup/update_catkin_ws:Update Catkin Workspace`. We need to find a good solution of keeping track of packages that have been installed by merging a seperate :file:`.rosinstall` file with :code:`wstool`.
+
+
 #. Change directory
 
    .. code-block:: sh
