@@ -7,3 +7,6 @@
 [submodule "src/mu_auv_localization"]
 	path = src/mu_auv_localization
 	url = https://github.com/HippoCampusRobotics/mu_auv_localization.git
+[submodule "src/path_planning"]
+	path = src/path_planning
+	url = https://github.com/HippoCampusRobotics/path_planning.git

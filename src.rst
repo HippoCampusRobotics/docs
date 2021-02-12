@@ -9,4 +9,5 @@ Documentation of the Source Code
    hippocampus_common
    mu_auv_localization
    control
+   path_planning
 

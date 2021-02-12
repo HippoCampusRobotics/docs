@@ -19,18 +19,24 @@ import os
 import sys
 
 packages = ["hippocampus_common", "control",
-"mu_auv_localization"]
+"mu_auv_localization", "path_planning"]
 for pkg in packages:
         sys.path.insert(0, os.path.abspath("./src/{}/src".format(pkg)))
 
 autodoc_mock_imports = [
         "geometry_msgs",
+        "std_msgs",
+        "geometry_msgs",
+        "nav_msgs",
         "numpy",
         "rospy",
         "smbus",
         "smbus2",
         "tf",
         "tf2_ros",
+        "dynamic_reconfigure",
+        "control.cfg",
+        "matplotlib",
 ]
 
 # -- Project information -----------------------------------------------------
