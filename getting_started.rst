@@ -11,5 +11,6 @@ Getting Started
    getting_started/installing_ros
    getting_started/setting_up_catkin_workspace
    getting_started/installing_px4
+   getting_started/installing_qgc
    getting_started/starting_gazebo_simulation
    getting_started/deploying_hippocampus
