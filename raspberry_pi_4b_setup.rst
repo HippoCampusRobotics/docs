@@ -12,6 +12,9 @@ Raspberry Pi 4B Setup
    raspberry_pi_4b_setup/ros_network_setup
    raspberry_pi_4b_setup/update_catkin_ws
    raspberry_pi_4b_setup/install_ros_packages
-   raspberry_pi_4b_setup/mavros
-   raspberry_pi_4b_setup/camera
+   raspberry_pi_4b_setup/install_mavros
+   raspberry_pi_4b_setup/install_our_ros_packages
+   raspberry_pi_4b_setup/install_camera_library
    raspberry_pi_4b_setup/uart_configuration
+   raspberry_pi_4b_setup/quality_of_life_features
+   raspberry_pi_4b_setup/pinout

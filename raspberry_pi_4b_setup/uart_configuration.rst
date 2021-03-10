@@ -21,13 +21,32 @@ UART KERNELS                 Tx/Rx GPIOs           Function
 5    :code:`fe201a00.serial` :code:`GPIO12/GPIO13` Telemtry / z-Axis Motor
 ==== ======================= ===================== =========================
 
+Pinout
+======
+
+.. tabs::
+
+   .. tab:: UUV
+      
+      .. image:: /res/images/pi_pinout_uuv.svg
+         :width: 30000
+         :align: center
+         
+
+   .. tab:: Gantry
+
+      .. image:: /res/images/pi_pinout_gantry.svg
+         :width: 30000
+         :align: center
+
+
 UART Rule
 =========
 
 Create the file :file:`/etc/udev/rules.d/50-serial.rules` with the following content:
 
 .. tabs::
-
+   
    .. code-tab:: sh UUV
       :linenos:
 

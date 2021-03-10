@@ -42,8 +42,8 @@ autodoc_mock_imports = [
 # -- Project information -----------------------------------------------------
 
 project = 'HippoCampusDocs'
-copyright = '2020, Thies Lennart Alff'
-author = 'Thies Lennart Alff'
+copyright = '2020, Thies Lennart Alff, Nathalie Bauschmann'
+author = 'Thies Lennart Alff, Nathalie Bauschmann'
 
 
 # -- General configuration ---------------------------------------------------

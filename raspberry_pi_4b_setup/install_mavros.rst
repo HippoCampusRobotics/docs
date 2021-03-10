@@ -1,5 +1,5 @@
-MAVROS
-######
+Install MAVROS
+##############
 
 .. code-block:: sh
 

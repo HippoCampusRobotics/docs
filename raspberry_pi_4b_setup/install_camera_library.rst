@@ -1,5 +1,5 @@
-Camera
-######
+Install MIPI Camera Library
+###########################
 
 If the Raspberry Pi uses an OV9281 camera, you will have to install the MIPI camera library by Arducam.
 
