@@ -24,7 +24,7 @@ Adding a desktop entry
 
 For convenience, we will add a desktop entry for QGC. This makes it possible to search for the application on your system, and add the application's icon to your dock.
 
-For this, move the downloaded AppImage :file:`QGroundControl.AppImage` to a folder :file:`~/bin`.
+For this, move the downloaded AppImage :file:`QGroundControl.AppImage` to a folder :file:`~/bin` (you may have to create this directory first).
 Don't forget to make the AppImage file executable.
 
 You will also need an app icon, an image with transparent background will look best.
