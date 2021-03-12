@@ -44,7 +44,7 @@ Tethered Setup
 
    .. code-block:: sh 
 
-      roslaunch hippocampus_common hardware_hippo.launch vehicle_name:=uuv00 qgc_ip:=123456789
+      roslaunch hippocampus_common hardware_hippo.launch vehicle_name:=uuv00 qgc_ip:=192.168.0.100
 
 #. **Start this on a computer of your choice:**
 
@@ -77,14 +77,14 @@ If you absolutely cannot arm due to preflight errors, you can force arm using a 
 Force arming via mavros
 -----------------------
 
-.. code-block:: shaped
+.. code-block:: sh
 
    rosservice call /uuv00/mavros/cmd/command "{broadcast: false, command: 400,confirmation: 0, param1: 1, param2: 21196, param3: 0.0, param4: 0.0,param5: 0.0, param6: 0.0, param7: 0.0}"
 
 Force disarming
 ---------------
 
-.. code-block:: shaped
+.. code-block:: sh
 
    rosservice call /uuv00/mavros/cmd/command "{broadcast: false, command: 400,confirmation: 0, param1: 0, param2: 21196, param3: 0.0, param4: 0.0,param5: 0.0, param6: 0.0, param7: 0.0}"
 
