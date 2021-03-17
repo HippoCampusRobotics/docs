@@ -54,6 +54,8 @@ You can view the HTML output by opening :file:`_build/html/index.html` with a we
 Autogenerate Documentation
 **************************
 
+.. attention:: Autodoc is disabled for now. Either implement a docker workflow to build the docs where all runtime dependencies of the documented source code are met or just don't use autodoc. We stick with the latter one for now.
+
 To generate API documentation for Python packages add the them as submodule under the :file:`src` directory.
 
 .. code-block:: sh
