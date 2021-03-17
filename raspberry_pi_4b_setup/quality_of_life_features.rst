@@ -27,6 +27,10 @@ Install the `Pure <https://github.com/sindresorhus/pure>`_ prompt:
    # add path to ~/.zshrc, initialize prompt and choose pure (at the top of the file!)
    echo 'fpath+=$HOME/.zsh/pure \nautoload -U promptinit; promptinit \nprompt pure' | cat - ~/.zshrc > temp && mv temp ~/.zshrc
 
+   # delete default theme entry
+   sed -i 's/ZSH_THEME="robbyrussell"/ZSH_THEME=""/' ~/.zshrc
+
+
 Install `zsh-autosuggestions <https://github.com/zsh-users/zsh-autosuggestions>`_:
 
 .. code-block:: sh
@@ -46,6 +50,18 @@ Adjust colours of pure prompt and autosuggestions:
 
 See the Pure `Zstyle options <https://github.com/sindresorhus/pure#zstyle-options>`_ and the `Xterm265 colour chart <https://upload.wikimedia.org/wikipedia/commons/1/15/Xterm_256color_chart.svg>`_ for other settings and colours.
 
+To avoid not seeing the nice colors we just selected:
+
+.. code-block:: sh
+
+   echo "export TERM=xterm-256color" >> ~/.zshrc
+
+
+To apply changes:
+
+.. code-block:: sh
+
+   source ~/.zshrc
 
 
 Byobu
@@ -56,6 +72,14 @@ To install `Byobu <https://www.byobu.org/>`_, a terminal multiplexer:
 .. code-block:: sh 
 
    sudo apt install byobu
+
+Enable Byobu:
+
+.. code-block:: sh
+
+   byobu-enable
+
+
 
 Useful Shortcuts
 ----------------
@@ -84,6 +108,7 @@ Useful Shortcuts
    +--------------------------------------------------------+------------------------------------------------------------------+
 
 Here's a more elaborate `cheat sheet <https://gist.github.com/inhumantsar/bf86ff1961cccdf8be06>`_.
+
 
 
 VIM
