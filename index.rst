@@ -17,7 +17,6 @@ Welcome to HippoCampusDocs's documentation!
    gantry
    contributing
    workflow_and_style_guide
-   src
 
 
 

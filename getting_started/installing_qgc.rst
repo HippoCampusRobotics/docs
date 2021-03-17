@@ -14,10 +14,10 @@ More info about QGC can be found in the `docs <https://docs.qgroundcontrol.com/m
 The Daily Build AppImage 
 ========================
 
-... can be downloaded `here <https://docs.qgroundcontrol.com/master/en/releases/daily_builds.html>`_.
+... can be downloaded `here <https://docs.qgroundcontrol.com/master/en/releases/daily_builds.html>`__.
 
 It is a good idea to keep this up-to-date. 
-Alternatively, stable releases can be found `here <https://docs.qgroundcontrol.com/master/en/getting_started/download_and_install.html>`_.
+Alternatively, stable releases can be found `here <https://docs.qgroundcontrol.com/master/en/getting_started/download_and_install.html>`__.
 
 Adding a desktop entry
 ======================
