@@ -1,6 +1,11 @@
 Pre-Boot Configuration
 ######################
+
+
+
 #. Flash an Raspbian Buster image to an SD card with the tool of your choice (for example `Raspberry Pi Imager <https://www.raspberrypi.org/downloads/>`_).
+
+   .. note:: Experimental `64bit images <https://downloads.raspberrypi.org/raspios_arm64/images/>`_ seem to work with Arducam and have the advantage that ROS can be installed via :code:`apt`. No need to build ROS from source! Use ROS Noetic in this case.
 
 #. Do not eject the SD card yet. Download the :download:`Boot partition files <https://gist.github.com/lennartalff/5cf69169edcca7bc6bfc7909a567f67d>` and move them to the :file:`boot` partition of the SD card.
 

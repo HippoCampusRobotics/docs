@@ -3,6 +3,8 @@ ROS Installation
 
 In general you can follow the official instruction in the `ROS wiki <http://wiki.ros.org/ROSberryPi/Installing%20ROS%20Melodic%20on%20the%20Raspberry%20Pi>`_ to install ROS under Raspbian Buster on the Raspberry Pi. But the following instructions will use :code:`catkin tools` instead of :code:`catkin_make` or :code:`catkin_make_isolated`. 
 
+.. note:: If you use the 64bit Raspbian, you can follow the Debian standard `installation guide <http://wiki.ros.org/noetic/Installation/Debian>`_ and skip everything regarding :file:`ros_catkin_ws`.
+
 Workspace Concept
 =================
 

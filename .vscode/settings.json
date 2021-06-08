@@ -1,6 +1,6 @@
 {
     "restructuredtext.confPath": "${workspaceFolder}",
-    "python.pythonPath": "venv/bin/python3",
+    "python.pythonPath": "${workspaceFolder}/venv/bin/python3",
     "editor.wordWrap": "on",
     "restructuredtext.languageServer.disabled": true,
     // parallel scrolling is not working correctly, so it's deactivated
