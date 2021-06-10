@@ -13,6 +13,7 @@ Welcome to HippoCampusDocs's documentation!
    
    getting_started
    raspberry_pi_4b_setup
+   esc
    bluerov
    gantry
    contributing
