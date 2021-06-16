@@ -49,18 +49,18 @@ Create the file :file:`/etc/udev/rules.d/50-serial.rules` with the following con
    
    .. code-tab:: sh UUV
 
-      KERNEL=="ttyAMA[0-9]*", GROUP="dialout", ENV{MOTOR_SERIAL}="fcu_serial"
+      KERNEL=="ttyAMA[0-9]*", GROUP="dialout", ENV{SERIAL_MARKER}="fcu_serial"
 
       ENV{SERIAL_MARKER}=="fcu_serial",  SUBSYSTEM=="tty", KERNELS=="fe201800.serial", SYMLINK+="fcu_debug"
-      ENV{MOTOR_SERIAL}=="fcu_serial",  SUBSYSTEM=="tty", KERNELS=="fe201a00.serial", SYMLINK+="fcu_tele"
+      ENV{SERIAL_MARKER}=="fcu_serial",  SUBSYSTEM=="tty", KERNELS=="fe201a00.serial", SYMLINK+="fcu_tele"
 
    .. code-tab:: sh Gantry
 
-      KERNEL=="ttyAMA[0-9]*", GROUP="dialout", ENV{MOTOR_SERIAL}="motor_serial"
+      KERNEL=="ttyAMA[0-9]*", GROUP="dialout", ENV{SERIAL_MARKER}="motor_serial"
 
-      ENV{MOTOR_SERIAL}=="motor_serial",  SUBSYSTEM=="tty", KERNELS=="fe201600.serial", SYMLINK+="motor_x"
-      ENV{MOTOR_SERIAL}=="motor_serial",  SUBSYSTEM=="tty", KERNELS=="fe201800.serial", SYMLINK+="motor_y"
-      ENV{MOTOR_SERIAL}=="motor_serial",  SUBSYSTEM=="tty", KERNELS=="fe201a00.serial", SYMLINK+="motor_z"
+      ENV{SERIAL_MARKER}=="motor_serial",  SUBSYSTEM=="tty", KERNELS=="fe201600.serial", SYMLINK+="motor_x"
+      ENV{SERIAL_MARKER}=="motor_serial",  SUBSYSTEM=="tty", KERNELS=="fe201800.serial", SYMLINK+="motor_y"
+      ENV{SERIAL_MARKER}=="motor_serial",  SUBSYSTEM=="tty", KERNELS=="fe201a00.serial", SYMLINK+="motor_z"
 
 You can apply these changes by
 
