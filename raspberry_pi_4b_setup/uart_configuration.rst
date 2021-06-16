@@ -48,15 +48,13 @@ Create the file :file:`/etc/udev/rules.d/50-serial.rules` with the following con
 .. tabs::
    
    .. code-tab:: sh UUV
-      :linenos:
 
       KERNEL=="ttyAMA[0-9]*", GROUP="dialout", ENV{MOTOR_SERIAL}="fcu_serial"
 
-      ENV{MOTOR_SERIAL}=="fcu_serial",  SUBSYSTEM=="tty", KERNELS=="fe201800.serial", SYMLINK+="fcu_debug"
+      ENV{SERIAL_MARKER}=="fcu_serial",  SUBSYSTEM=="tty", KERNELS=="fe201800.serial", SYMLINK+="fcu_debug"
       ENV{MOTOR_SERIAL}=="fcu_serial",  SUBSYSTEM=="tty", KERNELS=="fe201a00.serial", SYMLINK+="fcu_tele"
 
    .. code-tab:: sh Gantry
-      :linenos:
 
       KERNEL=="ttyAMA[0-9]*", GROUP="dialout", ENV{MOTOR_SERIAL}="motor_serial"
 

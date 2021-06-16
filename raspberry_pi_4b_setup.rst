@@ -16,5 +16,6 @@ Raspberry Pi 4B Setup
    raspberry_pi_4b_setup/install_our_ros_packages
    raspberry_pi_4b_setup/install_camera_library
    raspberry_pi_4b_setup/uart_configuration
+   raspberry_pi_4b_setup/usb_configuration
    raspberry_pi_4b_setup/quality_of_life_features
    raspberry_pi_4b_setup/pinout
