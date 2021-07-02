@@ -1,6 +1,9 @@
 USB Configuration
 #################
 
+Pixracer
+========
+
 Similar to the UART configuration we can add a UDEV rule to identify the Pixracer if connected via USB and create a symlink with meaningful name.
 
 Create the file :file:`/etc/udev/rules.d/50-pixracer.rules` and add the following lines:
