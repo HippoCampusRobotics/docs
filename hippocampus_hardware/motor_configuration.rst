@@ -7,7 +7,7 @@ The following image depicts the thruster configuration. The numbers correspond t
 
    Motor and propeller configuration.
 
-To avoid confusion the order of the three motor/ESC wires should be black, red, yellow from front to rear. If the ESC or motor has other colors for its wires make sure the motor turns in positive direction (right hand rule with axis parallel to the vehicle's x-axis 😉) for positive setpoints. 
+To avoid confusion, the order of the three motor/ESC wires should be black, red, yellow from front to rear. If the ESC or motor has other colors for its wires make sure the motor turns in positive direction (right hand rule with axis parallel to the vehicle's x-axis 😉) for positive setpoints. 
 
 To test this you can use the :code:`motor_test` command in the FCU's shell (you can access the shell via the debug port or via QGroundControl's MAVLink Console). For details see the `PX4 documentation <https://dev.px4.io/master/en/middleware/modules_command.html#motortest>`__. 
 
