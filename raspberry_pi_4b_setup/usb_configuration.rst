@@ -9,7 +9,7 @@ Create the file :file:`/etc/udev/rules.d/50-pixracer.rules` and add the followin
 
    KERNEL=="ttyACM[0-9]*", GROUP="dialout", ENV{FCU_USB}="fcu_usb"
 
-   ENV{FCU_USB}=="fcu_usb", SUBSYSTEM=="tty", ATTRS{product}=="PX4 FMU v4.x", SYMLINK+="fcu_usb"
+   ENV{FCU_USB}=="fcu_usb", SUBSYSTEM=="tty", ATTRS{idVendor}=="26ac", ATTRS{idProduct}=="0012", SYMLINK+="fcu_usb"
 
 Retrigger the rules:
 
