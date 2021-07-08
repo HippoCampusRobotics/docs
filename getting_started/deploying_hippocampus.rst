@@ -8,6 +8,36 @@ Flashing the PixRacer
 
    Flash the PX4-Autopilot firmware onto the PixRacer. Select correct Airframe.
 
+PX4 Parameters
+==============
+
+Set :code:`EKF2_AID_MASK` to **vision position fusion** and **vision yaw fusion**. This is probably a value of 24.
+
+Set :code:`EKF2_HGT_MODE` to **Vision**
+
+Good starting gains for the Geometric Attitude Controller are:
+
+.. tabs::
+
+   .. tab:: Big Hippo (Alu)
+
+      ============= ======= 
+         Parameter    Value  
+      ============= ======= 
+      UUV_ROLL_P      5.0  
+      UUV_ROLL_D      0.5  
+      UUV_PITCH_P     5.0  
+      UUV_PITCH_D     1.0  
+      UUV_YAW_P       8.0  
+      UUV_YAW_D       1.0  
+      ============= =======
+
+   .. tab:: Hippo (Plastic)
+
+      .. todo:: Find good basic values.
+
+
+
 PixRacer Calibration
 ====================
 
