@@ -1,6 +1,9 @@
 Starting Simulation
 ###################
 
+.. hint:: If launching gazebo from ROS, ROS is not able to kill the gazebo node without escalating to **SIGTERM**. This happens after a 15s timeout. If you do not have the time to wait for so long, you can modifiy :file:`/opt/ros/noetic/lib/python3/dist-packages/roslaunch/nodeprocess.py` and change :code:`DEFAULT_TIMEOUT_SIGINT` to some value you are willing to wait.
+
+
 General Launch Setup
 ====================
 
