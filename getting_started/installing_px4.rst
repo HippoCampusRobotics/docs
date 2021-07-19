@@ -38,6 +38,37 @@ Choose the option depending on your shell:
         echo "export ROS_PACKAGE_PATH=\$ROS_PACKAGE_PATH:$PX4_DIR" >> ~/.bashrc
         echo "export ROS_PACKAGE_PATH=\$ROS_PACKAGE_PATH:$PX4_DIR/Tools/sitl_gazebo" >> ~/.bashrc
 
+
+Build The Code
+==============
+
+Set up dependencies:
+
+.. code-block:: sh
+
+    cd ~/PX4-Autopilot && bash ./Tools/setup/ubuntu.sh
+
+Install :code:`xmlstarlet` and :code:`python3-pip`:
+
+.. code-block:: sh
+
+    sudo apt install xmlstarlet python3-pip
+
+
+Build the firmware:
+
+.. code-block:: sh
+
+    cd ~/PX4-Autopilot && make px4_fmu-v4_default
+
+Build the simulation:
+
+.. code-block:: sh
+
+    DONT_RUN=1 make px4_sitl gazebo_uuv_hippocampus
+
+
+
 Sensible Modifications
 ======================
 

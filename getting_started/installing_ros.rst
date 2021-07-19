@@ -109,10 +109,13 @@ Automatically source your Catkin workspace, choose the option according to your 
       echo "source \$HOME/catkin_ws/devel/setup.bash" >> ~/.bashrc
 
 
-Installation of HippoCampus Packages
-====================================
+Setting up Catkin Workspace
+===========================
 
 .. attention:: Make sure you are in your Catkin workspace's :file:`src` directory.
+
+Installation of HippoCampus packages
+************************************
 
 This is a collection of usually needed packages on your personal computer. Feel free to skip unwanted packages and visit `GitHub <https://github.com/hippocampusrobotics>`__ to see a full list of our packages.
 
@@ -132,8 +135,22 @@ If you want to interact with the gantry you would also want to have the followin
    git clone git@github.com:HippoCampusRobotics/rqt_gantry.git
    git clone git@github.com:HippoCampusRobotics/gantry_control.git
 
+To install dependencies, such as AprilTag and MAVROS:
 
-   
+.. code-block:: sh
 
+   cd ~/catkin_ws && rosdep install --from-path src --ignore-src -r -y
 
+For MAVROS, you also need to install the `GeographicLib <https://geographiclib.sourceforge.io/>`__ datasets:
+
+.. code-block:: sh
+
+   wget https://raw.githubusercontent.com/mavlink/mavros/master/mavros/scripts/install_geographiclib_datasets.sh
+   sudo bash ./install_geographiclib_datasets.sh   
+
+Build your Catkin workspace:
+
+.. code-block:: sh
+
+   cd ~/catkin_ws && catkin build
 

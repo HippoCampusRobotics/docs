@@ -2,13 +2,6 @@ Installing QGroundControl
 #########################
 
 QGroundControl (QCG) is the Ground Control Station we use for deploying HippoCampus.
-
-QGroundControl has these amazing features/things we need QGroundControl for:
-
-* amazing feature #1
-* nearly as amazing feature #2
-* ... whatever
-
 More info about QGC can be found in the `docs <https://docs.qgroundcontrol.com/master/en/>`_.
 
 The Daily Build AppImage 
