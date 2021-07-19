@@ -2,7 +2,7 @@ Getting Started
 ###############
 
 .. note::
-   This guide assumes `Ubuntu 18.04 <https://releases.ubuntu.com/18.04/>`_ is used as OS.
+   This guide assumes `Ubuntu 20.04 <https://releases.ubuntu.com/20.04/>`_ is used as OS.
 
 .. toctree::
    :maxdepth: 2

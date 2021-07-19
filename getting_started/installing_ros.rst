@@ -1,7 +1,7 @@
 Installing ROS
 ##############
 
-The following installations steps work for a Ubuntu 18.04 amd64 version **and** for the Ubuntu 18.04 server image for the Raspberry Pi.
+The following installations steps work for a Ubuntu 20.04 amd64 version **and** for the Ubuntu 20.04 server image for the Raspberry Pi.
 
 Preparation
 ===========
@@ -16,7 +16,8 @@ Preparation
 
    .. code-block:: sh
 
-      sudo apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
+      sudo apt install curl # if you haven't already installed curl
+      curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -
 
 #. Update
 
@@ -27,34 +28,38 @@ Preparation
 Installation
 ============
 
-.. note:: Choose the installation option depending on your needs. Probably it's not reasonable to install :code:`ros-melodic-desktop-full` on an Ubuntu server image for the Raspberry Pi.
+.. note:: Choose the installation option depending on your needs. Probably it's not reasonable to install :code:`ros-noetic-desktop-full` on an Ubuntu server image for the Raspberry Pi.
 
 #. Install ROS
 
    .. tabs::
       .. code-tab:: sh desktop-full
 
-         sudo apt install ros-melodic-desktop-full
+         sudo apt install ros-noetic-desktop-full
       
       .. code-tab:: sh base (no GUI)
 
-         sudo apt install ros-melodic-ros-base
+         sudo apt install ros-noetic-ros-base
 
 
 #. Install build dependencies
 
    .. code-block:: sh
 
-      sudo apt install python-rosdep python-rosinstall python-rosinstall-generator python-wstool build-essential
+      sudo apt install python3-rosdep python3-rosinstall python3-rosinstall-generator python3-wstool build-essential
 
 #. Install catkin-tools
 
    .. code-block:: sh
 
-      sudo apt install python-catkin-tools
+      sudo apt install python3-catkin-tools python3-osrf-pycommon
 
 rosdep Initialization
 =====================
+
+.. code-block:: sh
+
+   sudo apt install python3-rosdep
 
 .. code-block:: sh
 
@@ -71,11 +76,11 @@ Depending on the shell you use, choose one of the following two options:
 .. tabs:: 
    .. code-tab:: sh zsh
 
-      source /opt/ros/melodic/setup.zsh
+      source /opt/ros/noetic/setup.zsh
 
    .. code-tab:: sh bash
 
-      source /opt/ros/melodic/setup.bash
+      source /opt/ros/noetic/setup.bash
 
 
 Create workspace directories
@@ -95,12 +100,12 @@ Automatically source your Catkin workspace, choose the option according to your 
 .. tabs:: 
    .. code-tab:: sh zsh
 
-      echo "source /opt/ros/melodic/setup.zsh" >> ~/.zshrc
+      echo "source /opt/ros/noetic/setup.zsh" >> ~/.zshrc
       echo "source \$HOME/catkin_ws/devel/setup.zsh" >> ~/.zshrc
 
    .. code-tab:: sh bash
 
-      echo "source /opt/ros/melodic/setup.bash" >> ~/.bashrc
+      echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
       echo "source \$HOME/catkin_ws/devel/setup.bash" >> ~/.bashrc
 
 
