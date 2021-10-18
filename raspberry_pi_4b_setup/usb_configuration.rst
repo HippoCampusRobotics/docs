@@ -1,18 +1,23 @@
 USB Configuration
 #################
 
-Pixracer
-========
-
 Similar to the UART configuration we can add a UDEV rule to identify the Pixracer if connected via USB and create a symlink with meaningful name.
 
-Create the file :file:`/etc/udev/rules.d/50-pixracer.rules` and add the following lines:
+Create the file :file:`/etc/udev/rules.d/50-fcu.rules` and add the following lines:
 
-.. code-block:: sh
+.. tabs::
 
-   KERNEL=="ttyACM[0-9]*", GROUP="dialout", ENV{FCU_USB}="fcu_usb"
+   .. code-tab:: sh PixRacer
 
-   ENV{FCU_USB}=="fcu_usb", SUBSYSTEM=="tty", ATTRS{idVendor}=="26ac", ATTRS{idProduct}=="0012", SYMLINK+="fcu_usb"
+      KERNEL=="ttyACM[0-9]*", GROUP="dialout", ENV{FCU_USB}="fcu_usb"
+
+      ENV{FCU_USB}=="fcu_usb", SUBSYSTEM=="tty", ATTRS{idVendor}=="26ac", ATTRS{idProduct}=="0012", SYMLINK+="fcu_usb"
+   
+   .. code-tab:: sh PixHawk 4
+
+      KERNEL=="ttyACM[0-9]*", GROUP="dialout", ENV{FCU_USB}="fcu_usb"
+
+      ENV{FCU_USB}=="fcu_usb", SUBSYSTEM=="tty", ATTRS{idVendor}=="26ac", ATTRS{idProduct}=="0032", SYMLINK+="fcu_usb"
 
 Retrigger the rules:
 

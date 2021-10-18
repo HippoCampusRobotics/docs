@@ -28,7 +28,7 @@ Preparations
 
    .. code-block:: bash
 
-      sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
+      curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -
 
 #. Update source lists
 
@@ -40,7 +40,7 @@ Preparations
 
    .. code-block:: bash
 
-      sudo apt install -y python-rosdep python-rosinstall-generator python-wstool python-rosinstall build-essential cmake python-catkin-tools
+      sudo apt install -y python3-rosdep python3-rosinstall-generator python3-vcstool python3-rosinstall build-essential cmake python3-catkin-tools
 
 #. Initialize rosdep
 
@@ -59,7 +59,7 @@ Setup Workspace
 
    .. code-block:: bash
 
-      mkdir ~/ros_catkin_ws && cd ~/ros_catkin_ws
+      mkdir -p ~/ros_catkin_ws/src && cd ~/ros_catkin_ws
 
 #. Fetch source code
 
@@ -67,18 +67,18 @@ Setup Workspace
    
    .. code-block:: bash
 
-      rosinstall_generator ros_comm perception --rosdistro melodic --deps --wet-only --tar > melodic-ros_comm-perception-wet.rosinstall
+      rosinstall_generator ros_comm perception --rosdistro noetic --deps --wet-only --tar > noetic-ros_comm-perception-wet.rosinstall
 
    .. code-block:: bash
 
-      wstool init src melodic-ros_comm-perception-wet.rosinstall
+      vcs import --input noetic-ros_comm-perception-wet.rosinstall ./src
 
 
 #. Resolve dependencies
 
    .. code-block:: bash
 
-      rosdep install -y --from-paths src --ignore-src --rosdistro melodic -r --os=debian:buster
+      rosdep install -y --from-paths src --ignore-src --rosdistro noetic -r --os=debian:buster
 
 Build the Code
 ==============
@@ -87,7 +87,7 @@ Build the Code
 
    .. code-block:: bash
 
-      catkin config --install-space /opt/ros/melodic
+      catkin config --install-space /opt/ros/noetic
 
 #. Use the :code:`install` configuration instead of :code:`devel`
 
@@ -101,7 +101,8 @@ Build the Code
 
    .. code-block:: bash
 
-      sudo catkin build --cmake-args -DCMAKE_BUILD_TYPE=Release
+      sudo catkin build --cmake-args -DCMAKE_BUILD_TYPE=Release -DPYTHON_EXECUTABLE=/usr/bin/python3
+
 
 Initialize User Workspace
 =========================
