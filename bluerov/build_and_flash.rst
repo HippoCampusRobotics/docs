@@ -35,18 +35,3 @@ You need to be able to reach the BlueROV's Raspberry Pi via ssh. The most conven
    ssh ubuntu@ubuntu.local << EOF
    python3 ~/Firmware/Tools/px_uploader.py --port /dev/ttyACM0 ~/px4_fmu-v5_default.px4
    EOF
-
-
-For even more convenience, copy your ssh-key to the BlueROV to enable passwordless login and create an entry in your :file:`~/.ssh/config` for the BlueROV similiar to:
-
-.. code-block:: sh
-   :linenos:
-
-   Host klopsi
-       User ubuntu
-       Hostname klopsi.local
-       IdentitiyFile "~/.ssh/id_ed25519"
-
-.. note:: Replace the path for the identity file with the name of your key.
-
-This entry allows you to use :file:`klopsi` instead of :file:`ubuntu@klopsi.local`.
