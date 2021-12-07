@@ -13,6 +13,7 @@ Welcome to HippoCampusDocs's documentation!
    
    getting_started
    raspberry_pi_4b_setup
+   raspberry_pi_4b_experimental
    hippocampus_hardware
    bluerov
    gantry
