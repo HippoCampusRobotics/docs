@@ -17,6 +17,7 @@ Welcome to HippoCampusDocs's documentation!
    hippocampus_hardware
    bluerov
    gantry
+   underwater_camera
    contributing
    workflow_and_style_guide
 
