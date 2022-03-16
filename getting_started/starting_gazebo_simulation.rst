@@ -20,7 +20,7 @@ To start Gazebo with one HippoCampus:
 
 .. code-block:: sh
 
-   roslaunch hippocampus_sim single_vehicle_complete.launch
+   roslaunch hippocampus_sim top_single_vehicle_complete.launch
 
 
 Path Following example
