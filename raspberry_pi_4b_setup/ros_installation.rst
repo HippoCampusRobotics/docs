@@ -113,11 +113,11 @@ Initialize User Workspace
 
       .. code-tab:: sh zsh
 
-         source /opt/ros/melodic/setup.zsh
+         source /opt/ros/noetic/setup.zsh
 
       .. code-tab:: sh bash
 
-         source /opt/ros/melodic/setup.bash
+         source /opt/ros/noetic/setup.bash
 
 
 #. Create workspace
@@ -163,3 +163,4 @@ For this change of the :file:`.bashrc` to take effect immediately execute:
 
       source ~/.bashrc
 
+up
