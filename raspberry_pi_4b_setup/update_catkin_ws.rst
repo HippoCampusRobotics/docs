@@ -15,29 +15,29 @@ If you want to update already existing packages in the :file:`/ros_catkin_ws`, y
 
 #. Update your :file:`.rosinstall` file
 
-   - First, move your existing rosinstall file (assuming :code:`melodic-ros_comm-perception-wet.rosinstall`) so that it doesn't get overwritten:
+   - First, move your existing rosinstall file (assuming :code:`noetic-ros_comm-perception-wet.rosinstall`) so that it doesn't get overwritten:
 
       .. code-block:: sh
 
-         mv -i melodic-ros_comm-perception-wet.rosinstall melodic-ros_comm-perception-wet.rosinstall.old
+         mv -i noetic-ros_comm-perception-wet.rosinstall noetic-ros_comm-perception-wet.rosinstall.old
 
    - Generate new rosinstall file with same, but updated packages: 
 
       .. code-block:: sh
 
-         rosinstall_generator ros_comm perception --rosdistro melodic --deps --wet-only --tar > melodic-ros_comm-perception-wet.rosinstall
+         rosinstall_generator ros_comm perception --rosdistro noetic --deps --wet-only --tar > noetic-ros_comm-perception-wet.rosinstall
 
    - You can compare the new rosinstall file to the old version to see which packages will be updated: 
 
       .. code-block:: sh 
 
-         diff -u melodic-ros_comm-perception-wet.rosinstall melodic-ros_comm-perception-wet.rosinstall.old
+         diff -u noetic-ros_comm-perception-wet.rosinstall noetic-ros_comm-perception-wet.rosinstall.old
 
 #. Merge
 
    .. code-block:: sh
 
-      wstool merge -t src melodic-ros_comm-perception-wet.rosinstall
+      wstool merge -t src noetic-ros_comm-perception-wet.rosinstall
 
 #. Update
 
