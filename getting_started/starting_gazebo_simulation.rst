@@ -12,6 +12,20 @@ Vehicle-specific nodes should be launched in namespace "vehicle_name", for examp
 Each camera node should be launched in namespace "camera_name", which can be: :code:`vertical_camera` for HippoCampus, and :code:`vertical_camera` and :code:`front_camera` for the BlueROV's two cameras.
 
 
+Parameter Setup
+===============
+
+Before continuing on the *hydrobatic-way-of-live*, we need to set some parameters first.
+
+In QGroundControl:
+
+We set *Offboard* as a flight mode in which remote control (RC) loss is ignored. Thus, *fail-safe* actions are not triggered.
+
+.. code-block:: sh
+
+    COM_RCL_EXCEPT=4
+
+
 
 Spawning HippoCampus
 ====================
@@ -28,7 +42,7 @@ Path Following example
 
 As an example, we will let the HippoCampus follow an Infinity-shaped path in Gazebo.
 
-Here is the launch file code :file:`path_following_example.launch` explained: 
+Here is the launch file code :file:`top_path_following_example.launch` explained: 
 
 .. todo::
    
@@ -40,7 +54,7 @@ Here is the launch file code :file:`path_following_example.launch` explained:
 
 .. code-block:: sh
 
-   roslaunch hippocampus_sim path_following_example.launch
+   roslaunch hippocampus_sim top_path_following_example.launch
 
 Offboard Mode
 =============
