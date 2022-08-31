@@ -13,6 +13,13 @@ The offset to the tank's coordinate system is measured relative to the tank's wa
 
 According to the `localization package <https://github.com/HippoCampusRobotics/mu_auv_localization/blob/main/scripts/generate_tag_poses_yaml>`__ the offset in x-direction is 0.144m and 0.342m in y-direction. 
 
+Motion Controllers
+==================
+
+The x- and z-axis are driven by Motion Controllers V1.0. The manual of these controllers is hard to come by these days. So :download:`here </res/manuals/mcdc2805.pdf>` is the PDF. The y-axis has a newer conroller. Probably V2.5. Faulhaber has an Application Note `AN103 <https://www.faulhaber.com/fileadmin/Import/Media/AN103_EN.pdf>`__ describing the differences between the older and the newer controller types. Can't say it is of much use (Lennart)
+
+.. note:: If you use the Motion Manager, keep in mind that you need Motion Manager 5 for the older MCs instead of version 6. 
+
 Motors
 ======
 
