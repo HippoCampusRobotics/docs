@@ -19,7 +19,7 @@ Afro ESC
 
       git clone https://github.com/hippocampusrobotics/tgy.git
 
-#. Build the firmware
+#. Build the firmware. This depends on the interface used. The classic way to go is PWM. But if you want to control the ESCs directly from the Raspberry Pi, you might want to use I2C.
 
    .. tabs::
 
