@@ -26,11 +26,11 @@ jobs:
       - name: Commit documentation changes
         run: |
           git clone https://github.com/HippoCampusRobotics/docs.git --branch gh-pages --single-branch gh-pages
-          cp -r _build/html/* gh-pages/
+          rsync -avh --delete _build/html/ gh-pages/
           cd gh-pages
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add .
+          git add -A
           git commit -m "Update documentation" -a || true
       - name: Push changes
         uses: ad-m/github-push-action@master
