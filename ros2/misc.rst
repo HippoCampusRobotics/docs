@@ -28,6 +28,8 @@ Auto-Complete
    eval "$(register-python-argcomplete3 ros2)"
    eval "$(register-python-argcomplete3 colcon)"
 
+.. attention:: Auto-completing topic names seems to work only after an execution of `ros2 topic list`. Before the auto-complete gets stuck and has to be canceled by :kbd:`Ctrl` + :kbd:`C`.
+
 .. note:: Sourcing :file:`install/setup.zsh` might reset this. Better source :file:`install/local_setup.zsh`.
 
 Verifying XACRO
