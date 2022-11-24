@@ -6,11 +6,20 @@ Building the Firmware
 
 If PX4 is used in combination with the onboard computer, make sure the firmware running on the FCU was built with RTPS support.
 
-A tested PX4-Version is the commit :code:`45b390b0bf`. For this version the RTPS support is *not* enabled by default for the :code:`fmu-v4` target. One has to modify the file :file:`boards/px4/fmu-v4/default.px4board` and add the line
+A tested PX4-Version is the commit :code:`45b390b0bf`.
 
 .. code-block:: sh
 
-   CONFIG_MODULES_MICRORTPS_BRIDGE=y
+   git clone https://github.com/PX4/PX4-Autopilot.git --recursive \
+   && cd PX4-Autopilot \
+   && git checkout 45b390b0bf \
+   && git submodule update --init --recursive
+
+For this version the RTPS support is *not* enabled by default for the :code:`fmu-v4` target. One has to modify the file :file:`boards/px4/fmu-v4/default.px4board` and add the line
+
+.. code-block:: sh
+
+   CONFIG_MODULES_MICRODDS_CLIENT=y
 
 
 Also modify the autostart line in :file:`src/modules/microdds_client/module.yaml` if you want to have a namespace prepended to the topic names
@@ -18,6 +27,12 @@ Also modify the autostart line in :file:`src/modules/microdds_client/module.yaml
 .. code-block:: sh
 
    set XRCE_DDS_ARGS "-t serial -d ${SERIAL_DEV} -b p:${BAUD_PARAM} -n uuv00"
+
+Build the firmware
+
+.. code-block:: sh
+
+   make px4_fmu-v4
 
 To manually start the :code:`microdds_client`, go to the nsh terminal and run
 
