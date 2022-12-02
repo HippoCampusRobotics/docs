@@ -44,6 +44,8 @@ To manually start the :code:`microdds_client`, go to the nsh terminal and run
 Configure the Firmware
 ======================
 
+.. attention:: Make sure you disable the GPS completely by changing its control mode parameter. Otherwise the the vision will be taken as odometry data instead of absolute positions.
+
 Set :code:`XRCE_DDS_0_CFG` to :code:`TELEM2`, i.e. :code:`102`. If you want to, you can change the baudrate of TELEM2 at :code:`SER_TEL2_BAUD`. But the default of 921600 should be just fine.
 
 Install px4_msgs
@@ -89,27 +91,26 @@ If the setup is working, :code:`ros2 topic list` should show the FMUs in and out
 
 .. code-block:: sh
 
-   /fmu/in/obstacle_distance
-   /fmu/in/offboard_control_mode
-   /fmu/in/onboard_computer_status
-   /fmu/in/sensor_optical_flow
-   /fmu/in/telemetry_status
-   /fmu/in/trajectory_setpoint
-   /fmu/in/vehicle_attitude_setpoint
-   /fmu/in/vehicle_command
-   /fmu/in/vehicle_mocap_odometry
-   /fmu/in/vehicle_rates_setpoint
-   /fmu/in/vehicle_trajectory_bezier
-   /fmu/in/vehicle_trajectory_waypoint
-   /fmu/in/vehicle_visual_odometry
-   /fmu/out/failsafe_flags
-   /fmu/out/sensor_combined
-   /fmu/out/timesync_status
-   /fmu/out/vehicle_attitude
-   /fmu/out/vehicle_control_mode
-   /fmu/out/vehicle_local_position
-   /fmu/out/vehicle_odometry
-   /fmu/out/vehicle_status
-   /parameter_events
-   /rosout
+   /uuv00/fmu/in/obstacle_distance [px4_msgs/msg/ObstacleDistance]
+   /uuv00/fmu/in/offboard_control_mode [px4_msgs/msg/OffboardControlMode]
+   /uuv00/fmu/in/onboard_computer_status [px4_msgs/msg/OnboardComputerStatus]
+   /uuv00/fmu/in/sensor_optical_flow [px4_msgs/msg/SensorOpticalFlow]
+   /uuv00/fmu/in/telemetry_status [px4_msgs/msg/TelemetryStatus]
+   /uuv00/fmu/in/trajectory_setpoint [px4_msgs/msg/TrajectorySetpoint]
+   /uuv00/fmu/in/vehicle_attitude_setpoint [px4_msgs/msg/VehicleAttitudeSetpoint]
+   /uuv00/fmu/in/vehicle_command [px4_msgs/msg/VehicleCommand]
+   /uuv00/fmu/in/vehicle_mocap_odometry [px4_msgs/msg/VehicleOdometry]
+   /uuv00/fmu/in/vehicle_rates_setpoint [px4_msgs/msg/VehicleRatesSetpoint]
+   /uuv00/fmu/in/vehicle_trajectory_bezier [px4_msgs/msg/VehicleTrajectoryBezier]
+   /uuv00/fmu/in/vehicle_trajectory_waypoint [px4_msgs/msg/VehicleTrajectoryWaypoint]
+   /uuv00/fmu/in/vehicle_visual_odometry [px4_msgs/msg/VehicleOdometry]
+   /uuv00/fmu/out/failsafe_flags [px4_msgs/msg/FailsafeFlags]
+   /uuv00/fmu/out/sensor_combined [px4_msgs/msg/SensorCombined]
+   /uuv00/fmu/out/timesync_status [px4_msgs/msg/TimesyncStatus]
+   /uuv00/fmu/out/vehicle_attitude [px4_msgs/msg/VehicleAttitude]
+   /uuv00/fmu/out/vehicle_control_mode [px4_msgs/msg/VehicleControlMode]
+   /uuv00/fmu/out/vehicle_local_position [px4_msgs/msg/VehicleLocalPosition]
+   /uuv00/fmu/out/vehicle_odometry [px4_msgs/msg/VehicleOdometry]
+   /uuv00/fmu/out/vehicle_status [px4_msgs/msg/VehicleStatus]
+
 
