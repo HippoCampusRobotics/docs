@@ -51,7 +51,10 @@ Set :code:`XRCE_DDS_0_CFG` to :code:`TELEM2`, i.e. :code:`102`. If you want to, 
 Install px4_msgs
 ================
 
-A commit that is tested to be working with the above mentioned version of PX4 is :code:`cfed39a`.
+.. hint:: Building **and** rebuilding :file:`px4_msgs` takes very long, especially on the Raspberry Pi. Therefore, it is recommended to have an underlying workspace for packages that we are not modifying regularly.
+
+
+A commit that is tested to be working with the above-mentioned version of PX4 is :code:`8a7f3da`.
 
 Clone it into the ROS workspace
 
