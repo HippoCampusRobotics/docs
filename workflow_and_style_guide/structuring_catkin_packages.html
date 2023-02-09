@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <link rel="icon" href="../_static/hippo.svg" type="image/svg+xml">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Structuring Catkin Packages &mdash; HippoCampusDocs  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Using Formatters" href="using_formatters.html" />
+    <link rel="prev" title="Workflow and Style Guide" href="../workflow_and_style_guide.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            HippoCampusDocs
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../raspberry_pi_4b_setup.html">Raspberry Pi 4B Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../raspberry_pi_4b_experimental.html">Raspberry Pi 4B Experimental</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hippocampus_hardware.html">HippoCampus Hardware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bluerov.html">BlueROV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gantry.html">Gantry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../underwater_camera.html">Underwater Camera</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../workflow_and_style_guide.html">Workflow and Style Guide</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Structuring Catkin Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#python-packages">Python Packages</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="using_formatters.html">Using Formatters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="writing_launch_files.html">Writing Launch Files</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">HippoCampusDocs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+           <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../workflow_and_style_guide.html">Workflow and Style Guide</a></li>
+      <li class="breadcrumb-item active">Structuring Catkin Packages</li>
+    
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/HippoCampusRobotics/docs/blob/master/workflow_and_style_guide/structuring_catkin_packages.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+    <li class="wy-breadcrumbs-aside"><a href="https://hippocampusrobotics.github.io/" class="fa fa-github"> Project Page </a></li>
+
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="structuring-catkin-packages">
+<h1>Structuring Catkin Packages<a class="headerlink" href="#structuring-catkin-packages" title="Permalink to this heading"></a></h1>
+<section id="python-packages">
+<h2>Python Packages<a class="headerlink" href="#python-packages" title="Permalink to this heading"></a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In the following the place holder <code class="file docutils literal notranslate"><span class="pre">your_package</span></code> is used. For your own package replace it with the name of your Catkin package.</p>
+</div>
+<p>Most packages will be written in Python. The structure should follow the conventions proposed in <a class="reference external" href="https://www.ros.org/reps/rep-0008.html">REP 8</a>. So the package structure will look like:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>your_package
+├── CMakeLists.txt
+├── README.md
+├── package.xml
+├── setup.py
+├── config
+│   └── a_config_file.yaml
+├── launch
+│   ├── start_a.launch
+│   └── start_b.launch
+├── msg
+│   └── message_file.msg
+├── nodes
+│   ├── cool_node
+│   └── also_quite_okay_node
+├── scripts
+│       └── script_that_is_not_a_node.py
+├── src
+│   └── your_package
+│       ├── __init__.py
+│       ├── module_a.py
+│       └── module_b.py
+└── srv
+    └── servie_file.srv
+</pre></div>
+</div>
+<dl class="simple">
+<dt>config</dt><dd><p>Contains configuration parameters stored in <code class="file docutils literal notranslate"><span class="pre">.yaml</span></code> files.</p>
+</dd>
+<dt>launch</dt><dd><p>Contains your launch files.</p>
+</dd>
+<dt>msg</dt><dd><p>Contains the definitions of your package’s custom messages.</p>
+</dd>
+<dt>nodes</dt><dd><p>Contains executable Python scripts. To be consistent with <code class="code docutils literal notranslate"><span class="pre">C++</span></code> executables omit the <code class="file docutils literal notranslate"><span class="pre">.py</span></code>.</p>
+</dd>
+<dt>src</dt><dd><p>Contains a Python package. This has to have the same name as your Catkin package.</p>
+</dd>
+<dt>srv</dt><dd><p>Contains definitions of your package’s custom services.</p>
+</dd>
+</dl>
+<p>There is no need to have the full directory structure if directories would be empty. So for example if your package does not have any services or messages, just omit the <code class="file docutils literal notranslate"><span class="pre">srv</span></code> or <code class="file docutils literal notranslate"><span class="pre">msg</span></code> directory respectively.</p>
+<p>The Python modules inside <code class="file docutils literal notranslate"><span class="pre">src/your_package</span></code> can be reused by other Python scripts via <code class="code docutils literal notranslate"><span class="pre">import</span> <span class="pre">your_package.module_a</span></code> and are available for all your other Catkin packages aswell.</p>
+<p>If your package has the <code class="file docutils literal notranslate"><span class="pre">src/your_package</span></code> directory make sure, your <code class="file docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> contains the line</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">catkin_python_setup</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>and your package has a <code class="file docutils literal notranslate"><span class="pre">setup.py</span></code> that looks like</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">distutils.core</span> <span class="kn">import</span> <span class="n">setup</span>
+<span class="kn">from</span> <span class="nn">catkin_pkg.python_setup</span> <span class="kn">import</span> <span class="n">generate_distutils_setup</span>
+
+<span class="n">setup_args</span> <span class="o">=</span> <span class="n">generate_distutils_setup</span><span class="p">(</span>
+    <span class="n">packages</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;your_package&quot;</span><span class="p">],</span>
+    <span class="n">package_dir</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;&quot;</span><span class="p">:</span> <span class="s2">&quot;src&quot;</span><span class="p">},</span>
+<span class="p">)</span>
+
+<span class="n">setup</span><span class="p">(</span><span class="o">**</span><span class="n">setup_args</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Replace <code class="code docutils literal notranslate"><span class="pre">your_package</span></code> in <code class="code docutils literal notranslate"><span class="pre">packages=[&quot;your_package&quot;]</span></code> with your actual package name.</p>
+</div>
+<dl class="simple">
+<dt>Also keep the hint in <a class="reference external" href="https://www.ros.org/reps/rep-0008.html">REP 8</a> in mind:</dt><dd><p>NOTE: we strive to keep ROS-specific code separate from reusable, generic code. The separation of ‘node files’ and files you place in src/packagename helps encourage this.</p>
+</dd>
+</dl>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../workflow_and_style_guide.html" class="btn btn-neutral float-left" title="Workflow and Style Guide" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="using_formatters.html" class="btn btn-neutral float-right" title="Using Formatters" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020, Thies Lennart Alff, Nathalie Bauschmann.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

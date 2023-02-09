@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <link rel="icon" href="../_static/hippo.svg" type="image/svg+xml">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quality-of-Life Features &mdash; HippoCampusDocs  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="ROS Installation" href="ros_installation.html" />
+    <link rel="prev" title="Ethernet Configuration" href="ethernet_configuration.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            HippoCampusDocs
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting Started</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../raspberry_pi_4b_setup.html">Raspberry Pi 4B Setup</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="pre_boot_configuration.html">Pre-Boot Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="system_configuration.html">System Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ethernet_configuration.html">Ethernet Configuration</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Quality-of-Life Features</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#the-fast-way">The Fast Way</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-good-way">The Good Way</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#zsh">zsh</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#byobu">Byobu</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#vim">VIM</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ros_installation.html">ROS Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ros_network_setup.html">ROS Network Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="update_catkin_ws.html">Update Catkin Workspace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install_ros_packages.html">Install ROS Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install_mavros.html">Install MAVROS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install_our_ros_packages.html">Install Our ROS Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install_camera_library.html">Install MIPI Camera Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="uart_configuration.html">UART Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb_configuration.html">USB Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pinout.html">Pinout</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../raspberry_pi_4b_experimental.html">Raspberry Pi 4B Experimental</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hippocampus_hardware.html">HippoCampus Hardware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bluerov.html">BlueROV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gantry.html">Gantry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../underwater_camera.html">Underwater Camera</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../workflow_and_style_guide.html">Workflow and Style Guide</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">HippoCampusDocs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+           <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../raspberry_pi_4b_setup.html">Raspberry Pi 4B Setup</a></li>
+      <li class="breadcrumb-item active">Quality-of-Life Features</li>
+    
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/HippoCampusRobotics/docs/blob/master/raspberry_pi_4b_setup/quality_of_life_features.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+    <li class="wy-breadcrumbs-aside"><a href="https://hippocampusrobotics.github.io/" class="fa fa-github"> Project Page </a></li>
+
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="quality-of-life-features">
+<h1>Quality-of-Life Features<a class="headerlink" href="#quality-of-life-features" title="Permalink to this heading"></a></h1>
+<section id="the-fast-way">
+<h2>The Fast Way<a class="headerlink" href="#the-fast-way" title="Permalink to this heading"></a></h2>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>zsh<span class="w"> </span>git<span class="w"> </span>curl<span class="w"> </span>wget<span class="w"> </span>byobu<span class="w"> </span>vim<span class="se">\</span>
+<span class="o">&amp;&amp;</span><span class="w"> </span>sh<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh<span class="k">)</span><span class="s2">&quot;</span>
+</pre></div>
+</div>
+<p>Choose <code class="code docutils literal notranslate"><span class="pre">zsh</span></code> as default by hitting enter.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="c1"># clone repo</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$HOME</span><span class="s2">/.zsh&quot;</span>
+git<span class="w"> </span>clone<span class="w"> </span>https://github.com/sindresorhus/pure.git<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$HOME</span><span class="s2">/.zsh/pure&quot;</span>
+
+<span class="c1"># add path to ~/.zshrc, initialize prompt and choose pure (at the top of the file!)</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;fpath+=$HOME/.zsh/pure \nautoload -U promptinit; promptinit \nprompt pure&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>cat<span class="w"> </span>-<span class="w"> </span>~/.zshrc<span class="w"> </span>&gt;<span class="w"> </span>temp<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>mv<span class="w"> </span>temp<span class="w"> </span>~/.zshrc
+
+<span class="c1"># delete default theme entry</span>
+sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;s/ZSH_THEME=&quot;robbyrussell&quot;/ZSH_THEME=&quot;&quot;/&#39;</span><span class="w"> </span>~/.zshrc
+<span class="c1"># clone repo</span>
+git<span class="w"> </span>clone<span class="w"> </span>https://github.com/zsh-users/zsh-autosuggestions<span class="w"> </span><span class="si">${</span><span class="nv">ZSH_CUSTOM</span><span class="k">:-</span><span class="p">~/.oh-my-zsh/custom</span><span class="si">}</span>/plugins/zsh-autosuggestions
+
+<span class="c1"># add plugin to list of plugins</span>
+<span class="c1"># assuming unchanged list containing only git, otherwise do this manually</span>
+sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;s/plugins=(git)/plugins=(git zsh-autosuggestions)/&#39;</span><span class="w"> </span>~/.zshrc
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;zstyle &#39;:prompt:pure:path&#39; color 075\nzstyle &#39;:prompt:pure:prompt:success&#39; color 214\nzstyle &#39;:prompt:pure:user&#39; color 119\nzstyle &#39;:prompt:pure:host&#39; color 119\nZSH_AUTOSUGGEST_HIGHLIGHT_STYLE=&#39;fg=161&#39;&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.zshrc
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;zstyle &#39;:prompt:pure:path&#39; color 075\nzstyle &#39;:prompt:pure:prompt:success&#39; color 214\nzstyle &#39;:prompt:pure:user&#39; color 119\nzstyle &#39;:prompt:pure:host&#39; color 119\nZSH_AUTOSUGGEST_HIGHLIGHT_STYLE=&#39;fg=161&#39;&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.zshrc
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;export TERM=xterm-256color&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.zshrc
+<span class="nb">source</span><span class="w"> </span>~/.zshrc
+byobu-enable
+</pre></div>
+</div>
+</section>
+<section id="the-good-way">
+<h2>The Good Way<a class="headerlink" href="#the-good-way" title="Permalink to this heading"></a></h2>
+<section id="zsh">
+<h3>zsh<a class="headerlink" href="#zsh" title="Permalink to this heading"></a></h3>
+<p>We prefer using the Z shell (zsh). To install:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>zsh<span class="w"> </span>git<span class="w"> </span>curl
+</pre></div>
+</div>
+<p>Install <a class="reference external" href="https://ohmyz.sh/">oh-my-zsh</a>:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>sh<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh<span class="k">)</span><span class="s2">&quot;</span>
+</pre></div>
+</div>
+<p>Install the <a class="reference external" href="https://github.com/sindresorhus/pure">Pure</a> prompt:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="c1"># clone repo</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$HOME</span><span class="s2">/.zsh&quot;</span>
+git<span class="w"> </span>clone<span class="w"> </span>https://github.com/sindresorhus/pure.git<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$HOME</span><span class="s2">/.zsh/pure&quot;</span>
+
+<span class="c1"># add path to ~/.zshrc, initialize prompt and choose pure (at the top of the file!)</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;fpath+=$HOME/.zsh/pure \nautoload -U promptinit; promptinit \nprompt pure&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>cat<span class="w"> </span>-<span class="w"> </span>~/.zshrc<span class="w"> </span>&gt;<span class="w"> </span>temp<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>mv<span class="w"> </span>temp<span class="w"> </span>~/.zshrc
+
+<span class="c1"># delete default theme entry</span>
+sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;s/ZSH_THEME=&quot;robbyrussell&quot;/ZSH_THEME=&quot;&quot;/&#39;</span><span class="w"> </span>~/.zshrc
+</pre></div>
+</div>
+<p>Install <a class="reference external" href="https://github.com/zsh-users/zsh-autosuggestions">zsh-autosuggestions</a>:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="c1"># clone repo</span>
+git<span class="w"> </span>clone<span class="w"> </span>https://github.com/zsh-users/zsh-autosuggestions<span class="w"> </span><span class="si">${</span><span class="nv">ZSH_CUSTOM</span><span class="k">:-</span><span class="p">~/.oh-my-zsh/custom</span><span class="si">}</span>/plugins/zsh-autosuggestions
+
+<span class="c1"># add plugin to list of plugins</span>
+<span class="c1"># assuming unchanged list containing only git, otherwise do this manually</span>
+sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;s/plugins=(git)/plugins=(git zsh-autosuggestions)/&#39;</span><span class="w"> </span>~/.zshrc
+</pre></div>
+</div>
+<p>Adjust colours of pure prompt and autosuggestions:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;zstyle &#39;:prompt:pure:path&#39; color 075\nzstyle &#39;:prompt:pure:prompt:success&#39; color 214\nzstyle &#39;:prompt:pure:user&#39; color 119\nzstyle &#39;:prompt:pure:host&#39; color 119\nZSH_AUTOSUGGEST_HIGHLIGHT_STYLE=&#39;fg=161&#39;&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.zshrc
+</pre></div>
+</div>
+<p>See the Pure <a class="reference external" href="https://github.com/sindresorhus/pure#zstyle-options">Zstyle options</a> and the <a class="reference external" href="https://upload.wikimedia.org/wikipedia/commons/1/15/Xterm_256color_chart.svg">Xterm265 colour chart</a> for other settings and colours.</p>
+<p>To avoid not seeing the nice colors we just selected:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;export TERM=xterm-256color&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.zshrc
+</pre></div>
+</div>
+<p>To apply changes:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span><span class="w"> </span>~/.zshrc
+</pre></div>
+</div>
+</section>
+<section id="byobu">
+<h3>Byobu<a class="headerlink" href="#byobu" title="Permalink to this heading"></a></h3>
+<p>To install <a class="reference external" href="https://www.byobu.org/">Byobu</a>, a terminal multiplexer:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>byobu
+</pre></div>
+</div>
+<p>Enable Byobu:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>byobu-enable
+</pre></div>
+</div>
+<section id="useful-shortcuts">
+<h4>Useful Shortcuts<a class="headerlink" href="#useful-shortcuts" title="Permalink to this heading"></a></h4>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 75%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Shortcut</p></th>
+<th class="head"><p>Function</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">F2</kbd></p></td>
+<td><p>Open new terminal window</p></td>
+</tr>
+<tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate">F3</kbd></p></td>
+<td><p>Move to previous window</p></td>
+</tr>
+<tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">F4</kbd></p></td>
+<td><p>Move to next window</p></td>
+</tr>
+<tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate">F6</kbd></p></td>
+<td><p>Detach from this session</p></td>
+</tr>
+<tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">Ctrl</kbd> + <kbd class="kbd docutils literal notranslate">A</kbd> and then <kbd class="kbd docutils literal notranslate">Ctrl</kbd> + <kbd class="kbd docutils literal notranslate">D</kbd></p></td>
+<td><p>Also Detach from this session.</p>
+<p>The first time you use this, you will be asked whether you</p>
+<p>want to use <em>screen</em> hotkeys or <em>emacs</em> hotkeys. Choose screen.</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate">Alt</kbd> + <kbd class="kbd docutils literal notranslate">F12</kbd></p></td>
+<td><p>Turn mouse support for scrolling on/off</p></td>
+</tr>
+</tbody>
+</table>
+<p>Here’s a more elaborate <a class="reference external" href="https://gist.github.com/inhumantsar/bf86ff1961cccdf8be06">cheat sheet</a>.</p>
+</section>
+</section>
+<section id="vim">
+<h3>VIM<a class="headerlink" href="#vim" title="Permalink to this heading"></a></h3>
+<p>To install vim:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>vim
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="ethernet_configuration.html" class="btn btn-neutral float-left" title="Ethernet Configuration" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="ros_installation.html" class="btn btn-neutral float-right" title="ROS Installation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020, Thies Lennart Alff, Nathalie Bauschmann.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

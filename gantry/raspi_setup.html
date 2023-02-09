@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <link rel="icon" href="../_static/hippo.svg" type="image/svg+xml">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Raspberry Pi Setup &mdash; HippoCampusDocs  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Underwater Camera" href="../underwater_camera.html" />
+    <link rel="prev" title="General Information" href="general_information.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            HippoCampusDocs
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../raspberry_pi_4b_setup.html">Raspberry Pi 4B Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../raspberry_pi_4b_experimental.html">Raspberry Pi 4B Experimental</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hippocampus_hardware.html">HippoCampus Hardware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bluerov.html">BlueROV</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../gantry.html">Gantry</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="general_information.html">General Information</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Raspberry Pi Setup</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#requirements">Requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#enable-uart">Enable UART</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#udev-rules">UDEV Rules</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../underwater_camera.html">Underwater Camera</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../workflow_and_style_guide.html">Workflow and Style Guide</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">HippoCampusDocs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+           <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../gantry.html">Gantry</a></li>
+      <li class="breadcrumb-item active">Raspberry Pi Setup</li>
+    
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/HippoCampusRobotics/docs/blob/master/gantry/raspi_setup.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+    <li class="wy-breadcrumbs-aside"><a href="https://hippocampusrobotics.github.io/" class="fa fa-github"> Project Page </a></li>
+
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="raspberry-pi-setup">
+<h1>Raspberry Pi Setup<a class="headerlink" href="#raspberry-pi-setup" title="Permalink to this heading"></a></h1>
+<p><em>Section author: Lennart Alff &lt;<a class="reference external" href="mailto:thies&#46;lennart&#46;alff&#37;&#52;&#48;tuhh&#46;de">thies<span>&#46;</span>lennart<span>&#46;</span>alff<span>&#64;</span>tuhh<span>&#46;</span>de</a>&gt;</em></p>
+<section id="requirements">
+<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>Raspberry Pi 4 (previous versions do not have enough UART devices!)</p></li>
+<li><p>Ubuntu 18.04 Server image installed on Raspberry</p></li>
+<li><p>A ROS installation (no GUI dependencies, so the <code class="code docutils literal notranslate"><span class="pre">ros-melodic-ros-base</span></code> would suffice, see the <a class="reference internal" href="../getting_started/installing_ros.html#installing-ros"><span class="std std-ref">Installing ROS</span></a> instructions).</p></li>
+</ul>
+</section>
+<section id="enable-uart">
+<h2>Enable UART<a class="headerlink" href="#enable-uart" title="Permalink to this heading"></a></h2>
+<p>Modify the <code class="file docutils literal notranslate"><span class="pre">usercfg.txt</span></code>, either pre-boot directly on the <code class="file docutils literal notranslate"><span class="pre">/boot</span></code> partition or from the running Raspberry Pi in the <code class="file docutils literal notranslate"><span class="pre">/boot/firmware</span></code> directory,  and add the following lines:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nv">dtoverlay</span><span class="o">=</span>uart3
+<span class="nv">dtoverlay</span><span class="o">=</span>uart4
+<span class="nv">dtoverlay</span><span class="o">=</span>uart5
+</pre></div>
+</div>
+</section>
+<section id="udev-rules">
+<h2>UDEV Rules<a class="headerlink" href="#udev-rules" title="Permalink to this heading"></a></h2>
+<p>The Raspberry Pi uses its UARTs to communicate with the Faulhaber motors. The name of the UART ports depend on the number of activated UART devices on the dtoverlay. So it is hard to identify which of the <code class="file docutils literal notranslate"><span class="pre">/dev/ttyAMAn</span></code> devices corresponds to which physical UART device.</p>
+<p>To simplify things you can add UDEV rules.</p>
+<p>Executing</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>udevadm<span class="w"> </span>info<span class="w"> </span>--name<span class="o">=</span>/dev/ttyAMA2<span class="w"> </span>--attribute-walk
+</pre></div>
+</div>
+<p>produces the following output:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span>looking<span class="w"> </span>at<span class="w"> </span>device<span class="w"> </span><span class="s1">&#39;/devices/platform/soc/fe201800.serial/tty/ttyAMA2&#39;</span>:
+<span class="linenos"> 2</span><span class="w">  </span><span class="nv">KERNEL</span><span class="o">==</span><span class="s2">&quot;ttyAMA2&quot;</span>
+<span class="linenos"> 3</span><span class="w">  </span><span class="nv">SUBSYSTEM</span><span class="o">==</span><span class="s2">&quot;tty&quot;</span>
+<span class="linenos"> 4</span><span class="w">  </span><span class="nv">DRIVER</span><span class="o">==</span><span class="s2">&quot;&quot;</span>
+<span class="linenos"> 5</span>
+<span class="linenos"> 6</span>looking<span class="w"> </span>at<span class="w"> </span>parent<span class="w"> </span>device<span class="w"> </span><span class="s1">&#39;/devices/ platform/soc/fe201800.serial&#39;</span>:
+<span class="linenos"> 7</span><span class="w">  </span><span class="nv">KERNELS</span><span class="o">==</span><span class="s2">&quot;fe201800.serial&quot;</span>
+<span class="linenos"> 8</span><span class="w">  </span><span class="nv">SUBSYSTEMS</span><span class="o">==</span><span class="s2">&quot;amba&quot;</span>
+<span class="linenos"> 9</span><span class="w">  </span><span class="nv">DRIVERS</span><span class="o">==</span><span class="s2">&quot;uart-pl011&quot;</span>
+<span class="linenos">10</span><span class="w">  </span>ATTRS<span class="o">{</span>driver_override<span class="o">}==</span><span class="s2">&quot;(null)&quot;</span>
+<span class="linenos">11</span><span class="w">  </span>ATTRS<span class="o">{</span>id<span class="o">}==</span><span class="s2">&quot;00241011&quot;</span>
+<span class="linenos">12</span><span class="w">  </span>ATTRS<span class="o">{</span>irq0<span class="o">}==</span><span class="s2">&quot;14&quot;</span>
+<span class="linenos">13</span>
+<span class="linenos">14</span>looking<span class="w"> </span>at<span class="w"> </span>parent<span class="w"> </span>device<span class="w"> </span><span class="s1">&#39;/devices/ platform/soc&#39;</span>:
+<span class="linenos">15</span><span class="w">  </span><span class="nv">KERNELS</span><span class="o">==</span><span class="s2">&quot;soc&quot;</span>
+<span class="linenos">16</span><span class="w">  </span><span class="nv">SUBSYSTEMS</span><span class="o">==</span><span class="s2">&quot;platform&quot;</span>
+<span class="linenos">17</span><span class="w">  </span><span class="nv">DRIVERS</span><span class="o">==</span><span class="s2">&quot;&quot;</span>
+<span class="linenos">18</span><span class="w">  </span>ATTRS<span class="o">{</span>driver_override<span class="o">}==</span><span class="s2">&quot;(null)&quot;</span>
+<span class="linenos">19</span>
+<span class="linenos">20</span>looking<span class="w"> </span>at<span class="w"> </span>parent<span class="w"> </span>device<span class="w"> </span><span class="s1">&#39;/devices/ platform&#39;</span>:
+<span class="linenos">21</span><span class="w">  </span><span class="nv">KERNELS</span><span class="o">==</span><span class="s2">&quot;platform&quot;</span>
+<span class="linenos">22</span><span class="w">  </span><span class="nv">SUBSYSTEMS</span><span class="o">==</span><span class="s2">&quot;&quot;</span>
+<span class="linenos">23</span><span class="w">  </span><span class="nv">DRIVERS</span><span class="o">==</span><span class="s2">&quot;&quot;</span>
+</pre></div>
+</div>
+<p>The identifier of the physical interface is defined by line 7 <code class="code docutils literal notranslate"><span class="pre">KERNELS==&quot;fe201800.serial&quot;</span></code>.</p>
+<p>Since the value is defined in the parent device, you can not apply the UDEV rule to the <code class="code docutils literal notranslate"><span class="pre">/dev/ttyAMAn</span></code> device, but you have to use an environment variable.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In case the string for <code class="code docutils literal notranslate"><span class="pre">KERNELS</span></code> changes in the future, please change the value for the following UDEV rule in the following part!</p>
+</div>
+<ul>
+<li><dl>
+<dt>Motor X-Axis</dt><dd><p>UART3</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>Tx/Rx<span class="w"> </span>&lt;-&gt;<span class="w"> </span>GPIO4/GPIO5<span class="w"> </span><span class="o">(</span><span class="nv">KERNELS</span><span class="o">==</span><span class="s2">&quot;fe201600.serial&quot;</span><span class="o">)</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>Motor Y-Axis</dt><dd><p>UART4</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>Tx/Rx<span class="w"> </span>&lt;-&gt;<span class="w"> </span>GPIO8/GPIO9<span class="w"> </span><span class="o">(</span><span class="nv">KERNELS</span><span class="o">==</span><span class="s2">&quot;fe201800.serial&quot;</span><span class="o">)</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>Motor Z-Axis</dt><dd><p>UART5</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>Tx/Rx<span class="w"> </span>&lt;-&gt;<span class="w"> </span>GPIO12/GPIO13<span class="w"> </span><span class="o">(</span><span class="nv">KERNELS</span><span class="o">==</span><span class="s2">&quot;fe201a00.serial&quot;</span><span class="o">)</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+</ul>
+<p>The resulting UDEV rule in <code class="file docutils literal notranslate"><span class="pre">/etc/udev/rules.d/50-serial.rules</span></code> is:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nv">KERNEL</span><span class="o">==</span><span class="s2">&quot;ttyAMA[0-9]*&quot;</span>,<span class="w"> </span><span class="nv">GROUP</span><span class="o">=</span><span class="s2">&quot;dialout&quot;</span>,<span class="w"> </span>ENV<span class="o">{</span>MOTOR_SERIAL<span class="o">}=</span><span class="s2">&quot;motor_serial&quot;</span>
+<span class="linenos">2</span>
+<span class="linenos">3</span>ENV<span class="o">{</span>MOTOR_SERIAL<span class="o">}==</span><span class="s2">&quot;motor_serial&quot;</span>,<span class="w">  </span><span class="nv">SUBSYSTEM</span><span class="o">==</span><span class="s2">&quot;tty&quot;</span>,<span class="w"> </span><span class="nv">KERNELS</span><span class="o">==</span><span class="s2">&quot;fe201600.serial&quot;</span>,<span class="w"> </span><span class="nv">SYMLINK</span><span class="o">+=</span><span class="s2">&quot;motor_x&quot;</span>
+<span class="linenos">4</span>ENV<span class="o">{</span>MOTOR_SERIAL<span class="o">}==</span><span class="s2">&quot;motor_serial&quot;</span>,<span class="w">  </span><span class="nv">SUBSYSTEM</span><span class="o">==</span><span class="s2">&quot;tty&quot;</span>,<span class="w"> </span><span class="nv">KERNELS</span><span class="o">==</span><span class="s2">&quot;fe201800.serial&quot;</span>,<span class="w"> </span><span class="nv">SYMLINK</span><span class="o">+=</span><span class="s2">&quot;motor_y&quot;</span>
+<span class="linenos">5</span>ENV<span class="o">{</span>MOTOR_SERIAL<span class="o">}==</span><span class="s2">&quot;motor_serial&quot;</span>,<span class="w">  </span><span class="nv">SUBSYSTEM</span><span class="o">==</span><span class="s2">&quot;tty&quot;</span>,<span class="w"> </span><span class="nv">KERNELS</span><span class="o">==</span><span class="s2">&quot;fe201a00.serial&quot;</span>,<span class="w"> </span><span class="nv">SYMLINK</span><span class="o">+=</span><span class="s2">&quot;motor_z&quot;</span>
+</pre></div>
+</div>
+<p>You can apply these changes by</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>udevadm<span class="w"> </span>control<span class="w"> </span>--reload-rules<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>sudo<span class="w"> </span>udevadm<span class="w"> </span>trigger
+</pre></div>
+</div>
+<p>To check, that the rule is applied correctly, you can execute</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>ls<span class="w"> </span>/dev/motor*<span class="w"> </span>-l
+</pre></div>
+</div>
+<p>The output should show symbolic links for the three motor axes.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>lrwxrwxrwx<span class="w"> </span><span class="m">1</span><span class="w"> </span>root<span class="w"> </span>root<span class="w"> </span><span class="m">7</span><span class="w"> </span>Aug<span class="w">  </span><span class="m">7</span><span class="w"> </span><span class="m">01</span>:00<span class="w"> </span>/dev/motor_x<span class="w"> </span>-&gt;<span class="w"> </span>ttyAMA2
+lrwxrwxrwx<span class="w"> </span><span class="m">1</span><span class="w"> </span>root<span class="w"> </span>root<span class="w"> </span><span class="m">7</span><span class="w"> </span>Aug<span class="w">  </span><span class="m">7</span><span class="w"> </span><span class="m">01</span>:00<span class="w"> </span>/dev/motor_y<span class="w"> </span>-&gt;<span class="w"> </span>ttyAMA3
+lrwxrwxrwx<span class="w"> </span><span class="m">1</span><span class="w"> </span>root<span class="w"> </span>root<span class="w"> </span><span class="m">7</span><span class="w"> </span>Aug<span class="w">  </span><span class="m">7</span><span class="w"> </span><span class="m">01</span>:00<span class="w"> </span>/dev/motor_z<span class="w"> </span>-&gt;<span class="w"> </span>ttyAMA4
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <code class="file docutils literal notranslate"><span class="pre">ttyAMA</span></code> numbers might differ.</p>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="general_information.html" class="btn btn-neutral float-left" title="General Information" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../underwater_camera.html" class="btn btn-neutral float-right" title="Underwater Camera" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020, Thies Lennart Alff, Nathalie Bauschmann.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
