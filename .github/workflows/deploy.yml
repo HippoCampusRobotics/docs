@@ -7,15 +7,19 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
+      - name: Set up Python 3.10
+        uses: actions/setup-python@main
+        with:
+          python-version: '3.10'
       - name: Checkout
-        uses: actions/checkout@master
+        uses: actions/checkout@main
         with:
           submodules: true
 
       - name: Build
-        uses: ammaraskar/sphinx-action@master
-        with:
-          docs-folder: "./"
+        run: |
+          pip install -r requirements.txt
+          make clean && make html
       
       - name: Upload Artifacts
         uses: actions/upload-artifact@v1
