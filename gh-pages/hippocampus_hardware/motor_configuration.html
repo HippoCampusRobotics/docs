@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <link rel="icon" href="../_static/hippo.svg" type="image/svg+xml">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Motor Configuration &mdash; HippoCampusDocs  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="FCU Firmware" href="fcu_firmware.html" />
+    <link rel="prev" title="Afro ESC" href="afro_esc.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            HippoCampusDocs
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../raspberry_pi_4b_setup.html">Raspberry Pi 4B Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../raspberry_pi_4b_experimental.html">Raspberry Pi 4B Experimental</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../hippocampus_hardware.html">HippoCampus Hardware</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="afro_esc.html">Afro ESC</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Motor Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fcu_firmware.html">FCU Firmware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fcu_firmware.html#exiting-bootloader">Exiting Bootloader</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../bluerov.html">BlueROV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gantry.html">Gantry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../underwater_camera.html">Underwater Camera</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../workflow_and_style_guide.html">Workflow and Style Guide</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">HippoCampusDocs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+           <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../hippocampus_hardware.html">HippoCampus Hardware</a></li>
+      <li class="breadcrumb-item active">Motor Configuration</li>
+    
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/HippoCampusRobotics/docs/blob/master/hippocampus_hardware/motor_configuration.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+    <li class="wy-breadcrumbs-aside"><a href="https://hippocampusrobotics.github.io/" class="fa fa-github"> Project Page </a></li>
+
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="motor-configuration">
+<h1>Motor Configuration<a class="headerlink" href="#motor-configuration" title="Permalink to this heading"></a></h1>
+<p>The following image depicts the thruster configuration. The numbers correspond to the FCU’s PWM outputs. Make sure the propellers are mounted correctly since there are two clockwise and two counterclockwise propellers.</p>
+<figure class="align-default" id="id1">
+<img alt="../_images/thrusters.png" src="../_images/thrusters.png" />
+<figcaption>
+<p><span class="caption-text">Motor and propeller configuration.</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>To avoid confusion, the order of the three motor/ESC wires should be black, red, yellow from front to rear. If the ESC or motor has other colors for its wires make sure the motor turns in positive direction (right hand rule with axis parallel to the vehicle’s x-axis 😉) for positive setpoints.</p>
+<p>To test this you can use the <code class="code docutils literal notranslate"><span class="pre">motor_test</span></code> command in the FCU’s shell (you can access the shell via the debug port or via QGroundControl’s MAVLink Console). For details see the <a class="reference external" href="https://dev.px4.io/master/en/middleware/modules_command.html#motortest">PX4 documentation</a>.</p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>Since we use the motors in reversible mode the parameter <code class="code docutils literal notranslate"><span class="pre">-p</span> <span class="pre">50</span></code> corresponds to a stopped motor. 0 corresponds to full throttle backward and 100 corresponds to full throttle forward.</p>
+</div>
+<p>To let the first motor turn for a second you can enter for example this:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>motor_test<span class="w"> </span><span class="nb">test</span><span class="w"> </span>-p<span class="w"> </span><span class="m">60</span><span class="w"> </span>-m<span class="w"> </span><span class="m">1</span><span class="w"> </span>-t<span class="w"> </span><span class="m">1</span>
+</pre></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="afro_esc.html" class="btn btn-neutral float-left" title="Afro ESC" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="fcu_firmware.html" class="btn btn-neutral float-right" title="FCU Firmware" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020, Thies Lennart Alff, Nathalie Bauschmann.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

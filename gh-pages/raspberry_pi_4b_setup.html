@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <link rel="icon" href="_static/hippo.svg" type="image/svg+xml">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Raspberry Pi 4B Setup &mdash; HippoCampusDocs  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/tabs.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Pre-Boot Configuration" href="raspberry_pi_4b_setup/pre_boot_configuration.html" />
+    <link rel="prev" title="Deploying HippoCampus" href="getting_started/deploying_hippocampus.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            HippoCampusDocs
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Raspberry Pi 4B Setup</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="raspberry_pi_4b_setup/pre_boot_configuration.html">Pre-Boot Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="raspberry_pi_4b_setup/system_configuration.html">System Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="raspberry_pi_4b_setup/ethernet_configuration.html">Ethernet Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="raspberry_pi_4b_setup/quality_of_life_features.html">Quality-of-Life Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="raspberry_pi_4b_setup/ros_installation.html">ROS Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="raspberry_pi_4b_setup/ros_network_setup.html">ROS Network Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="raspberry_pi_4b_setup/update_catkin_ws.html">Update Catkin Workspace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="raspberry_pi_4b_setup/install_ros_packages.html">Install ROS Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="raspberry_pi_4b_setup/install_mavros.html">Install MAVROS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="raspberry_pi_4b_setup/install_our_ros_packages.html">Install Our ROS Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="raspberry_pi_4b_setup/install_camera_library.html">Install MIPI Camera Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="raspberry_pi_4b_setup/uart_configuration.html">UART Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="raspberry_pi_4b_setup/usb_configuration.html">USB Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="raspberry_pi_4b_setup/pinout.html">Pinout</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="raspberry_pi_4b_experimental.html">Raspberry Pi 4B Experimental</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hippocampus_hardware.html">HippoCampus Hardware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bluerov.html">BlueROV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gantry.html">Gantry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="underwater_camera.html">Underwater Camera</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow_and_style_guide.html">Workflow and Style Guide</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">HippoCampusDocs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+           <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Raspberry Pi 4B Setup</li>
+    
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/HippoCampusRobotics/docs/blob/master/raspberry_pi_4b_setup.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+    <li class="wy-breadcrumbs-aside"><a href="https://hippocampusrobotics.github.io/" class="fa fa-github"> Project Page </a></li>
+
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="raspberry-pi-4b-setup">
+<h1>Raspberry Pi 4B Setup<a class="headerlink" href="#raspberry-pi-4b-setup" title="Permalink to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="raspberry_pi_4b_setup/pre_boot_configuration.html">Pre-Boot Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="raspberry_pi_4b_setup/system_configuration.html">System Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="raspberry_pi_4b_setup/ethernet_configuration.html">Ethernet Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="raspberry_pi_4b_setup/quality_of_life_features.html">Quality-of-Life Features</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="raspberry_pi_4b_setup/quality_of_life_features.html#the-fast-way">The Fast Way</a></li>
+<li class="toctree-l2"><a class="reference internal" href="raspberry_pi_4b_setup/quality_of_life_features.html#the-good-way">The Good Way</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="raspberry_pi_4b_setup/ros_installation.html">ROS Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="raspberry_pi_4b_setup/ros_installation.html#workspace-concept">Workspace Concept</a></li>
+<li class="toctree-l2"><a class="reference internal" href="raspberry_pi_4b_setup/ros_installation.html#preparations">Preparations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="raspberry_pi_4b_setup/ros_installation.html#setup-workspace">Setup Workspace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="raspberry_pi_4b_setup/ros_installation.html#build-the-code">Build the Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="raspberry_pi_4b_setup/ros_installation.html#initialize-user-workspace">Initialize User Workspace</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="raspberry_pi_4b_setup/ros_network_setup.html">ROS Network Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="raspberry_pi_4b_setup/update_catkin_ws.html">Update Catkin Workspace</a></li>
+<li class="toctree-l1"><a class="reference internal" href="raspberry_pi_4b_setup/install_ros_packages.html">Install ROS Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="raspberry_pi_4b_setup/install_mavros.html">Install MAVROS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="raspberry_pi_4b_setup/install_our_ros_packages.html">Install Our ROS Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="raspberry_pi_4b_setup/install_camera_library.html">Install MIPI Camera Library</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="raspberry_pi_4b_setup/install_camera_library.html#bit-library">32-bit Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="raspberry_pi_4b_setup/install_camera_library.html#id1">64-bit Library</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="raspberry_pi_4b_setup/uart_configuration.html">UART Configuration</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="raspberry_pi_4b_setup/uart_configuration.html#uart-kernels-pin-mapping">UART-KERNELS-Pin Mapping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="raspberry_pi_4b_setup/uart_configuration.html#pinout">Pinout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="raspberry_pi_4b_setup/uart_configuration.html#uart-rule">UART Rule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="raspberry_pi_4b_setup/uart_configuration.html#identify-kernels">Identify KERNELS</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="raspberry_pi_4b_setup/usb_configuration.html">USB Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="raspberry_pi_4b_setup/pinout.html">Pinout</a></li>
+</ul>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="getting_started/deploying_hippocampus.html" class="btn btn-neutral float-left" title="Deploying HippoCampus" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="raspberry_pi_4b_setup/pre_boot_configuration.html" class="btn btn-neutral float-right" title="Pre-Boot Configuration" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020, Thies Lennart Alff, Nathalie Bauschmann.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

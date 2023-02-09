@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <link rel="icon" href="../_static/hippo.svg" type="image/svg+xml">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Build And Flash &mdash; HippoCampusDocs  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Servo And Light" href="servo_and_light.html" />
+    <link rel="prev" title="Deploy Klopsi" href="deploy.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            HippoCampusDocs
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../raspberry_pi_4b_setup.html">Raspberry Pi 4B Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../raspberry_pi_4b_experimental.html">Raspberry Pi 4B Experimental</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hippocampus_hardware.html">HippoCampus Hardware</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../bluerov.html">BlueROV</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="deploy.html">Deploy Klopsi</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Build And Flash</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#build-the-firmware">Build The Firmware</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#flash-the-firmware">Flash The Firmware</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="servo_and_light.html">Servo And Light</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../gantry.html">Gantry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../underwater_camera.html">Underwater Camera</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../workflow_and_style_guide.html">Workflow and Style Guide</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">HippoCampusDocs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+           <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../bluerov.html">BlueROV</a></li>
+      <li class="breadcrumb-item active">Build And Flash</li>
+    
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/HippoCampusRobotics/docs/blob/master/bluerov/build_and_flash.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+    <li class="wy-breadcrumbs-aside"><a href="https://hippocampusrobotics.github.io/" class="fa fa-github"> Project Page </a></li>
+
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="build-and-flash">
+<h1>Build And Flash<a class="headerlink" href="#build-and-flash" title="Permalink to this heading"></a></h1>
+<section id="build-the-firmware">
+<h2>Build The Firmware<a class="headerlink" href="#build-the-firmware" title="Permalink to this heading"></a></h2>
+<p>We replaced the original FCU with the Pixhawk4, which is a 5th generation board. So the build command is:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>make<span class="w"> </span>px4_fmu-v5_default
+</pre></div>
+</div>
+<p>If you get an error message that tells you, the <code class="code docutils literal notranslate"><span class="pre">gcc-arm-none-eabi</span></code> could not be found, make sure you have installed it (for example via the <code class="file docutils literal notranslate"><span class="pre">Tools/setup/ubuntu.sh</span></code> convenience script). In some cases, the path is not correctly extended, so it might be necessary to copy the line similiar to</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span>/opt/gcc-arm-none-eabi-9-2020-q2-update/bin:<span class="nv">$PATH</span>
+</pre></div>
+</div>
+<p>from <code class="file docutils literal notranslate"><span class="pre">~/.profile</span></code> to <code class="file docutils literal notranslate"><span class="pre">~/.bashrc</span></code> (or in case you use <code class="code docutils literal notranslate"><span class="pre">zsh</span></code> to <code class="file docutils literal notranslate"><span class="pre">~/.zshrc</span></code>).</p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>The version of <code class="code docutils literal notranslate"><span class="pre">gcc-arm-none-eabi</span></code> might change, so it is necessary that you copy the line from your <code class="file docutils literal notranslate"><span class="pre">~/.profile</span></code> and not the one in this docs.</p>
+</div>
+</section>
+<section id="flash-the-firmware">
+<h2>Flash The Firmware<a class="headerlink" href="#flash-the-firmware" title="Permalink to this heading"></a></h2>
+<p>You need to be able to reach the BlueROV’s Raspberry Pi via ssh. The most convenient way is to create a <code class="code docutils literal notranslate"><span class="pre">bash</span></code> script.</p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>Please update the following code block in case the BlueROV’s host or username changes.</p>
+</div>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="ch">#!/bin/bash</span>
+<span class="linenos">2</span>scp<span class="w"> </span>/PATH/TO/YOUR/PX4/FILE/px4_fmu-v5_default.px4<span class="w"> </span>ubuntu@ubuntu.local:~/px4_fmu-v5_default.px4
+<span class="linenos">3</span>ssh<span class="w"> </span>ubuntu@ubuntu.local<span class="w"> </span><span class="s">&lt;&lt; EOF</span>
+<span class="linenos">4</span><span class="s">python3 ~/Firmware/Tools/px_uploader.py --port /dev/ttyACM0 ~/px4_fmu-v5_default.px4</span>
+<span class="linenos">5</span><span class="s">EOF</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="deploy.html" class="btn btn-neutral float-left" title="Deploy Klopsi" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="servo_and_light.html" class="btn btn-neutral float-right" title="Servo And Light" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020, Thies Lennart Alff, Nathalie Bauschmann.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

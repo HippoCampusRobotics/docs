@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <link rel="icon" href="../_static/hippo.svg" type="image/svg+xml">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Afro ESC &mdash; HippoCampusDocs  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/tabs.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Motor Configuration" href="motor_configuration.html" />
+    <link rel="prev" title="HippoCampus Hardware" href="../hippocampus_hardware.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            HippoCampusDocs
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../raspberry_pi_4b_setup.html">Raspberry Pi 4B Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../raspberry_pi_4b_experimental.html">Raspberry Pi 4B Experimental</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../hippocampus_hardware.html">HippoCampus Hardware</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Afro ESC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="motor_configuration.html">Motor Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fcu_firmware.html">FCU Firmware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fcu_firmware.html#exiting-bootloader">Exiting Bootloader</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../bluerov.html">BlueROV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gantry.html">Gantry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../underwater_camera.html">Underwater Camera</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../workflow_and_style_guide.html">Workflow and Style Guide</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">HippoCampusDocs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+           <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../hippocampus_hardware.html">HippoCampus Hardware</a></li>
+      <li class="breadcrumb-item active">Afro ESC</li>
+    
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/HippoCampusRobotics/docs/blob/master/hippocampus_hardware/afro_esc.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+    <li class="wy-breadcrumbs-aside"><a href="https://hippocampusrobotics.github.io/" class="fa fa-github"> Project Page </a></li>
+
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="afro-esc">
+<h1>Afro ESC<a class="headerlink" href="#afro-esc" title="Permalink to this heading"></a></h1>
+<ol class="arabic">
+<li><p>Download <code class="code docutils literal notranslate"><span class="pre">AVRA</span></code>.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/Ro5bert/avra.git
+</pre></div>
+</div>
+</li>
+<li><p>Build and install <code class="code docutils literal notranslate"><span class="pre">AVRA</span></code></p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>avra<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>sudo<span class="w"> </span>make<span class="w"> </span>install
+</pre></div>
+</div>
+</li>
+<li><p>Download the firmware</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/hippocampusrobotics/tgy.git
+</pre></div>
+</div>
+</li>
+<li><p>Build the firmware. This depends on the interface used. The classic way to go is PWM. But if you want to control the ESCs directly from the Raspberry Pi, you might want to use I2C.</p>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-0-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-0-0-0" name="0-0" role="tab" tabindex="0">PWM</button><button aria-controls="panel-0-0-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-1" name="0-1" role="tab" tabindex="-1">I2C</button></div><div aria-labelledby="tab-0-0-0" class="sphinx-tabs-panel" id="panel-0-0-0" name="0-0" role="tabpanel" tabindex="0"><p>Modify at least the following lines in <code class="file docutils literal notranslate"><span class="pre">tgy.asm</span></code></p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nv">RC_PULS_REVERSE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="p">;</span><span class="w"> </span>This<span class="w"> </span>enables<span class="w"> </span>forward/reverse<span class="w"> </span>throttle
+<span class="nv">RC_CALIBRATION</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="p">;</span>
+<span class="nv">STOP_RC_PULS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1000</span><span class="w"> </span><span class="p">;</span><span class="w"> </span>minimum<span class="w"> </span>pwm<span class="w"> </span>value
+<span class="nv">FULL_RC_PULS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2000</span><span class="w"> </span><span class="p">;</span><span class="w"> </span>maximum<span class="w"> </span>pwm<span class="w"> </span>value
+</pre></div>
+</div>
+<p><strong>Optionally</strong> fiddle with the deadband</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nv">RCP_DEADBAND</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">50</span><span class="w"> </span><span class="p">;</span><span class="w"> </span>default<span class="w"> </span>value
+</pre></div>
+</div>
+<p>Build the firmware</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>make<span class="w"> </span>all
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-0-0-1" class="sphinx-tabs-panel" hidden="true" id="panel-0-0-1" name="0-1" role="tabpanel" tabindex="0"><p>Build the firmware in 8 different versions with different <code class="code docutils literal notranslate"><span class="pre">MOTOR_ID</span></code> values starting from <code class="code docutils literal notranslate"><span class="pre">0x29</span></code> and increasing by 1 per step.</p>
+<blockquote>
+<div><div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>make<span class="w"> </span>build_8
+</pre></div>
+</div>
+</div></blockquote>
+</div></div>
+</li>
+<li><p>Connect the Afro Programmer with your computer and connect the data wires with the ESC. Supply the ESC with an appropriate voltage (probably ~10-12V).</p></li>
+<li><p>Install or <a class="reference download internal" download="" href="../_downloads/c27ff1131691167c0ccf77d5a2b8872e/avrdude"><code class="xref download docutils literal notranslate"><span class="pre">download</span></code></a> <code class="code docutils literal notranslate"><span class="pre">avrdude</span></code>.</p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>Newer versions of <code class="code docutils literal notranslate"><span class="pre">avrdude</span></code> do not seem to work with the AFRO programmer. So you may want to stick with the older version in the download.</p>
+</div>
+</li>
+<li><p>Flash the <code class="file docutils literal notranslate"><span class="pre">afro_nfet.hex</span></code> firmware you have built before.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>avrdude<span class="w"> </span>-b<span class="w"> </span><span class="m">9600</span><span class="w"> </span>-p<span class="w"> </span>m8<span class="w"> </span>-P<span class="w"> </span>/dev/ttyUSB0<span class="w"> </span>-c<span class="w"> </span>stk500v2<span class="w"> </span>-e<span class="w"> </span>-U<span class="w"> </span>flash:w:afro_nfet.hex.0:i
+</pre></div>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Make sure <code class="code docutils literal notranslate"><span class="pre">avrdude</span></code> verifies the flashed data successfully. Otherwise rebuilt the firmware with <code class="code docutils literal notranslate"><span class="pre">make</span> <span class="pre">clean</span> <span class="pre">&amp;&amp;</span> <span class="pre">make</span> <span class="pre">all</span></code> and try again.</p>
+</div>
+</li>
+</ol>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../hippocampus_hardware.html" class="btn btn-neutral float-left" title="HippoCampus Hardware" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="motor_configuration.html" class="btn btn-neutral float-right" title="Motor Configuration" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020, Thies Lennart Alff, Nathalie Bauschmann.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <link rel="icon" href="../_static/hippo.svg" type="image/svg+xml">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Deploy Klopsi &mdash; HippoCampusDocs  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/tabs.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Build And Flash" href="build_and_flash.html" />
+    <link rel="prev" title="BlueROV" href="../bluerov.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            HippoCampusDocs
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../raspberry_pi_4b_setup.html">Raspberry Pi 4B Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../raspberry_pi_4b_experimental.html">Raspberry Pi 4B Experimental</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hippocampus_hardware.html">HippoCampus Hardware</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../bluerov.html">BlueROV</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Deploy Klopsi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ssh-access">SSH Access</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#environment-variables-checklist">Environment Variables Checklist</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#start-the-usual-setup">Start the usual Setup</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="build_and_flash.html">Build And Flash</a></li>
+<li class="toctree-l2"><a class="reference internal" href="servo_and_light.html">Servo And Light</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../gantry.html">Gantry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../underwater_camera.html">Underwater Camera</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../workflow_and_style_guide.html">Workflow and Style Guide</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">HippoCampusDocs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+           <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../bluerov.html">BlueROV</a></li>
+      <li class="breadcrumb-item active">Deploy Klopsi</li>
+    
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/HippoCampusRobotics/docs/blob/master/bluerov/deploy.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+    <li class="wy-breadcrumbs-aside"><a href="https://hippocampusrobotics.github.io/" class="fa fa-github"> Project Page </a></li>
+
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="deploy-klopsi">
+<h1>Deploy Klopsi<a class="headerlink" href="#deploy-klopsi" title="Permalink to this heading"></a></h1>
+<section id="ssh-access">
+<h2>SSH Access<a class="headerlink" href="#ssh-access" title="Permalink to this heading"></a></h2>
+<p>For convenience, copy your ssh-key to the BlueROV to enable passwordless login and create an entry in your <code class="file docutils literal notranslate"><span class="pre">~/.ssh/config</span></code> for the BlueROV similiar to:</p>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-UGkgaW4gdXBwZXIgdHViZQ==" aria-selected="true" class="sphinx-tabs-tab code-tab group-tab" id="tab-0-UGkgaW4gdXBwZXIgdHViZQ==" name="UGkgaW4gdXBwZXIgdHViZQ==" role="tab" tabindex="0">Pi in upper tube</button><button aria-controls="panel-0-UGkgaW4gbG93ZXIgdHViZQ==" aria-selected="false" class="sphinx-tabs-tab code-tab group-tab" id="tab-0-UGkgaW4gbG93ZXIgdHViZQ==" name="UGkgaW4gbG93ZXIgdHViZQ==" role="tab" tabindex="-1">Pi in lower tube</button></div><div aria-labelledby="tab-0-UGkgaW4gdXBwZXIgdHViZQ==" class="sphinx-tabs-panel code-tab group-tab" id="panel-0-UGkgaW4gdXBwZXIgdHViZQ==" name="UGkgaW4gdXBwZXIgdHViZQ==" role="tabpanel" tabindex="0"><div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>Host<span class="w"> </span>klopsi-main
+<span class="w">    </span>User<span class="w"> </span>pi
+<span class="w">    </span>Hostname<span class="w"> </span>klopsi-main.local
+<span class="w">    </span>IdentitiyFile<span class="w"> </span><span class="s2">&quot;~/.ssh/id_ed25519&quot;</span>
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-0-UGkgaW4gbG93ZXIgdHViZQ==" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-0-UGkgaW4gbG93ZXIgdHViZQ==" name="UGkgaW4gbG93ZXIgdHViZQ==" role="tabpanel" tabindex="0"><div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>Host<span class="w"> </span>klopsi-buddy
+<span class="w">    </span>User<span class="w"> </span>pi
+<span class="w">    </span>Hostname<span class="w"> </span>klopsi-buddy.local
+<span class="w">    </span>IdentitiyFile<span class="w"> </span><span class="s2">&quot;~/.ssh/id_ed25519&quot;</span>
+</pre></div>
+</div>
+</div></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Replace the path for the identity file with the name of your key.</p>
+</div>
+<p>This entry allows you to use <code class="code docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">klopsi-main</span></code> instead of <code class="code docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">pi&#64;klopsi-main.local</span></code>.</p>
+</section>
+<section id="environment-variables-checklist">
+<h2>Environment Variables Checklist<a class="headerlink" href="#environment-variables-checklist" title="Permalink to this heading"></a></h2>
+<ol class="arabic">
+<li><p>Change <code class="code docutils literal notranslate"><span class="pre">ROS_MASTER_URI</span></code> in <code class="file docutils literal notranslate"><span class="pre">~/.zshrc</span></code> to your desired value for both Raspberry Pis. For example
+.. code-block:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ROS_MASTER_URI</span><span class="o">=</span><span class="s2">&quot;http://hippo-celsius.local:11311&quot;</span>
+</pre></div>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>Do not forget to resource <code class="file docutils literal notranslate"><span class="pre">~/.zshrc</span></code>!</p>
+</div>
+</li>
+<li><p>Change <code class="code docutils literal notranslate"><span class="pre">QGC_HOST</span></code> in <code class="file docutils literal notranslate"><span class="pre">~/bin/mavros</span></code> on <code class="file docutils literal notranslate"><span class="pre">klopsi-main</span></code> to the hostname of the computer you want to have QGroundControl running on.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">QGC_HOST</span><span class="o">=</span><span class="s2">&quot;hippo-celsius.local&quot;</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</section>
+<section id="start-the-usual-setup">
+<h2>Start the usual Setup<a class="headerlink" href="#start-the-usual-setup" title="Permalink to this heading"></a></h2>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-1-1-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-1-1-0" name="1-0" role="tab" tabindex="0">klopsi-main</button><button aria-controls="panel-1-1-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-1-1-1" name="1-1" role="tab" tabindex="-1">klopsi-buddy</button></div><div aria-labelledby="tab-1-1-0" class="sphinx-tabs-panel" id="panel-1-1-0" name="1-0" role="tabpanel" tabindex="0"><ol class="arabic">
+<li><p>Start MAVROS
+.. code-block:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mavros</span> <span class="n">bluerov</span>
+</pre></div>
+</div>
+</li>
+<li><p>Start</p>
+<ul class="simple">
+<li><p>Front Camera</p></li>
+<li><p>Lights</p></li>
+<li><p>Camera Servo</p></li>
+<li><p>Barometer</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">roslaunch</span> <span class="n">hardware_interfaces</span> <span class="n">top_hardware_bluerov</span><span class="o">.</span><span class="n">launch</span> <span class="n">vehicle_name</span><span class="o">:=</span><span class="n">bluerov</span>
+</pre></div>
+</div>
+<p>All these nodes can be reconfigured via <code class="code docutils literal notranslate"><span class="pre">dynamic_reconfigure</span></code>.</p>
+</li>
+</ol>
+</div><div aria-labelledby="tab-1-1-1" class="sphinx-tabs-panel" hidden="true" id="panel-1-1-1" name="1-1" role="tabpanel" tabindex="0"><dl>
+<dt>Start the vertical camera</dt><dd><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">roslaunch</span> <span class="n">camera</span> <span class="n">camera_node</span><span class="o">.</span><span class="n">launch</span> <span class="n">vehicle_name</span><span class="o">:=</span><span class="n">bluerov</span>
+</pre></div>
+</div>
+<p>This camera can be configured via <code class="code docutils literal notranslate"><span class="pre">dynamic_reconfigure</span></code>.</p>
+</dd>
+</dl>
+</div></div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../bluerov.html" class="btn btn-neutral float-left" title="BlueROV" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="build_and_flash.html" class="btn btn-neutral float-right" title="Build And Flash" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020, Thies Lennart Alff, Nathalie Bauschmann.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <link rel="icon" href="../_static/hippo.svg" type="image/svg+xml">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contributing to Documentation &mdash; HippoCampusDocs  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Contributing to HippoCampus" href="contributing_to_hippocampus.html" />
+    <link rel="prev" title="Contributing" href="../contributing.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            HippoCampusDocs
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../raspberry_pi_4b_setup.html">Raspberry Pi 4B Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../raspberry_pi_4b_experimental.html">Raspberry Pi 4B Experimental</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hippocampus_hardware.html">HippoCampus Hardware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bluerov.html">BlueROV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gantry.html">Gantry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../underwater_camera.html">Underwater Camera</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../contributing.html">Contributing</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Contributing to Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#forking-the-repository">Forking the Repository</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#make-your-changes">Make your Changes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#build-the-docs-locally">Build the Docs locally</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#view-the-html-output">View the HTML output</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#autogenerate-documentation">Autogenerate Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="contributing_to_hippocampus.html">Contributing to HippoCampus</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../workflow_and_style_guide.html">Workflow and Style Guide</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">HippoCampusDocs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+           <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../contributing.html">Contributing</a></li>
+      <li class="breadcrumb-item active">Contributing to Documentation</li>
+    
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/HippoCampusRobotics/docs/blob/master/contributing/contributing_to_documentation.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+    <li class="wy-breadcrumbs-aside"><a href="https://hippocampusrobotics.github.io/" class="fa fa-github"> Project Page </a></li>
+
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="contributing-to-documentation">
+<h1>Contributing to Documentation<a class="headerlink" href="#contributing-to-documentation" title="Permalink to this heading"></a></h1>
+<section id="forking-the-repository">
+<h2>Forking the Repository<a class="headerlink" href="#forking-the-repository" title="Permalink to this heading"></a></h2>
+<p>Go to this documentation’s <a class="reference external" href="https://github.com/HippoCampusRobotics/docs">GitHub repository</a> and fork it (see <a class="reference external" href="https://help.github.com/en/github/getting-started-with-github/fork-a-repo">GitHub’s documentation</a> for details on forking if you do not know how to fork a repository).</p>
+<p>Then clone your fork with <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span></code> so you can work with the repository locally.</p>
+</section>
+<section id="make-your-changes">
+<h2>Make your Changes<a class="headerlink" href="#make-your-changes" title="Permalink to this heading"></a></h2>
+<p>Modify or complement the existing .rst-files to your liking.</p>
+<p>Help with the most common ReStructuredText/Sphinx directives can be found <a class="reference external" href="https://documentation-style-guide-sphinx.readthedocs.io/en/latest/style-guide.html">here</a>. For a more extensive documentation of the capabilities of Sphinx visit the official <a class="reference external" href="https://www.sphinx-doc.org/en/master/contents.html">website</a>.</p>
+</section>
+<section id="build-the-docs-locally">
+<h2>Build the Docs locally<a class="headerlink" href="#build-the-docs-locally" title="Permalink to this heading"></a></h2>
+<p>Since Sphinx follws the <a class="reference external" href="https://en.wikipedia.org/wiki/WYSIWYM">WYSIWYM paradigm</a>, it is a good idea to build the <code class="docutils literal notranslate"><span class="pre">html</span></code> output, to check if your changes work out as expected.</p>
+<p>Probably easiest way to do so is to setup a virtual environment for python by executing the following commmand inside your cloned fork of the documentation repository:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>venv
+</pre></div>
+</div>
+<p>Activate the virtual environment with</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span><span class="w"> </span>venv/bin/activate
+</pre></div>
+</div>
+<p>and install the Sphinx dependencies by executing</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip3<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+</pre></div>
+</div>
+<p>Now you can build the documentation by running</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make<span class="w"> </span>html
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Always make sure to have the virtual environment activated when executing the <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">html</span></code> command.</p>
+</div>
+</section>
+<section id="view-the-html-output">
+<h2>View the HTML output<a class="headerlink" href="#view-the-html-output" title="Permalink to this heading"></a></h2>
+<p>You can view the HTML output by opening <code class="file docutils literal notranslate"><span class="pre">_build/html/index.html</span></code> with a webbrowser.</p>
+</section>
+<section id="autogenerate-documentation">
+<h2>Autogenerate Documentation<a class="headerlink" href="#autogenerate-documentation" title="Permalink to this heading"></a></h2>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>Autodoc is disabled for now. Either implement a docker workflow to build the docs where all runtime dependencies of the documented source code are met or just don’t use autodoc. We stick with the latter one for now.</p>
+</div>
+<p>To generate API documentation for Python packages add the them as submodule under the <code class="file docutils literal notranslate"><span class="pre">src</span></code> directory.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nv">PKG_NAME</span><span class="o">=</span><span class="s2">&quot;insert-your-package-name-here&quot;</span>
+git<span class="w"> </span>submodule<span class="w"> </span>add<span class="w"> </span>https://github.com/HippoCampusRobotics/<span class="nv">$PKG_NAME</span>.git<span class="w"> </span>src/<span class="nv">$PKG_NAME</span>
+</pre></div>
+</div>
+<p>Add the package name to the <code class="code docutils literal notranslate"><span class="pre">packages</span></code> list in <code class="file docutils literal notranslate"><span class="pre">conf.py</span></code>.</p>
+<p>Then add the package in <code class="file docutils literal notranslate"><span class="pre">src.rst</span></code>. If you get errors/warning telling you that something related to your newly added package could not be imported, make sure you add all external modules imported in your package/modules to the <code class="code docutils literal notranslate"><span class="pre">autodoc_mock_imports</span></code> list in <code class="file docutils literal notranslate"><span class="pre">conf.py</span></code>.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../contributing.html" class="btn btn-neutral float-left" title="Contributing" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="contributing_to_hippocampus.html" class="btn btn-neutral float-right" title="Contributing to HippoCampus" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020, Thies Lennart Alff, Nathalie Bauschmann.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
