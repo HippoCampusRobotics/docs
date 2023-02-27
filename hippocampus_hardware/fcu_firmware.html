@@ -51,13 +51,17 @@
 <li class="toctree-l1 current"><a class="reference internal" href="../hippocampus_hardware.html">HippoCampus Hardware</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="afro_esc.html">Afro ESC</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motor_configuration.html">Motor Configuration</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">FCU Firmware</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#exiting-bootloader">Exiting Bootloader</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">FCU Firmware</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#building-the-firmware">Building the Firmware</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#exiting-bootloader">Exiting Bootloader</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../bluerov.html">BlueROV</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../gantry.html">Gantry</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../underwater_camera.html">Underwater Camera</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ros2.html">ROS2</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../workflow_and_style_guide.html">Workflow and Style Guide</a></li>
 </ul>
@@ -92,6 +96,12 @@
              
   <section id="fcu-firmware">
 <h1>FCU Firmware<a class="headerlink" href="#fcu-firmware" title="Permalink to this heading"></a></h1>
+<section id="building-the-firmware">
+<h2>Building the Firmware<a class="headerlink" href="#building-the-firmware" title="Permalink to this heading"></a></h2>
+<p>Assuming the PX4-Autopilot firmmware has been cloned and the build tools has been installed as described in <a class="reference internal" href="../getting_started/installing_px4.html#installing-px4"><span class="std std-ref">Installing PX4</span></a>, building the firmware for the PixRacer is done by</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>make<span class="w"> </span>px4_fmu-v4_default
+</pre></div>
+</div>
 <p>Since the FCU is connected with the Raspberry Pi via USB, it is possible to flash new firmwares directly from the Raspberry Pi.</p>
 <p>In the PX4-Autopilot repository is a script to do this: <code class="file docutils literal notranslate"><span class="pre">Tools/px_uploader.py</span></code>.</p>
 <div class="admonition hint">
@@ -121,7 +131,7 @@
 </ol>
 </section>
 <section id="exiting-bootloader">
-<h1>Exiting Bootloader<a class="headerlink" href="#exiting-bootloader" title="Permalink to this heading"></a></h1>
+<h2>Exiting Bootloader<a class="headerlink" href="#exiting-bootloader" title="Permalink to this heading"></a></h2>
 <p>In some cases the FCU might get stuck in bootloader mode. In this case send the reboot sequence to the bootloader.</p>
 <p>Run</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>python3
@@ -134,6 +144,7 @@
 <span class="n">quit</span><span class="p">()</span>
 </pre></div>
 </div>
+</section>
 </section>
 
 
