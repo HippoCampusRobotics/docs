@@ -55,17 +55,23 @@ Install :code:`xmlstarlet` and :code:`python3-pip`:
     sudo apt install xmlstarlet python3-pip
 
 
-Build the firmware:
+Go to the firmware directory
 
 .. code-block:: sh
 
-    cd ~/PX4-Autopilot && make px4_fmu-v4_default
+    cd ~/PX4-Autopilot
 
-Build the simulation:
+Build the firmware
 
-.. code-block:: sh
+.. tabs:: 
 
-    DONT_RUN=1 make px4_sitl gazebo_uuv_hippocampus
+    .. code-tab:: sh Firmware for simulation
+
+        DONT_RUN=1 make px4_sitl gazebo_uuv_hippocampus
+
+    .. code-tab:: sh Firmware for PixRacer
+
+        make px4_fmu-v4_default
 
 
 

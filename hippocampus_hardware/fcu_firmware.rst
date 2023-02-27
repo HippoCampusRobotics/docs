@@ -1,6 +1,14 @@
 FCU Firmware
 ############
 
+Building the Firmware
+=====================
+Assuming the PX4-Autopilot firmmware has been cloned and the build tools has been installed as described in :ref:`getting_started/installing_px4:Installing PX4`, building the firmware for the PixRacer is done by
+
+.. code-block:: sh
+
+   make px4_fmu-v4_default
+
 Since the FCU is connected with the Raspberry Pi via USB, it is possible to flash new firmwares directly from the Raspberry Pi.
 
 In the PX4-Autopilot repository is a script to do this: :file:`Tools/px_uploader.py`.
@@ -31,7 +39,7 @@ In the PX4-Autopilot repository is a script to do this: :file:`Tools/px_uploader
    .. attention:: Make sure you have single quotes around the port name. Otherwise the shell resolves the wildcard before the python script is executed. Alternatively choose the port directly, probably :code:`/dev/fcu_usb`.
 
 Exiting Bootloader
-##################
+==================
 
 In some cases the FCU might get stuck in bootloader mode. In this case send the reboot sequence to the bootloader.
 
