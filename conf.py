@@ -36,7 +36,7 @@ extensions = [
         "sphinx.ext.autosectionlabel",
         "sphinx_tabs.tabs",
         "sphinx.ext.napoleon",
-        "sphinx-favicon"
+        "sphinx_favicon"
 ]
 
 # Add any paths that contain templates here, relative to this directory.
