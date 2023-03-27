@@ -107,7 +107,10 @@
 </div>
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
-<p>If one likes to source the custom workspace in <code class="file docutils literal notranslate"><span class="pre">.zshrc</span></code>, make sure you do <strong>not</strong> use this environment to build the workspace. Instead run the build command in — for example — <code class="code docutils literal notranslate"><span class="pre">bash</span></code>, where you only source workspaces outside the workspace you want to build! To avoid inheriting environment variables you can run <code class="code docutils literal notranslate"><span class="pre">env</span> <span class="pre">-i</span> <span class="pre">bash</span></code>.</p>
+<p>If one likes to source the custom workspace in <code class="file docutils literal notranslate"><span class="pre">.zshrc</span></code>, make sure you do <strong>not</strong> use this environment to build the workspace. Instead run the build command in — for example — <code class="code docutils literal notranslate"><span class="pre">bash</span></code>, where you only source workspaces outside the workspace you want to build! To avoid inheriting environment variables you can run <code class="code docutils literal notranslate"><span class="pre">env</span> <span class="pre">-i</span> <span class="pre">bash</span></code> or for a docker setup run</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>ros2<span class="w"> </span>bash
+</pre></div>
+</div>
 </div>
 </section>
 <section id="auto-complete">
