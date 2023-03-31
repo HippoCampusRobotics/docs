@@ -28,7 +28,7 @@ In case :file:`compile_commands.json` is needed for parsing/autocompletion
 Auto-Complete
 *************
 
-.. attention:: Check if this `GitHub Isse <https://github.com/ros2/ros2cli/issues/534>`_ is resolved. If so, modify this document. Otherwise add the following to :code:`.zshrc`.
+.. attention:: ROS2 command line tools do not autocomplete as of this `GitHub Issue <https://github.com/ros2/ros2cli/issues/534>`_. While this issue has since been closed, the problem still occurs. To fix it, add the following to :code:`.zshrc`.
 
 .. code-block::
    :name: test

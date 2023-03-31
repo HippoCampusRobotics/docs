@@ -7,6 +7,8 @@ There is a `PR <https://github.com/AprilRobotics/apriltag_ros/pull/114>`__ for p
 
    https://github.com/wep21/apriltag_ros/tree/ros2-port/apriltag_ros
 
+You will have to clone this package and manually switch to the the :file:`ros2-port` branch afterwards.
+
 There is an alternative `package <https://github.com/christianrauch/apriltag_ros>`__ by Christian Rauch, that works somewhat different but has a simpler code base. Unfortunately it does not support tag bundles.
 
 

@@ -1,6 +1,10 @@
 Getting Started
 ###############
 
+
+.. attention::
+   We are moving to ROS2. This guide will be updated soon.
+
 .. note::
    This guide assumes `Ubuntu 20.04 <https://releases.ubuntu.com/20.04/>`_ is used as OS.
 
