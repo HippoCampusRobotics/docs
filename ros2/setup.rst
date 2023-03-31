@@ -1,0 +1,150 @@
+Getting Started with ROS2
+=========================
+
+.. todo:: 
+   
+   Link to a more elaborate version from Lennart. In this guide, we will keep it as short (and simple) as possible. Just execute one code block after the other...
+
+
+In the following, we describe our ROS2 system setup.
+
+.. note::
+   This guide assumes `Ubuntu 22.04 <https://releases.ubuntu.com/22.04/>`_ is used as OS. We use ROS2 `Humble <https://docs.ros.org/en/humble/index.html>`_.
+
+
+Installing ROS2
+---------------
+
+Follow this `guide <https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html>`_ from the official ROS2 documentation. We use the recommended way of installing the Debian packages.
+
+Make sure to pick the 'desktop install' unless you have a reason not to (e.g. on a SBC).
+
+
+Our Workspace Setup
+-------------------
+
+There are a few packages that we will need to build from source, but probably will not touch (much). In order to keep the compilation time of our workspace as short as possible during development, we will use a setup with two overlayed workspaces. 
+We use :file:`ros2` as development workspace und :file:`ros2_underlay` for larger manually compiled non-development packages that take a lot of time to compile/recompile.
+Typical packages for :file:`ros2_underlay` are :code:`px4_msgs` and a ROS2 version of :code:`apriltag_ros` (since there has not been an official release at this point of time).
+In :file:`ros2`, we will keep all of our own packages.
+
+To create this directory structure, execute:
+
+.. code-block:: sh
+
+   mkdir -p ~/ros2/src
+   mkdir -p ~/ros2_underlay/src
+
+
+Getting the external packages
+-----------------------------
+
+We will need the following external packages that we will put into :file:`ros2_underlay`:
+
+.. code:: sh
+
+   cd ~/ros2_underlay/src && git clone https://github.com/PX4/px4_msgs.git
+
+Have a look in :ref:`ros2/apriltag:AprilTag` to get a ROS2 version of the :file:`apriltag_ros` package.
+
+
+Building the Workspaces
+-----------------------
+
+
+With :code:`colcon`, the new build tool for ROS2, you cannot build your custom workspace when it is sourced. This would mean that you either cannot source your workspace in :file:`.zshrc` (or :file:`.bashrc` if you use bash), or you have to manually make sure to run the build command in an environment where you only source workspaces outside the workspace you want to build. 
+
+Since this is very tedious, we define some aliases. Put these two lines into your :file:`.zshrc`:
+
+
+.. code:: sh
+
+   alias build_ros="env -i HOME=$HOME USER=$USER TERM=xterm-256color bash -l -c 'source $HOME/ros2_underlay/install/setup.bash && cd $HOME/ros2 && colcon build --symlink-install --cmake-args -DCMAKE_EXPORT_COMPILE_COMMANDS=ON'"
+   alias build_underlay="env -i HOME=$HOME USER=$USER TERM=xterm-256color bash -l -c 'source /opt/ros/humble/setup.bash && cd $HOME/ros2_underlay && colcon build'"
+
+Make sure to source the :file:`.zshrc` in your terminal when you make changes. 
+
+ros2_underlay Workspace
+***********************
+
+We can now build the first "under"layed workspace :file:`ros2_underlay`.
+But first, let's check for unresolved dependencies.
+
+.. code:: sh
+
+   cd ~/ros2_underlay && rosdep install --from-paths src -y --ignore-src
+
+And to build:
+
+.. code:: sh
+
+   build_underlay
+
+Note that you do not have to be inside the respective workspace directory to build by executing the defined alias. Very convenient!
+
+After a successful build, we can source this workspace in the :file:`.zshrc`, so that our main, overlayed workspace will find it.
+
+.. code:: sh
+
+   echo "source $HOME/ros2_underlay/install/setup.zsh" >> ~/.zshrc
+
+Main ros2 Workspace
+***********************
+
+Now, we can build our main workspace. Let's get our packages:
+
+.. code:: sh
+
+   cd ~/ros2/src
+   git clone git@github.com:HippoCampusRobotics/hippo_core.git
+   git clone git@github.com:HippoCampusRobotics/hippo_simulation.git
+   git clone git@github.com:HippoCampusRobotics/state_estimation.git
+   git clone git@github.com:HippoCampusRobotics/vision.git
+
+.. todo:: 
+
+   Add any other relevant packages as we continue our move to ROS2.
+
+These packages have some more dependencies. Let's resolve them by executing
+
+.. code:: sh
+
+   cd ~/ros2 && rosdep install --from-paths src -y --ignore-src
+
+Make sure that the underlayed workspace containing external packages is sourced for this.
+
+Then, we can build this workspace using our defined alias.
+
+.. code:: sh
+
+   build_ros
+
+Now, source this workspace in your :file:`.zshrc`, too, using the local setup this time:
+
+.. code:: sh
+
+   echo "source $HOME/ros2/install/local_setup.zsh" >> ~/.zshrc
+
+Note that since this workspace overlays the :file:`ros2_underlay` workspace, this setup file needs to be sourced afterwards.
+
+Finally, we can fix the autocompletion for :code:`zsh` by following our section on :ref:`ros2/misc:Auto-Complete`.
+
+Final Check
+***********************
+
+Your :file:`.zshrc` should look similar to this now:
+
+.. code:: sh 
+   
+   ...
+
+
+   alias build_ros="env -i HOME=$HOME USER=$USER TERM=xterm-256color bash -l -c 'source $HOME/ros2_underlay/install/setup.bash && cd $HOME/ros2 && colcon build --symlink-install --cmake-args -DCMAKE_EXPORT_COMPILE_COMMANDS=ON'"
+   alias build_underlay="env -i HOME=$HOME USER=$USER TERM=xterm-256color bash -l -c 'source /opt/ros/humble/setup.bash && cd $HOME/ros2_underlay && colcon build'"
+
+   source /opt/ros/humble/setup.zsh
+   source $HOME/ros2_underlay/install/setup.zsh
+   source $HOME/ros2/install/local_setup.zsh
+
+   eval "$(register-python-argcomplete3 ros2)"
+   eval "$(register-python-argcomplete3 colcon)"
