@@ -61,10 +61,8 @@ There is a `PR <https://github.com/AprilRobotics/apriltag_ros/pull/114>`__ for p
    
    There is an alternative `package <https://github.com/christianrauch/apriltag_ros>`__ by Christian Rauch, that works somewhat different but has a simpler code base. Unfortunately it does not support tag bundles.
 
-
 Building the Workspaces
 -----------------------
-
 
 With :code:`colcon`, the new build tool for ROS2, you cannot build your custom workspace when it is sourced. This would mean that you either cannot source your workspace in :file:`.zshrc` (or :file:`.bashrc` if you use bash), or you have to manually make sure to run the build command in an environment where you only source workspaces outside the workspace you want to build. 
 
@@ -141,7 +139,6 @@ Now, source this workspace in your :file:`.zshrc`, too, using the local setup th
 Note that since this workspace overlays the :file:`ros2_underlay` workspace, this setup file needs to be sourced afterwards.
 
 
-
 Auto-Complete
 *************
 
@@ -156,6 +153,7 @@ ROS2 command line tools do not autocomplete as of this `GitHub Issue <https://gi
 Auto-completing topic names seems to work only after an execution of `ros2 topic list`. Before the auto-complete gets stuck and has to be canceled by :kbd:`Ctrl` + :kbd:`C`.
 
 Sourcing :file:`install/setup.zsh` might reset this. Better source :file:`install/local_setup.zsh`.
+
 
 Final Check
 ***********
