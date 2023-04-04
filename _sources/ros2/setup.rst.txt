@@ -41,26 +41,37 @@ Getting the external packages
 
 We will need the following external packages that we will put into :file:`ros2_underlay`:
 
+PX4-msg
+*******
+
 .. code:: sh
 
    cd ~/ros2_underlay/src && git clone https://github.com/PX4/px4_msgs.git
 
-Have a look in :ref:`ros2/apriltag:AprilTag` to get a ROS2 version of the :file:`apriltag_ros` package.
+AprilTag-ROS
+************
+There is a `PR <https://github.com/AprilRobotics/apriltag_ros/pull/114>`__ for porting the good old :code:`apriltag_ros` package to ROS2. 
 
+.. code:: sh
+
+   cd ~/ros2_underlay/src && git clone https://github.com/wep21/apriltag_ros.git
+   cd ~/ros2_underlay/src/apriltag_ros && git checkout ros2-port
+
+.. note::
+   
+   There is an alternative `package <https://github.com/christianrauch/apriltag_ros>`__ by Christian Rauch, that works somewhat different but has a simpler code base. Unfortunately it does not support tag bundles.
 
 Building the Workspaces
 -----------------------
-
 
 With :code:`colcon`, the new build tool for ROS2, you cannot build your custom workspace when it is sourced. This would mean that you either cannot source your workspace in :file:`.zshrc` (or :file:`.bashrc` if you use bash), or you have to manually make sure to run the build command in an environment where you only source workspaces outside the workspace you want to build. 
 
 Since this is very tedious, we define some aliases. Put these two lines into your :file:`.zshrc`:
 
-
 .. code:: sh
 
-   alias build_ros="env -i HOME=$HOME USER=$USER TERM=xterm-256color bash -l -c 'source $HOME/ros2_underlay/install/setup.bash && cd $HOME/ros2 && colcon build --symlink-install --cmake-args -DCMAKE_EXPORT_COMPILE_COMMANDS=ON'"
-   alias build_underlay="env -i HOME=$HOME USER=$USER TERM=xterm-256color bash -l -c 'source /opt/ros/humble/setup.bash && cd $HOME/ros2_underlay && colcon build'"
+   echo "alias build_ros=\"env -i HOME=\$HOME USER=\$USER TERM=xterm-256color bash -l -c 'source \$HOME/ros2_underlay/install/setup.bash && cd \$HOME/ros2 && colcon build --symlink-install --cmake-args -DCMAKE_EXPORT_COMPILE_COMMANDS=ON'\"" >> ~/.zshrc
+   echo "alias build_underlay=\"env -i HOME=\$HOME USER=\$USER TERM=xterm-256color bash -l -c 'source /opt/ros/humble/setup.bash && cd \$HOME/ros2_underlay && colcon build'\"" >> ~/.zshrc
 
 Make sure to source the :file:`.zshrc` in your terminal when you make changes. 
 
@@ -127,10 +138,25 @@ Now, source this workspace in your :file:`.zshrc`, too, using the local setup th
 
 Note that since this workspace overlays the :file:`ros2_underlay` workspace, this setup file needs to be sourced afterwards.
 
-Finally, we can fix the autocompletion for :code:`zsh` by following our section on :ref:`ros2/misc:Auto-Complete`.
+
+Auto-Complete
+*************
+
+ROS2 command line tools do not autocomplete as of this `GitHub Issue <https://github.com/ros2/ros2cli/issues/534>`_. While this issue has since been closed, the problem still occurs. To fix this
+
+.. code-block::
+   :name: test
+   
+   echo "eval \"\$(register-python-argcomplete3 ros2)\"" >> ~/.zshrc
+   echo "eval \"\$(register-python-argcomplete3 colcon)\"" >> ~/.zshrc
+
+Auto-completing topic names seems to work only after an execution of `ros2 topic list`. Before the auto-complete gets stuck and has to be canceled by :kbd:`Ctrl` + :kbd:`C`.
+
+Sourcing :file:`install/setup.zsh` might reset this. Better source :file:`install/local_setup.zsh`.
+
 
 Final Check
-***********************
+***********
 
 Your :file:`.zshrc` should look similar to this now:
 
