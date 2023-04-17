@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
     <link href="../_static/hippo.svg" rel="icon" type="image/svg+xml">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Raspbian Buster 64bit &mdash; HippoCampusDocs  documentation</title>
+  <title>3.1. Raspbian Buster 64bit &mdash; HippoCampusDocs  documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
@@ -18,8 +18,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Ubuntu 20.04 Server 64bit" href="ubuntu_20.04_server_64bit.html" />
-    <link rel="prev" title="Raspberry Pi 4B Experimental" href="../raspberry_pi_4b_experimental.html" /> 
+    <link rel="next" title="3.2. Ubuntu 22.04 Server 64bit" href="ubuntu_22.04_server_64bit.html" />
+    <link rel="prev" title="3. Raspberry Pi 4B Experimental" href="../raspberry_pi_4b_experimental.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -43,27 +43,27 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting Started</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../raspberry_pi_4b_setup.html">Raspberry Pi 4B Setup</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../raspberry_pi_4b_experimental.html">Raspberry Pi 4B Experimental</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Raspbian Buster 64bit</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#preparation">Preparation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#install-ros">Install ROS</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#compile-userland-libraries">Compile Userland Libraries</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#install-arducam-library">Install Arducam Library</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#create-symbolic-links">Create Symbolic Links</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">1. Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../raspberry_pi_4b_setup.html">2. Raspberry Pi 4B Setup</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../raspberry_pi_4b_experimental.html">3. Raspberry Pi 4B Experimental</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">3.1. Raspbian Buster 64bit</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#preparation">3.1.1. Preparation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#install-ros">3.1.2. Install ROS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#compile-userland-libraries">3.1.3. Compile Userland Libraries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#install-arducam-library">3.1.4. Install Arducam Library</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#create-symbolic-links">3.1.5. Create Symbolic Links</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="ubuntu_20.04_server_64bit.html">Ubuntu 20.04 Server 64bit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ubuntu_22.04_server_64bit.html">3.2. Ubuntu 22.04 Server 64bit</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../hippocampus_hardware.html">HippoCampus Hardware</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../bluerov.html">BlueROV</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../gantry.html">Gantry</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../underwater_camera.html">Underwater Camera</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../ros2.html">ROS2</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../workflow_and_style_guide.html">Workflow and Style Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hippocampus_hardware.html">4. HippoCampus Hardware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bluerov.html">5. BlueROV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gantry.html">6. Gantry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../underwater_camera.html">7. Underwater Camera</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ros2.html">8. ROS2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">9. Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../workflow_and_style_guide.html">10. Workflow and Style Guide</a></li>
 </ul>
 
         </div>
@@ -80,8 +80,8 @@
            <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="../raspberry_pi_4b_experimental.html">Raspberry Pi 4B Experimental</a></li>
-      <li class="breadcrumb-item active">Raspbian Buster 64bit</li>
+          <li class="breadcrumb-item"><a href="../raspberry_pi_4b_experimental.html"><span class="section-number">3. </span>Raspberry Pi 4B Experimental</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">3.1. </span>Raspbian Buster 64bit</li>
     
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/HippoCampusRobotics/docs/blob/master/raspberry_pi_4b_experimental/raspbian_buster_64bit.rst" class="fa fa-github"> Edit on GitHub</a>
@@ -95,10 +95,10 @@
            <div itemprop="articleBody">
              
   <section id="raspbian-buster-64bit">
-<h1>Raspbian Buster 64bit<a class="headerlink" href="#raspbian-buster-64bit" title="Permalink to this heading"></a></h1>
+<h1><span class="section-number">3.1. </span>Raspbian Buster 64bit<a class="headerlink" href="#raspbian-buster-64bit" title="Permalink to this heading"></a></h1>
 <p>An experimental 64bit image of Raspbian can be downloaded from <a class="reference external" href="https://downloads.raspberrypi.org/raspios_arm64/images/">here</a>. The advantage of the 64bit version are the prebuilt packages for ROS. But at the same time problems regarding the camera can occure. The Arducam library depends on MMAL. This is not prebuilt for 64bit systems. It would be rather nice to not rely on Arducam’s OV9281 camera board but to use an USB camera. But for now this is how it is.</p>
 <section id="preparation">
-<h2>Preparation<a class="headerlink" href="#preparation" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">3.1.1. </span>Preparation<a class="headerlink" href="#preparation" title="Permalink to this heading"></a></h2>
 <p>Append the following to <code class="file docutils literal notranslate"><span class="pre">/boot/config.txt</span></code>:</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="c1"># enable additional uarts if you need them</span>
 <span class="nv">dtoverlay</span><span class="o">=</span>uart4
@@ -116,11 +116,11 @@
 <p>Also create an empty <code class="file docutils literal notranslate"><span class="pre">ssh</span></code> file on <code class="file docutils literal notranslate"><span class="pre">/boot</span></code> and change the hostname according to our general naming convention in <a class="reference internal" href="../raspberry_pi_4b_setup/pre_boot_configuration.html#pre-boot-configuration"><span class="std std-ref">Pre-Boot Configuration</span></a>.</p>
 </section>
 <section id="install-ros">
-<h2>Install ROS<a class="headerlink" href="#install-ros" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">3.1.2. </span>Install ROS<a class="headerlink" href="#install-ros" title="Permalink to this heading"></a></h2>
 <p>You can in general follow the official installation guidelines at the <a class="reference external" href="http://wiki.ros.org/noetic/Installation/Ubuntu">ROS wiki</a> (even if it is the Ubuntu guide).</p>
 </section>
 <section id="compile-userland-libraries">
-<h2>Compile Userland Libraries<a class="headerlink" href="#compile-userland-libraries" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">3.1.3. </span>Compile Userland Libraries<a class="headerlink" href="#compile-userland-libraries" title="Permalink to this heading"></a></h2>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/raspberrypi/userland<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>userland
 </pre></div>
 </div>
@@ -139,7 +139,7 @@
 </div>
 </section>
 <section id="install-arducam-library">
-<h2>Install Arducam Library<a class="headerlink" href="#install-arducam-library" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">3.1.4. </span>Install Arducam Library<a class="headerlink" href="#install-arducam-library" title="Permalink to this heading"></a></h2>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/ArduCAM/MIPI_Camera.git
 </pre></div>
 </div>
@@ -148,7 +148,7 @@
 </div>
 </section>
 <section id="create-symbolic-links">
-<h2>Create Symbolic Links<a class="headerlink" href="#create-symbolic-links" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">3.1.5. </span>Create Symbolic Links<a class="headerlink" href="#create-symbolic-links" title="Permalink to this heading"></a></h2>
 <p>In our <a class="reference external" href="https://github.com/hippoCampusRobotics/camera">camera package</a> is a script to create necessary symlinks for the libraries. Otherwise the linker will complain because of undefined references when executing <code class="code docutils literal notranslate"><span class="pre">catkin</span> <span class="pre">build</span></code>.</p>
 </section>
 </section>
@@ -157,14 +157,14 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../raspberry_pi_4b_experimental.html" class="btn btn-neutral float-left" title="Raspberry Pi 4B Experimental" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="ubuntu_20.04_server_64bit.html" class="btn btn-neutral float-right" title="Ubuntu 20.04 Server 64bit" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../raspberry_pi_4b_experimental.html" class="btn btn-neutral float-left" title="3. Raspberry Pi 4B Experimental" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="ubuntu_22.04_server_64bit.html" class="btn btn-neutral float-right" title="3.2. Ubuntu 22.04 Server 64bit" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2020, Thies Lennart Alff, Nathalie Bauschmann.</p>
+    <p>&#169; Copyright 2020-2023, Thies Lennart Alff, Nathalie Bauschmann.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
     <link href="../_static/hippo.svg" rel="icon" type="image/svg+xml">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Install MIPI Camera Library &mdash; HippoCampusDocs  documentation</title>
+  <title>2.11. Install MIPI Camera Library &mdash; HippoCampusDocs  documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
@@ -18,8 +18,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="UART Configuration" href="uart_configuration.html" />
-    <link rel="prev" title="Install Our ROS Packages" href="install_our_ros_packages.html" /> 
+    <link rel="next" title="2.12. UART Configuration" href="uart_configuration.html" />
+    <link rel="prev" title="2.10. Install Our ROS Packages" href="install_our_ros_packages.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -43,36 +43,36 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting Started</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../raspberry_pi_4b_setup.html">Raspberry Pi 4B Setup</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="pre_boot_configuration.html">Pre-Boot Configuration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="system_configuration.html">System Configuration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ethernet_configuration.html">Ethernet Configuration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="quality_of_life_features.html">Quality-of-Life Features</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ros_installation.html">ROS Installation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ros_network_setup.html">ROS Network Setup</a></li>
-<li class="toctree-l2"><a class="reference internal" href="update_catkin_ws.html">Update Catkin Workspace</a></li>
-<li class="toctree-l2"><a class="reference internal" href="install_ros_packages.html">Install ROS Packages</a></li>
-<li class="toctree-l2"><a class="reference internal" href="install_mavros.html">Install MAVROS</a></li>
-<li class="toctree-l2"><a class="reference internal" href="install_our_ros_packages.html">Install Our ROS Packages</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Install MIPI Camera Library</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#bit-library">32-bit Library</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id1">64-bit Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">1. Getting Started</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../raspberry_pi_4b_setup.html">2. Raspberry Pi 4B Setup</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="pre_boot_configuration.html">2.1. Pre-Boot Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="system_configuration.html">2.2. System Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ethernet_configuration.html">2.3. Ethernet Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quality_of_life_features.html">2.4. Quality-of-Life Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ros_installation.html">2.5. ROS Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ros_network_setup.html">2.6. ROS Network Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="update_catkin_ws.html">2.7. Update Catkin Workspace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install_ros_packages.html">2.8. Install ROS Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install_mavros.html">2.9. Install MAVROS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install_our_ros_packages.html">2.10. Install Our ROS Packages</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">2.11. Install MIPI Camera Library</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#bit-library">2.11.1. 32-bit Library</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id1">2.11.2. 64-bit Library</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="uart_configuration.html">UART Configuration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="usb_configuration.html">USB Configuration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pinout.html">Pinout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="uart_configuration.html">2.12. UART Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb_configuration.html">2.13. USB Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pinout.html">2.14. Pinout</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../raspberry_pi_4b_experimental.html">Raspberry Pi 4B Experimental</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../hippocampus_hardware.html">HippoCampus Hardware</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../bluerov.html">BlueROV</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../gantry.html">Gantry</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../underwater_camera.html">Underwater Camera</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../ros2.html">ROS2</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../workflow_and_style_guide.html">Workflow and Style Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../raspberry_pi_4b_experimental.html">3. Raspberry Pi 4B Experimental</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hippocampus_hardware.html">4. HippoCampus Hardware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bluerov.html">5. BlueROV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gantry.html">6. Gantry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../underwater_camera.html">7. Underwater Camera</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ros2.html">8. ROS2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">9. Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../workflow_and_style_guide.html">10. Workflow and Style Guide</a></li>
 </ul>
 
         </div>
@@ -89,8 +89,8 @@
            <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="../raspberry_pi_4b_setup.html">Raspberry Pi 4B Setup</a></li>
-      <li class="breadcrumb-item active">Install MIPI Camera Library</li>
+          <li class="breadcrumb-item"><a href="../raspberry_pi_4b_setup.html"><span class="section-number">2. </span>Raspberry Pi 4B Setup</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">2.11. </span>Install MIPI Camera Library</li>
     
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/HippoCampusRobotics/docs/blob/master/raspberry_pi_4b_setup/install_camera_library.rst" class="fa fa-github"> Edit on GitHub</a>
@@ -104,10 +104,10 @@
            <div itemprop="articleBody">
              
   <section id="install-mipi-camera-library">
-<h1>Install MIPI Camera Library<a class="headerlink" href="#install-mipi-camera-library" title="Permalink to this heading"></a></h1>
+<h1><span class="section-number">2.11. </span>Install MIPI Camera Library<a class="headerlink" href="#install-mipi-camera-library" title="Permalink to this heading"></a></h1>
 <p>If the Raspberry Pi uses an OV9281 camera, you will have to install the MIPI camera library by Arducam.</p>
 <section id="bit-library">
-<h2>32-bit Library<a class="headerlink" href="#bit-library" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">2.11.1. </span>32-bit Library<a class="headerlink" href="#bit-library" title="Permalink to this heading"></a></h2>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/ArduCAM/MIPI_Camera.git
 </pre></div>
 </div>
@@ -116,7 +116,7 @@
 </div>
 </section>
 <section id="id1">
-<h2>64-bit Library<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">2.11.2. </span>64-bit Library<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h2>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/raspberrypi/userland
 <span class="nb">cd</span><span class="w"> </span>userland
 git<span class="w"> </span>revert<span class="w"> </span>f97b1af1b3e653f9da2c1a3643479bfd469e3b74
@@ -139,14 +139,14 @@ sudo<span class="w"> </span>cp<span class="w"> </span>MIPI_Camera/RPI/lib/aarch6
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="install_our_ros_packages.html" class="btn btn-neutral float-left" title="Install Our ROS Packages" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="uart_configuration.html" class="btn btn-neutral float-right" title="UART Configuration" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="install_our_ros_packages.html" class="btn btn-neutral float-left" title="2.10. Install Our ROS Packages" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="uart_configuration.html" class="btn btn-neutral float-right" title="2.12. UART Configuration" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2020, Thies Lennart Alff, Nathalie Bauschmann.</p>
+    <p>&#169; Copyright 2020-2023, Thies Lennart Alff, Nathalie Bauschmann.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
     <link href="../_static/hippo.svg" rel="icon" type="image/svg+xml">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Build And Flash &mdash; HippoCampusDocs  documentation</title>
+  <title>5.2. Build And Flash &mdash; HippoCampusDocs  documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
@@ -18,8 +18,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Servo And Light" href="servo_and_light.html" />
-    <link rel="prev" title="Deploy Klopsi" href="deploy.html" /> 
+    <link rel="next" title="5.3. Servo And Light" href="servo_and_light.html" />
+    <link rel="prev" title="5.1. Deploy Klopsi" href="deploy.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -43,25 +43,25 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting Started</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../raspberry_pi_4b_setup.html">Raspberry Pi 4B Setup</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../raspberry_pi_4b_experimental.html">Raspberry Pi 4B Experimental</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../hippocampus_hardware.html">HippoCampus Hardware</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../bluerov.html">BlueROV</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="deploy.html">Deploy Klopsi</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Build And Flash</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#build-the-firmware">Build The Firmware</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#flash-the-firmware">Flash The Firmware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">1. Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../raspberry_pi_4b_setup.html">2. Raspberry Pi 4B Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../raspberry_pi_4b_experimental.html">3. Raspberry Pi 4B Experimental</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hippocampus_hardware.html">4. HippoCampus Hardware</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../bluerov.html">5. BlueROV</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="deploy.html">5.1. Deploy Klopsi</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">5.2. Build And Flash</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#build-the-firmware">5.2.1. Build The Firmware</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#flash-the-firmware">5.2.2. Flash The Firmware</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="servo_and_light.html">Servo And Light</a></li>
+<li class="toctree-l2"><a class="reference internal" href="servo_and_light.html">5.3. Servo And Light</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../gantry.html">Gantry</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../underwater_camera.html">Underwater Camera</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../ros2.html">ROS2</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../workflow_and_style_guide.html">Workflow and Style Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gantry.html">6. Gantry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../underwater_camera.html">7. Underwater Camera</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ros2.html">8. ROS2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">9. Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../workflow_and_style_guide.html">10. Workflow and Style Guide</a></li>
 </ul>
 
         </div>
@@ -78,8 +78,8 @@
            <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="../bluerov.html">BlueROV</a></li>
-      <li class="breadcrumb-item active">Build And Flash</li>
+          <li class="breadcrumb-item"><a href="../bluerov.html"><span class="section-number">5. </span>BlueROV</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">5.2. </span>Build And Flash</li>
     
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/HippoCampusRobotics/docs/blob/master/bluerov/build_and_flash.rst" class="fa fa-github"> Edit on GitHub</a>
@@ -93,9 +93,9 @@
            <div itemprop="articleBody">
              
   <section id="build-and-flash">
-<h1>Build And Flash<a class="headerlink" href="#build-and-flash" title="Permalink to this heading"></a></h1>
+<h1><span class="section-number">5.2. </span>Build And Flash<a class="headerlink" href="#build-and-flash" title="Permalink to this heading"></a></h1>
 <section id="build-the-firmware">
-<h2>Build The Firmware<a class="headerlink" href="#build-the-firmware" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">5.2.1. </span>Build The Firmware<a class="headerlink" href="#build-the-firmware" title="Permalink to this heading"></a></h2>
 <p>We replaced the original FCU with the Pixhawk4, which is a 5th generation board. So the build command is:</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>make<span class="w"> </span>px4_fmu-v5_default
 </pre></div>
@@ -111,7 +111,7 @@
 </div>
 </section>
 <section id="flash-the-firmware">
-<h2>Flash The Firmware<a class="headerlink" href="#flash-the-firmware" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">5.2.2. </span>Flash The Firmware<a class="headerlink" href="#flash-the-firmware" title="Permalink to this heading"></a></h2>
 <p>You need to be able to reach the BlueROV’s Raspberry Pi via ssh. The most convenient way is to create a <code class="code docutils literal notranslate"><span class="pre">bash</span></code> script.</p>
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
@@ -131,14 +131,14 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="deploy.html" class="btn btn-neutral float-left" title="Deploy Klopsi" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="servo_and_light.html" class="btn btn-neutral float-right" title="Servo And Light" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="deploy.html" class="btn btn-neutral float-left" title="5.1. Deploy Klopsi" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="servo_and_light.html" class="btn btn-neutral float-right" title="5.3. Servo And Light" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2020, Thies Lennart Alff, Nathalie Bauschmann.</p>
+    <p>&#169; Copyright 2020-2023, Thies Lennart Alff, Nathalie Bauschmann.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

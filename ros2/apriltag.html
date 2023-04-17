@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
     <link href="../_static/hippo.svg" rel="icon" type="image/svg+xml">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AprilTag &mdash; HippoCampusDocs  documentation</title>
+  <title>8.5. AprilTag &mdash; HippoCampusDocs  documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
@@ -18,8 +18,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Contributing" href="../contributing.html" />
-    <link rel="prev" title="PX4" href="px4.html" /> 
+    <link rel="next" title="9. Contributing" href="../contributing.html" />
+    <link rel="prev" title="8.4. PX4" href="px4.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -43,25 +43,26 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting Started</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../raspberry_pi_4b_setup.html">Raspberry Pi 4B Setup</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../raspberry_pi_4b_experimental.html">Raspberry Pi 4B Experimental</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../hippocampus_hardware.html">HippoCampus Hardware</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../bluerov.html">BlueROV</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../gantry.html">Gantry</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../underwater_camera.html">Underwater Camera</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../ros2.html">ROS2</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="setup.html">Getting Started with ROS2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="misc.html">Misc</a></li>
-<li class="toctree-l2"><a class="reference internal" href="px4.html">PX4</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">AprilTag</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#generate-parameter-files">Generate Parameter Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">1. Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../raspberry_pi_4b_setup.html">2. Raspberry Pi 4B Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../raspberry_pi_4b_experimental.html">3. Raspberry Pi 4B Experimental</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hippocampus_hardware.html">4. HippoCampus Hardware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bluerov.html">5. BlueROV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gantry.html">6. Gantry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../underwater_camera.html">7. Underwater Camera</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../ros2.html">8. ROS2</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="getting_started_with_ros2.html">8.1. Getting Started with ROS2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="concepts.html">8.2. Concepts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="misc.html">8.3. Misc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="px4.html">8.4. PX4</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">8.5. AprilTag</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#generate-parameter-files">8.5.1. Generate Parameter Files</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../workflow_and_style_guide.html">Workflow and Style Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">9. Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../workflow_and_style_guide.html">10. Workflow and Style Guide</a></li>
 </ul>
 
         </div>
@@ -78,8 +79,8 @@
            <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="../ros2.html">ROS2</a></li>
-      <li class="breadcrumb-item active">AprilTag</li>
+          <li class="breadcrumb-item"><a href="../ros2.html"><span class="section-number">8. </span>ROS2</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">8.5. </span>AprilTag</li>
     
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/HippoCampusRobotics/docs/blob/master/ros2/apriltag.rst" class="fa fa-github"> Edit on GitHub</a>
@@ -93,7 +94,7 @@
            <div itemprop="articleBody">
              
   <section id="apriltag">
-<h1>AprilTag<a class="headerlink" href="#apriltag" title="Permalink to this heading"></a></h1>
+<h1><span class="section-number">8.5. </span>AprilTag<a class="headerlink" href="#apriltag" title="Permalink to this heading"></a></h1>
 <p>There is a <a class="reference external" href="https://github.com/AprilRobotics/apriltag_ros/pull/114">PR</a> for porting the good old <code class="code docutils literal notranslate"><span class="pre">apriltag_ros</span></code> package to ROS2.</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>https://github.com/wep21/apriltag_ros/tree/ros2-port/apriltag_ros
 </pre></div>
@@ -101,7 +102,7 @@
 <p>You will have to clone this package and manually switch to the the <code class="file docutils literal notranslate"><span class="pre">ros2-port</span></code> branch afterwards.</p>
 <p>There is an alternative <a class="reference external" href="https://github.com/christianrauch/apriltag_ros">package</a> by Christian Rauch, that works somewhat different but has a simpler code base. Unfortunately it does not support tag bundles.</p>
 <section id="generate-parameter-files">
-<h2>Generate Parameter Files<a class="headerlink" href="#generate-parameter-files" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">8.5.1. </span>Generate Parameter Files<a class="headerlink" href="#generate-parameter-files" title="Permalink to this heading"></a></h2>
 <p>To either select the tags, that should be detected, or create a tag bundle configuration, run</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>run<span class="w"> </span>hippo_sim<span class="w"> </span>generate_tag_poses.py<span class="w"> </span>--out-dir<span class="w"> </span><span class="sb">`</span><span class="nb">pwd</span><span class="sb">`</span>
 </pre></div>
@@ -118,14 +119,14 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="px4.html" class="btn btn-neutral float-left" title="PX4" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../contributing.html" class="btn btn-neutral float-right" title="Contributing" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="px4.html" class="btn btn-neutral float-left" title="8.4. PX4" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../contributing.html" class="btn btn-neutral float-right" title="9. Contributing" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2020, Thies Lennart Alff, Nathalie Bauschmann.</p>
+    <p>&#169; Copyright 2020-2023, Thies Lennart Alff, Nathalie Bauschmann.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

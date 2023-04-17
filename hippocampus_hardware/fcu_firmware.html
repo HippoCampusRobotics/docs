@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
     <link href="../_static/hippo.svg" rel="icon" type="image/svg+xml">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FCU Firmware &mdash; HippoCampusDocs  documentation</title>
+  <title>4.3. FCU Firmware &mdash; HippoCampusDocs  documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
@@ -18,8 +18,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="BlueROV" href="../bluerov.html" />
-    <link rel="prev" title="Motor Configuration" href="motor_configuration.html" /> 
+    <link rel="next" title="5. BlueROV" href="../bluerov.html" />
+    <link rel="prev" title="4.2. Motor Configuration" href="motor_configuration.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -43,25 +43,25 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting Started</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../raspberry_pi_4b_setup.html">Raspberry Pi 4B Setup</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../raspberry_pi_4b_experimental.html">Raspberry Pi 4B Experimental</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../hippocampus_hardware.html">HippoCampus Hardware</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="afro_esc.html">Afro ESC</a></li>
-<li class="toctree-l2"><a class="reference internal" href="motor_configuration.html">Motor Configuration</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">FCU Firmware</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#building-the-firmware">Building the Firmware</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#exiting-bootloader">Exiting Bootloader</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">1. Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../raspberry_pi_4b_setup.html">2. Raspberry Pi 4B Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../raspberry_pi_4b_experimental.html">3. Raspberry Pi 4B Experimental</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../hippocampus_hardware.html">4. HippoCampus Hardware</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="afro_esc.html">4.1. Afro ESC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="motor_configuration.html">4.2. Motor Configuration</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">4.3. FCU Firmware</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#building-the-firmware">4.3.1. Building the Firmware</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#exiting-bootloader">4.3.2. Exiting Bootloader</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../bluerov.html">BlueROV</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../gantry.html">Gantry</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../underwater_camera.html">Underwater Camera</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../ros2.html">ROS2</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../workflow_and_style_guide.html">Workflow and Style Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bluerov.html">5. BlueROV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gantry.html">6. Gantry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../underwater_camera.html">7. Underwater Camera</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ros2.html">8. ROS2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">9. Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../workflow_and_style_guide.html">10. Workflow and Style Guide</a></li>
 </ul>
 
         </div>
@@ -78,8 +78,8 @@
            <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="../hippocampus_hardware.html">HippoCampus Hardware</a></li>
-      <li class="breadcrumb-item active">FCU Firmware</li>
+          <li class="breadcrumb-item"><a href="../hippocampus_hardware.html"><span class="section-number">4. </span>HippoCampus Hardware</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">4.3. </span>FCU Firmware</li>
     
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/HippoCampusRobotics/docs/blob/master/hippocampus_hardware/fcu_firmware.rst" class="fa fa-github"> Edit on GitHub</a>
@@ -93,9 +93,9 @@
            <div itemprop="articleBody">
              
   <section id="fcu-firmware">
-<h1>FCU Firmware<a class="headerlink" href="#fcu-firmware" title="Permalink to this heading"></a></h1>
+<h1><span class="section-number">4.3. </span>FCU Firmware<a class="headerlink" href="#fcu-firmware" title="Permalink to this heading"></a></h1>
 <section id="building-the-firmware">
-<h2>Building the Firmware<a class="headerlink" href="#building-the-firmware" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">4.3.1. </span>Building the Firmware<a class="headerlink" href="#building-the-firmware" title="Permalink to this heading"></a></h2>
 <p>Assuming the PX4-Autopilot firmmware has been cloned and the build tools has been installed as described in <a class="reference internal" href="../getting_started/installing_px4.html#installing-px4"><span class="std std-ref">Installing PX4</span></a>, building the firmware for the PixRacer is done by</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>make<span class="w"> </span>px4_fmu-v4_default
 </pre></div>
@@ -129,7 +129,7 @@
 </ol>
 </section>
 <section id="exiting-bootloader">
-<h2>Exiting Bootloader<a class="headerlink" href="#exiting-bootloader" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">4.3.2. </span>Exiting Bootloader<a class="headerlink" href="#exiting-bootloader" title="Permalink to this heading"></a></h2>
 <p>In some cases the FCU might get stuck in bootloader mode. In this case send the reboot sequence to the bootloader.</p>
 <p>Run</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>python3
@@ -149,14 +149,14 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="motor_configuration.html" class="btn btn-neutral float-left" title="Motor Configuration" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../bluerov.html" class="btn btn-neutral float-right" title="BlueROV" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="motor_configuration.html" class="btn btn-neutral float-left" title="4.2. Motor Configuration" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../bluerov.html" class="btn btn-neutral float-right" title="5. BlueROV" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2020, Thies Lennart Alff, Nathalie Bauschmann.</p>
+    <p>&#169; Copyright 2020-2023, Thies Lennart Alff, Nathalie Bauschmann.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
     <link href="../_static/hippo.svg" rel="icon" type="image/svg+xml">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Deploying HippoCampus &mdash; HippoCampusDocs  documentation</title>
+  <title>1.6. Deploying HippoCampus &mdash; HippoCampusDocs  documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
@@ -19,8 +19,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Raspberry Pi 4B Setup" href="../raspberry_pi_4b_setup.html" />
-    <link rel="prev" title="Starting Simulation" href="starting_gazebo_simulation.html" /> 
+    <link rel="next" title="2. Raspberry Pi 4B Setup" href="../raspberry_pi_4b_setup.html" />
+    <link rel="prev" title="1.5. Starting Simulation" href="starting_gazebo_simulation.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -44,42 +44,42 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="../getting_started.html">Getting Started</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="quality_of_life_features_2.html">Quality-of-Life Features</a></li>
-<li class="toctree-l2"><a class="reference internal" href="installing_ros.html">Installing ROS</a></li>
-<li class="toctree-l2"><a class="reference internal" href="installing_px4.html">Installing PX4</a></li>
-<li class="toctree-l2"><a class="reference internal" href="installing_qgc.html">Installing QGroundControl</a></li>
-<li class="toctree-l2"><a class="reference internal" href="starting_gazebo_simulation.html">Starting Simulation</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Deploying HippoCampus</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#flashing-the-pixracer">Flashing the PixRacer</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#px4-parameters">PX4 Parameters</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#pixracer-calibration">PixRacer Calibration</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#camera-calibration">Camera Calibration</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#launch-setup">Launch Setup</a><ul>
+<li class="toctree-l1 current"><a class="reference internal" href="../getting_started.html">1. Getting Started</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="quality_of_life_features_2.html">1.1. Quality-of-Life Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installing_ros.html">1.2. Installing ROS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installing_px4.html">1.3. Installing PX4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installing_qgc.html">1.4. Installing QGroundControl</a></li>
+<li class="toctree-l2"><a class="reference internal" href="starting_gazebo_simulation.html">1.5. Starting Simulation</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">1.6. Deploying HippoCampus</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#flashing-the-pixracer">1.6.1. Flashing the PixRacer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#px4-parameters">1.6.2. PX4 Parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pixracer-calibration">1.6.3. PixRacer Calibration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#camera-calibration">1.6.4. Camera Calibration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#launch-setup">1.6.5. Launch Setup</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#tethered-setup">Tethered Setup</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#autonomous-setup">Autonomous Setup</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#offboard-mode">Offboard Mode</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#arming-the-vehicle">Arming the Vehicle</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#offboard-mode">1.6.6. Offboard Mode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#arming-the-vehicle">1.6.7. Arming the Vehicle</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#force-arming-via-mavros">Force arming via mavros</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#force-disarming">Force disarming</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#final-steps">Final Steps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#final-steps">1.6.8. Final Steps</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../raspberry_pi_4b_setup.html">Raspberry Pi 4B Setup</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../raspberry_pi_4b_experimental.html">Raspberry Pi 4B Experimental</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../hippocampus_hardware.html">HippoCampus Hardware</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../bluerov.html">BlueROV</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../gantry.html">Gantry</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../underwater_camera.html">Underwater Camera</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../ros2.html">ROS2</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../workflow_and_style_guide.html">Workflow and Style Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../raspberry_pi_4b_setup.html">2. Raspberry Pi 4B Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../raspberry_pi_4b_experimental.html">3. Raspberry Pi 4B Experimental</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hippocampus_hardware.html">4. HippoCampus Hardware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bluerov.html">5. BlueROV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gantry.html">6. Gantry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../underwater_camera.html">7. Underwater Camera</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ros2.html">8. ROS2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">9. Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../workflow_and_style_guide.html">10. Workflow and Style Guide</a></li>
 </ul>
 
         </div>
@@ -96,8 +96,8 @@
            <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="../getting_started.html">Getting Started</a></li>
-      <li class="breadcrumb-item active">Deploying HippoCampus</li>
+          <li class="breadcrumb-item"><a href="../getting_started.html"><span class="section-number">1. </span>Getting Started</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">1.6. </span>Deploying HippoCampus</li>
     
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/HippoCampusRobotics/docs/blob/master/getting_started/deploying_hippocampus.rst" class="fa fa-github"> Edit on GitHub</a>
@@ -111,16 +111,16 @@
            <div itemprop="articleBody">
              
   <section id="deploying-hippocampus">
-<h1>Deploying HippoCampus<a class="headerlink" href="#deploying-hippocampus" title="Permalink to this heading"></a></h1>
+<h1><span class="section-number">1.6. </span>Deploying HippoCampus<a class="headerlink" href="#deploying-hippocampus" title="Permalink to this heading"></a></h1>
 <section id="flashing-the-pixracer">
-<h2>Flashing the PixRacer<a class="headerlink" href="#flashing-the-pixracer" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">1.6.1. </span>Flashing the PixRacer<a class="headerlink" href="#flashing-the-pixracer" title="Permalink to this heading"></a></h2>
 <div class="admonition-todo admonition" id="id1">
 <p class="admonition-title">Todo</p>
 <p>Flash the PX4-Autopilot firmware onto the PixRacer. Select correct Airframe.</p>
 </div>
 </section>
 <section id="px4-parameters">
-<h2>PX4 Parameters<a class="headerlink" href="#px4-parameters" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">1.6.2. </span>PX4 Parameters<a class="headerlink" href="#px4-parameters" title="Permalink to this heading"></a></h2>
 <p>Set <code class="code docutils literal notranslate"><span class="pre">EKF2_AID_MASK</span></code> to <strong>vision position fusion</strong> and <strong>vision yaw fusion</strong>. This is probably a value of 24.</p>
 <p>Set <code class="code docutils literal notranslate"><span class="pre">EKF2_HGT_MODE</span></code> to <strong>Vision</strong></p>
 <p>Good starting gains for the Geometric Attitude Controller are:</p>
@@ -159,17 +159,17 @@
 </div></div>
 </section>
 <section id="pixracer-calibration">
-<h2>PixRacer Calibration<a class="headerlink" href="#pixracer-calibration" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">1.6.3. </span>PixRacer Calibration<a class="headerlink" href="#pixracer-calibration" title="Permalink to this heading"></a></h2>
 <p>Just follow the steps in QGroundControl.
 Probably a good idea to step away from the steel water tank.</p>
 </section>
 <section id="camera-calibration">
-<h2>Camera Calibration<a class="headerlink" href="#camera-calibration" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">1.6.4. </span>Camera Calibration<a class="headerlink" href="#camera-calibration" title="Permalink to this heading"></a></h2>
 <p><a class="reference external" href="http://wiki.ros.org/camera_calibration/Tutorials/MonocularCalibration">http://wiki.ros.org/camera_calibration/Tutorials/MonocularCalibration</a></p>
 <p>Copy file to <code class="file docutils literal notranslate"><span class="pre">~/catkin_ws/src/camera/config/calib_ov9281_00.yaml</span></code> on RaspberryPi.</p>
 </section>
 <section id="launch-setup">
-<h2>Launch Setup<a class="headerlink" href="#launch-setup" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">1.6.5. </span>Launch Setup<a class="headerlink" href="#launch-setup" title="Permalink to this heading"></a></h2>
 <section id="tethered-setup">
 <h3>Tethered Setup<a class="headerlink" href="#tethered-setup" title="Permalink to this heading"></a></h3>
 <ol class="arabic">
@@ -203,11 +203,11 @@ Probably a good idea to step away from the steel water tank.</p>
 </section>
 </section>
 <section id="offboard-mode">
-<h2>Offboard Mode<a class="headerlink" href="#offboard-mode" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">1.6.6. </span>Offboard Mode<a class="headerlink" href="#offboard-mode" title="Permalink to this heading"></a></h2>
 <p>Set mode to Offboard in QGC.</p>
 </section>
 <section id="arming-the-vehicle">
-<h2>Arming the Vehicle<a class="headerlink" href="#arming-the-vehicle" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">1.6.7. </span>Arming the Vehicle<a class="headerlink" href="#arming-the-vehicle" title="Permalink to this heading"></a></h2>
 <p>Now, you can arm the vehicle in QGC. Try not to move the vehicle too much.
 If you absolutely cannot arm due to preflight errors, you can force arm using a rosservice.</p>
 <section id="force-arming-via-mavros">
@@ -224,7 +224,7 @@ If you absolutely cannot arm due to preflight errors, you can force arm using a 
 </section>
 </section>
 <section id="final-steps">
-<h2>Final Steps<a class="headerlink" href="#final-steps" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">1.6.8. </span>Final Steps<a class="headerlink" href="#final-steps" title="Permalink to this heading"></a></h2>
 <p>Look! It’s running just perfectly fine without any trial and error.</p>
 <a class="reference internal image-reference" href="../_images/hippo_inf_path.gif"><img alt="../_images/hippo_inf_path.gif" class="align-center" src="../_images/hippo_inf_path.gif" style="width: 500px;" /></a>
 </section>
@@ -234,14 +234,14 @@ If you absolutely cannot arm due to preflight errors, you can force arm using a 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="starting_gazebo_simulation.html" class="btn btn-neutral float-left" title="Starting Simulation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../raspberry_pi_4b_setup.html" class="btn btn-neutral float-right" title="Raspberry Pi 4B Setup" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="starting_gazebo_simulation.html" class="btn btn-neutral float-left" title="1.5. Starting Simulation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../raspberry_pi_4b_setup.html" class="btn btn-neutral float-right" title="2. Raspberry Pi 4B Setup" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2020, Thies Lennart Alff, Nathalie Bauschmann.</p>
+    <p>&#169; Copyright 2020-2023, Thies Lennart Alff, Nathalie Bauschmann.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

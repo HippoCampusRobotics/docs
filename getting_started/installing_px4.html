@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
     <link href="../_static/hippo.svg" rel="icon" type="image/svg+xml">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Installing PX4 &mdash; HippoCampusDocs  documentation</title>
+  <title>1.3. Installing PX4 &mdash; HippoCampusDocs  documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
@@ -19,8 +19,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Installing QGroundControl" href="installing_qgc.html" />
-    <link rel="prev" title="Installing ROS" href="installing_ros.html" /> 
+    <link rel="next" title="1.4. Installing QGroundControl" href="installing_qgc.html" />
+    <link rel="prev" title="1.2. Installing ROS" href="installing_ros.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -44,33 +44,33 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="../getting_started.html">Getting Started</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="quality_of_life_features_2.html">Quality-of-Life Features</a></li>
-<li class="toctree-l2"><a class="reference internal" href="installing_ros.html">Installing ROS</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Installing PX4</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#get-the-code">Get The Code</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#export-environment-variables">Export Environment Variables</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#build-the-code">Build The Code</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#sensible-modifications">Sensible Modifications</a><ul>
+<li class="toctree-l1 current"><a class="reference internal" href="../getting_started.html">1. Getting Started</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="quality_of_life_features_2.html">1.1. Quality-of-Life Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installing_ros.html">1.2. Installing ROS</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">1.3. Installing PX4</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#get-the-code">1.3.1. Get The Code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#export-environment-variables">1.3.2. Export Environment Variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#build-the-code">1.3.3. Build The Code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sensible-modifications">1.3.4. Sensible Modifications</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#battery-invalid">Battery Invalid</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="installing_qgc.html">Installing QGroundControl</a></li>
-<li class="toctree-l2"><a class="reference internal" href="starting_gazebo_simulation.html">Starting Simulation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="deploying_hippocampus.html">Deploying HippoCampus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installing_qgc.html">1.4. Installing QGroundControl</a></li>
+<li class="toctree-l2"><a class="reference internal" href="starting_gazebo_simulation.html">1.5. Starting Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deploying_hippocampus.html">1.6. Deploying HippoCampus</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../raspberry_pi_4b_setup.html">Raspberry Pi 4B Setup</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../raspberry_pi_4b_experimental.html">Raspberry Pi 4B Experimental</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../hippocampus_hardware.html">HippoCampus Hardware</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../bluerov.html">BlueROV</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../gantry.html">Gantry</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../underwater_camera.html">Underwater Camera</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../ros2.html">ROS2</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../workflow_and_style_guide.html">Workflow and Style Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../raspberry_pi_4b_setup.html">2. Raspberry Pi 4B Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../raspberry_pi_4b_experimental.html">3. Raspberry Pi 4B Experimental</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hippocampus_hardware.html">4. HippoCampus Hardware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bluerov.html">5. BlueROV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gantry.html">6. Gantry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../underwater_camera.html">7. Underwater Camera</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ros2.html">8. ROS2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">9. Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../workflow_and_style_guide.html">10. Workflow and Style Guide</a></li>
 </ul>
 
         </div>
@@ -87,8 +87,8 @@
            <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="../getting_started.html">Getting Started</a></li>
-      <li class="breadcrumb-item active">Installing PX4</li>
+          <li class="breadcrumb-item"><a href="../getting_started.html"><span class="section-number">1. </span>Getting Started</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">1.3. </span>Installing PX4</li>
     
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/HippoCampusRobotics/docs/blob/master/getting_started/installing_px4.rst" class="fa fa-github"> Edit on GitHub</a>
@@ -102,7 +102,7 @@
            <div itemprop="articleBody">
              
   <section id="installing-px4">
-<h1>Installing PX4<a class="headerlink" href="#installing-px4" title="Permalink to this heading"></a></h1>
+<h1><span class="section-number">1.3. </span>Installing PX4<a class="headerlink" href="#installing-px4" title="Permalink to this heading"></a></h1>
 <p>We try to stick to the original PX4 software as much as possible.</p>
 <p>Feel free to modifiy your fork of the autopilot as much as you want, but if you add functionality, that should be shared with the rest of the world, create a pull request.</p>
 <div class="admonition note">
@@ -110,13 +110,13 @@
 <p>The following instructions assume, you want to clone the PX4-Autopilot in your home directory. If you don’t, you have to modifiy the instructions accordingly.</p>
 </div>
 <section id="get-the-code">
-<h2>Get The Code<a class="headerlink" href="#get-the-code" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">1.3.1. </span>Get The Code<a class="headerlink" href="#get-the-code" title="Permalink to this heading"></a></h2>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>--branch<span class="w"> </span>v1.12.3<span class="w"> </span>--recursive<span class="w"> </span>https://github.com/PX4/PX4-Autopilot.git
 </pre></div>
 </div>
 </section>
 <section id="export-environment-variables">
-<h2>Export Environment Variables<a class="headerlink" href="#export-environment-variables" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">1.3.2. </span>Export Environment Variables<a class="headerlink" href="#export-environment-variables" title="Permalink to this heading"></a></h2>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nv">PX4_DIR</span><span class="o">=</span><span class="nv">$HOME</span>/PX4-Autopilot
 </pre></div>
 </div>
@@ -135,7 +135,7 @@
 </div></div>
 </section>
 <section id="build-the-code">
-<h2>Build The Code<a class="headerlink" href="#build-the-code" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">1.3.3. </span>Build The Code<a class="headerlink" href="#build-the-code" title="Permalink to this heading"></a></h2>
 <p>Set up dependencies:</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/PX4-Autopilot<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>bash<span class="w"> </span>./Tools/setup/ubuntu.sh
 </pre></div>
@@ -159,7 +159,7 @@
 </div></div>
 </section>
 <section id="sensible-modifications">
-<h2>Sensible Modifications<a class="headerlink" href="#sensible-modifications" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">1.3.4. </span>Sensible Modifications<a class="headerlink" href="#sensible-modifications" title="Permalink to this heading"></a></h2>
 <section id="battery-invalid">
 <h3>Battery Invalid<a class="headerlink" href="#battery-invalid" title="Permalink to this heading"></a></h3>
 <p>If the battery parameters are set up correctly and your battery values are not shown in QGroundControl, this might be because the firmware detects the battery errenously as invalid. This happens for example on the BlueROV, where the FCU is powered via USB and the power sense module provides only the measurements but not the supply voltage.</p>
@@ -177,14 +177,14 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="installing_ros.html" class="btn btn-neutral float-left" title="Installing ROS" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="installing_qgc.html" class="btn btn-neutral float-right" title="Installing QGroundControl" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="installing_ros.html" class="btn btn-neutral float-left" title="1.2. Installing ROS" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="installing_qgc.html" class="btn btn-neutral float-right" title="1.4. Installing QGroundControl" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2020, Thies Lennart Alff, Nathalie Bauschmann.</p>
+    <p>&#169; Copyright 2020-2023, Thies Lennart Alff, Nathalie Bauschmann.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
