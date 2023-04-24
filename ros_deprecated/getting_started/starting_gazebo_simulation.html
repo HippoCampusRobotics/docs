@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
     <link href="../../_static/hippo.svg" rel="icon" type="image/svg+xml">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>10.1.4. Starting Simulation &mdash; HippoCampusDocs  documentation</title>
+  <title>11.1.4. Starting Simulation &mdash; HippoCampusDocs  documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/tabs.css" type="text/css" />
@@ -18,8 +18,8 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="10.1.5. Deploying HippoCampus" href="deploying_hippocampus.html" />
-    <link rel="prev" title="10.1.3. Installing QGroundControl" href="installing_qgc.html" /> 
+    <link rel="next" title="11.1.5. Deploying HippoCampus" href="deploying_hippocampus.html" />
+    <link rel="prev" title="11.1.3. Installing QGroundControl" href="installing_qgc.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -52,12 +52,13 @@
 <li class="toctree-l1"><a class="reference internal" href="../../00_main_toc/gantry.html">7. Gantry</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../00_main_toc/underwater_camera.html">8. Underwater Camera</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../00_main_toc/ros2.html">9. ROS2</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../../00_main_toc/ros_deprecated.html">10. ROS Deprecated</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="../getting_started.html">10.1. Getting Started</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="installing_ros.html">10.1.1. Installing ROS</a></li>
-<li class="toctree-l3"><a class="reference internal" href="installing_px4.html">10.1.2. Installing PX4</a></li>
-<li class="toctree-l3"><a class="reference internal" href="installing_qgc.html">10.1.3. Installing QGroundControl</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">10.1.4. Starting Simulation</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../00_main_toc/misc.html">10. Misc</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../00_main_toc/ros_deprecated.html">11. ROS Deprecated</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../getting_started.html">11.1. Getting Started</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="installing_ros.html">11.1.1. Installing ROS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installing_px4.html">11.1.2. Installing PX4</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installing_qgc.html">11.1.3. Installing QGroundControl</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">11.1.4. Starting Simulation</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#general-launch-setup">General Launch Setup</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#parameter-setup">Parameter Setup</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#spawning-hippocampus">Spawning HippoCampus</a></li>
@@ -66,11 +67,11 @@
 <li class="toctree-l4"><a class="reference internal" href="#arming-the-vehicle">Arming the Vehicle</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="deploying_hippocampus.html">10.1.5. Deploying HippoCampus</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deploying_hippocampus.html">11.1.5. Deploying HippoCampus</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../raspberry_pi_4b_setup.html">10.2. Raspberry Pi 4B Setup</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../workflow_and_style_guide.html">10.3. Workflow and Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../raspberry_pi_4b_setup.html">11.2. Raspberry Pi 4B Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../workflow_and_style_guide.html">11.3. Workflow and Style Guide</a></li>
 </ul>
 </li>
 </ul>
@@ -89,9 +90,9 @@
            <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="../../00_main_toc/ros_deprecated.html"><span class="section-number">10. </span>ROS Deprecated</a></li>
-          <li class="breadcrumb-item"><a href="../getting_started.html"><span class="section-number">10.1. </span>Getting Started</a></li>
-      <li class="breadcrumb-item active"><span class="section-number">10.1.4. </span>Starting Simulation</li>
+          <li class="breadcrumb-item"><a href="../../00_main_toc/ros_deprecated.html"><span class="section-number">11. </span>ROS Deprecated</a></li>
+          <li class="breadcrumb-item"><a href="../getting_started.html"><span class="section-number">11.1. </span>Getting Started</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">11.1.4. </span>Starting Simulation</li>
     
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/HippoCampusRobotics/docs/blob/master/ros_deprecated/getting_started/starting_gazebo_simulation.rst" class="fa fa-github"> Edit on GitHub</a>
@@ -105,7 +106,7 @@
            <div itemprop="articleBody">
              
   <section id="starting-simulation">
-<h1><span class="section-number">10.1.4. </span>Starting Simulation<a class="headerlink" href="#starting-simulation" title="Permalink to this heading"></a></h1>
+<h1><span class="section-number">11.1.4. </span>Starting Simulation<a class="headerlink" href="#starting-simulation" title="Permalink to this heading"></a></h1>
 <div class="admonition hint">
 <p class="admonition-title">Hint</p>
 <p>If launching gazebo from ROS, ROS is not able to kill the gazebo node without escalating to <strong>SIGTERM</strong>. This happens after a 15s timeout. If you do not have the time to wait for so long, you can modifiy <code class="file docutils literal notranslate"><span class="pre">/opt/ros/noetic/lib/python3/dist-packages/roslaunch/nodeprocess.py</span></code> and change <code class="code docutils literal notranslate"><span class="pre">DEFAULT_TIMEOUT_SIGINT</span></code> to some value you are willing to wait.</p>
@@ -159,8 +160,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="installing_qgc.html" class="btn btn-neutral float-left" title="10.1.3. Installing QGroundControl" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="deploying_hippocampus.html" class="btn btn-neutral float-right" title="10.1.5. Deploying HippoCampus" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="installing_qgc.html" class="btn btn-neutral float-left" title="11.1.3. Installing QGroundControl" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="deploying_hippocampus.html" class="btn btn-neutral float-right" title="11.1.5. Deploying HippoCampus" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

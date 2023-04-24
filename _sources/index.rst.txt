@@ -21,6 +21,7 @@ Welcome to HippoCampusDocs's documentation!
    00_main_toc/gantry
    00_main_toc/underwater_camera
    00_main_toc/ros2
+   00_main_toc/misc
    00_main_toc/ros_deprecated
 
 
