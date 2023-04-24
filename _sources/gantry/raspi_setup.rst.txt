@@ -8,14 +8,14 @@ Requirements
 
 * Raspberry Pi 4 (previous versions do not have enough UART devices!)
 
-* Ubuntu 18.04 Server image installed on Raspberry
+* Ubuntu 22.04 Server image installed on Raspberry Pi
 
-* A ROS installation (no GUI dependencies, so the :code:`ros-melodic-ros-base` would suffice, see the :ref:`getting_started/installing_ros:Installing ROS` instructions).
+* A ROS installation, no GUI dependencies, so the :code:`ros-humble-ros-base` would suffice.
 
 Enable UART
 ===========
 
-Modify the :file:`usercfg.txt`, either pre-boot directly on the :file:`/boot` partition or from the running Raspberry Pi in the :file:`/boot/firmware` directory,  and add the following lines:
+Modify the :file:`usercfg.txt`, either pre-boot directly on the :file:`/boot` partition or from the running Raspberry Pi in the :file:`/boot/firmware` directory, and add the following lines:
 
 .. code-block:: sh
 

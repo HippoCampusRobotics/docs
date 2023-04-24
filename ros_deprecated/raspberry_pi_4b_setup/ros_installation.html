@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <link href="../../_static/hippo.svg" rel="icon" type="image/svg+xml">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>10.2.5. ROS Installation &mdash; HippoCampusDocs  documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/tabs.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/tabs.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="10.2.6. ROS Network Setup" href="ros_network_setup.html" />
+    <link rel="prev" title="10.2.4. Quality-of-Life Features" href="quality_of_life_features.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            HippoCampusDocs
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../00_main_toc/contributing.html">1. Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../00_main_toc/getting_started.html">2. Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../00_main_toc/concepts.html">3. Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../00_main_toc/raspberry_pi_4b_setup.html">4. Raspberry Pi 4B Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../00_main_toc/hippocampus_hardware.html">5. HippoCampus Hardware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../00_main_toc/bluerov.html">6. BlueROV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../00_main_toc/gantry.html">7. Gantry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../00_main_toc/underwater_camera.html">8. Underwater Camera</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../00_main_toc/ros2.html">9. ROS2</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../00_main_toc/ros_deprecated.html">10. ROS Deprecated</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../getting_started.html">10.1. Getting Started</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../raspberry_pi_4b_setup.html">10.2. Raspberry Pi 4B Setup</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="pre_boot_configuration.html">10.2.1. Pre-Boot Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="system_configuration.html">10.2.2. System Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ethernet_configuration.html">10.2.3. Ethernet Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quality_of_life_features.html">10.2.4. Quality-of-Life Features</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">10.2.5. ROS Installation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#workspace-concept">Workspace Concept</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#preparations">Preparations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#setup-workspace">Setup Workspace</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#build-the-code">Build the Code</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#initialize-user-workspace">Initialize User Workspace</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="ros_network_setup.html">10.2.6. ROS Network Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="update_catkin_ws.html">10.2.7. Update Catkin Workspace</a></li>
+<li class="toctree-l3"><a class="reference internal" href="install_ros_packages.html">10.2.8. Install ROS Packages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="install_mavros.html">10.2.9. Install MAVROS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="install_our_ros_packages.html">10.2.10. Install Our ROS Packages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="install_camera_library.html">10.2.11. Install MIPI Camera Library</a></li>
+<li class="toctree-l3"><a class="reference internal" href="uart_configuration.html">10.2.12. UART Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usb_configuration.html">10.2.13. USB Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pinout.html">10.2.14. Pinout</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../workflow_and_style_guide.html">10.3. Workflow and Style Guide</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">HippoCampusDocs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+           <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../00_main_toc/ros_deprecated.html"><span class="section-number">10. </span>ROS Deprecated</a></li>
+          <li class="breadcrumb-item"><a href="../raspberry_pi_4b_setup.html"><span class="section-number">10.2. </span>Raspberry Pi 4B Setup</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">10.2.5. </span>ROS Installation</li>
+    
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/HippoCampusRobotics/docs/blob/master/ros_deprecated/raspberry_pi_4b_setup/ros_installation.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+    <li class="wy-breadcrumbs-aside"><a href="https://hippocampusrobotics.github.io/" class="fa fa-github"> Project Page </a></li>
+
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="ros-installation">
+<h1><span class="section-number">10.2.5. </span>ROS Installation<a class="headerlink" href="#ros-installation" title="Permalink to this heading"></a></h1>
+<p>In general you can follow the official instruction in the <a class="reference external" href="http://wiki.ros.org/ROSberryPi/Installing%20ROS%20Melodic%20on%20the%20Raspberry%20Pi">ROS wiki</a> to install ROS under Raspbian Buster on the Raspberry Pi. But the following instructions will use <code class="code docutils literal notranslate"><span class="pre">catkin</span> <span class="pre">tools</span></code> instead of <code class="code docutils literal notranslate"><span class="pre">catkin_make</span></code> or <code class="code docutils literal notranslate"><span class="pre">catkin_make_isolated</span></code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you use the 64bit Raspbian, you can follow the Debian standard <a class="reference external" href="http://wiki.ros.org/noetic/Installation/Debian">installation guide</a> and skip everything regarding <code class="file docutils literal notranslate"><span class="pre">ros_catkin_ws</span></code>.</p>
+</div>
+<section id="workspace-concept">
+<h2>Workspace Concept<a class="headerlink" href="#workspace-concept" title="Permalink to this heading"></a></h2>
+<p>Since ROS is not availabe as binary packages for Raspbian, all the ROS packages have to be installed from source. To not flood our <cite>normal</cite> Catkin workspace, we create two seperate workspaces.</p>
+<dl class="simple">
+<dt>~/ros_catkin_ws</dt><dd><p>This is the workspace, where the source code of the packages we just want to install lives. We will configure Catkin to install these packages in <code class="file docutils literal notranslate"><span class="pre">/opt/ros/melodic</span></code>. This is the directory, where the installation via prebuilt packages would also create its files. It is not very likely you get in touch with this workspace often after the initial installation.</p>
+</dd>
+<dt>~/catkin_ws</dt><dd><p>Your normal workspace directory. All the Hippocampus specific packages should be in here. Also other packages that you want to modify should be in this workspace.</p>
+</dd>
+</dl>
+</section>
+<section id="preparations">
+<h2>Preparations<a class="headerlink" href="#preparations" title="Permalink to this heading"></a></h2>
+<ol class="arabic">
+<li><p>Adding keys</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>sh<span class="w"> </span>-c<span class="w"> </span><span class="s1">&#39;echo &quot;deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main&quot; &gt; /etc/apt/sources.list.d/ros-latest.list&#39;</span>
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl<span class="w"> </span>-s<span class="w"> </span>https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc<span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>apt-key<span class="w"> </span>add<span class="w"> </span>-
+</pre></div>
+</div>
+</li>
+<li><p>Update source lists</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>update
+</pre></div>
+</div>
+</li>
+<li><p>Install dependencies</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>python3-rosdep<span class="w"> </span>python3-rosinstall-generator<span class="w"> </span>python3-vcstool<span class="w"> </span>python3-rosinstall<span class="w"> </span>build-essential<span class="w"> </span>cmake<span class="w"> </span>python3-catkin-tools
+</pre></div>
+</div>
+</li>
+<li><p>Initialize rosdep</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>rosdep<span class="w"> </span>init
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rosdep<span class="w"> </span>update
+</pre></div>
+</div>
+</li>
+</ol>
+</section>
+<section id="setup-workspace">
+<h2>Setup Workspace<a class="headerlink" href="#setup-workspace" title="Permalink to this heading"></a></h2>
+<ol class="arabic">
+<li><p>Create workspace</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>-p<span class="w"> </span>~/ros_catkin_ws/src<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>~/ros_catkin_ws
+</pre></div>
+</div>
+</li>
+<li><p>Fetch source code</p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>The following commands will fetch the sources for the <code class="code docutils literal notranslate"><span class="pre">ros_comm</span></code> meta package and the <code class="code docutils literal notranslate"><span class="pre">perception</span></code> meta package. If you do not need all of them or if you need even more packages feel free to modify the following commands accordingly. Building unnecessary packages might be a waste of time.</p>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rosinstall_generator<span class="w"> </span>ros_comm<span class="w"> </span>perception<span class="w"> </span>--rosdistro<span class="w"> </span>noetic<span class="w"> </span>--deps<span class="w"> </span>--wet-only<span class="w"> </span>--tar<span class="w"> </span>&gt;<span class="w"> </span>noetic-ros_comm-perception-wet.rosinstall
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>vcs<span class="w"> </span>import<span class="w"> </span>--input<span class="w"> </span>noetic-ros_comm-perception-wet.rosinstall<span class="w"> </span>./src
+</pre></div>
+</div>
+</li>
+<li><p>Resolve dependencies</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rosdep<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>--from-paths<span class="w"> </span>src<span class="w"> </span>--ignore-src<span class="w"> </span>--rosdistro<span class="w"> </span>noetic<span class="w"> </span>-r<span class="w"> </span>--os<span class="o">=</span>debian:buster
+</pre></div>
+</div>
+</li>
+</ol>
+</section>
+<section id="build-the-code">
+<h2>Build the Code<a class="headerlink" href="#build-the-code" title="Permalink to this heading"></a></h2>
+<ol class="arabic">
+<li><p>Set the install space</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>catkin<span class="w"> </span>config<span class="w"> </span>--install-space<span class="w"> </span>/opt/ros/noetic
+</pre></div>
+</div>
+</li>
+<li><p>Use the <code class="code docutils literal notranslate"><span class="pre">install</span></code> configuration instead of <code class="code docutils literal notranslate"><span class="pre">devel</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>catkin<span class="w"> </span>config<span class="w"> </span>--install
+</pre></div>
+</div>
+</li>
+<li><p>Start the build process</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Depending on your package configuration the next command may take some time, i.e. a few hours if you want to build many packages.</p>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>catkin<span class="w"> </span>build<span class="w"> </span>--cmake-args<span class="w"> </span>-DCMAKE_BUILD_TYPE<span class="o">=</span>Release<span class="w"> </span>-DPYTHON_EXECUTABLE<span class="o">=</span>/usr/bin/python3
+</pre></div>
+</div>
+</li>
+</ol>
+</section>
+<section id="initialize-user-workspace">
+<h2>Initialize User Workspace<a class="headerlink" href="#initialize-user-workspace" title="Permalink to this heading"></a></h2>
+<ol class="arabic">
+<li><p>Source your ROS installation</p>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-enNo" aria-selected="true" class="sphinx-tabs-tab code-tab group-tab" id="tab-0-enNo" name="enNo" role="tab" tabindex="0">zsh</button><button aria-controls="panel-0-YmFzaA==" aria-selected="false" class="sphinx-tabs-tab code-tab group-tab" id="tab-0-YmFzaA==" name="YmFzaA==" role="tab" tabindex="-1">bash</button></div><div aria-labelledby="tab-0-enNo" class="sphinx-tabs-panel code-tab group-tab" id="panel-0-enNo" name="enNo" role="tabpanel" tabindex="0"><div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span><span class="w"> </span>/opt/ros/noetic/setup.zsh
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-0-YmFzaA==" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-0-YmFzaA==" name="YmFzaA==" role="tabpanel" tabindex="0"><div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span><span class="w"> </span>/opt/ros/noetic/setup.bash
+</pre></div>
+</div>
+</div></div>
+</li>
+<li><p>Create workspace</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>-p<span class="w"> </span>~/catkin_ws/src<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>~/catkin_ws
+</pre></div>
+</div>
+</li>
+<li><p>Initialize workspace</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>catkin<span class="w"> </span>init
+</pre></div>
+</div>
+</li>
+<li><p>Build empty workspace</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>catkin<span class="w"> </span>build
+</pre></div>
+</div>
+</li>
+</ol>
+<p>This command created the devel directory inside your catkin workspace. To source your workspace you can either source it manually for each terminal session by executing <code class="code docutils literal notranslate"><span class="pre">source</span> <span class="pre">~/catkin_ws/devel/setup.bash</span></code>. A better way to handle this automatically is to append this command to your <code class="file docutils literal notranslate"><span class="pre">.bashrc</span></code> file.</p>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-1-enNo" aria-selected="true" class="sphinx-tabs-tab code-tab group-tab" id="tab-1-enNo" name="enNo" role="tab" tabindex="0">zsh</button><button aria-controls="panel-1-YmFzaA==" aria-selected="false" class="sphinx-tabs-tab code-tab group-tab" id="tab-1-YmFzaA==" name="YmFzaA==" role="tab" tabindex="-1">bash</button></div><div aria-labelledby="tab-1-enNo" class="sphinx-tabs-panel code-tab group-tab" id="panel-1-enNo" name="enNo" role="tabpanel" tabindex="0"><div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;source $HOME/catkin_ws/devel/setup.zsh&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.zshrc
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-1-YmFzaA==" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-1-YmFzaA==" name="YmFzaA==" role="tabpanel" tabindex="0"><div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;source $HOME/catkin_ws/devel/setup.bash&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.bashrc
+</pre></div>
+</div>
+</div></div>
+<p>For this change of the <code class="file docutils literal notranslate"><span class="pre">.bashrc</span></code> to take effect immediately execute:</p>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-2-enNo" aria-selected="true" class="sphinx-tabs-tab code-tab group-tab" id="tab-2-enNo" name="enNo" role="tab" tabindex="0">zsh</button><button aria-controls="panel-2-YmFzaA==" aria-selected="false" class="sphinx-tabs-tab code-tab group-tab" id="tab-2-YmFzaA==" name="YmFzaA==" role="tab" tabindex="-1">bash</button></div><div aria-labelledby="tab-2-enNo" class="sphinx-tabs-panel code-tab group-tab" id="panel-2-enNo" name="enNo" role="tabpanel" tabindex="0"><div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span><span class="w"> </span>~/.zshrc
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-2-YmFzaA==" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-2-YmFzaA==" name="YmFzaA==" role="tabpanel" tabindex="0"><div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span><span class="w"> </span>~/.bashrc
+</pre></div>
+</div>
+</div></div>
+<p>up</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="quality_of_life_features.html" class="btn btn-neutral float-left" title="10.2.4. Quality-of-Life Features" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="ros_network_setup.html" class="btn btn-neutral float-right" title="10.2.6. ROS Network Setup" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020-2023, Thies Lennart Alff, Nathalie Bauschmann.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

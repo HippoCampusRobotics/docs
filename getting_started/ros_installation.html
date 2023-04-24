@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <link href="../_static/hippo.svg" rel="icon" type="image/svg+xml">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2.1. ROS Installation &mdash; HippoCampusDocs  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/tabs.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="2.2. Workspace Setup" href="workspace_setup.html" />
+    <link rel="prev" title="2. Getting Started" href="../00_main_toc/getting_started.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            HippoCampusDocs
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../00_main_toc/contributing.html">1. Contributing</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../00_main_toc/getting_started.html">2. Getting Started</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">2.1. ROS Installation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#preparation">2.1.1. Preparation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#installation">2.1.2. Installation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rosdep-initialization">2.1.3. rosdep Initialization</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="workspace_setup.html">2.2. Workspace Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="px4_setup.html">2.3. PX4 Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installing_qgc.html">2.4. Installing QGroundControl</a></li>
+<li class="toctree-l2"><a class="reference internal" href="starting_gazebo_simulation.html">2.5. Starting Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deploying_hippocampus.html">2.6. Deploying HippoCampus</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../00_main_toc/concepts.html">3. Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../00_main_toc/raspberry_pi_4b_setup.html">4. Raspberry Pi 4B Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../00_main_toc/hippocampus_hardware.html">5. HippoCampus Hardware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../00_main_toc/bluerov.html">6. BlueROV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../00_main_toc/gantry.html">7. Gantry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../00_main_toc/underwater_camera.html">8. Underwater Camera</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../00_main_toc/ros2.html">9. ROS2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../00_main_toc/ros_deprecated.html">10. ROS Deprecated</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">HippoCampusDocs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+           <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../00_main_toc/getting_started.html"><span class="section-number">2. </span>Getting Started</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">2.1. </span>ROS Installation</li>
+    
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/HippoCampusRobotics/docs/blob/master/getting_started/ros_installation.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+    <li class="wy-breadcrumbs-aside"><a href="https://hippocampusrobotics.github.io/" class="fa fa-github"> Project Page </a></li>
+
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="ros-installation">
+<h1><span class="section-number">2.1. </span>ROS Installation<a class="headerlink" href="#ros-installation" title="Permalink to this heading"></a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The following installations steps work for a Ubuntu 22.04 amd64 version <strong>and</strong> for the Ubuntu 22.04 server image for the Raspberry Pi.</p>
+</div>
+<section id="preparation">
+<h2><span class="section-number">2.1.1. </span>Preparation<a class="headerlink" href="#preparation" title="Permalink to this heading"></a></h2>
+<ol class="arabic">
+<li><p>Make sure you have a UTF-8 supported locale with</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>locale
+</pre></div>
+</div>
+<p>If not, refer to the <a class="reference external" href="https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html#set-locale">ROS documentation</a>.</p>
+</li>
+<li><p>Enable universe repository</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>software-properties-common
+sudo<span class="w"> </span>add-apt-repository<span class="w"> </span>universe
+</pre></div>
+</div>
+</li>
+<li><p>Add the key</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>curl<span class="w"> </span>-y
+sudo<span class="w"> </span>curl<span class="w"> </span>-sSL<span class="w"> </span>https://raw.githubusercontent.com/ros/rosdistro/master/ros.key<span class="w"> </span>-o<span class="w"> </span>/usr/share/keyrings/ros-archive-keyring.gpg
+</pre></div>
+</div>
+</li>
+<li><p>Add sources</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;deb [arch=</span><span class="k">$(</span>dpkg<span class="w"> </span>--print-architecture<span class="k">)</span><span class="s2"> signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu </span><span class="k">$(</span>.<span class="w"> </span>/etc/os-release<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="nv">$UBUNTU_CODENAME</span><span class="k">)</span><span class="s2"> main&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>tee<span class="w"> </span>/etc/apt/sources.list.d/ros2.list<span class="w"> </span>&gt;<span class="w"> </span>/dev/null
+</pre></div>
+</div>
+</li>
+<li><p>Update</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is critial!</p>
+</div>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>upgrade<span class="w"> </span>-y
+</pre></div>
+</div>
+</li>
+</ol>
+</section>
+<section id="installation">
+<h2><span class="section-number">2.1.2. </span>Installation<a class="headerlink" href="#installation" title="Permalink to this heading"></a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Choose the installation option depending on your needs. Probably it’s <strong>not</strong> reasonable to install <code class="code docutils literal notranslate"><span class="pre">ros-humble-desktop-full</span></code> on an Ubuntu server image for the Raspberry Pi.</p>
+</div>
+<ol class="arabic">
+<li><p>Install ROS</p>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-ZGVza3RvcC1mdWxs" aria-selected="true" class="sphinx-tabs-tab code-tab group-tab" id="tab-0-ZGVza3RvcC1mdWxs" name="ZGVza3RvcC1mdWxs" role="tab" tabindex="0">desktop-full</button><button aria-controls="panel-0-cGVyY2VwdGlvbiAoZS5nLiBmb3IgUmFzcGJlcnJ5IFBpKQ==" aria-selected="false" class="sphinx-tabs-tab code-tab group-tab" id="tab-0-cGVyY2VwdGlvbiAoZS5nLiBmb3IgUmFzcGJlcnJ5IFBpKQ==" name="cGVyY2VwdGlvbiAoZS5nLiBmb3IgUmFzcGJlcnJ5IFBpKQ==" role="tab" tabindex="-1">perception (e.g. for Raspberry Pi)</button></div><div aria-labelledby="tab-0-ZGVza3RvcC1mdWxs" class="sphinx-tabs-panel code-tab group-tab" id="panel-0-ZGVza3RvcC1mdWxs" name="ZGVza3RvcC1mdWxs" role="tabpanel" tabindex="0"><div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>ros-humble-desktop-full
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-0-cGVyY2VwdGlvbiAoZS5nLiBmb3IgUmFzcGJlcnJ5IFBpKQ==" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-0-cGVyY2VwdGlvbiAoZS5nLiBmb3IgUmFzcGJlcnJ5IFBpKQ==" name="cGVyY2VwdGlvbiAoZS5nLiBmb3IgUmFzcGJlcnJ5IFBpKQ==" role="tabpanel" tabindex="0"><div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>ros-humble-ros-perception
+</pre></div>
+</div>
+</div></div>
+</li>
+<li><p>Install development tools</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>ros-dev-tools
+</pre></div>
+</div>
+</li>
+</ol>
+</section>
+<section id="rosdep-initialization">
+<h2><span class="section-number">2.1.3. </span>rosdep Initialization<a class="headerlink" href="#rosdep-initialization" title="Permalink to this heading"></a></h2>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>python3-rosdep
+</pre></div>
+</div>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>rosdep<span class="w"> </span>init<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>rosdep<span class="w"> </span>update
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Do <strong>not</strong> execute <code class="code docutils literal notranslate"><span class="pre">rosdep</span> <span class="pre">update</span></code> with root privileges. This would lead to permission issues.</p>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../00_main_toc/getting_started.html" class="btn btn-neutral float-left" title="2. Getting Started" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="workspace_setup.html" class="btn btn-neutral float-right" title="2.2. Workspace Setup" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020-2023, Thies Lennart Alff, Nathalie Bauschmann.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

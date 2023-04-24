@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <link href="../../_static/hippo.svg" rel="icon" type="image/svg+xml">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>10.3.2. Using Formatters &mdash; HippoCampusDocs  documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/tabs.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="10.3.3. Writing Launch Files" href="writing_launch_files.html" />
+    <link rel="prev" title="10.3.1. Structuring Catkin Packages" href="structuring_catkin_packages.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            HippoCampusDocs
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../00_main_toc/contributing.html">1. Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../00_main_toc/getting_started.html">2. Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../00_main_toc/concepts.html">3. Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../00_main_toc/raspberry_pi_4b_setup.html">4. Raspberry Pi 4B Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../00_main_toc/hippocampus_hardware.html">5. HippoCampus Hardware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../00_main_toc/bluerov.html">6. BlueROV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../00_main_toc/gantry.html">7. Gantry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../00_main_toc/underwater_camera.html">8. Underwater Camera</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../00_main_toc/ros2.html">9. ROS2</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../00_main_toc/ros_deprecated.html">10. ROS Deprecated</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../getting_started.html">10.1. Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../raspberry_pi_4b_setup.html">10.2. Raspberry Pi 4B Setup</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../workflow_and_style_guide.html">10.3. Workflow and Style Guide</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="structuring_catkin_packages.html">10.3.1. Structuring Catkin Packages</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">10.3.2. Using Formatters</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#python">Python</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="writing_launch_files.html">10.3.3. Writing Launch Files</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">HippoCampusDocs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+           <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../00_main_toc/ros_deprecated.html"><span class="section-number">10. </span>ROS Deprecated</a></li>
+          <li class="breadcrumb-item"><a href="../workflow_and_style_guide.html"><span class="section-number">10.3. </span>Workflow and Style Guide</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">10.3.2. </span>Using Formatters</li>
+    
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/HippoCampusRobotics/docs/blob/master/ros_deprecated/workflow_and_style_guide/using_formatters.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+    <li class="wy-breadcrumbs-aside"><a href="https://hippocampusrobotics.github.io/" class="fa fa-github"> Project Page </a></li>
+
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="using-formatters">
+<h1><span class="section-number">10.3.2. </span>Using Formatters<a class="headerlink" href="#using-formatters" title="Permalink to this heading"></a></h1>
+<section id="python">
+<h2>Python<a class="headerlink" href="#python" title="Permalink to this heading"></a></h2>
+<p>For Python code we use <code class="code docutils literal notranslate"><span class="pre">yapf</span></code> as formatter with these settings:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">style</span><span class="p">]</span>
+<span class="n">based_on_style</span> <span class="o">=</span> <span class="n">pep8</span>
+<span class="n">column_limit</span> <span class="o">=</span> <span class="mi">80</span>
+</pre></div>
+</div>
+<p>The default <code class="file docutils literal notranslate"><span class="pre">.style.yapf</span></code> <code class="code docutils literal notranslate"><span class="pre">yapf</span></code> style file can be found on <a class="reference external" href="https://gist.github.com/lennartalff/42dc02ee01ced47bfb0f75d715e5dcf9">GitHub Gist</a> or directly downloaded in your current directory by executing:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>wget<span class="w"> </span>https://gist.githubusercontent.com/lennartalff/42dc02ee01ced47bfb0f75d715e5dcf9/raw/da9d31abbf27d1d71b24a25dbe1c840506a17bfb/.style.yapf
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The downloaded file is named <code class="code docutils literal notranslate"><span class="pre">.style.yapf</span></code> and is therefore hidden. To show up in command line use <code class="code docutils literal notranslate"><span class="pre">ls</span> <span class="pre">-a</span></code> or hit <kbd class="kbd docutils literal notranslate">Ctrl</kbd> + <kbd class="kbd docutils literal notranslate">H</kbd> in your GUI filebrowser.</p>
+</div>
+<p>To run <code class="code docutils literal notranslate"><span class="pre">yapf</span></code> via the commandline and show the differences on formatting it suggests enter your project’s directory and enter:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>yapf<span class="w"> </span>--diff<span class="w"> </span>--recursive<span class="w"> </span>.
+</pre></div>
+</div>
+<p>If no output shows up this means all the Python files are already formatted according to the style settings in <code class="file docutils literal notranslate"><span class="pre">.style.yapf</span></code>.</p>
+<p>To apply changes on all files run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>yapf<span class="w"> </span>-i<span class="w"> </span>--recursive<span class="w"> </span>.
+</pre></div>
+</div>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>A more detailed description on how to use <code class="code docutils literal notranslate"><span class="pre">yapf</span></code> can be found in its <a class="reference external" href="https://github.com/google/yapf">README</a>.</p>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="structuring_catkin_packages.html" class="btn btn-neutral float-left" title="10.3.1. Structuring Catkin Packages" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="writing_launch_files.html" class="btn btn-neutral float-right" title="10.3.3. Writing Launch Files" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020-2023, Thies Lennart Alff, Nathalie Bauschmann.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

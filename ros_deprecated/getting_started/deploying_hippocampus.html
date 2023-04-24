@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <link href="../../_static/hippo.svg" rel="icon" type="image/svg+xml">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>10.1.5. Deploying HippoCampus &mdash; HippoCampusDocs  documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/tabs.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/tabs.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="10.2. Raspberry Pi 4B Setup" href="../raspberry_pi_4b_setup.html" />
+    <link rel="prev" title="10.1.4. Starting Simulation" href="starting_gazebo_simulation.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            HippoCampusDocs
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../00_main_toc/contributing.html">1. Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../00_main_toc/getting_started.html">2. Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../00_main_toc/concepts.html">3. Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../00_main_toc/raspberry_pi_4b_setup.html">4. Raspberry Pi 4B Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../00_main_toc/hippocampus_hardware.html">5. HippoCampus Hardware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../00_main_toc/bluerov.html">6. BlueROV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../00_main_toc/gantry.html">7. Gantry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../00_main_toc/underwater_camera.html">8. Underwater Camera</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../00_main_toc/ros2.html">9. ROS2</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../00_main_toc/ros_deprecated.html">10. ROS Deprecated</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../getting_started.html">10.1. Getting Started</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="installing_ros.html">10.1.1. Installing ROS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installing_px4.html">10.1.2. Installing PX4</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installing_qgc.html">10.1.3. Installing QGroundControl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="starting_gazebo_simulation.html">10.1.4. Starting Simulation</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">10.1.5. Deploying HippoCampus</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#flashing-the-pixracer">Flashing the PixRacer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#px4-parameters">PX4 Parameters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pixracer-calibration">PixRacer Calibration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#camera-calibration">Camera Calibration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#launch-setup">Launch Setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#offboard-mode">Offboard Mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#arming-the-vehicle">Arming the Vehicle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#final-steps">Final Steps</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../raspberry_pi_4b_setup.html">10.2. Raspberry Pi 4B Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../workflow_and_style_guide.html">10.3. Workflow and Style Guide</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">HippoCampusDocs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+           <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../00_main_toc/ros_deprecated.html"><span class="section-number">10. </span>ROS Deprecated</a></li>
+          <li class="breadcrumb-item"><a href="../getting_started.html"><span class="section-number">10.1. </span>Getting Started</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">10.1.5. </span>Deploying HippoCampus</li>
+    
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/HippoCampusRobotics/docs/blob/master/ros_deprecated/getting_started/deploying_hippocampus.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+    <li class="wy-breadcrumbs-aside"><a href="https://hippocampusrobotics.github.io/" class="fa fa-github"> Project Page </a></li>
+
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="deploying-hippocampus">
+<h1><span class="section-number">10.1.5. </span>Deploying HippoCampus<a class="headerlink" href="#deploying-hippocampus" title="Permalink to this heading"></a></h1>
+<section id="flashing-the-pixracer">
+<h2>Flashing the PixRacer<a class="headerlink" href="#flashing-the-pixracer" title="Permalink to this heading"></a></h2>
+<div class="admonition-todo admonition" id="id1">
+<p class="admonition-title">Todo</p>
+<p>Flash the PX4-Autopilot firmware onto the PixRacer. Select correct Airframe.</p>
+</div>
+</section>
+<section id="px4-parameters">
+<h2>PX4 Parameters<a class="headerlink" href="#px4-parameters" title="Permalink to this heading"></a></h2>
+<p>Set <code class="code docutils literal notranslate"><span class="pre">EKF2_AID_MASK</span></code> to <strong>vision position fusion</strong> and <strong>vision yaw fusion</strong>. This is probably a value of 24.</p>
+<p>Set <code class="code docutils literal notranslate"><span class="pre">EKF2_HGT_MODE</span></code> to <strong>Vision</strong></p>
+<p>Good starting gains for the Geometric Attitude Controller are:</p>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-0-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-0-0-0" name="0-0" role="tab" tabindex="0">Big Hippo (Alu)</button><button aria-controls="panel-0-0-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-1" name="0-1" role="tab" tabindex="-1">Hippo (Plastic)</button></div><div aria-labelledby="tab-0-0-0" class="sphinx-tabs-panel" id="panel-0-0-0" name="0-0" role="tabpanel" tabindex="0"><table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Parameter</p></th>
+<th class="head"><p>Value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>UUV_ROLL_P</p></td>
+<td><p>5.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>UUV_ROLL_D</p></td>
+<td><p>0.5</p></td>
+</tr>
+<tr class="row-even"><td><p>UUV_PITCH_P</p></td>
+<td><p>5.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>UUV_PITCH_D</p></td>
+<td><p>1.0</p></td>
+</tr>
+<tr class="row-even"><td><p>UUV_YAW_P</p></td>
+<td><p>8.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>UUV_YAW_D</p></td>
+<td><p>1.0</p></td>
+</tr>
+</tbody>
+</table>
+</div><div aria-labelledby="tab-0-0-1" class="sphinx-tabs-panel" hidden="true" id="panel-0-0-1" name="0-1" role="tabpanel" tabindex="0"><div class="admonition-todo admonition" id="id2">
+<p class="admonition-title">Todo</p>
+<p>Find good basic values.</p>
+</div>
+</div></div>
+</section>
+<section id="pixracer-calibration">
+<h2>PixRacer Calibration<a class="headerlink" href="#pixracer-calibration" title="Permalink to this heading"></a></h2>
+<p>Just follow the steps in QGroundControl.
+Probably a good idea to step away from the steel water tank.</p>
+</section>
+<section id="camera-calibration">
+<h2>Camera Calibration<a class="headerlink" href="#camera-calibration" title="Permalink to this heading"></a></h2>
+<p><a class="reference external" href="http://wiki.ros.org/camera_calibration/Tutorials/MonocularCalibration">http://wiki.ros.org/camera_calibration/Tutorials/MonocularCalibration</a></p>
+<p>Copy file to <code class="file docutils literal notranslate"><span class="pre">~/catkin_ws/src/camera/config/calib_ov9281_00.yaml</span></code> on RaspberryPi.</p>
+</section>
+<section id="launch-setup">
+<h2>Launch Setup<a class="headerlink" href="#launch-setup" title="Permalink to this heading"></a></h2>
+<section id="tethered-setup">
+<h3>Tethered Setup<a class="headerlink" href="#tethered-setup" title="Permalink to this heading"></a></h3>
+<ol class="arabic">
+<li><p><strong>ROS network setup</strong></p>
+<p>The ROS master will be running on the <em>main</em> RaspberryPi on HippoCampus. Set the ROS_MASTER_URI on your computer to <code class="code docutils literal notranslate"><span class="pre">http://hippo-main-XX.local:11311</span></code>.</p>
+<p>In case of errors, checklist to work through. Maybe this should be in a seperate debugging section.</p>
+</li>
+<li><p><strong>Start this on HippoCampus:</strong></p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>roslaunch<span class="w"> </span>hippocampus_common<span class="w"> </span>hardware_hippo.launch<span class="w"> </span>vehicle_name:<span class="o">=</span>uuv00
+</pre></div>
+</div>
+<p>IP address for QGC computer can be changed by adding</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>roslaunch<span class="w"> </span>hippocampus_common<span class="w"> </span>hardware_hippo.launch<span class="w"> </span>vehicle_name:<span class="o">=</span>uuv00<span class="w"> </span>qgc_ip:<span class="o">=</span><span class="m">192</span>.168.0.100
+</pre></div>
+</div>
+</li>
+<li><p><strong>Start this on a computer of your choice:</strong></p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>roslaunch<span class="w"> </span>hippocampus_common<span class="w"> </span>offboard_hippo.launch<span class="w"> </span>vehicle_name:<span class="o">=</span>uuv00
+</pre></div>
+</div>
+</li>
+</ol>
+</section>
+<section id="autonomous-setup">
+<h3>Autonomous Setup<a class="headerlink" href="#autonomous-setup" title="Permalink to this heading"></a></h3>
+<p>Pretty much the same, this time just launch all necessary nodes on HippoCampus. It might be a good idea to make use of the <em>Buddy</em> RaspberryPi as well.</p>
+<div class="admonition-todo admonition" id="id3">
+<p class="admonition-title">Todo</p>
+<p>TBD</p>
+</div>
+</section>
+</section>
+<section id="offboard-mode">
+<h2>Offboard Mode<a class="headerlink" href="#offboard-mode" title="Permalink to this heading"></a></h2>
+<p>Set mode to Offboard in QGC.</p>
+</section>
+<section id="arming-the-vehicle">
+<h2>Arming the Vehicle<a class="headerlink" href="#arming-the-vehicle" title="Permalink to this heading"></a></h2>
+<p>Now, you can arm the vehicle in QGC. Try not to move the vehicle too much.
+If you absolutely cannot arm due to preflight errors, you can force arm using a rosservice.</p>
+<section id="force-arming-via-mavros">
+<h3>Force arming via mavros<a class="headerlink" href="#force-arming-via-mavros" title="Permalink to this heading"></a></h3>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>rosservice<span class="w"> </span>call<span class="w"> </span>/uuv00/mavros/cmd/command<span class="w"> </span><span class="s2">&quot;{broadcast: false, command: 400,confirmation: 0, param1: 1, param2: 21196, param3: 0.0, param4: 0.0,param5: 0.0, param6: 0.0, param7: 0.0}&quot;</span>
+</pre></div>
+</div>
+</section>
+<section id="force-disarming">
+<h3>Force disarming<a class="headerlink" href="#force-disarming" title="Permalink to this heading"></a></h3>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>rosservice<span class="w"> </span>call<span class="w"> </span>/uuv00/mavros/cmd/command<span class="w"> </span><span class="s2">&quot;{broadcast: false, command: 400,confirmation: 0, param1: 0, param2: 21196, param3: 0.0, param4: 0.0,param5: 0.0, param6: 0.0, param7: 0.0}&quot;</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="final-steps">
+<h2>Final Steps<a class="headerlink" href="#final-steps" title="Permalink to this heading"></a></h2>
+<p>Look! It’s running just perfectly fine without any trial and error.</p>
+<a class="reference internal image-reference" href="../../_images/hippo_inf_path.gif"><img alt="../../_images/hippo_inf_path.gif" class="align-center" src="../../_images/hippo_inf_path.gif" style="width: 500px;" /></a>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="starting_gazebo_simulation.html" class="btn btn-neutral float-left" title="10.1.4. Starting Simulation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../raspberry_pi_4b_setup.html" class="btn btn-neutral float-right" title="10.2. Raspberry Pi 4B Setup" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020-2023, Thies Lennart Alff, Nathalie Bauschmann.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

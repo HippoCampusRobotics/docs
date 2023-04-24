@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
     <link href="../_static/hippo.svg" rel="icon" type="image/svg+xml">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>6.2. Raspberry Pi Setup &mdash; HippoCampusDocs  documentation</title>
+  <title>7.2. Raspberry Pi Setup &mdash; HippoCampusDocs  documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
@@ -18,8 +18,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="7. Underwater Camera" href="../underwater_camera.html" />
-    <link rel="prev" title="6.1. General Information" href="general_information.html" /> 
+    <link rel="next" title="8. Underwater Camera" href="../00_main_toc/underwater_camera.html" />
+    <link rel="prev" title="7.1. General Information" href="general_information.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -43,25 +43,25 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">1. Getting Started</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../raspberry_pi_4b_setup.html">2. Raspberry Pi 4B Setup</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../raspberry_pi_4b_experimental.html">3. Raspberry Pi 4B Experimental</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../hippocampus_hardware.html">4. HippoCampus Hardware</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../bluerov.html">5. BlueROV</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../gantry.html">6. Gantry</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="general_information.html">6.1. General Information</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">6.2. Raspberry Pi Setup</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#requirements">6.2.1. Requirements</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#enable-uart">6.2.2. Enable UART</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#udev-rules">6.2.3. UDEV Rules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../00_main_toc/contributing.html">1. Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../00_main_toc/getting_started.html">2. Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../00_main_toc/concepts.html">3. Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../00_main_toc/raspberry_pi_4b_setup.html">4. Raspberry Pi 4B Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../00_main_toc/hippocampus_hardware.html">5. HippoCampus Hardware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../00_main_toc/bluerov.html">6. BlueROV</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../00_main_toc/gantry.html">7. Gantry</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="general_information.html">7.1. General Information</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">7.2. Raspberry Pi Setup</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#requirements">7.2.1. Requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#enable-uart">7.2.2. Enable UART</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#udev-rules">7.2.3. UDEV Rules</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../underwater_camera.html">7. Underwater Camera</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../ros2.html">8. ROS2</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../contributing.html">9. Contributing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../workflow_and_style_guide.html">10. Workflow and Style Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../00_main_toc/underwater_camera.html">8. Underwater Camera</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../00_main_toc/ros2.html">9. ROS2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../00_main_toc/ros_deprecated.html">10. ROS Deprecated</a></li>
 </ul>
 
         </div>
@@ -78,8 +78,8 @@
            <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="../gantry.html"><span class="section-number">6. </span>Gantry</a></li>
-      <li class="breadcrumb-item active"><span class="section-number">6.2. </span>Raspberry Pi Setup</li>
+          <li class="breadcrumb-item"><a href="../00_main_toc/gantry.html"><span class="section-number">7. </span>Gantry</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">7.2. </span>Raspberry Pi Setup</li>
     
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/HippoCampusRobotics/docs/blob/master/gantry/raspi_setup.rst" class="fa fa-github"> Edit on GitHub</a>
@@ -93,19 +93,19 @@
            <div itemprop="articleBody">
              
   <section id="raspberry-pi-setup">
-<h1><span class="section-number">6.2. </span>Raspberry Pi Setup<a class="headerlink" href="#raspberry-pi-setup" title="Permalink to this heading"></a></h1>
+<h1><span class="section-number">7.2. </span>Raspberry Pi Setup<a class="headerlink" href="#raspberry-pi-setup" title="Permalink to this heading"></a></h1>
 <p><em>Section author: Lennart Alff &lt;<a class="reference external" href="mailto:thies&#46;lennart&#46;alff&#37;&#52;&#48;tuhh&#46;de">thies<span>&#46;</span>lennart<span>&#46;</span>alff<span>&#64;</span>tuhh<span>&#46;</span>de</a>&gt;</em></p>
 <section id="requirements">
-<h2><span class="section-number">6.2.1. </span>Requirements<a class="headerlink" href="#requirements" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">7.2.1. </span>Requirements<a class="headerlink" href="#requirements" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p>Raspberry Pi 4 (previous versions do not have enough UART devices!)</p></li>
-<li><p>Ubuntu 18.04 Server image installed on Raspberry</p></li>
-<li><p>A ROS installation (no GUI dependencies, so the <code class="code docutils literal notranslate"><span class="pre">ros-melodic-ros-base</span></code> would suffice, see the <a class="reference internal" href="../getting_started/installing_ros.html#installing-ros"><span class="std std-ref">Installing ROS</span></a> instructions).</p></li>
+<li><p>Ubuntu 22.04 Server image installed on Raspberry Pi</p></li>
+<li><p>A ROS installation, no GUI dependencies, so the <code class="code docutils literal notranslate"><span class="pre">ros-humble-ros-base</span></code> would suffice.</p></li>
 </ul>
 </section>
 <section id="enable-uart">
-<h2><span class="section-number">6.2.2. </span>Enable UART<a class="headerlink" href="#enable-uart" title="Permalink to this heading"></a></h2>
-<p>Modify the <code class="file docutils literal notranslate"><span class="pre">usercfg.txt</span></code>, either pre-boot directly on the <code class="file docutils literal notranslate"><span class="pre">/boot</span></code> partition or from the running Raspberry Pi in the <code class="file docutils literal notranslate"><span class="pre">/boot/firmware</span></code> directory,  and add the following lines:</p>
+<h2><span class="section-number">7.2.2. </span>Enable UART<a class="headerlink" href="#enable-uart" title="Permalink to this heading"></a></h2>
+<p>Modify the <code class="file docutils literal notranslate"><span class="pre">usercfg.txt</span></code>, either pre-boot directly on the <code class="file docutils literal notranslate"><span class="pre">/boot</span></code> partition or from the running Raspberry Pi in the <code class="file docutils literal notranslate"><span class="pre">/boot/firmware</span></code> directory, and add the following lines:</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nv">dtoverlay</span><span class="o">=</span>uart3
 <span class="nv">dtoverlay</span><span class="o">=</span>uart4
 <span class="nv">dtoverlay</span><span class="o">=</span>uart5
@@ -113,7 +113,7 @@
 </div>
 </section>
 <section id="udev-rules">
-<h2><span class="section-number">6.2.3. </span>UDEV Rules<a class="headerlink" href="#udev-rules" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">7.2.3. </span>UDEV Rules<a class="headerlink" href="#udev-rules" title="Permalink to this heading"></a></h2>
 <p>The Raspberry Pi uses its UARTs to communicate with the Faulhaber motors. The name of the UART ports depend on the number of activated UART devices on the dtoverlay. So it is hard to identify which of the <code class="file docutils literal notranslate"><span class="pre">/dev/ttyAMAn</span></code> devices corresponds to which physical UART device.</p>
 <p>To simplify things you can add UDEV rules.</p>
 <p>Executing</p>
@@ -211,8 +211,8 @@ lrwxrwxrwx<span class="w"> </span><span class="m">1</span><span class="w"> </spa
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="general_information.html" class="btn btn-neutral float-left" title="6.1. General Information" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../underwater_camera.html" class="btn btn-neutral float-right" title="7. Underwater Camera" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="general_information.html" class="btn btn-neutral float-left" title="7.1. General Information" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../00_main_toc/underwater_camera.html" class="btn btn-neutral float-right" title="8. Underwater Camera" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

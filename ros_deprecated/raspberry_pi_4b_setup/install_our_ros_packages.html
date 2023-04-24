@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <link href="../../_static/hippo.svg" rel="icon" type="image/svg+xml">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>10.2.10. Install Our ROS Packages &mdash; HippoCampusDocs  documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/tabs.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="10.2.11. Install MIPI Camera Library" href="install_camera_library.html" />
+    <link rel="prev" title="10.2.9. Install MAVROS" href="install_mavros.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            HippoCampusDocs
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../00_main_toc/contributing.html">1. Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../00_main_toc/getting_started.html">2. Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../00_main_toc/concepts.html">3. Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../00_main_toc/raspberry_pi_4b_setup.html">4. Raspberry Pi 4B Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../00_main_toc/hippocampus_hardware.html">5. HippoCampus Hardware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../00_main_toc/bluerov.html">6. BlueROV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../00_main_toc/gantry.html">7. Gantry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../00_main_toc/underwater_camera.html">8. Underwater Camera</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../00_main_toc/ros2.html">9. ROS2</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../00_main_toc/ros_deprecated.html">10. ROS Deprecated</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../getting_started.html">10.1. Getting Started</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../raspberry_pi_4b_setup.html">10.2. Raspberry Pi 4B Setup</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="pre_boot_configuration.html">10.2.1. Pre-Boot Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="system_configuration.html">10.2.2. System Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ethernet_configuration.html">10.2.3. Ethernet Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quality_of_life_features.html">10.2.4. Quality-of-Life Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ros_installation.html">10.2.5. ROS Installation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ros_network_setup.html">10.2.6. ROS Network Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="update_catkin_ws.html">10.2.7. Update Catkin Workspace</a></li>
+<li class="toctree-l3"><a class="reference internal" href="install_ros_packages.html">10.2.8. Install ROS Packages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="install_mavros.html">10.2.9. Install MAVROS</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">10.2.10. Install Our ROS Packages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="install_camera_library.html">10.2.11. Install MIPI Camera Library</a></li>
+<li class="toctree-l3"><a class="reference internal" href="uart_configuration.html">10.2.12. UART Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usb_configuration.html">10.2.13. USB Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pinout.html">10.2.14. Pinout</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../workflow_and_style_guide.html">10.3. Workflow and Style Guide</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">HippoCampusDocs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+           <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../00_main_toc/ros_deprecated.html"><span class="section-number">10. </span>ROS Deprecated</a></li>
+          <li class="breadcrumb-item"><a href="../raspberry_pi_4b_setup.html"><span class="section-number">10.2. </span>Raspberry Pi 4B Setup</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">10.2.10. </span>Install Our ROS Packages</li>
+    
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/HippoCampusRobotics/docs/blob/master/ros_deprecated/raspberry_pi_4b_setup/install_our_ros_packages.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+    <li class="wy-breadcrumbs-aside"><a href="https://hippocampusrobotics.github.io/" class="fa fa-github"> Project Page </a></li>
+
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="install-our-ros-packages">
+<h1><span class="section-number">10.2.10. </span>Install Our ROS Packages<a class="headerlink" href="#install-our-ros-packages" title="Permalink to this heading"></a></h1>
+<p>Change into the catkin workspace’s <code class="file docutils literal notranslate"><span class="pre">src</span></code> directory:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/catkin_ws/src
+</pre></div>
+</div>
+<p>Clone our packages needed for autonomous deployment of HippoCampus:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/HippoCampusRobotics/hippocampus_common.git
+git<span class="w"> </span>clone<span class="w"> </span>https://github.com/HippoCampusRobotics/hippocampus_msgs.git
+git<span class="w"> </span>clone<span class="w"> </span>https://github.com/HippoCampusRobotics/mu_auv_localization.git
+git<span class="w"> </span>clone<span class="w"> </span>https://github.com/HippoCampusRobotics/control.git
+git<span class="w"> </span>clone<span class="w"> </span>https://github.com/HippoCampusRobotics/path_planning.git
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You don’t necessarily need all packages on <em>both</em> the <strong>main</strong> and the <strong>buddy</strong> RaspberryPi.</p>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="install_mavros.html" class="btn btn-neutral float-left" title="10.2.9. Install MAVROS" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="install_camera_library.html" class="btn btn-neutral float-right" title="10.2.11. Install MIPI Camera Library" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020-2023, Thies Lennart Alff, Nathalie Bauschmann.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

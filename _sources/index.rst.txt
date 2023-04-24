@@ -12,16 +12,16 @@ Welcome to HippoCampusDocs's documentation!
    :caption: Contents:
    :numbered: 3
    
-   getting_started
-   raspberry_pi_4b_setup
-   raspberry_pi_4b_experimental
-   hippocampus_hardware
-   bluerov
-   gantry
-   underwater_camera
-   ros2
-   contributing
-   workflow_and_style_guide
+   00_main_toc/contributing
+   00_main_toc/getting_started
+   00_main_toc/concepts
+   00_main_toc/raspberry_pi_4b_setup
+   00_main_toc/hippocampus_hardware
+   00_main_toc/bluerov
+   00_main_toc/gantry
+   00_main_toc/underwater_camera
+   00_main_toc/ros2
+   00_main_toc/ros_deprecated
 
 
 

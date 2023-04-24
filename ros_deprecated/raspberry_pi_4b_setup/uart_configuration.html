@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <link href="../../_static/hippo.svg" rel="icon" type="image/svg+xml">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>10.2.12. UART Configuration &mdash; HippoCampusDocs  documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/tabs.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/tabs.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="10.2.13. USB Configuration" href="usb_configuration.html" />
+    <link rel="prev" title="10.2.11. Install MIPI Camera Library" href="install_camera_library.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            HippoCampusDocs
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../00_main_toc/contributing.html">1. Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../00_main_toc/getting_started.html">2. Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../00_main_toc/concepts.html">3. Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../00_main_toc/raspberry_pi_4b_setup.html">4. Raspberry Pi 4B Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../00_main_toc/hippocampus_hardware.html">5. HippoCampus Hardware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../00_main_toc/bluerov.html">6. BlueROV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../00_main_toc/gantry.html">7. Gantry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../00_main_toc/underwater_camera.html">8. Underwater Camera</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../00_main_toc/ros2.html">9. ROS2</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../00_main_toc/ros_deprecated.html">10. ROS Deprecated</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../getting_started.html">10.1. Getting Started</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../raspberry_pi_4b_setup.html">10.2. Raspberry Pi 4B Setup</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="pre_boot_configuration.html">10.2.1. Pre-Boot Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="system_configuration.html">10.2.2. System Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ethernet_configuration.html">10.2.3. Ethernet Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quality_of_life_features.html">10.2.4. Quality-of-Life Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ros_installation.html">10.2.5. ROS Installation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ros_network_setup.html">10.2.6. ROS Network Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="update_catkin_ws.html">10.2.7. Update Catkin Workspace</a></li>
+<li class="toctree-l3"><a class="reference internal" href="install_ros_packages.html">10.2.8. Install ROS Packages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="install_mavros.html">10.2.9. Install MAVROS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="install_our_ros_packages.html">10.2.10. Install Our ROS Packages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="install_camera_library.html">10.2.11. Install MIPI Camera Library</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">10.2.12. UART Configuration</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#uart-kernels-pin-mapping">UART-KERNELS-Pin Mapping</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pinout">Pinout</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#uart-rule">UART Rule</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#identify-kernels">Identify KERNELS</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="usb_configuration.html">10.2.13. USB Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pinout.html">10.2.14. Pinout</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../workflow_and_style_guide.html">10.3. Workflow and Style Guide</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">HippoCampusDocs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+           <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../00_main_toc/ros_deprecated.html"><span class="section-number">10. </span>ROS Deprecated</a></li>
+          <li class="breadcrumb-item"><a href="../raspberry_pi_4b_setup.html"><span class="section-number">10.2. </span>Raspberry Pi 4B Setup</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">10.2.12. </span>UART Configuration</li>
+    
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/HippoCampusRobotics/docs/blob/master/ros_deprecated/raspberry_pi_4b_setup/uart_configuration.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+    <li class="wy-breadcrumbs-aside"><a href="https://hippocampusrobotics.github.io/" class="fa fa-github"> Project Page </a></li>
+
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="uart-configuration">
+<h1><span class="section-number">10.2.12. </span>UART Configuration<a class="headerlink" href="#uart-configuration" title="Permalink to this heading"></a></h1>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>By default UART0 is used as a login terminal. Do not change this, unless there is a compelling reason to do so.</p>
+</div>
+<p>We have made the decision to use UART5 for the telemetry communication with the FCU. UART4 is connected to the debug port of the FCU.</p>
+<section id="uart-kernels-pin-mapping">
+<h2>UART-KERNELS-Pin Mapping<a class="headerlink" href="#uart-kernels-pin-mapping" title="Permalink to this heading"></a></h2>
+<p>The UART functions in the following table depend on whether Raspberry Pi is used in a UUV or for the gantry controlling computer.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>UART</p></th>
+<th class="head"><p>KERNELS</p></th>
+<th class="head"><p>Tx/Rx GPIOs</p></th>
+<th class="head"><p>Function</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">GPIO14/GPIO15</span></code></p></td>
+<td><p>Access to Login Shell</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td></td>
+<td></td>
+<td><p>Reserved for Bluetooth</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">GPIO0/GPIO1</span></code></p></td>
+<td><p>– / –</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">fe201600.serial</span></code></p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">GPIO4/GPIO5</span></code></p></td>
+<td><p>– / x-Axis Motor</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">fe201800.serial</span></code></p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">GPIO8/GPIO9</span></code></p></td>
+<td><p>Debug Port / y-Axis Motor</p></td>
+</tr>
+<tr class="row-odd"><td><p>5</p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">fe201a00.serial</span></code></p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">GPIO12/GPIO13</span></code></p></td>
+<td><p>Telemtry / z-Axis Motor</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="pinout">
+<h2>Pinout<a class="headerlink" href="#pinout" title="Permalink to this heading"></a></h2>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-0-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-0-0-0" name="0-0" role="tab" tabindex="0">UUV</button><button aria-controls="panel-0-0-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-1" name="0-1" role="tab" tabindex="-1">Gantry</button></div><div aria-labelledby="tab-0-0-0" class="sphinx-tabs-panel" id="panel-0-0-0" name="0-0" role="tabpanel" tabindex="0"><a class="reference internal image-reference" href="../../_images/pi_pinout_uuv.svg"><img alt="../../_images/pi_pinout_uuv.svg" class="align-center" src="../../_images/pi_pinout_uuv.svg" width="30000" /></a>
+</div><div aria-labelledby="tab-0-0-1" class="sphinx-tabs-panel" hidden="true" id="panel-0-0-1" name="0-1" role="tabpanel" tabindex="0"><a class="reference internal image-reference" href="../../_images/pi_pinout_gantry.svg"><img alt="../../_images/pi_pinout_gantry.svg" class="align-center" src="../../_images/pi_pinout_gantry.svg" width="30000" /></a>
+</div></div>
+</section>
+<section id="uart-rule">
+<h2>UART Rule<a class="headerlink" href="#uart-rule" title="Permalink to this heading"></a></h2>
+<p>Create the file <code class="file docutils literal notranslate"><span class="pre">/etc/udev/rules.d/50-serial.rules</span></code> with the following content:</p>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-1-VVVW" aria-selected="true" class="sphinx-tabs-tab code-tab group-tab" id="tab-1-VVVW" name="VVVW" role="tab" tabindex="0">UUV</button><button aria-controls="panel-1-R2FudHJ5" aria-selected="false" class="sphinx-tabs-tab code-tab group-tab" id="tab-1-R2FudHJ5" name="R2FudHJ5" role="tab" tabindex="-1">Gantry</button></div><div aria-labelledby="tab-1-VVVW" class="sphinx-tabs-panel code-tab group-tab" id="panel-1-VVVW" name="VVVW" role="tabpanel" tabindex="0"><div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nv">KERNEL</span><span class="o">==</span><span class="s2">&quot;ttyAMA[0-9]*&quot;</span>,<span class="w"> </span><span class="nv">GROUP</span><span class="o">=</span><span class="s2">&quot;dialout&quot;</span>,<span class="w"> </span>ENV<span class="o">{</span>SERIAL_MARKER<span class="o">}=</span><span class="s2">&quot;fcu_serial&quot;</span>
+
+ENV<span class="o">{</span>SERIAL_MARKER<span class="o">}==</span><span class="s2">&quot;fcu_serial&quot;</span>,<span class="w">  </span><span class="nv">SUBSYSTEM</span><span class="o">==</span><span class="s2">&quot;tty&quot;</span>,<span class="w"> </span><span class="nv">KERNELS</span><span class="o">==</span><span class="s2">&quot;fe201800.serial&quot;</span>,<span class="w"> </span><span class="nv">SYMLINK</span><span class="o">+=</span><span class="s2">&quot;fcu_debug&quot;</span>
+ENV<span class="o">{</span>SERIAL_MARKER<span class="o">}==</span><span class="s2">&quot;fcu_serial&quot;</span>,<span class="w">  </span><span class="nv">SUBSYSTEM</span><span class="o">==</span><span class="s2">&quot;tty&quot;</span>,<span class="w"> </span><span class="nv">KERNELS</span><span class="o">==</span><span class="s2">&quot;fe201a00.serial&quot;</span>,<span class="w"> </span><span class="nv">SYMLINK</span><span class="o">+=</span><span class="s2">&quot;fcu_tele&quot;</span>
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-1-R2FudHJ5" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-1-R2FudHJ5" name="R2FudHJ5" role="tabpanel" tabindex="0"><div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nv">KERNEL</span><span class="o">==</span><span class="s2">&quot;ttyAMA[0-9]*&quot;</span>,<span class="w"> </span><span class="nv">GROUP</span><span class="o">=</span><span class="s2">&quot;dialout&quot;</span>,<span class="w"> </span>ENV<span class="o">{</span>SERIAL_MARKER<span class="o">}=</span><span class="s2">&quot;motor_serial&quot;</span>
+
+ENV<span class="o">{</span>SERIAL_MARKER<span class="o">}==</span><span class="s2">&quot;motor_serial&quot;</span>,<span class="w">  </span><span class="nv">SUBSYSTEM</span><span class="o">==</span><span class="s2">&quot;tty&quot;</span>,<span class="w"> </span><span class="nv">KERNELS</span><span class="o">==</span><span class="s2">&quot;fe201600.serial&quot;</span>,<span class="w"> </span><span class="nv">SYMLINK</span><span class="o">+=</span><span class="s2">&quot;motor_x&quot;</span>
+ENV<span class="o">{</span>SERIAL_MARKER<span class="o">}==</span><span class="s2">&quot;motor_serial&quot;</span>,<span class="w">  </span><span class="nv">SUBSYSTEM</span><span class="o">==</span><span class="s2">&quot;tty&quot;</span>,<span class="w"> </span><span class="nv">KERNELS</span><span class="o">==</span><span class="s2">&quot;fe201800.serial&quot;</span>,<span class="w"> </span><span class="nv">SYMLINK</span><span class="o">+=</span><span class="s2">&quot;motor_y&quot;</span>
+ENV<span class="o">{</span>SERIAL_MARKER<span class="o">}==</span><span class="s2">&quot;motor_serial&quot;</span>,<span class="w">  </span><span class="nv">SUBSYSTEM</span><span class="o">==</span><span class="s2">&quot;tty&quot;</span>,<span class="w"> </span><span class="nv">KERNELS</span><span class="o">==</span><span class="s2">&quot;fe201a00.serial&quot;</span>,<span class="w"> </span><span class="nv">SYMLINK</span><span class="o">+=</span><span class="s2">&quot;motor_z&quot;</span>
+</pre></div>
+</div>
+</div></div>
+<p>You can apply these changes by</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>udevadm<span class="w"> </span>control<span class="w"> </span>--reload-rules<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>sudo<span class="w"> </span>udevadm<span class="w"> </span>trigger
+</pre></div>
+</div>
+<p>To check, that the rule is applied correctly, you can execute</p>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-2-VVVW" aria-selected="true" class="sphinx-tabs-tab code-tab group-tab" id="tab-2-VVVW" name="VVVW" role="tab" tabindex="0">UUV</button><button aria-controls="panel-2-R2FudHJ5" aria-selected="false" class="sphinx-tabs-tab code-tab group-tab" id="tab-2-R2FudHJ5" name="R2FudHJ5" role="tab" tabindex="-1">Gantry</button></div><div aria-labelledby="tab-2-VVVW" class="sphinx-tabs-panel code-tab group-tab" id="panel-2-VVVW" name="VVVW" role="tabpanel" tabindex="0"><div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>ls<span class="w"> </span>/dev/fcu*<span class="w"> </span>-l
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-2-R2FudHJ5" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-2-R2FudHJ5" name="R2FudHJ5" role="tabpanel" tabindex="0"><div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>ls<span class="w"> </span>/dev/motor*<span class="w"> </span>-l
+</pre></div>
+</div>
+</div></div>
+<p>The output should show symbolic links for the serial devices:</p>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-3-VVVW" aria-selected="true" class="sphinx-tabs-tab code-tab group-tab" id="tab-3-VVVW" name="VVVW" role="tab" tabindex="0">UUV</button><button aria-controls="panel-3-R2FudHJ5" aria-selected="false" class="sphinx-tabs-tab code-tab group-tab" id="tab-3-R2FudHJ5" name="R2FudHJ5" role="tab" tabindex="-1">Gantry</button></div><div aria-labelledby="tab-3-VVVW" class="sphinx-tabs-panel code-tab group-tab" id="panel-3-VVVW" name="VVVW" role="tabpanel" tabindex="0"><div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>lrwxrwxrwx<span class="w"> </span><span class="m">1</span><span class="w"> </span>root<span class="w"> </span>root<span class="w"> </span><span class="m">7</span><span class="w"> </span>Dec<span class="w"> </span><span class="m">11</span><span class="w"> </span><span class="m">14</span>:57<span class="w"> </span>/dev/fcu_debug<span class="w"> </span>-&gt;<span class="w"> </span>ttyAMA1
+lrwxrwxrwx<span class="w"> </span><span class="m">1</span><span class="w"> </span>root<span class="w"> </span>root<span class="w"> </span><span class="m">7</span><span class="w"> </span>Dec<span class="w"> </span><span class="m">11</span><span class="w"> </span><span class="m">14</span>:57<span class="w"> </span>/dev/fcu_tele<span class="w"> </span>-&gt;<span class="w"> </span>ttyAMA2
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-3-R2FudHJ5" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-3-R2FudHJ5" name="R2FudHJ5" role="tabpanel" tabindex="0"><div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>lrwxrwxrwx<span class="w"> </span><span class="m">1</span><span class="w"> </span>root<span class="w"> </span>root<span class="w"> </span><span class="m">7</span><span class="w"> </span>Aug<span class="w">  </span><span class="m">7</span><span class="w"> </span><span class="m">01</span>:00<span class="w"> </span>/dev/motor_x<span class="w"> </span>-&gt;<span class="w"> </span>ttyAMA2
+lrwxrwxrwx<span class="w"> </span><span class="m">1</span><span class="w"> </span>root<span class="w"> </span>root<span class="w"> </span><span class="m">7</span><span class="w"> </span>Aug<span class="w">  </span><span class="m">7</span><span class="w"> </span><span class="m">01</span>:00<span class="w"> </span>/dev/motor_y<span class="w"> </span>-&gt;<span class="w"> </span>ttyAMA3
+lrwxrwxrwx<span class="w"> </span><span class="m">1</span><span class="w"> </span>root<span class="w"> </span>root<span class="w"> </span><span class="m">7</span><span class="w"> </span>Aug<span class="w">  </span><span class="m">7</span><span class="w"> </span><span class="m">01</span>:00<span class="w"> </span>/dev/motor_z<span class="w"> </span>-&gt;<span class="w"> </span>ttyAMA4
+</pre></div>
+</div>
+</div></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <code class="file docutils literal notranslate"><span class="pre">ttyAMA</span></code> numbers might differ, depending on the UARTs you have activated.</p>
+</div>
+</section>
+<section id="identify-kernels">
+<h2>Identify KERNELS<a class="headerlink" href="#identify-kernels" title="Permalink to this heading"></a></h2>
+<p>To identify the KERNELS paramter of a certain <code class="file docutils literal notranslate"><span class="pre">ttyAMA</span></code> device, execute the following command.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>udevadm<span class="w"> </span>info<span class="w"> </span>--name<span class="o">=</span>/dev/ttyAMA1<span class="w"> </span>--attribute-walk
+</pre></div>
+</div>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span>looking<span class="w"> </span>at<span class="w"> </span>device<span class="w"> </span><span class="s1">&#39;/devices/platform/soc/fe201800.serial/tty/ttyAMA1&#39;</span>:
+<span class="linenos"> 2</span><span class="nv">KERNEL</span><span class="o">==</span><span class="s2">&quot;ttyAMA1&quot;</span>
+<span class="linenos"> 3</span><span class="nv">SUBSYSTEM</span><span class="o">==</span><span class="s2">&quot;tty&quot;</span>
+<span class="linenos"> 4</span><span class="nv">DRIVER</span><span class="o">==</span><span class="s2">&quot;&quot;</span>
+<span class="linenos"> 5</span>
+<span class="linenos"> 6</span>looking<span class="w"> </span>at<span class="w"> </span>parent<span class="w"> </span>device<span class="w"> </span><span class="s1">&#39;/devices/ platform/soc/fe201800.serial&#39;</span>:
+<span class="hll"><span class="linenos"> 7</span><span class="nv">KERNELS</span><span class="o">==</span><span class="s2">&quot;fe201800.serial&quot;</span>
+</span><span class="linenos"> 8</span><span class="nv">SUBSYSTEMS</span><span class="o">==</span><span class="s2">&quot;amba&quot;</span>
+<span class="linenos"> 9</span><span class="nv">DRIVERS</span><span class="o">==</span><span class="s2">&quot;uart-pl011&quot;</span>
+<span class="linenos">10</span>ATTRS<span class="o">{</span>driver_override<span class="o">}==</span><span class="s2">&quot;(null)&quot;</span>
+<span class="linenos">11</span>ATTRS<span class="o">{</span>id<span class="o">}==</span><span class="s2">&quot;00241011&quot;</span>
+<span class="linenos">12</span>ATTRS<span class="o">{</span>irq0<span class="o">}==</span><span class="s2">&quot;14&quot;</span>
+<span class="linenos">13</span>
+<span class="linenos">14</span>looking<span class="w"> </span>at<span class="w"> </span>parent<span class="w"> </span>device<span class="w"> </span><span class="s1">&#39;/devices/ platform/soc&#39;</span>:
+<span class="linenos">15</span><span class="nv">KERNELS</span><span class="o">==</span><span class="s2">&quot;soc&quot;</span>
+<span class="linenos">16</span><span class="nv">SUBSYSTEMS</span><span class="o">==</span><span class="s2">&quot;platform&quot;</span>
+<span class="linenos">17</span><span class="nv">DRIVERS</span><span class="o">==</span><span class="s2">&quot;&quot;</span>
+<span class="linenos">18</span>ATTRS<span class="o">{</span>driver_override<span class="o">}==</span><span class="s2">&quot;(null)&quot;</span>
+<span class="linenos">19</span>
+<span class="linenos">20</span>looking<span class="w"> </span>at<span class="w"> </span>parent<span class="w"> </span>device<span class="w"> </span><span class="s1">&#39;/devices/ platform&#39;</span>:
+<span class="linenos">21</span><span class="nv">KERNELS</span><span class="o">==</span><span class="s2">&quot;platform&quot;</span>
+<span class="linenos">22</span><span class="nv">SUBSYSTEMS</span><span class="o">==</span><span class="s2">&quot;&quot;</span>
+<span class="linenos">23</span><span class="nv">DRIVERS</span><span class="o">==</span><span class="s2">&quot;&quot;</span>
+</pre></div>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>The <code class="file docutils literal notranslate"><span class="pre">ttyAMAx</span></code> number is not specific for the UART device and depends on how many UARTs are activated.</p>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="install_camera_library.html" class="btn btn-neutral float-left" title="10.2.11. Install MIPI Camera Library" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="usb_configuration.html" class="btn btn-neutral float-right" title="10.2.13. USB Configuration" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020-2023, Thies Lennart Alff, Nathalie Bauschmann.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <link href="../_static/hippo.svg" rel="icon" type="image/svg+xml">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2.2. Workspace Setup &mdash; HippoCampusDocs  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="2.3. PX4 Setup" href="px4_setup.html" />
+    <link rel="prev" title="2.1. ROS Installation" href="ros_installation.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            HippoCampusDocs
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../00_main_toc/contributing.html">1. Contributing</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../00_main_toc/getting_started.html">2. Getting Started</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="ros_installation.html">2.1. ROS Installation</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">2.2. Workspace Setup</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#our-workspace-setup">2.2.1. Our Workspace Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#getting-the-external-packages">2.2.2. Getting the external packages</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#px4-msg">PX4-msg</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#apriltag-ros">AprilTag-ROS</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#building-the-workspaces">2.2.3. Building the Workspaces</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#underlay-workspace">Underlay Workspace</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#main-workspace">Main Workspace</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#auto-complete">Auto-Complete</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#final-check">Final Check</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="px4_setup.html">2.3. PX4 Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installing_qgc.html">2.4. Installing QGroundControl</a></li>
+<li class="toctree-l2"><a class="reference internal" href="starting_gazebo_simulation.html">2.5. Starting Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deploying_hippocampus.html">2.6. Deploying HippoCampus</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../00_main_toc/concepts.html">3. Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../00_main_toc/raspberry_pi_4b_setup.html">4. Raspberry Pi 4B Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../00_main_toc/hippocampus_hardware.html">5. HippoCampus Hardware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../00_main_toc/bluerov.html">6. BlueROV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../00_main_toc/gantry.html">7. Gantry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../00_main_toc/underwater_camera.html">8. Underwater Camera</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../00_main_toc/ros2.html">9. ROS2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../00_main_toc/ros_deprecated.html">10. ROS Deprecated</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">HippoCampusDocs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+           <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../00_main_toc/getting_started.html"><span class="section-number">2. </span>Getting Started</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">2.2. </span>Workspace Setup</li>
+    
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/HippoCampusRobotics/docs/blob/master/getting_started/workspace_setup.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+    <li class="wy-breadcrumbs-aside"><a href="https://hippocampusrobotics.github.io/" class="fa fa-github"> Project Page </a></li>
+
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="workspace-setup">
+<h1><span class="section-number">2.2. </span>Workspace Setup<a class="headerlink" href="#workspace-setup" title="Permalink to this heading"></a></h1>
+<p>In the following, we describe our ROS2 system setup.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This guide assumes <a class="reference external" href="https://releases.ubuntu.com/22.04/">Ubuntu 22.04</a> is used as OS. We use ROS2 <a class="reference external" href="https://docs.ros.org/en/humble/index.html">Humble</a>.</p>
+</div>
+<section id="our-workspace-setup">
+<h2><span class="section-number">2.2.1. </span>Our Workspace Setup<a class="headerlink" href="#our-workspace-setup" title="Permalink to this heading"></a></h2>
+<p>There are a few packages that we will need to build from source, but probably will not touch (or at least not too much). In order to keep the compilation time of our workspace as short as possible during development, we will use a setup with two overlayed workspaces.
+We use <code class="file docutils literal notranslate"><span class="pre">ros2</span></code> as development workspace und <code class="file docutils literal notranslate"><span class="pre">ros2_underlay</span></code> for larger manually compiled non-development packages that take a lot of time to compile/recompile.
+Typical packages for <code class="file docutils literal notranslate"><span class="pre">ros2_underlay</span></code> are <code class="code docutils literal notranslate"><span class="pre">px4_msgs</span></code> and a ROS2 version of <code class="code docutils literal notranslate"><span class="pre">apriltag_ros</span></code> (since there has not been an official release at this point of time).
+In <code class="file docutils literal notranslate"><span class="pre">ros2</span></code>, we will keep all of our own packages.</p>
+<p>To create this directory structure, execute:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>-p<span class="w"> </span>~/ros2/src
+mkdir<span class="w"> </span>-p<span class="w"> </span>~/ros2_underlay/src
+</pre></div>
+</div>
+</section>
+<section id="getting-the-external-packages">
+<h2><span class="section-number">2.2.2. </span>Getting the external packages<a class="headerlink" href="#getting-the-external-packages" title="Permalink to this heading"></a></h2>
+<p>We will need the following external packages that we will put into <code class="file docutils literal notranslate"><span class="pre">ros2_underlay</span></code>:</p>
+<section id="px4-msg">
+<h3>PX4-msg<a class="headerlink" href="#px4-msg" title="Permalink to this heading"></a></h3>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/ros2_underlay/src<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/PX4/px4_msgs.git
+</pre></div>
+</div>
+</section>
+<section id="apriltag-ros">
+<h3>AprilTag-ROS<a class="headerlink" href="#apriltag-ros" title="Permalink to this heading"></a></h3>
+<p>There is a <a class="reference external" href="https://github.com/AprilRobotics/apriltag_ros/pull/114">PR</a> for porting the good old <code class="code docutils literal notranslate"><span class="pre">apriltag_ros</span></code> package to ROS2.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/ros2_underlay/src<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/wep21/apriltag_ros.git
+<span class="nb">cd</span><span class="w"> </span>~/ros2_underlay/src/apriltag_ros<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>git<span class="w"> </span>checkout<span class="w"> </span>ros2-port
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>There is an alternative <a class="reference external" href="https://github.com/christianrauch/apriltag_ros">package</a> by Christian Rauch, that works somewhat different but has a simpler code base. Unfortunately it does not support tag bundles.</p>
+</div>
+</section>
+</section>
+<section id="building-the-workspaces">
+<h2><span class="section-number">2.2.3. </span>Building the Workspaces<a class="headerlink" href="#building-the-workspaces" title="Permalink to this heading"></a></h2>
+<p>With <code class="code docutils literal notranslate"><span class="pre">colcon</span></code>, the new build tool for ROS2, you cannot build your custom workspace when it is sourced. This would mean that you either cannot source your workspace in <code class="file docutils literal notranslate"><span class="pre">.zshrc</span></code> (or <code class="file docutils literal notranslate"><span class="pre">.bashrc</span></code> if you use bash), or you have to manually make sure to run the build command in an environment where you only source workspaces outside the workspace you want to build.</p>
+<p>Since this is very tedious, we define some aliases. Put these two lines into your <code class="file docutils literal notranslate"><span class="pre">.zshrc</span></code>:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;alias build_ros=\&quot;env -i HOME=\$HOME USER=\$USER TERM=xterm-256color bash -l -c &#39;source \$HOME/ros2_underlay/install/setup.bash &amp;&amp; cd \$HOME/ros2 &amp;&amp; colcon build --symlink-install --cmake-args -DCMAKE_EXPORT_COMPILE_COMMANDS=ON&#39;\&quot;&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.zshrc
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;alias build_underlay=\&quot;env -i HOME=\$HOME USER=\$USER TERM=xterm-256color bash -l -c &#39;source /opt/ros/humble/setup.bash &amp;&amp; cd \$HOME/ros2_underlay &amp;&amp; colcon build&#39;\&quot;&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.zshrc
+</pre></div>
+</div>
+<p>Make sure to source the <code class="file docutils literal notranslate"><span class="pre">.zshrc</span></code> in your terminal when you make changes.</p>
+<section id="underlay-workspace">
+<h3>Underlay Workspace<a class="headerlink" href="#underlay-workspace" title="Permalink to this heading"></a></h3>
+<p>We can now build the first “under”layed workspace <code class="file docutils literal notranslate"><span class="pre">ros2_underlay</span></code>.
+But first, let’s check for unresolved dependencies.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/ros2_underlay<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>rosdep<span class="w"> </span>install<span class="w"> </span>--from-paths<span class="w"> </span>src<span class="w"> </span>-y<span class="w"> </span>--ignore-src
+</pre></div>
+</div>
+<p>And to build:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>build_underlay
+</pre></div>
+</div>
+<p>Note that you do not have to be inside the respective workspace directory to build by executing the defined alias. Very convenient!</p>
+<p>After a successful build, we can source this workspace in the <code class="file docutils literal notranslate"><span class="pre">.zshrc</span></code>, so that our main, overlayed workspace will find it.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;source </span><span class="nv">$HOME</span><span class="s2">/ros2_underlay/install/setup.zsh&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.zshrc
+</pre></div>
+</div>
+</section>
+<section id="main-workspace">
+<h3>Main Workspace<a class="headerlink" href="#main-workspace" title="Permalink to this heading"></a></h3>
+<p>Now, we can build our main workspace. Let’s get our packages:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/ros2/src
+git<span class="w"> </span>clone<span class="w"> </span>git@github.com:HippoCampusRobotics/hippo_core.git
+git<span class="w"> </span>clone<span class="w"> </span>git@github.com:HippoCampusRobotics/hippo_simulation.git
+git<span class="w"> </span>clone<span class="w"> </span>git@github.com:HippoCampusRobotics/state_estimation.git
+git<span class="w"> </span>clone<span class="w"> </span>git@github.com:HippoCampusRobotics/vision.git
+</pre></div>
+</div>
+<div class="admonition-todo admonition" id="id1">
+<p class="admonition-title">Todo</p>
+<p>Add any other relevant packages as we continue our move to ROS2.</p>
+</div>
+<p>These packages have some more dependencies. Let’s resolve them by executing</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/ros2<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>rosdep<span class="w"> </span>install<span class="w"> </span>--from-paths<span class="w"> </span>src<span class="w"> </span>-y<span class="w"> </span>--ignore-src
+</pre></div>
+</div>
+<p>Make sure that the underlay workspace containing external packages is sourced for this.</p>
+<p>Then, we can build this workspace using our defined alias.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>build_ros
+</pre></div>
+</div>
+<p>Now, source this workspace in your <code class="file docutils literal notranslate"><span class="pre">.zshrc</span></code>, too, using the local setup this time:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;source </span><span class="nv">$HOME</span><span class="s2">/ros2/install/local_setup.zsh&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.zshrc
+</pre></div>
+</div>
+<p>Note that since this workspace overlays the <code class="file docutils literal notranslate"><span class="pre">ros2_underlay</span></code> workspace, this setup file needs to be sourced afterwards.</p>
+</section>
+<section id="auto-complete">
+<h3>Auto-Complete<a class="headerlink" href="#auto-complete" title="Permalink to this heading"></a></h3>
+<p>ROS2 command line tools do not autocomplete as of this <a class="reference external" href="https://github.com/ros2/ros2cli/issues/534">GitHub Issue</a>. While this issue has since been closed, the problem still occurs. To fix this</p>
+<div class="highlight-default notranslate" id="test"><div class="highlight"><pre><span></span><span class="n">echo</span> <span class="s2">&quot;eval </span><span class="se">\&quot;</span><span class="s2">\$(register-python-argcomplete3 ros2)</span><span class="se">\&quot;</span><span class="s2">&quot;</span> <span class="o">&gt;&gt;</span> <span class="o">~/.</span><span class="n">zshrc</span>
+<span class="n">echo</span> <span class="s2">&quot;eval </span><span class="se">\&quot;</span><span class="s2">\$(register-python-argcomplete3 colcon)</span><span class="se">\&quot;</span><span class="s2">&quot;</span> <span class="o">&gt;&gt;</span> <span class="o">~/.</span><span class="n">zshrc</span>
+</pre></div>
+</div>
+<p>Auto-completing topic names seems to work only after an execution of <cite>ros2 topic list</cite>. Before the auto-complete gets stuck and has to be canceled by <kbd class="kbd docutils literal notranslate">Ctrl</kbd> + <kbd class="kbd docutils literal notranslate">C</kbd>.</p>
+<p>Sourcing <code class="file docutils literal notranslate"><span class="pre">install/setup.zsh</span></code> might reset this. Better source <code class="file docutils literal notranslate"><span class="pre">install/local_setup.zsh</span></code>.</p>
+</section>
+<section id="final-check">
+<h3>Final Check<a class="headerlink" href="#final-check" title="Permalink to this heading"></a></h3>
+<p>Your <code class="file docutils literal notranslate"><span class="pre">.zshrc</span></code> should look similar to this now:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>...
+
+
+<span class="nb">alias</span><span class="w"> </span><span class="nv">build_ros</span><span class="o">=</span><span class="s2">&quot;env -i HOME=</span><span class="nv">$HOME</span><span class="s2"> USER=</span><span class="nv">$USER</span><span class="s2"> TERM=xterm-256color bash -l -c &#39;source </span><span class="nv">$HOME</span><span class="s2">/ros2_underlay/install/setup.bash &amp;&amp; cd </span><span class="nv">$HOME</span><span class="s2">/ros2 &amp;&amp; colcon build --symlink-install --cmake-args -DCMAKE_EXPORT_COMPILE_COMMANDS=ON&#39;&quot;</span>
+<span class="nb">alias</span><span class="w"> </span><span class="nv">build_underlay</span><span class="o">=</span><span class="s2">&quot;env -i HOME=</span><span class="nv">$HOME</span><span class="s2"> USER=</span><span class="nv">$USER</span><span class="s2"> TERM=xterm-256color bash -l -c &#39;source /opt/ros/humble/setup.bash &amp;&amp; cd </span><span class="nv">$HOME</span><span class="s2">/ros2_underlay &amp;&amp; colcon build&#39;&quot;</span>
+
+<span class="nb">source</span><span class="w"> </span>/opt/ros/humble/setup.zsh
+<span class="nb">source</span><span class="w"> </span><span class="nv">$HOME</span>/ros2_underlay/install/setup.zsh
+<span class="nb">source</span><span class="w"> </span><span class="nv">$HOME</span>/ros2/install/local_setup.zsh
+
+<span class="nb">eval</span><span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>register-python-argcomplete3<span class="w"> </span>ros2<span class="k">)</span><span class="s2">&quot;</span>
+<span class="nb">eval</span><span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>register-python-argcomplete3<span class="w"> </span>colcon<span class="k">)</span><span class="s2">&quot;</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="ros_installation.html" class="btn btn-neutral float-left" title="2.1. ROS Installation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="px4_setup.html" class="btn btn-neutral float-right" title="2.3. PX4 Setup" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020-2023, Thies Lennart Alff, Nathalie Bauschmann.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

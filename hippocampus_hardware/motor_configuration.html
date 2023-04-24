@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
     <link href="../_static/hippo.svg" rel="icon" type="image/svg+xml">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>4.2. Motor Configuration &mdash; HippoCampusDocs  documentation</title>
+  <title>5.2. Motor Configuration &mdash; HippoCampusDocs  documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
@@ -18,8 +18,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="4.3. FCU Firmware" href="fcu_firmware.html" />
-    <link rel="prev" title="4.1. Afro ESC" href="afro_esc.html" /> 
+    <link rel="next" title="5.3. FCU Firmware" href="fcu_firmware.html" />
+    <link rel="prev" title="5.1. Afro ESC" href="afro_esc.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -43,21 +43,21 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">1. Getting Started</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../raspberry_pi_4b_setup.html">2. Raspberry Pi 4B Setup</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../raspberry_pi_4b_experimental.html">3. Raspberry Pi 4B Experimental</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../hippocampus_hardware.html">4. HippoCampus Hardware</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="afro_esc.html">4.1. Afro ESC</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">4.2. Motor Configuration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="fcu_firmware.html">4.3. FCU Firmware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../00_main_toc/contributing.html">1. Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../00_main_toc/getting_started.html">2. Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../00_main_toc/concepts.html">3. Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../00_main_toc/raspberry_pi_4b_setup.html">4. Raspberry Pi 4B Setup</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../00_main_toc/hippocampus_hardware.html">5. HippoCampus Hardware</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="afro_esc.html">5.1. Afro ESC</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">5.2. Motor Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fcu_firmware.html">5.3. FCU Firmware</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../bluerov.html">5. BlueROV</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../gantry.html">6. Gantry</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../underwater_camera.html">7. Underwater Camera</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../ros2.html">8. ROS2</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../contributing.html">9. Contributing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../workflow_and_style_guide.html">10. Workflow and Style Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../00_main_toc/bluerov.html">6. BlueROV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../00_main_toc/gantry.html">7. Gantry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../00_main_toc/underwater_camera.html">8. Underwater Camera</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../00_main_toc/ros2.html">9. ROS2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../00_main_toc/ros_deprecated.html">10. ROS Deprecated</a></li>
 </ul>
 
         </div>
@@ -74,8 +74,8 @@
            <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="../hippocampus_hardware.html"><span class="section-number">4. </span>HippoCampus Hardware</a></li>
-      <li class="breadcrumb-item active"><span class="section-number">4.2. </span>Motor Configuration</li>
+          <li class="breadcrumb-item"><a href="../00_main_toc/hippocampus_hardware.html"><span class="section-number">5. </span>HippoCampus Hardware</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">5.2. </span>Motor Configuration</li>
     
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/HippoCampusRobotics/docs/blob/master/hippocampus_hardware/motor_configuration.rst" class="fa fa-github"> Edit on GitHub</a>
@@ -89,12 +89,12 @@
            <div itemprop="articleBody">
              
   <section id="motor-configuration">
-<h1><span class="section-number">4.2. </span>Motor Configuration<a class="headerlink" href="#motor-configuration" title="Permalink to this heading"></a></h1>
+<h1><span class="section-number">5.2. </span>Motor Configuration<a class="headerlink" href="#motor-configuration" title="Permalink to this heading"></a></h1>
 <p>The following image depicts the thruster configuration. The numbers correspond to the FCU’s PWM outputs. Make sure the propellers are mounted correctly since there are two clockwise and two counterclockwise propellers.</p>
 <figure class="align-default" id="id1">
 <img alt="../_images/thrusters.png" src="../_images/thrusters.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 4.1 </span><span class="caption-text">Motor and propeller configuration.</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Fig. 5.1 </span><span class="caption-text">Motor and propeller configuration.</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p>To avoid confusion, the order of the three motor/ESC wires should be black, red, yellow from front to rear. If the ESC or motor has other colors for its wires make sure the motor turns in positive direction (right hand rule with axis parallel to the vehicle’s x-axis 😉) for positive setpoints.</p>
@@ -113,8 +113,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="afro_esc.html" class="btn btn-neutral float-left" title="4.1. Afro ESC" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="fcu_firmware.html" class="btn btn-neutral float-right" title="4.3. FCU Firmware" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="afro_esc.html" class="btn btn-neutral float-left" title="5.1. Afro ESC" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="fcu_firmware.html" class="btn btn-neutral float-right" title="5.3. FCU Firmware" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

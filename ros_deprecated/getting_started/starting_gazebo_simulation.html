@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <link href="../../_static/hippo.svg" rel="icon" type="image/svg+xml">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>10.1.4. Starting Simulation &mdash; HippoCampusDocs  documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/tabs.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="10.1.5. Deploying HippoCampus" href="deploying_hippocampus.html" />
+    <link rel="prev" title="10.1.3. Installing QGroundControl" href="installing_qgc.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            HippoCampusDocs
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../00_main_toc/contributing.html">1. Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../00_main_toc/getting_started.html">2. Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../00_main_toc/concepts.html">3. Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../00_main_toc/raspberry_pi_4b_setup.html">4. Raspberry Pi 4B Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../00_main_toc/hippocampus_hardware.html">5. HippoCampus Hardware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../00_main_toc/bluerov.html">6. BlueROV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../00_main_toc/gantry.html">7. Gantry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../00_main_toc/underwater_camera.html">8. Underwater Camera</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../00_main_toc/ros2.html">9. ROS2</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../00_main_toc/ros_deprecated.html">10. ROS Deprecated</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../getting_started.html">10.1. Getting Started</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="installing_ros.html">10.1.1. Installing ROS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installing_px4.html">10.1.2. Installing PX4</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installing_qgc.html">10.1.3. Installing QGroundControl</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">10.1.4. Starting Simulation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#general-launch-setup">General Launch Setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#parameter-setup">Parameter Setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#spawning-hippocampus">Spawning HippoCampus</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#path-following-example">Path Following example</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#offboard-mode">Offboard Mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#arming-the-vehicle">Arming the Vehicle</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="deploying_hippocampus.html">10.1.5. Deploying HippoCampus</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../raspberry_pi_4b_setup.html">10.2. Raspberry Pi 4B Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../workflow_and_style_guide.html">10.3. Workflow and Style Guide</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">HippoCampusDocs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+           <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../00_main_toc/ros_deprecated.html"><span class="section-number">10. </span>ROS Deprecated</a></li>
+          <li class="breadcrumb-item"><a href="../getting_started.html"><span class="section-number">10.1. </span>Getting Started</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">10.1.4. </span>Starting Simulation</li>
+    
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/HippoCampusRobotics/docs/blob/master/ros_deprecated/getting_started/starting_gazebo_simulation.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+    <li class="wy-breadcrumbs-aside"><a href="https://hippocampusrobotics.github.io/" class="fa fa-github"> Project Page </a></li>
+
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="starting-simulation">
+<h1><span class="section-number">10.1.4. </span>Starting Simulation<a class="headerlink" href="#starting-simulation" title="Permalink to this heading"></a></h1>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>If launching gazebo from ROS, ROS is not able to kill the gazebo node without escalating to <strong>SIGTERM</strong>. This happens after a 15s timeout. If you do not have the time to wait for so long, you can modifiy <code class="file docutils literal notranslate"><span class="pre">/opt/ros/noetic/lib/python3/dist-packages/roslaunch/nodeprocess.py</span></code> and change <code class="code docutils literal notranslate"><span class="pre">DEFAULT_TIMEOUT_SIGINT</span></code> to some value you are willing to wait.</p>
+</div>
+<section id="general-launch-setup">
+<h2>General Launch Setup<a class="headerlink" href="#general-launch-setup" title="Permalink to this heading"></a></h2>
+<p>Vehicle-specific nodes should be launched in namespace “vehicle_name”, for example <code class="code docutils literal notranslate"><span class="pre">uuv00</span></code> - <code class="code docutils literal notranslate"><span class="pre">uuv99</span></code>.</p>
+<p>Each camera node should be launched in namespace “camera_name”, which can be: <code class="code docutils literal notranslate"><span class="pre">vertical_camera</span></code> for HippoCampus, and <code class="code docutils literal notranslate"><span class="pre">vertical_camera</span></code> and <code class="code docutils literal notranslate"><span class="pre">front_camera</span></code> for the BlueROV’s two cameras.</p>
+</section>
+<section id="parameter-setup">
+<h2>Parameter Setup<a class="headerlink" href="#parameter-setup" title="Permalink to this heading"></a></h2>
+<p>Before continuing on the <em>hydrobatic-way-of-live</em>, we need to set some parameters first.</p>
+<p>In QGroundControl:</p>
+<p>We set <em>Offboard</em> as a flight mode in which remote control (RC) loss is ignored. Thus, <em>fail-safe</em> actions are not triggered.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nv">COM_RCL_EXCEPT</span><span class="o">=</span><span class="m">4</span>
+</pre></div>
+</div>
+</section>
+<section id="spawning-hippocampus">
+<h2>Spawning HippoCampus<a class="headerlink" href="#spawning-hippocampus" title="Permalink to this heading"></a></h2>
+<p>To start Gazebo with one HippoCampus:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>roslaunch<span class="w"> </span>hippocampus_sim<span class="w"> </span>top_single_vehicle_complete.launch
+</pre></div>
+</div>
+</section>
+<section id="path-following-example">
+<h2>Path Following example<a class="headerlink" href="#path-following-example" title="Permalink to this heading"></a></h2>
+<p>As an example, we will let the HippoCampus follow an Infinity-shaped path in Gazebo.</p>
+<p>Here is the launch file code <code class="file docutils literal notranslate"><span class="pre">top_path_following_example.launch</span></code> explained:</p>
+<div class="admonition-todo admonition" id="id1">
+<p class="admonition-title">Todo</p>
+<p>…</p>
+</div>
+<p>… Let’s start it!</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>roslaunch<span class="w"> </span>hippocampus_sim<span class="w"> </span>top_path_following_example.launch
+</pre></div>
+</div>
+</section>
+<section id="offboard-mode">
+<h2>Offboard Mode<a class="headerlink" href="#offboard-mode" title="Permalink to this heading"></a></h2>
+<p>The path follower node publishes attitude setpoints. For the uuv_att_control PX4 module to accept externally provided setpoints, the flight mode <em>Offboard mode</em> has to be selected. This mode can only be engaged if the vehicle is already receiving a stream of target setpoints (&gt;2Hz). The vehicle will exit the mode if target setpoints are not received at a rate of &gt;2Hz.</p>
+<p>The offboard mode can be selected in QGC.</p>
+</section>
+<section id="arming-the-vehicle">
+<h2>Arming the Vehicle<a class="headerlink" href="#arming-the-vehicle" title="Permalink to this heading"></a></h2>
+<p>Arming is also done in QGC.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="installing_qgc.html" class="btn btn-neutral float-left" title="10.1.3. Installing QGroundControl" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="deploying_hippocampus.html" class="btn btn-neutral float-right" title="10.1.5. Deploying HippoCampus" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020-2023, Thies Lennart Alff, Nathalie Bauschmann.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

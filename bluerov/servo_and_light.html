@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
     <link href="../_static/hippo.svg" rel="icon" type="image/svg+xml">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>5.3. Servo And Light &mdash; HippoCampusDocs  documentation</title>
+  <title>6.3. Servo And Light &mdash; HippoCampusDocs  documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
@@ -18,8 +18,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="6. Gantry" href="../gantry.html" />
-    <link rel="prev" title="5.2. Build And Flash" href="build_and_flash.html" /> 
+    <link rel="next" title="7. Gantry" href="../00_main_toc/gantry.html" />
+    <link rel="prev" title="6.2. Build And Flash" href="build_and_flash.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -43,20 +43,21 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">1. Getting Started</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../raspberry_pi_4b_setup.html">2. Raspberry Pi 4B Setup</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../raspberry_pi_4b_experimental.html">3. Raspberry Pi 4B Experimental</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../hippocampus_hardware.html">4. HippoCampus Hardware</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../bluerov.html">5. BlueROV</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="deploy.html">5.1. Deploy Klopsi</a></li>
-<li class="toctree-l2"><a class="reference internal" href="build_and_flash.html">5.2. Build And Flash</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">5.3. Servo And Light</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#install-pigpio">5.3.1. Install PIGPIO</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../00_main_toc/contributing.html">1. Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../00_main_toc/getting_started.html">2. Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../00_main_toc/concepts.html">3. Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../00_main_toc/raspberry_pi_4b_setup.html">4. Raspberry Pi 4B Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../00_main_toc/hippocampus_hardware.html">5. HippoCampus Hardware</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../00_main_toc/bluerov.html">6. BlueROV</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="deploy.html">6.1. Deploy Klopsi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="build_and_flash.html">6.2. Build And Flash</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">6.3. Servo And Light</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#install-pigpio">6.3.1. Install PIGPIO</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#raspbian">Raspbian</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#ubuntu">Ubuntu</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#enable-the-daemon">5.3.2. Enable The Daemon</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#enable-the-daemon">6.3.2. Enable The Daemon</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#ubuntu-only">Ubuntu only</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#raspbian-and-ubuntu">Raspbian and Ubuntu</a></li>
 </ul>
@@ -65,11 +66,10 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../gantry.html">6. Gantry</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../underwater_camera.html">7. Underwater Camera</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../ros2.html">8. ROS2</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../contributing.html">9. Contributing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../workflow_and_style_guide.html">10. Workflow and Style Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../00_main_toc/gantry.html">7. Gantry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../00_main_toc/underwater_camera.html">8. Underwater Camera</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../00_main_toc/ros2.html">9. ROS2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../00_main_toc/ros_deprecated.html">10. ROS Deprecated</a></li>
 </ul>
 
         </div>
@@ -86,8 +86,8 @@
            <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="../bluerov.html"><span class="section-number">5. </span>BlueROV</a></li>
-      <li class="breadcrumb-item active"><span class="section-number">5.3. </span>Servo And Light</li>
+          <li class="breadcrumb-item"><a href="../00_main_toc/bluerov.html"><span class="section-number">6. </span>BlueROV</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">6.3. </span>Servo And Light</li>
     
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/HippoCampusRobotics/docs/blob/master/bluerov/servo_and_light.rst" class="fa fa-github"> Edit on GitHub</a>
@@ -101,10 +101,10 @@
            <div itemprop="articleBody">
              
   <section id="servo-and-light">
-<h1><span class="section-number">5.3. </span>Servo And Light<a class="headerlink" href="#servo-and-light" title="Permalink to this heading"></a></h1>
+<h1><span class="section-number">6.3. </span>Servo And Light<a class="headerlink" href="#servo-and-light" title="Permalink to this heading"></a></h1>
 <p>The LED headlights and the camera servo are controlled via PWM signals. To get a jitter-free PWM signal, a library, supporting hardware PWM, is required. For example <code class="code docutils literal notranslate"><span class="pre">pigpio</span></code>.</p>
 <section id="install-pigpio">
-<h2><span class="section-number">5.3.1. </span>Install PIGPIO<a class="headerlink" href="#install-pigpio" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">6.3.1. </span>Install PIGPIO<a class="headerlink" href="#install-pigpio" title="Permalink to this heading"></a></h2>
 <section id="raspbian">
 <h3>Raspbian<a class="headerlink" href="#raspbian" title="Permalink to this heading"></a></h3>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt-get<span class="w"> </span>update
@@ -124,7 +124,7 @@ sudo<span class="w"> </span>make<span class="w"> </span>install
 </section>
 </section>
 <section id="enable-the-daemon">
-<h2><span class="section-number">5.3.2. </span>Enable The Daemon<a class="headerlink" href="#enable-the-daemon" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">6.3.2. </span>Enable The Daemon<a class="headerlink" href="#enable-the-daemon" title="Permalink to this heading"></a></h2>
 <section id="ubuntu-only">
 <h3>Ubuntu only<a class="headerlink" href="#ubuntu-only" title="Permalink to this heading"></a></h3>
 <p>You need to create the <code class="file docutils literal notranslate"><span class="pre">pigpiod.service</span></code> file at <code class="file docutils literal notranslate"><span class="pre">/etc/systemd/system</span></code>.</p>
@@ -159,8 +159,8 @@ sudo<span class="w"> </span>make<span class="w"> </span>install
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="build_and_flash.html" class="btn btn-neutral float-left" title="5.2. Build And Flash" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../gantry.html" class="btn btn-neutral float-right" title="6. Gantry" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="build_and_flash.html" class="btn btn-neutral float-left" title="6.2. Build And Flash" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../00_main_toc/gantry.html" class="btn btn-neutral float-right" title="7. Gantry" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

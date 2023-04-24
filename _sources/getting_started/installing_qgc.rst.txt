@@ -1,6 +1,8 @@
 Installing QGroundControl
 #########################
 
+.. todo:: Rework for ROS2 needed.
+
 QGroundControl (QCG) is the Ground Control Station we use for deploying HippoCampus.
 More info about QGC can be found in the `docs <https://docs.qgroundcontrol.com/master/en/>`_.
 
