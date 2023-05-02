@@ -7,5 +7,9 @@
     "[restructuredtext]": {
         "editor.tabSize": 3
     },
-    "esbonio.sphinx.confDir": "${workspaceFolder}"
+    "esbonio.sphinx.confDir": "${workspaceFolder}",
+    "python.formatting.provider": "yapf",
+    "python.formatting.yapfArgs": [
+        "--style={based_on_style: pep8, column_limit: 80}"
+    ],
 }
