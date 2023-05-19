@@ -4,9 +4,11 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
     <link href="../_static/hippo.svg" rel="icon" type="image/svg+xml">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>2.14. Pinout &mdash; HippoCampusDocs  documentation</title>
+  <title>4.3. Pinout &mdash; HippoCampusDocs  documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/asciinema-player_2.6.1.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/asciinema-custom.css" type="text/css" />
       <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
@@ -15,12 +17,13 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/asciinema-player_2.6.1.js"></script>
         <script src="../_static/tabs.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="3. Raspberry Pi 4B Experimental" href="../raspberry_pi_4b_experimental.html" />
-    <link rel="prev" title="2.13. USB Configuration" href="usb_configuration.html" /> 
+    <link rel="next" title="4.4. UART Configuration" href="uart_configuration.html" />
+    <link rel="prev" title="4.2. Ubuntu 22.04 Server 64bit" href="ubuntu_22.04_server_64bit.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -44,32 +47,24 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">1. Getting Started</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../raspberry_pi_4b_setup.html">2. Raspberry Pi 4B Setup</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="pre_boot_configuration.html">2.1. Pre-Boot Configuration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="system_configuration.html">2.2. System Configuration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ethernet_configuration.html">2.3. Ethernet Configuration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="quality_of_life_features.html">2.4. Quality-of-Life Features</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ros_installation.html">2.5. ROS Installation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ros_network_setup.html">2.6. ROS Network Setup</a></li>
-<li class="toctree-l2"><a class="reference internal" href="update_catkin_ws.html">2.7. Update Catkin Workspace</a></li>
-<li class="toctree-l2"><a class="reference internal" href="install_ros_packages.html">2.8. Install ROS Packages</a></li>
-<li class="toctree-l2"><a class="reference internal" href="install_mavros.html">2.9. Install MAVROS</a></li>
-<li class="toctree-l2"><a class="reference internal" href="install_our_ros_packages.html">2.10. Install Our ROS Packages</a></li>
-<li class="toctree-l2"><a class="reference internal" href="install_camera_library.html">2.11. Install MIPI Camera Library</a></li>
-<li class="toctree-l2"><a class="reference internal" href="uart_configuration.html">2.12. UART Configuration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="usb_configuration.html">2.13. USB Configuration</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">2.14. Pinout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../00_main_toc/contributing.html">1. Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../00_main_toc/getting_started.html">2. Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../00_main_toc/concepts.html">3. Concepts</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../00_main_toc/raspberry_pi_4b_setup.html">4. Raspberry Pi 4B Setup</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="quality_of_life_features.html">4.1. Quality-of-Life Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ubuntu_22.04_server_64bit.html">4.2. Ubuntu 22.04 Server 64bit</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">4.3. Pinout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="uart_configuration.html">4.4. UART Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb_configuration.html">4.5. USB Configuration</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../raspberry_pi_4b_experimental.html">3. Raspberry Pi 4B Experimental</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../hippocampus_hardware.html">4. HippoCampus Hardware</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../bluerov.html">5. BlueROV</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../gantry.html">6. Gantry</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../underwater_camera.html">7. Underwater Camera</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../ros2.html">8. ROS2</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../contributing.html">9. Contributing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../workflow_and_style_guide.html">10. Workflow and Style Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../00_main_toc/hippocampus_hardware.html">5. HippoCampus Hardware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../00_main_toc/bluerov.html">6. BlueROV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../00_main_toc/gantry.html">7. Gantry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../00_main_toc/underwater_camera.html">8. Underwater Camera</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../00_main_toc/ros2.html">9. ROS2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../00_main_toc/misc.html">10. Misc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../00_main_toc/ros_deprecated.html">11. ROS Deprecated</a></li>
 </ul>
 
         </div>
@@ -86,8 +81,8 @@
            <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="../raspberry_pi_4b_setup.html"><span class="section-number">2. </span>Raspberry Pi 4B Setup</a></li>
-      <li class="breadcrumb-item active"><span class="section-number">2.14. </span>Pinout</li>
+          <li class="breadcrumb-item"><a href="../00_main_toc/raspberry_pi_4b_setup.html"><span class="section-number">4. </span>Raspberry Pi 4B Setup</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">4.3. </span>Pinout</li>
     
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/HippoCampusRobotics/docs/blob/master/raspberry_pi_4b_setup/pinout.rst" class="fa fa-github"> Edit on GitHub</a>
@@ -101,7 +96,7 @@
            <div itemprop="articleBody">
              
   <section id="pinout">
-<h1><span class="section-number">2.14. </span>Pinout<a class="headerlink" href="#pinout" title="Permalink to this heading"></a></h1>
+<h1><span class="section-number">4.3. </span>Pinout<a class="headerlink" href="#pinout" title="Permalink to this heading"></a></h1>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-0-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-0-0-0" name="0-0" role="tab" tabindex="0">UUV</button><button aria-controls="panel-0-0-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-1" name="0-1" role="tab" tabindex="-1">BlueROV (main)</button><button aria-controls="panel-0-0-2" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-2" name="0-2" role="tab" tabindex="-1">Gantry</button></div><div aria-labelledby="tab-0-0-0" class="sphinx-tabs-panel" id="panel-0-0-0" name="0-0" role="tabpanel" tabindex="0"><a class="reference internal image-reference" href="../_images/pi_pinout_uuv.svg"><img alt="../_images/pi_pinout_uuv.svg" class="align-center" src="../_images/pi_pinout_uuv.svg" width="30000" /></a>
 </div><div aria-labelledby="tab-0-0-1" class="sphinx-tabs-panel" hidden="true" id="panel-0-0-1" name="0-1" role="tabpanel" tabindex="0"><a class="reference internal image-reference" href="../_images/pi_pinout_bluerov.svg"><img alt="../_images/pi_pinout_bluerov.svg" class="align-center" src="../_images/pi_pinout_bluerov.svg" width="30000" /></a>
@@ -113,8 +108,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="usb_configuration.html" class="btn btn-neutral float-left" title="2.13. USB Configuration" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../raspberry_pi_4b_experimental.html" class="btn btn-neutral float-right" title="3. Raspberry Pi 4B Experimental" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="ubuntu_22.04_server_64bit.html" class="btn btn-neutral float-left" title="4.2. Ubuntu 22.04 Server 64bit" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="uart_configuration.html" class="btn btn-neutral float-right" title="4.4. UART Configuration" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

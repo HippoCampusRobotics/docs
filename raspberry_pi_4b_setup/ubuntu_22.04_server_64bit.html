@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
     <link href="../_static/hippo.svg" rel="icon" type="image/svg+xml">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>4.1. Ubuntu 22.04 Server 64bit &mdash; HippoCampusDocs  documentation</title>
+  <title>4.2. Ubuntu 22.04 Server 64bit &mdash; HippoCampusDocs  documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/asciinema-player_2.6.1.css" type="text/css" />
@@ -21,8 +21,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="5. HippoCampus Hardware" href="../00_main_toc/hippocampus_hardware.html" />
-    <link rel="prev" title="4. Raspberry Pi 4B Setup" href="../00_main_toc/raspberry_pi_4b_setup.html" /> 
+    <link rel="next" title="4.3. Pinout" href="pinout.html" />
+    <link rel="prev" title="4.1. Quality-of-Life Features" href="quality_of_life_features.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -50,14 +50,18 @@
 <li class="toctree-l1"><a class="reference internal" href="../00_main_toc/getting_started.html">2. Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../00_main_toc/concepts.html">3. Concepts</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../00_main_toc/raspberry_pi_4b_setup.html">4. Raspberry Pi 4B Setup</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">4.1. Ubuntu 22.04 Server 64bit</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#modify-cloud-init">4.1.1. Modify Cloud-Init</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#create-workspace">4.1.2. Create Workspace</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="quality_of_life_features.html">4.1. Quality-of-Life Features</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">4.2. Ubuntu 22.04 Server 64bit</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#modify-cloud-init">4.2.1. Modify Cloud-Init</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#create-workspace">4.2.2. Create Workspace</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#concept">Concept</a></li>
 </ul>
 </li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="pinout.html">4.3. Pinout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="uart_configuration.html">4.4. UART Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb_configuration.html">4.5. USB Configuration</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../00_main_toc/hippocampus_hardware.html">5. HippoCampus Hardware</a></li>
@@ -84,7 +88,7 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../00_main_toc/raspberry_pi_4b_setup.html"><span class="section-number">4. </span>Raspberry Pi 4B Setup</a></li>
-      <li class="breadcrumb-item active"><span class="section-number">4.1. </span>Ubuntu 22.04 Server 64bit</li>
+      <li class="breadcrumb-item active"><span class="section-number">4.2. </span>Ubuntu 22.04 Server 64bit</li>
     
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/HippoCampusRobotics/docs/blob/master/raspberry_pi_4b_setup/ubuntu_22.04_server_64bit.rst" class="fa fa-github"> Edit on GitHub</a>
@@ -98,13 +102,13 @@
            <div itemprop="articleBody">
              
   <section id="ubuntu-22-04-server-64bit">
-<h1><span class="section-number">4.1. </span>Ubuntu 22.04 Server 64bit<a class="headerlink" href="#ubuntu-22-04-server-64bit" title="Permalink to this heading"></a></h1>
+<h1><span class="section-number">4.2. </span>Ubuntu 22.04 Server 64bit<a class="headerlink" href="#ubuntu-22-04-server-64bit" title="Permalink to this heading"></a></h1>
 <div class="admonition-todo admonition" id="id1">
 <p class="admonition-title">Todo</p>
 <p>Probably the MIPI Arducam OV9281 is not compatible with Ubuntu.</p>
 </div>
 <section id="modify-cloud-init">
-<h2><span class="section-number">4.1.1. </span>Modify Cloud-Init<a class="headerlink" href="#modify-cloud-init" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">4.2.1. </span>Modify Cloud-Init<a class="headerlink" href="#modify-cloud-init" title="Permalink to this heading"></a></h2>
 <p>Modify <code class="file docutils literal notranslate"><span class="pre">user-data</span></code> on the <code class="file docutils literal notranslate"><span class="pre">system-boot</span></code> partition to your liking. An example configuration is provided below:</p>
 <div class="literal-block-wrapper docutils container" id="id2">
 <div class="code-block-caption"><span class="caption-number">Listing 4.1 </span><span class="caption-text">user-data</span><a class="headerlink" href="#id2" title="Permalink to this code"></a></div>
@@ -147,7 +151,7 @@
 </div>
 </section>
 <section id="create-workspace">
-<h2><span class="section-number">4.1.2. </span>Create Workspace<a class="headerlink" href="#create-workspace" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">4.2.2. </span>Create Workspace<a class="headerlink" href="#create-workspace" title="Permalink to this heading"></a></h2>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>-p<span class="w"> </span>~/ros2/src
 mkdir<span class="w"> </span>-p<span class="w"> </span>~/ros2_underlay/src
 </pre></div>
@@ -162,8 +166,8 @@ mkdir<span class="w"> </span>-p<span class="w"> </span>~/ros2_underlay/src
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../00_main_toc/raspberry_pi_4b_setup.html" class="btn btn-neutral float-left" title="4. Raspberry Pi 4B Setup" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../00_main_toc/hippocampus_hardware.html" class="btn btn-neutral float-right" title="5. HippoCampus Hardware" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="quality_of_life_features.html" class="btn btn-neutral float-left" title="4.1. Quality-of-Life Features" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="pinout.html" class="btn btn-neutral float-right" title="4.3. Pinout" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

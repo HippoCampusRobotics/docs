@@ -21,7 +21,7 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="4.1. Ubuntu 22.04 Server 64bit" href="../raspberry_pi_4b_setup/ubuntu_22.04_server_64bit.html" />
+    <link rel="next" title="4.1. Quality-of-Life Features" href="../raspberry_pi_4b_setup/quality_of_life_features.html" />
     <link rel="prev" title="3.2. ROS2 Repositories" href="../concepts/ros2_repositories.html" /> 
 </head>
 
@@ -50,7 +50,11 @@
 <li class="toctree-l1"><a class="reference internal" href="getting_started.html">2. Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="concepts.html">3. Concepts</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">4. Raspberry Pi 4B Setup</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../raspberry_pi_4b_setup/ubuntu_22.04_server_64bit.html">4.1. Ubuntu 22.04 Server 64bit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../raspberry_pi_4b_setup/quality_of_life_features.html">4.1. Quality-of-Life Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../raspberry_pi_4b_setup/ubuntu_22.04_server_64bit.html">4.2. Ubuntu 22.04 Server 64bit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../raspberry_pi_4b_setup/pinout.html">4.3. Pinout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../raspberry_pi_4b_setup/uart_configuration.html">4.4. UART Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../raspberry_pi_4b_setup/usb_configuration.html">4.5. USB Configuration</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="hippocampus_hardware.html">5. HippoCampus Hardware</a></li>
@@ -94,11 +98,25 @@
 <div class="toctree-wrapper compound">
 <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../raspberry_pi_4b_setup/ubuntu_22.04_server_64bit.html">4.1. Ubuntu 22.04 Server 64bit</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../raspberry_pi_4b_setup/ubuntu_22.04_server_64bit.html#modify-cloud-init">4.1.1. Modify Cloud-Init</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../raspberry_pi_4b_setup/ubuntu_22.04_server_64bit.html#create-workspace">4.1.2. Create Workspace</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../raspberry_pi_4b_setup/quality_of_life_features.html">4.1. Quality-of-Life Features</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../raspberry_pi_4b_setup/quality_of_life_features.html#the-fast-way">4.1.1. The Fast Way</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../raspberry_pi_4b_setup/quality_of_life_features.html#the-good-way">4.1.2. The Good Way</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../raspberry_pi_4b_setup/ubuntu_22.04_server_64bit.html">4.2. Ubuntu 22.04 Server 64bit</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../raspberry_pi_4b_setup/ubuntu_22.04_server_64bit.html#modify-cloud-init">4.2.1. Modify Cloud-Init</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../raspberry_pi_4b_setup/ubuntu_22.04_server_64bit.html#create-workspace">4.2.2. Create Workspace</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../raspberry_pi_4b_setup/pinout.html">4.3. Pinout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../raspberry_pi_4b_setup/uart_configuration.html">4.4. UART Configuration</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../raspberry_pi_4b_setup/uart_configuration.html#uart-kernels-pin-mapping">4.4.1. UART-KERNELS-Pin Mapping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../raspberry_pi_4b_setup/uart_configuration.html#pinout">4.4.2. Pinout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../raspberry_pi_4b_setup/uart_configuration.html#uart-rule">4.4.3. UART Rule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../raspberry_pi_4b_setup/uart_configuration.html#identify-kernels">4.4.4. Identify KERNELS</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../raspberry_pi_4b_setup/usb_configuration.html">4.5. USB Configuration</a></li>
 </ul>
 </div>
 </section>
@@ -108,7 +126,7 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="../concepts/ros2_repositories.html" class="btn btn-neutral float-left" title="3.2. ROS2 Repositories" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../raspberry_pi_4b_setup/ubuntu_22.04_server_64bit.html" class="btn btn-neutral float-right" title="4.1. Ubuntu 22.04 Server 64bit" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../raspberry_pi_4b_setup/quality_of_life_features.html" class="btn btn-neutral float-right" title="4.1. Quality-of-Life Features" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
