@@ -3,3 +3,4 @@ sphinx==6.1.3
 sphinx-tabs
 sphinx-favicon>=1.0
 sphinxcontrib.asciinema
+sphinx-copybutton

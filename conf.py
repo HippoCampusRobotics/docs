@@ -37,7 +37,8 @@ extensions = [
         "sphinx_tabs.tabs",
         "sphinx.ext.napoleon",
         "sphinx_favicon",
-        "sphinxcontrib.asciinema"
+        "sphinxcontrib.asciinema",
+        "sphinx_copybutton",
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -77,3 +78,5 @@ numfig = True
 favicons = [
         "hippo.svg",
 ]
+
+copybutton_exclude = '.linenos, .gp'
