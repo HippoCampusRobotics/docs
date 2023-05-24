@@ -17,6 +17,10 @@ Pinout
          :width: 30000
          :align: center
 
+   .. tab:: BlueROV (buddy)
+
+      .. todo:: Create the pinout.
+
    .. tab:: Gantry
 
       .. image:: /res/images/pi_pinout_gantry.svg
