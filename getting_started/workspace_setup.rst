@@ -31,6 +31,8 @@ We will need the following external packages that we will put into :file:`ros2_u
 PX4-msg
 *******
 
+.. important:: See :ref:`getting_started/px4_setup:PX4 Setup` for a tested commit of the repository.
+
 .. code:: sh
 
    cd ~/ros2_underlay/src && git clone https://github.com/PX4/px4_msgs.git
