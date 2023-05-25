@@ -24,17 +24,17 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="2.6233869"
-     inkscape:cx="33.163236"
-     inkscape:cy="148.66278"
+     inkscape:cx="268.92716"
+     inkscape:cy="186.40026"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="true"
      showguides="false"
      inkscape:guide-bbox="true"
-     inkscape:window-width="3840"
-     inkscape:window-height="2160"
-     inkscape:window-x="0"
-     inkscape:window-y="2160"
+     inkscape:window-width="1884"
+     inkscape:window-height="2070"
+     inkscape:window-x="1926"
+     inkscape:window-y="60"
      inkscape:window-maximized="0"
      fit-margin-top="0"
      fit-margin-left="0"
@@ -1342,7 +1342,7 @@
          id="tspan5220"
          x="82.020836"
          y="64.166664"
-         style="fill:#cccccc;stroke-width:0.264583">GPIO 1 (Tx 2)</tspan></text>
+         style="fill:#cccccc;stroke-width:0.264583">GPIO 1 (Rx 2)</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#333333;fill-opacity:1;stroke:none;stroke-width:0.264583"
@@ -1589,7 +1589,7 @@
          id="tspan5300"
          x="56.885414"
          y="64.166664"
-         style="fill:#cccccc;stroke-width:0.264583">GPIO 0 (Rx 2)</tspan></text>
+         style="fill:#cccccc;stroke-width:0.264583">GPIO 0 (Tx 2)</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#cccccc;fill-opacity:1;stroke:none;stroke-width:0.264583"

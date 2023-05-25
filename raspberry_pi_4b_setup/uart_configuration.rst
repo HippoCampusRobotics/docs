@@ -5,21 +5,38 @@ UART Configuration
 
 We have made the decision to use UART5 for the telemetry communication with the FCU. UART4 is connected to the debug port of the FCU.
 
+Enable UARTs
+============
+
+Edit the config file
+
+.. code:: sh
+
+   sudo vim /boot/firmware/config.txt
+
+and append the :code:`dtoverlay=` lines for the required UARTs.
+
+.. code:: sh
+
+   dtoverlay=uart2
+   dtoverlay=uart4
+   dtoverlay=uart5
+
 UART-KERNELS-Pin Mapping
 ========================
 
 The UART functions in the following table depend on whether Raspberry Pi is used in a UUV or for the gantry controlling computer.
 
-==== ======================= ===================== =========================
-UART KERNELS                 Tx/Rx GPIOs           Function
-==== ======================= ===================== =========================
-0                            :code:`GPIO14/GPIO15` Access to Login Shell
-1                                                  Reserved for Bluetooth
-2                            :code:`GPIO0/GPIO1`   -- / --
-3    :code:`fe201600.serial` :code:`GPIO4/GPIO5`   -- / x-Axis Motor
-4    :code:`fe201800.serial` :code:`GPIO8/GPIO9`   Debug Port / y-Axis Motor
-5    :code:`fe201a00.serial` :code:`GPIO12/GPIO13` Telemtry / z-Axis Motor
-==== ======================= ===================== =========================
+==== ======================= =====================
+UART KERNELS                 Tx/Rx GPIOs          
+==== ======================= =====================
+0                            :code:`GPIO14/GPIO15`
+1                                                 
+2    :code:`fe201400.serial` :code:`GPIO0/GPIO1`  
+3    :code:`fe201600.serial` :code:`GPIO4/GPIO5`  
+4    :code:`fe201800.serial` :code:`GPIO8/GPIO9`  
+5    :code:`fe201a00.serial` :code:`GPIO12/GPIO13`
+==== ======================= =====================
 
 Pinout
 ======
@@ -31,7 +48,12 @@ Pinout
       .. image:: /res/images/pi_pinout_uuv.svg
          :width: 30000
          :align: center
+
+   .. tab:: BlueROV (main)
          
+      .. image:: /res/images/pi_pinout_bluerov.svg
+         :width: 30000
+         :align: center 
 
    .. tab:: Gantry
 
@@ -51,15 +73,32 @@ Create the file :file:`/etc/udev/rules.d/50-serial.rules` with the following con
 
       KERNEL=="ttyAMA[0-9]*", GROUP="dialout", ENV{SERIAL_MARKER}="fcu_serial"
 
+      # uart4
       ENV{SERIAL_MARKER}=="fcu_serial",  SUBSYSTEM=="tty", KERNELS=="fe201800.serial", SYMLINK+="fcu_debug"
-      ENV{SERIAL_MARKER}=="fcu_serial",  SUBSYSTEM=="tty", KERNELS=="fe201a00.serial", SYMLINK+="fcu_tele"
+      # uart5
+      ENV{SERIAL_MARKER}=="fcu_serial",  SUBSYSTEM=="tty", KERNELS=="fe201a00.serial", SYMLINK+="fcu_data"
+
+   .. code-tab:: sh BlueROV (main)
+
+      KERNEL=="ttyAMA[0-9]*", GROUP="dialout", ENV{SERIAL_MARKER}="serial_marker"
+
+      # uart2
+      ENV{SERIAL_MARKER}=="serial_marker",  SUBSYSTEM=="tty", KERNELS=="fe201400.serial", SYMLINK+="teensy_data"
+      # uart4
+      ENV{SERIAL_MARKER}=="serial_marker",  SUBSYSTEM=="tty", KERNELS=="fe201800.serial", SYMLINK+="fcu_debug"
+      # uart5
+      ENV{SERIAL_MARKER}=="serial_marker",  SUBSYSTEM=="tty", KERNELS=="fe201a00.serial", SYMLINK+="fcu_data"
+
 
    .. code-tab:: sh Gantry
 
       KERNEL=="ttyAMA[0-9]*", GROUP="dialout", ENV{SERIAL_MARKER}="motor_serial"
 
-      ENV{SERIAL_MARKER}=="motor_serial",  SUBSYSTEM=="tty", KERNELS=="fe201600.serial", SYMLINK+="motor_x"
+      # uart2
+      ENV{SERIAL_MARKER}=="motor_serial",  SUBSYSTEM=="tty", KERNELS=="fe201400.serial", SYMLINK+="motor_x"
+      # uart4
       ENV{SERIAL_MARKER}=="motor_serial",  SUBSYSTEM=="tty", KERNELS=="fe201800.serial", SYMLINK+="motor_y"
+      # uart5
       ENV{SERIAL_MARKER}=="motor_serial",  SUBSYSTEM=="tty", KERNELS=="fe201a00.serial", SYMLINK+="motor_z"
 
 You can apply these changes by

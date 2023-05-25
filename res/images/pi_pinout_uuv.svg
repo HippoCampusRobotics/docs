@@ -2,20 +2,20 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="144.4666mm"
    height="112.4479mm"
    viewBox="0 0 144.4666 112.44789"
    version="1.1"
    id="svg8"
-   inkscape:version="0.92.3 (2405546, 2018-03-11)"
-   sodipodi:docname="pi_pinout_uuv.svg">
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   sodipodi:docname="pi_pinout_uuv.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
   <defs
      id="defs2" />
   <sodipodi:namedview
@@ -26,22 +26,25 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="2.623387"
-     inkscape:cx="210.08659"
-     inkscape:cy="199.11951"
+     inkscape:cx="210.6056"
+     inkscape:cy="199.3606"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
      showguides="false"
      inkscape:guide-bbox="true"
-     inkscape:window-width="3773"
-     inkscape:window-height="2091"
-     inkscape:window-x="67"
-     inkscape:window-y="1069"
+     inkscape:window-width="3840"
+     inkscape:window-height="2160"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
      inkscape:window-maximized="1"
      fit-margin-top="0"
      fit-margin-left="0"
      fit-margin-right="0"
-     fit-margin-bottom="0">
+     fit-margin-bottom="0"
+     inkscape:showpageshadow="2"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1">
     <inkscape:grid
        type="xygrid"
        id="grid3713"
@@ -620,18 +623,13 @@
     </g>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="37.041668"
        y="9.6624994"
-       id="text4882"><tspan
-         sodipodi:role="line"
-         id="tspan4880"
-         x="37.041668"
-         y="19.026268"
-         style="stroke-width:0.26458332" /></text>
+       id="text4882" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="60.854168"
        y="12.589212"
        id="text4886"><tspan
@@ -639,10 +637,10 @@
          id="tspan4884"
          x="60.854168"
          y="12.589212"
-         style="font-size:3.17499995px;stroke-width:0.26458332">1</tspan></text>
+         style="font-size:3.175px;stroke-width:0.264583">1</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="60.849445"
        y="16.538563"
        id="text4886-7"><tspan
@@ -650,10 +648,10 @@
          id="tspan4884-6"
          x="60.849445"
          y="16.538563"
-         style="font-size:3.17499995px;stroke-width:0.26458332">3</tspan></text>
+         style="font-size:3.175px;stroke-width:0.264583">3</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="76.459801"
        y="12.579339"
        id="text4886-5"><tspan
@@ -661,10 +659,10 @@
          id="tspan4884-69"
          x="76.459801"
          y="12.579339"
-         style="font-size:3.17499995px;stroke-width:0.26458332">2</tspan></text>
+         style="font-size:3.175px;stroke-width:0.264583">2</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="76.465538"
        y="16.541737"
        id="text4886-5-3"><tspan
@@ -672,10 +670,10 @@
          id="tspan4884-69-7"
          x="76.465538"
          y="16.541737"
-         style="font-size:3.17499995px;stroke-width:0.26458332">4</tspan></text>
+         style="font-size:3.175px;stroke-width:0.264583">4</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="76.465111"
        y="20.510561"
        id="text4886-5-3-4"><tspan
@@ -683,21 +681,16 @@
          id="tspan4884-69-7-5"
          x="76.465111"
          y="20.510561"
-         style="font-size:3.17499995px;stroke-width:0.26458332">6</tspan></text>
+         style="font-size:3.175px;stroke-width:0.264583">6</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:4.23333311px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:4.23333px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="61.383331"
        y="20.775"
-       id="text4972"><tspan
-         sodipodi:role="line"
-         id="tspan4970"
-         x="61.383331"
-         y="24.520508"
-         style="stroke-width:0.26458332" /></text>
+       id="text4972" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="60.836563"
        y="20.511278"
        id="text4976"><tspan
@@ -705,10 +698,10 @@
          id="tspan4974"
          x="60.836563"
          y="20.511278"
-         style="font-size:3.17499995px;stroke-width:0.26458332">5</tspan></text>
+         style="font-size:3.175px;stroke-width:0.264583">5</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="60.835693"
        y="24.480907"
        id="text4980"><tspan
@@ -716,21 +709,16 @@
          id="tspan4978"
          x="60.835693"
          y="24.480907"
-         style="font-size:3.17499995px;stroke-width:0.26458332">7</tspan></text>
+         style="font-size:3.175px;stroke-width:0.264583">7</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.52777767px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:3.52778px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="54.239582"
        y="24.479166"
-       id="text4984"><tspan
-         sodipodi:role="line"
-         id="tspan4982"
-         x="54.239582"
-         y="27.600422"
-         style="stroke-width:0.26458332" /></text>
+       id="text4984" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="76.461975"
        y="24.474321"
        id="text4988"><tspan
@@ -738,10 +726,10 @@
          id="tspan4986"
          x="76.461975"
          y="24.474321"
-         style="font-size:3.17499995px;stroke-width:0.26458332">8</tspan></text>
+         style="font-size:3.175px;stroke-width:0.264583">8</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="60.846237"
        y="28.426834"
        id="text4992"><tspan
@@ -749,10 +737,10 @@
          id="tspan4990"
          x="60.846237"
          y="28.426834"
-         style="font-size:3.17499995px;stroke-width:0.26458332">9</tspan></text>
+         style="font-size:3.175px;stroke-width:0.264583">9</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="75.40625"
        y="28.447918"
        id="text4996"><tspan
@@ -760,21 +748,16 @@
          id="tspan4994"
          x="75.40625"
          y="28.447918"
-         style="font-size:3.17499995px;stroke-width:0.26458332">10</tspan></text>
+         style="font-size:3.175px;stroke-width:0.264583">10</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.52777767px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:3.52778px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="60.854164"
        y="32.416668"
-       id="text5000"><tspan
-         sodipodi:role="line"
-         id="tspan4998"
-         x="60.854164"
-         y="35.537926"
-         style="stroke-width:0.26458332" /></text>
+       id="text5000" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="59.53125"
        y="32.416668"
        id="text5004"><tspan
@@ -782,10 +765,10 @@
          id="tspan5002"
          x="59.53125"
          y="32.416668"
-         style="font-size:3.17499995px;stroke-width:0.26458332">11</tspan></text>
+         style="font-size:3.175px;stroke-width:0.264583">11</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="75.40625"
        y="32.416668"
        id="text5008"><tspan
@@ -793,10 +776,10 @@
          id="tspan5006"
          x="75.40625"
          y="32.416668"
-         style="font-size:3.17499995px;stroke-width:0.26458332">12</tspan></text>
+         style="font-size:3.175px;stroke-width:0.264583">12</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="59.53125"
        y="36.385414"
        id="text5012"><tspan
@@ -804,10 +787,10 @@
          id="tspan5010"
          x="59.53125"
          y="36.385414"
-         style="font-size:3.17499995px;stroke-width:0.26458332">13</tspan></text>
+         style="font-size:3.175px;stroke-width:0.264583">13</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="75.40625"
        y="36.385414"
        id="text5016"><tspan
@@ -815,10 +798,10 @@
          id="tspan5014"
          x="75.40625"
          y="36.385414"
-         style="font-size:3.17499995px;stroke-width:0.26458332">14</tspan></text>
+         style="font-size:3.175px;stroke-width:0.264583">14</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="59.53125"
        y="40.354164"
        id="text5020"><tspan
@@ -826,10 +809,10 @@
          id="tspan5018"
          x="59.53125"
          y="40.354164"
-         style="font-size:3.17499995px;stroke-width:0.26458332">15</tspan></text>
+         style="font-size:3.175px;stroke-width:0.264583">15</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="75.40625"
        y="40.354164"
        id="text5024"><tspan
@@ -837,10 +820,10 @@
          id="tspan5022"
          x="75.40625"
          y="40.354164"
-         style="font-size:3.17499995px;stroke-width:0.26458332">16</tspan></text>
+         style="font-size:3.175px;stroke-width:0.264583">16</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="59.53125"
        y="44.322914"
        id="text5028"><tspan
@@ -848,10 +831,10 @@
          id="tspan5026"
          x="59.53125"
          y="44.322914"
-         style="font-size:3.17499995px;stroke-width:0.26458332">17</tspan></text>
+         style="font-size:3.175px;stroke-width:0.264583">17</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="75.40625"
        y="44.322914"
        id="text5032"><tspan
@@ -859,10 +842,10 @@
          id="tspan5030"
          x="75.40625"
          y="44.322914"
-         style="font-size:3.17499995px;stroke-width:0.26458332">18</tspan></text>
+         style="font-size:3.175px;stroke-width:0.264583">18</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="59.53125"
        y="48.291664"
        id="text5036"><tspan
@@ -870,10 +853,10 @@
          id="tspan5034"
          x="59.53125"
          y="48.291664"
-         style="font-size:3.17499995px;stroke-width:0.26458332">19</tspan></text>
+         style="font-size:3.175px;stroke-width:0.264583">19</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="75.40625"
        y="48.291664"
        id="text5040"><tspan
@@ -881,10 +864,10 @@
          id="tspan5038"
          x="75.40625"
          y="48.291664"
-         style="font-size:3.17499995px;stroke-width:0.26458332">20</tspan></text>
+         style="font-size:3.175px;stroke-width:0.264583">20</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="59.53125"
        y="52.260414"
        id="text5044"><tspan
@@ -892,10 +875,10 @@
          id="tspan5042"
          x="59.53125"
          y="52.260414"
-         style="font-size:3.17499995px;stroke-width:0.26458332">21</tspan></text>
+         style="font-size:3.175px;stroke-width:0.264583">21</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="75.40625"
        y="52.260414"
        id="text5048"><tspan
@@ -903,10 +886,10 @@
          id="tspan5046"
          x="75.40625"
          y="52.260414"
-         style="font-size:3.17499995px;stroke-width:0.26458332">22</tspan></text>
+         style="font-size:3.175px;stroke-width:0.264583">22</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="59.53125"
        y="56.229164"
        id="text5052"><tspan
@@ -914,10 +897,10 @@
          id="tspan5050"
          x="59.53125"
          y="56.229164"
-         style="font-size:3.17499995px;stroke-width:0.26458332">23</tspan></text>
+         style="font-size:3.175px;stroke-width:0.264583">23</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="75.40625"
        y="56.229164"
        id="text5056"><tspan
@@ -925,10 +908,10 @@
          id="tspan5054"
          x="75.40625"
          y="56.229164"
-         style="font-size:3.17499995px;stroke-width:0.26458332">24</tspan></text>
+         style="font-size:3.175px;stroke-width:0.264583">24</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="59.53125"
        y="60.197914"
        id="text5060"><tspan
@@ -936,10 +919,10 @@
          id="tspan5058"
          x="59.53125"
          y="60.197914"
-         style="font-size:3.17499995px;stroke-width:0.26458332">25</tspan></text>
+         style="font-size:3.175px;stroke-width:0.264583">25</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="75.40625"
        y="60.197914"
        id="text5064"><tspan
@@ -947,10 +930,10 @@
          id="tspan5062"
          x="75.40625"
          y="60.197914"
-         style="font-size:3.17499995px;stroke-width:0.26458332">26</tspan></text>
+         style="font-size:3.175px;stroke-width:0.264583">26</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="59.53125"
        y="64.166664"
        id="text5068"><tspan
@@ -958,10 +941,10 @@
          id="tspan5066"
          x="59.53125"
          y="64.166664"
-         style="font-size:3.17499995px;stroke-width:0.26458332">27</tspan></text>
+         style="font-size:3.175px;stroke-width:0.264583">27</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="75.40625"
        y="64.166664"
        id="text5072"><tspan
@@ -969,10 +952,10 @@
          id="tspan5070"
          x="75.40625"
          y="64.166664"
-         style="font-size:3.17499995px;stroke-width:0.26458332">28</tspan></text>
+         style="font-size:3.175px;stroke-width:0.264583">28</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="59.53125"
        y="68.135414"
        id="text5076"><tspan
@@ -980,10 +963,10 @@
          id="tspan5074"
          x="59.53125"
          y="68.135414"
-         style="font-size:3.17499995px;stroke-width:0.26458332">29</tspan></text>
+         style="font-size:3.175px;stroke-width:0.264583">29</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="75.40625"
        y="68.135414"
        id="text5080"><tspan
@@ -991,10 +974,10 @@
          id="tspan5078"
          x="75.40625"
          y="68.135414"
-         style="font-size:3.17499995px;stroke-width:0.26458332">30</tspan></text>
+         style="font-size:3.175px;stroke-width:0.264583">30</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="59.53125"
        y="72.104164"
        id="text5084"><tspan
@@ -1002,10 +985,10 @@
          id="tspan5082"
          x="59.53125"
          y="72.104164"
-         style="font-size:3.17499995px;stroke-width:0.26458332">31</tspan></text>
+         style="font-size:3.175px;stroke-width:0.264583">31</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="75.40625"
        y="72.104164"
        id="text5088"><tspan
@@ -1013,10 +996,10 @@
          id="tspan5086"
          x="75.40625"
          y="72.104164"
-         style="font-size:3.17499995px;stroke-width:0.26458332">32</tspan></text>
+         style="font-size:3.175px;stroke-width:0.264583">32</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="59.53125"
        y="76.072914"
        id="text5092"><tspan
@@ -1024,10 +1007,10 @@
          id="tspan5090"
          x="59.53125"
          y="76.072914"
-         style="font-size:3.17499995px;stroke-width:0.26458332">33</tspan></text>
+         style="font-size:3.175px;stroke-width:0.264583">33</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="75.40625"
        y="76.072914"
        id="text5096"><tspan
@@ -1035,10 +1018,10 @@
          id="tspan5094"
          x="75.40625"
          y="76.072914"
-         style="font-size:3.17499995px;stroke-width:0.26458332">34</tspan></text>
+         style="font-size:3.175px;stroke-width:0.264583">34</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="59.53125"
        y="80.041664"
        id="text5100"><tspan
@@ -1046,10 +1029,10 @@
          id="tspan5098"
          x="59.53125"
          y="80.041664"
-         style="font-size:3.17499995px;stroke-width:0.26458332">35</tspan></text>
+         style="font-size:3.175px;stroke-width:0.264583">35</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="75.40625"
        y="80.041664"
        id="text5104"><tspan
@@ -1057,10 +1040,10 @@
          id="tspan5102"
          x="75.40625"
          y="80.041664"
-         style="font-size:3.17499995px;stroke-width:0.26458332">36</tspan></text>
+         style="font-size:3.175px;stroke-width:0.264583">36</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="59.53125"
        y="84.010414"
        id="text5108"><tspan
@@ -1068,10 +1051,10 @@
          id="tspan5106"
          x="59.53125"
          y="84.010414"
-         style="font-size:3.17499995px;stroke-width:0.26458332">37</tspan></text>
+         style="font-size:3.175px;stroke-width:0.264583">37</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="75.40625"
        y="84.010414"
        id="text5112"><tspan
@@ -1079,10 +1062,10 @@
          id="tspan5110"
          x="75.40625"
          y="84.010414"
-         style="font-size:3.17499995px;stroke-width:0.26458332">38</tspan></text>
+         style="font-size:3.175px;stroke-width:0.264583">38</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="59.53125"
        y="87.979164"
        id="text5116"><tspan
@@ -1090,10 +1073,10 @@
          id="tspan5114"
          x="59.53125"
          y="87.979164"
-         style="font-size:3.17499995px;stroke-width:0.26458332">39</tspan></text>
+         style="font-size:3.175px;stroke-width:0.264583">39</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="75.40625"
        y="87.979164"
        id="text5120"><tspan
@@ -1101,10 +1084,10 @@
          id="tspan5118"
          x="75.40625"
          y="87.979164"
-         style="font-size:3.17499995px;stroke-width:0.26458332">40</tspan></text>
+         style="font-size:3.175px;stroke-width:0.264583">40</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#666666;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#666666;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="82.020836"
        y="12.572916"
        id="text5132"><tspan
@@ -1112,10 +1095,10 @@
          id="tspan5130"
          x="82.020836"
          y="12.572916"
-         style="font-size:3.17499995px;fill:#666666;stroke-width:0.26458332">5V</tspan></text>
+         style="font-size:3.175px;fill:#666666;stroke-width:0.264583">5V</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#666666;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#666666;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="82.020836"
        y="16.541666"
        id="text5136"><tspan
@@ -1123,10 +1106,10 @@
          id="tspan5134"
          x="82.020836"
          y="16.541666"
-         style="font-size:3.17499995px;fill:#666666;stroke-width:0.26458332">5V</tspan></text>
+         style="font-size:3.175px;fill:#666666;stroke-width:0.264583">5V</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#333333;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#333333;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="82.020836"
        y="20.510416"
        id="text5140"><tspan
@@ -1134,11 +1117,11 @@
          id="tspan5138"
          x="82.020836"
          y="20.510416"
-         style="font-size:3.17499995px;fill:#333333;stroke-width:0.26458332">GND</tspan></text>
+         style="font-size:3.175px;fill:#333333;stroke-width:0.264583">GND</tspan></text>
     <flowRoot
        xml:space="preserve"
        id="flowRoot5144"
-       style="font-style:normal;font-weight:normal;font-size:13.33333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       style="font-style:normal;font-weight:normal;font-size:13.3333px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
        transform="scale(0.26458333)"><flowRegion
          id="flowRegion5146"><rect
            id="rect5148"
@@ -1146,10 +1129,11 @@
            height="314.99997"
            x="280"
            y="27.519686" /></flowRegion><flowPara
-         id="flowPara5150" /></flowRoot>    <flowRoot
+         id="flowPara5150" /></flowRoot>
+    <flowRoot
        xml:space="preserve"
        id="flowRoot5152"
-       style="font-style:normal;font-weight:normal;font-size:13.33333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       style="font-style:normal;font-weight:normal;font-size:13.3333px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
        transform="scale(0.26458333)"><flowRegion
          id="flowRegion5154"><rect
            id="rect5156"
@@ -1157,7 +1141,8 @@
            height="55"
            x="285"
            y="27.519686" /></flowRegion><flowPara
-         id="flowPara5158" /></flowRoot>    <flowRoot
+         id="flowPara5158" /></flowRoot>
+    <flowRoot
        xml:space="preserve"
        id="flowRoot5160"
        style="font-style:normal;font-weight:normal;font-size:12px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
@@ -1170,10 +1155,11 @@
            x="280"
            y="27.519686"
            style="font-size:12px" /></flowRegion><flowPara
-         id="flowPara5166" /></flowRoot>    <flowRoot
+         id="flowPara5166" /></flowRoot>
+    <flowRoot
        xml:space="preserve"
        id="flowRoot5168"
-       style="font-style:normal;font-weight:normal;font-size:13.33333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       style="font-style:normal;font-weight:normal;font-size:13.3333px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
        transform="scale(0.26458333)"><flowRegion
          id="flowRegion5170"><rect
            id="rect5172"
@@ -1181,9 +1167,10 @@
            height="65"
            x="305"
            y="32.519684" /></flowRegion><flowPara
-         id="flowPara5174" /></flowRoot>    <text
+         id="flowPara5174" /></flowRoot>
+    <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#cccccc;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#cccccc;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="82.020836"
        y="24.479166"
        id="text5178"><tspan
@@ -1191,10 +1178,10 @@
          id="tspan5176"
          x="82.020836"
          y="24.479166"
-         style="fill:#cccccc;stroke-width:0.26458332">GPIO 14 (Tx 0)</tspan></text>
+         style="fill:#cccccc;stroke-width:0.264583">GPIO 14 (Tx 0)</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#cccccc;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#cccccc;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="82.020836"
        y="28.447918"
        id="text5182"><tspan
@@ -1202,10 +1189,10 @@
          id="tspan5180"
          x="82.020836"
          y="28.447918"
-         style="fill:#cccccc;stroke-width:0.26458332">GPIO 15 (Rx 0)</tspan></text>
+         style="fill:#cccccc;stroke-width:0.264583">GPIO 15 (Rx 0)</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#cccccc;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#cccccc;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="82.020836"
        y="32.416668"
        id="text5190"><tspan
@@ -1213,10 +1200,10 @@
          id="tspan5188"
          x="82.020836"
          y="32.416668"
-         style="fill:#cccccc;stroke-width:0.26458332">GPIO 18</tspan></text>
+         style="fill:#cccccc;stroke-width:0.264583">GPIO 18</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#333333;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#333333;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="82.020836"
        y="36.385414"
        id="text5194"><tspan
@@ -1224,10 +1211,10 @@
          id="tspan5192"
          x="82.020836"
          y="36.385414"
-         style="fill:#333333;stroke-width:0.26458332">GND</tspan></text>
+         style="fill:#333333;stroke-width:0.264583">GND</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#cccccc;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#cccccc;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="82.020836"
        y="40.354164"
        id="text5198"><tspan
@@ -1235,10 +1222,10 @@
          id="tspan5196"
          x="82.020836"
          y="40.354164"
-         style="fill:#cccccc;stroke-width:0.26458332">GPIO 23</tspan></text>
+         style="fill:#cccccc;stroke-width:0.264583">GPIO 23</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#cccccc;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#cccccc;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="82.020836"
        y="44.322914"
        id="text5202"><tspan
@@ -1246,10 +1233,10 @@
          id="tspan5200"
          x="82.020836"
          y="44.322914"
-         style="fill:#cccccc;stroke-width:0.26458332">GPIO 24</tspan></text>
+         style="fill:#cccccc;stroke-width:0.264583">GPIO 24</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#333333;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#333333;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="82.020836"
        y="48.291664"
        id="text5206"><tspan
@@ -1257,10 +1244,10 @@
          id="tspan5204"
          x="82.020836"
          y="48.291664"
-         style="fill:#333333;stroke-width:0.26458332">GND</tspan></text>
+         style="fill:#333333;stroke-width:0.264583">GND</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#cccccc;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#cccccc;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="82.020836"
        y="52.260414"
        id="text5210"><tspan
@@ -1268,10 +1255,10 @@
          id="tspan5208"
          x="82.020836"
          y="52.260414"
-         style="fill:#cccccc;stroke-width:0.26458332">GPIO 25</tspan></text>
+         style="fill:#cccccc;stroke-width:0.264583">GPIO 25</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#666666;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#666666;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="82.020836"
        y="56.229164"
        id="text5214"><tspan
@@ -1279,10 +1266,10 @@
          id="tspan5212"
          x="82.020836"
          y="56.229164"
-         style="fill:#666666;stroke-width:0.26458332">GPIO 8 (Tx 4)</tspan></text>
+         style="fill:#666666;stroke-width:0.264583">GPIO 8 (Tx 4)</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#cccccc;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#cccccc;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="82.020836"
        y="60.197914"
        id="text5218"><tspan
@@ -1290,10 +1277,10 @@
          id="tspan5216"
          x="82.020836"
          y="60.197914"
-         style="fill:#cccccc;stroke-width:0.26458332">GPIO 7</tspan></text>
+         style="fill:#cccccc;stroke-width:0.264583">GPIO 7</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#cccccc;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#cccccc;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="82.020836"
        y="64.166664"
        id="text5222"><tspan
@@ -1301,10 +1288,10 @@
          id="tspan5220"
          x="82.020836"
          y="64.166664"
-         style="fill:#cccccc;stroke-width:0.26458332">GPIO 1 (Tx 2)</tspan></text>
+         style="fill:#cccccc;stroke-width:0.264583">GPIO 1 (Rx 2)</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#333333;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#333333;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="82.020836"
        y="68.135414"
        id="text5226"><tspan
@@ -1312,10 +1299,10 @@
          id="tspan5224"
          x="82.020836"
          y="68.135414"
-         style="fill:#333333;stroke-width:0.26458332">GND</tspan></text>
+         style="fill:#333333;stroke-width:0.264583">GND</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#666666;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#666666;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="82.020836"
        y="72.104164"
        id="text5230"><tspan
@@ -1323,10 +1310,10 @@
          id="tspan5228"
          x="82.020836"
          y="72.104164"
-         style="fill:#666666;stroke-width:0.26458332">GPIO 12 (Tx 5)</tspan></text>
+         style="fill:#666666;stroke-width:0.264583">GPIO 12 (Tx 5)</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#333333;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#333333;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="82.020836"
        y="76.072914"
        id="text5234"><tspan
@@ -1334,10 +1321,10 @@
          id="tspan5232"
          x="82.020836"
          y="76.072914"
-         style="fill:#333333;stroke-width:0.26458332">GND</tspan></text>
+         style="fill:#333333;stroke-width:0.264583">GND</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#cccccc;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#cccccc;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="82.020836"
        y="80.041664"
        id="text5238"><tspan
@@ -1345,10 +1332,10 @@
          id="tspan5236"
          x="82.020836"
          y="80.041664"
-         style="fill:#cccccc;stroke-width:0.26458332">GPIO 16</tspan></text>
+         style="fill:#cccccc;stroke-width:0.264583">GPIO 16</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#cccccc;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#cccccc;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="82.020836"
        y="84.010414"
        id="text5242"><tspan
@@ -1356,10 +1343,10 @@
          id="tspan5240"
          x="82.020836"
          y="84.010414"
-         style="fill:#cccccc;stroke-width:0.26458332">GPIO 20</tspan></text>
+         style="fill:#cccccc;stroke-width:0.264583">GPIO 20</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#cccccc;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#cccccc;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="82.020836"
        y="87.979164"
        id="text5246"><tspan
@@ -1367,10 +1354,10 @@
          id="tspan5244"
          x="82.020836"
          y="87.979164"
-         style="fill:#cccccc;stroke-width:0.26458332">GPIO 21</tspan></text>
+         style="fill:#cccccc;stroke-width:0.264583">GPIO 21</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#cccccc;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#cccccc;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="56.890755"
        y="12.572916"
        id="text5250"><tspan
@@ -1378,10 +1365,10 @@
          id="tspan5248"
          x="56.890755"
          y="12.572916"
-         style="fill:#cccccc;stroke-width:0.26458332">3.3V</tspan></text>
+         style="fill:#cccccc;stroke-width:0.264583">3.3V</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#cccccc;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#cccccc;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="56.890755"
        y="16.541666"
        id="text5254"><tspan
@@ -1389,10 +1376,10 @@
          id="tspan5252"
          x="56.890755"
          y="16.541666"
-         style="fill:#cccccc;stroke-width:0.26458332">GPIO 2</tspan></text>
+         style="fill:#cccccc;stroke-width:0.264583">GPIO 2</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#cccccc;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#cccccc;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="56.890755"
        y="20.510416"
        id="text5258"><tspan
@@ -1400,10 +1387,10 @@
          id="tspan5256"
          x="56.890755"
          y="20.510416"
-         style="fill:#cccccc;stroke-width:0.26458332">GPIO 3</tspan></text>
+         style="fill:#cccccc;stroke-width:0.264583">GPIO 3</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#cccccc;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#cccccc;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="56.890755"
        y="24.479166"
        id="text5262"><tspan
@@ -1411,10 +1398,10 @@
          id="tspan5260"
          x="56.890755"
          y="24.479166"
-         style="fill:#cccccc;stroke-width:0.26458332">GPIO 4 (Tx 3)</tspan></text>
+         style="fill:#cccccc;stroke-width:0.264583">GPIO 4 (Tx 3)</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#333333;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#333333;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="56.890755"
        y="28.447918"
        id="text5266"><tspan
@@ -1422,10 +1409,10 @@
          id="tspan5264"
          x="56.890755"
          y="28.447918"
-         style="fill:#333333;stroke-width:0.26458332">GND</tspan></text>
+         style="fill:#333333;stroke-width:0.264583">GND</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#cccccc;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#cccccc;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="56.885414"
        y="32.416668"
        id="text5270"><tspan
@@ -1433,10 +1420,10 @@
          id="tspan5268"
          x="56.885414"
          y="32.416668"
-         style="fill:#cccccc;stroke-width:0.26458332">GPIO 17</tspan></text>
+         style="fill:#cccccc;stroke-width:0.264583">GPIO 17</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#cccccc;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#cccccc;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="56.885414"
        y="36.385414"
        id="text5274"><tspan
@@ -1444,10 +1431,10 @@
          id="tspan5272"
          x="56.885414"
          y="36.385414"
-         style="fill:#cccccc;stroke-width:0.26458332">GPIO 27</tspan></text>
+         style="fill:#cccccc;stroke-width:0.264583">GPIO 27</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#cccccc;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#cccccc;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="56.885414"
        y="40.354164"
        id="text5278"><tspan
@@ -1455,10 +1442,10 @@
          id="tspan5276"
          x="56.885414"
          y="40.354164"
-         style="fill:#cccccc;stroke-width:0.26458332">GPIO 22</tspan></text>
+         style="fill:#cccccc;stroke-width:0.264583">GPIO 22</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#cccccc;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#cccccc;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="56.885414"
        y="44.322914"
        id="text5282"><tspan
@@ -1466,10 +1453,10 @@
          id="tspan5280"
          x="56.885414"
          y="44.322914"
-         style="fill:#cccccc;stroke-width:0.26458332">3.3V</tspan></text>
+         style="fill:#cccccc;stroke-width:0.264583">3.3V</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#cccccc;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#cccccc;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="56.885414"
        y="48.291664"
        id="text5286"><tspan
@@ -1477,10 +1464,10 @@
          id="tspan5284"
          x="56.885414"
          y="48.291664"
-         style="fill:#cccccc;stroke-width:0.26458332">GPIO 10</tspan></text>
+         style="fill:#cccccc;stroke-width:0.264583">GPIO 10</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#666666;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#666666;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="56.885414"
        y="52.260414"
        id="text5290"><tspan
@@ -1488,10 +1475,10 @@
          id="tspan5288"
          x="56.885414"
          y="52.260414"
-         style="fill:#666666;stroke-width:0.26458332">GPIO 9 (Rx 4)</tspan></text>
+         style="fill:#666666;stroke-width:0.264583">GPIO 9 (Rx 4)</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#cccccc;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#cccccc;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="56.885414"
        y="56.229164"
        id="text5294"><tspan
@@ -1499,10 +1486,10 @@
          id="tspan5292"
          x="56.885414"
          y="56.229164"
-         style="fill:#cccccc;stroke-width:0.26458332">GPIO 11</tspan></text>
+         style="fill:#cccccc;stroke-width:0.264583">GPIO 11</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#333333;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#333333;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="56.885414"
        y="60.197914"
        id="text5298"><tspan
@@ -1510,10 +1497,10 @@
          id="tspan5296"
          x="56.885414"
          y="60.197914"
-         style="fill:#333333;stroke-width:0.26458332">GND</tspan></text>
+         style="fill:#333333;stroke-width:0.264583">GND</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#cccccc;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#cccccc;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="56.885414"
        y="64.166664"
        id="text5302"><tspan
@@ -1521,10 +1508,10 @@
          id="tspan5300"
          x="56.885414"
          y="64.166664"
-         style="fill:#cccccc;stroke-width:0.26458332">GPIO 0 (Rx 2)</tspan></text>
+         style="fill:#cccccc;stroke-width:0.264583">GPIO 0 (Tx 2)</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#cccccc;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#cccccc;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="56.885414"
        y="68.135414"
        id="text5306"><tspan
@@ -1532,10 +1519,10 @@
          id="tspan5304"
          x="56.885414"
          y="68.135414"
-         style="fill:#cccccc;stroke-width:0.26458332">GPIO 5 (Rx 3)</tspan></text>
+         style="fill:#cccccc;stroke-width:0.264583">GPIO 5 (Rx 3)</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#cccccc;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#cccccc;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="56.885414"
        y="72.104164"
        id="text5310"><tspan
@@ -1543,10 +1530,10 @@
          id="tspan5308"
          x="56.885414"
          y="72.104164"
-         style="fill:#cccccc;stroke-width:0.26458332">GPIO 6</tspan></text>
+         style="fill:#cccccc;stroke-width:0.264583">GPIO 6</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#666666;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#666666;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="56.885414"
        y="76.072914"
        id="text5314"><tspan
@@ -1554,10 +1541,10 @@
          id="tspan5312"
          x="56.885414"
          y="76.072914"
-         style="fill:#666666;stroke-width:0.26458332">GPIO 13 (Rx 5)</tspan></text>
+         style="fill:#666666;stroke-width:0.264583">GPIO 13 (Rx 5)</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#cccccc;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#cccccc;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="56.885414"
        y="80.041664"
        id="text5318"><tspan
@@ -1565,10 +1552,10 @@
          id="tspan5316"
          x="56.885414"
          y="80.041664"
-         style="fill:#cccccc;stroke-width:0.26458332">GPIO 19</tspan></text>
+         style="fill:#cccccc;stroke-width:0.264583">GPIO 19</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#cccccc;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#cccccc;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="56.885414"
        y="84.010414"
        id="text5322"><tspan
@@ -1576,10 +1563,10 @@
          id="tspan5320"
          x="56.885414"
          y="84.010414"
-         style="fill:#cccccc;stroke-width:0.26458332">GPIO 26</tspan></text>
+         style="fill:#cccccc;stroke-width:0.264583">GPIO 26</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#333333;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#333333;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="56.885414"
        y="87.979164"
        id="text5326"><tspan
@@ -1587,10 +1574,10 @@
          id="tspan5324"
          x="56.885414"
          y="87.979164"
-         style="fill:#333333;stroke-width:0.26458332">GND</tspan></text>
+         style="fill:#333333;stroke-width:0.264583">GND</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="108.49487"
        y="16.541666"
        id="text5387"><tspan
@@ -1598,10 +1585,10 @@
          id="tspan5385"
          x="108.49487"
          y="16.541666"
-         style="text-align:start;text-anchor:start;stroke-width:0.26458332">V+ Power Supply</tspan></text>
+         style="text-align:start;text-anchor:start;stroke-width:0.264583">V+ Power Supply</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="108.47916"
        y="20.510416"
        id="text5395"><tspan
@@ -1609,7 +1596,7 @@
          id="tspan5393"
          x="108.47916"
          y="20.510416"
-         style="stroke-width:0.26458332">GND Power Supply</tspan></text>
+         style="stroke-width:0.264583">GND Power Supply</tspan></text>
     <flowRoot
        xml:space="preserve"
        id="flowRoot5401"
@@ -1621,9 +1608,10 @@
            height="58"
            x="396"
            y="27.519686" /></flowRegion><flowPara
-         id="flowPara5407" /></flowRoot>    <text
+         id="flowPara5407" /></flowRoot>
+    <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="108.47986"
        y="26.597021"
        id="text5411"><tspan
@@ -1631,10 +1619,10 @@
          id="tspan5409"
          x="108.47986"
          y="26.597021"
-         style="fill:#cccccc;stroke-width:0.26458332">Access to Login Shell</tspan></text>
+         style="fill:#cccccc;stroke-width:0.264583">Access to Login Shell</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="108.43352"
        y="56.274815"
        id="text5419"><tspan
@@ -1642,10 +1630,10 @@
          id="tspan5417"
          x="108.43352"
          y="56.274815"
-         style="text-align:start;text-anchor:start;stroke-width:0.26458332">FCU Debug Port Rx</tspan></text>
+         style="text-align:start;text-anchor:start;stroke-width:0.264583">FCU Debug Port Rx</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="30.426212"
        y="52.306061"
        id="text5423"><tspan
@@ -1653,10 +1641,10 @@
          id="tspan5421"
          x="30.426212"
          y="52.306061"
-         style="text-align:end;text-anchor:end;stroke-width:0.26458332">FCU Debug Port Tx</tspan></text>
+         style="text-align:end;text-anchor:end;stroke-width:0.264583">FCU Debug Port Tx</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="108.47916"
        y="72.104164"
        id="text5427"><tspan
@@ -1664,10 +1652,10 @@
          id="tspan5425"
          x="108.47916"
          y="72.104164"
-         style="stroke-width:0.26458332">FCU Telem. (TL2) Rx</tspan></text>
+         style="stroke-width:0.264583">FCU Telem. (TL2) Rx</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="30.426212"
        y="76.027267"
        id="text5431"><tspan
@@ -1675,10 +1663,10 @@
          id="tspan5429"
          x="30.426212"
          y="76.027267"
-         style="stroke-width:0.26458332">FCU Telem. (TL2) Tx</tspan></text>
+         style="stroke-width:0.264583">FCU Telem. (TL2) Tx</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="30.380566"
        y="28.447918"
        id="text5435"><tspan
@@ -1686,7 +1674,7 @@
          id="tspan5433"
          x="30.380566"
          y="28.447918"
-         style="stroke-width:0.26458332">GND Fan</tspan></text>
+         style="stroke-width:0.264583">GND Fan</tspan></text>
     <g
        id="g3731-6-6-0-2"
        transform="translate(23.489798,41.644284)"
@@ -2143,14 +2131,10 @@
       </g>
       <text
          xml:space="preserve"
-         style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;text-align:start;letter-spacing:0px;word-spacing:0px;baseline-shift:baseline;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;text-align:start;letter-spacing:0px;word-spacing:0px;baseline-shift:baseline;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
          x="122.10077"
          y="50.354435"
-         id="text6049"><tspan
-           sodipodi:role="line"
-           id="tspan6047"
-           x="122.10077"
-           y="53.163567" /></text>
+         id="text6049" />
     </g>
     <g
        id="g5562-0"
@@ -2186,10 +2170,10 @@
          id="text6083"
          y="37.125271"
          x="120.77785"
-         style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
          xml:space="preserve"
          transform="translate(40.617976,-29.844018)"><tspan
-           style="font-size:3.17499995px;stroke-width:0.26458332"
+           style="font-size:3.175px;stroke-width:0.264583"
            y="37.125271"
            x="120.77785"
            id="tspan6081"
@@ -2198,7 +2182,7 @@
          id="g6199">
         <text
            xml:space="preserve"
-           style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+           style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
            x="162.71875"
            y="12.269825"
            id="text6041"><tspan
@@ -2206,14 +2190,14 @@
              id="tspan6039"
              x="162.71875"
              y="12.269825"
-             style="stroke-width:0.26458332"><tspan
-               style="font-size:2.82222223px"
+             style="stroke-width:0.264583"><tspan
+               style="font-size:2.82222px"
                id="tspan6360">GPIO </tspan><tspan
-               style="font-size:2.11666656px"
+               style="font-size:2.11667px"
                id="tspan6075">(General Purpose IO)</tspan></tspan></text>
         <text
            xml:space="preserve"
-           style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+           style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
            x="162.71875"
            y="16.27692"
            id="text6045"><tspan
@@ -2221,14 +2205,14 @@
              id="tspan6043"
              x="162.71875"
              y="16.27692"
-             style="stroke-width:0.26458332"><tspan
-   style="font-size:2.82222223px"
+             style="stroke-width:0.264583"><tspan
+   style="font-size:2.82222px"
    id="tspan6362">SPI</tspan> <tspan
-   style="font-size:2.11666656px"
+   style="font-size:2.11667px"
    id="tspan6077">(Serial Peripheral Interface)</tspan></tspan></text>
         <text
            xml:space="preserve"
-           style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+           style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
            x="162.71875"
            y="20.258278"
            id="text6053"><tspan
@@ -2236,29 +2220,29 @@
              id="tspan6051"
              x="162.71875"
              y="20.258278"
-             style="stroke-width:0.26458332"><tspan
-   style="font-size:2.82222223px"
+             style="stroke-width:0.264583"><tspan
+   style="font-size:2.82222px"
    id="tspan6364">I2C</tspan> <tspan
-   style="font-size:2.11666656px"
+   style="font-size:2.11667px"
    id="tspan6079">(Inter-Integrated Circuit)</tspan></tspan></text>
         <text
            xml:space="preserve"
-           style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+           style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
            x="162.71875"
            y="24.227028"
            id="text6057"><tspan
              sodipodi:role="line"
              x="162.71875"
              y="24.227028"
-             style="stroke-width:0.26458332"
+             style="stroke-width:0.264583"
              id="tspan6067"><tspan
-   style="font-size:2.82222223px"
+   style="font-size:2.82222px"
    id="tspan6366">UART</tspan> <tspan
-   style="font-size:2.11666656px"
+   style="font-size:2.11667px"
    id="tspan6065">(Universal Asyncronous Receiver/Transmitter)</tspan></tspan></text>
         <text
            xml:space="preserve"
-           style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+           style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
            x="162.73135"
            y="28.195782"
            id="text6061"><tspan
@@ -2266,10 +2250,10 @@
              id="tspan6059"
              x="162.73135"
              y="28.195782"
-             style="stroke-width:0.26458332"><tspan
-   style="font-size:2.82222223px"
+             style="stroke-width:0.264583"><tspan
+   style="font-size:2.82222px"
    id="tspan6368">PCM</tspan> <tspan
-   style="font-size:2.11666656px"
+   style="font-size:2.11667px"
    id="tspan6063">(Pulse Code Modulation)</tspan></tspan></text>
         <g
            id="g6151">
@@ -2370,7 +2354,7 @@
     </g>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="108.47916"
        y="12.572916"
        id="text5399"><tspan
@@ -2378,7 +2362,7 @@
          id="tspan5397"
          x="108.47916"
          y="12.572916"
-         style="stroke-width:0.26458332">V+ Fan </tspan></text>
+         style="stroke-width:0.264583">V+ Fan </tspan></text>
     <path
        style="fill:none;stroke:#cccccc;stroke-width:0.26499999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 106.09792,21.833332 c 1.85209,0 0,3.175 1.32292,3.439583 -1.32292,0.264584 0.52917,3.704167 -1.32292,3.704168"

@@ -84,7 +84,7 @@ After a successful build, we can source this workspace in the :file:`.zshrc`, so
 
 .. code:: sh
 
-   echo "source $HOME/ros2_underlay/install/setup.zsh" >> ~/.zshrc
+   echo 'source $HOME/ros2_underlay/install/setup.zsh' >> ~/.zshrc
 
 Main Workspace
 **************
@@ -121,7 +121,7 @@ Now, source this workspace in your :file:`.zshrc`, too, using the local setup th
 
 .. code:: sh
 
-   echo "source $HOME/ros2/install/local_setup.zsh" >> ~/.zshrc
+   echo 'source $HOME/ros2/install/local_setup.zsh' >> ~/.zshrc
 
 Note that since this workspace overlays the :file:`ros2_underlay` workspace, this setup file needs to be sourced afterwards.
 
