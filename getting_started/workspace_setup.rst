@@ -70,7 +70,9 @@ But first, let's check for unresolved dependencies.
 
 .. code:: sh
 
-   cd ~/ros2_underlay && rosdep install --from-paths src -y --ignore-src
+   cd ~/ros2_underlay \
+   && source /opt/ros/humble/setup.zsh \
+   && rosdep install --from-paths src -y --ignore-src
 
 And to build:
 
