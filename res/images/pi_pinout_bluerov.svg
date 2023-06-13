@@ -23,19 +23,19 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.6233869"
-     inkscape:cx="268.92716"
-     inkscape:cy="186.40026"
+     inkscape:zoom="4.8292035"
+     inkscape:cx="254.28624"
+     inkscape:cy="182.63882"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="true"
      showguides="false"
      inkscape:guide-bbox="true"
-     inkscape:window-width="1884"
-     inkscape:window-height="2070"
-     inkscape:window-x="1926"
-     inkscape:window-y="60"
-     inkscape:window-maximized="0"
+     inkscape:window-width="3840"
+     inkscape:window-height="2160"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
      fit-margin-top="0"
      fit-margin-left="0"
      fit-margin-right="0"
@@ -208,6 +208,33 @@
      id="layer1"
      style="display:inline"
      transform="translate(2.7719009,-8.604167)">
+    <rect
+       style="display:inline;fill:#e9ddaf;stroke-width:0.264583"
+       id="rect6257-3-8-6-0-4-8-3"
+       width="60.980232"
+       height="3.6409693"
+       x="-2.7719007"
+       y="61.196831"
+       rx="1.3229166"
+       ry="1.3229166" />
+    <rect
+       style="display:inline;fill:#e9ddaf;stroke-width:0.264583"
+       id="rect6257-3-8-6-0-4-8-3-7"
+       width="60.980232"
+       height="3.6409693"
+       x="80.697914"
+       y="61.212704"
+       rx="1.3229166"
+       ry="1.3229166" />
+    <rect
+       style="display:inline;fill:#afe9d0;stroke-width:0.264583;fill-opacity:1"
+       id="rect6257-3-8-6-0-3"
+       width="60.980232"
+       height="3.6409693"
+       x="80.697914"
+       y="9.6095047"
+       rx="1.3229166"
+       ry="1.3229166" />
     <g
        id="g1771"
        transform="translate(2.7431325e-6,43.687849)">
@@ -238,19 +265,19 @@
        width="60.980232"
        height="3.6409693"
        x="-2.771899"
-       y="80.867035"
+       y="81.056458"
        rx="1.3229166"
        ry="1.3229166" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="8.5997057"
-       y="83.777924"
+       y="84.067566"
        id="text5399-4-6-7"><tspan
          sodipodi:role="line"
          id="tspan5397-6-1-5"
          x="8.5997057"
-         y="83.777924"
+         y="84.067566"
          style="stroke-width:0.264583">PixHawk Reset</tspan></text>
     <g
        id="g1212"
@@ -295,12 +322,30 @@
        rx="1.3229166"
        ry="1.3229166" />
     <rect
-       style="display:inline;fill:#e9afaf;stroke-width:0.26458332"
+       style="display:inline;fill:#e9afaf;stroke-width:0.264583"
        id="rect6257-3-8-6"
        width="60.980232"
        height="3.6409693"
        x="-2.7719009"
-       y="49.413197"
+       y="49.290581"
+       rx="1.3229166"
+       ry="1.3229166" />
+    <rect
+       style="display:inline;fill:#afe9d0;fill-opacity:1;stroke-width:0.264583"
+       id="rect6257-3-8-6-5"
+       width="60.980232"
+       height="3.6409693"
+       x="-2.7719007"
+       y="53.275204"
+       rx="1.3229166"
+       ry="1.3229166" />
+    <rect
+       style="display:inline;fill:#afe9d0;stroke-width:0.264583;fill-opacity:1"
+       id="rect6257-3-8-6-5-6"
+       width="60.980232"
+       height="3.6409693"
+       x="-2.7719007"
+       y="57.243954"
        rx="1.3229166"
        ry="1.3229166" />
     <rect
@@ -1334,7 +1379,7 @@
          style="fill:#cccccc;stroke-width:0.264583">GPIO 7</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#cccccc;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#666666;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="82.020836"
        y="64.166664"
        id="text5222"><tspan
@@ -1342,7 +1387,7 @@
          id="tspan5220"
          x="82.020836"
          y="64.166664"
-         style="fill:#cccccc;stroke-width:0.264583">GPIO 1 (Rx 2)</tspan></text>
+         style="fill:#666666;stroke-width:0.264583;fill-opacity:1">GPIO 1 (Rx 2)</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#333333;fill-opacity:1;stroke:none;stroke-width:0.264583"
@@ -1559,7 +1604,7 @@
          style="fill:#666666;stroke-width:0.264583">GPIO 9 (Rx 4)</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#cccccc;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#666666;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="56.885414"
        y="56.229164"
        id="text5294"><tspan
@@ -1567,7 +1612,7 @@
          id="tspan5292"
          x="56.885414"
          y="56.229164"
-         style="fill:#cccccc;stroke-width:0.264583">GPIO 11</tspan></text>
+         style="fill:#666666;stroke-width:0.264583;fill-opacity:1">GPIO 11</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#333333;fill-opacity:1;stroke:none;stroke-width:0.264583"
@@ -1581,7 +1626,7 @@
          style="fill:#333333;stroke-width:0.264583">GND</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#cccccc;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#666666;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="56.885414"
        y="64.166664"
        id="text5302"><tspan
@@ -1589,7 +1634,7 @@
          id="tspan5300"
          x="56.885414"
          y="64.166664"
-         style="fill:#cccccc;stroke-width:0.264583">GPIO 0 (Tx 2)</tspan></text>
+         style="fill:#666666;stroke-width:0.264583;fill-opacity:1">GPIO 0 (Tx 2)</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#cccccc;fill-opacity:1;stroke:none;stroke-width:0.264583"
@@ -1678,6 +1723,17 @@
          style="text-align:start;text-anchor:start;stroke-width:0.264583">V+ Power Supply</tspan></text>
     <text
        xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="108.49487"
+       y="12.255489"
+       id="text5387-6"><tspan
+         sodipodi:role="line"
+         id="tspan5385-7"
+         x="108.49487"
+         y="12.255489"
+         style="text-align:start;text-anchor:start;stroke-width:0.264583">V+ Heartbeat LED</tspan></text>
+    <text
+       xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="108.47916"
        y="20.510416"
@@ -1723,6 +1779,19 @@
          style="text-align:start;text-anchor:start;stroke-width:0.264583">FCU Debug Port Rx</tspan></text>
     <text
        xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="108.43352"
+       y="63.785664"
+       id="text5419-0"
+       inkscape:transform-center-x="2.3841693"
+       inkscape:transform-center-y="-0.19256793"><tspan
+         sodipodi:role="line"
+         id="tspan5417-9"
+         x="108.43352"
+         y="63.785664"
+         style="text-align:start;text-anchor:start;stroke-width:0.264583">Teensy Tx</tspan></text>
+    <text
+       xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="30.426212"
        y="52.306061"
@@ -1732,6 +1801,39 @@
          x="30.426212"
          y="52.306061"
          style="text-align:end;text-anchor:end;stroke-width:0.264583">FCU Debug Port Tx</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="30.562738"
+       y="55.921188"
+       id="text5423-3"><tspan
+         sodipodi:role="line"
+         id="tspan5421-5"
+         x="30.562738"
+         y="55.921188"
+         style="text-align:end;text-anchor:end;stroke-width:0.264583">Signal Heartbeat LED</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="30.562738"
+       y="59.889938"
+       id="text5423-3-2"><tspan
+         sodipodi:role="line"
+         id="tspan5421-5-9"
+         x="30.562738"
+         y="59.889938"
+         style="text-align:end;text-anchor:end;stroke-width:0.264583">GND Heartbeat LED</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="30.562738"
+       y="64.207939"
+       id="text5423-3-2-1"><tspan
+         sodipodi:role="line"
+         id="tspan5421-5-9-2"
+         x="30.562738"
+         y="64.207939"
+         style="text-align:end;text-anchor:end;stroke-width:0.264583">Teensy Rx</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
