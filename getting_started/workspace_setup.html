@@ -21,6 +21,7 @@
         <script src="../_static/asciinema-player_2.6.1.js"></script>
         <script src="../_static/clipboard.min.js"></script>
         <script src="../_static/copybutton.js"></script>
+        <script src="../_static/tabs.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -171,7 +172,9 @@ mkdir<span class="w"> </span>-p<span class="w"> </span>~/ros2_underlay/src
 <h3>Underlay Workspace<a class="headerlink" href="#underlay-workspace" title="Permalink to this heading"></a></h3>
 <p>We can now build the first “under”layed workspace <code class="file docutils literal notranslate"><span class="pre">ros2_underlay</span></code>.
 But first, let’s check for unresolved dependencies.</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/ros2_underlay<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>rosdep<span class="w"> </span>install<span class="w"> </span>--from-paths<span class="w"> </span>src<span class="w"> </span>-y<span class="w"> </span>--ignore-src
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/ros2_underlay<span class="w"> </span><span class="se">\</span>
+<span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">source</span><span class="w"> </span>/opt/ros/humble/setup.zsh<span class="w"> </span><span class="se">\</span>
+<span class="o">&amp;&amp;</span><span class="w"> </span>rosdep<span class="w"> </span>install<span class="w"> </span>--from-paths<span class="w"> </span>src<span class="w"> </span>-y<span class="w"> </span>--ignore-src
 </pre></div>
 </div>
 <p>And to build:</p>
@@ -180,20 +183,29 @@ But first, let’s check for unresolved dependencies.</p>
 </div>
 <p>Note that you do not have to be inside the respective workspace directory to build by executing the defined alias. Very convenient!</p>
 <p>After a successful build, we can source this workspace in the <code class="file docutils literal notranslate"><span class="pre">.zshrc</span></code>, so that our main, overlayed workspace will find it.</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;source </span><span class="nv">$HOME</span><span class="s2">/ros2_underlay/install/setup.zsh&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.zshrc
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;source $HOME/ros2_underlay/install/setup.zsh&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.zshrc
 </pre></div>
 </div>
 </section>
 <section id="main-workspace">
 <h3>Main Workspace<a class="headerlink" href="#main-workspace" title="Permalink to this heading"></a></h3>
 <p>Now, we can build our main workspace. Let’s get our packages:</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/ros2/src
-git<span class="w"> </span>clone<span class="w"> </span>git@github.com:HippoCampusRobotics/hippo_core.git
-git<span class="w"> </span>clone<span class="w"> </span>git@github.com:HippoCampusRobotics/hippo_simulation.git
-git<span class="w"> </span>clone<span class="w"> </span>git@github.com:HippoCampusRobotics/state_estimation.git
-git<span class="w"> </span>clone<span class="w"> </span>git@github.com:HippoCampusRobotics/vision.git
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-c3No" aria-selected="true" class="sphinx-tabs-tab code-tab group-tab" id="tab-0-c3No" name="c3No" role="tab" tabindex="0">ssh</button><button aria-controls="panel-0-aHR0cHM=" aria-selected="false" class="sphinx-tabs-tab code-tab group-tab" id="tab-0-aHR0cHM=" name="aHR0cHM=" role="tab" tabindex="-1">https</button></div><div aria-labelledby="tab-0-c3No" class="sphinx-tabs-panel code-tab group-tab" id="panel-0-c3No" name="c3No" role="tabpanel" tabindex="0"><div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/ros2/src<span class="w"> </span><span class="se">\</span>
+<span class="o">&amp;&amp;</span><span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>--recursive<span class="w"> </span>git@github.com:HippoCampusRobotics/hippo_core.git<span class="w"> </span><span class="se">\</span>
+<span class="o">&amp;&amp;</span><span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:HippoCampusRobotics/hippo_simulation.git<span class="w"> </span><span class="se">\</span>
+<span class="o">&amp;&amp;</span><span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:HippoCampusRobotics/state_estimation.git<span class="w"> </span><span class="se">\</span>
+<span class="o">&amp;&amp;</span><span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:HippoCampusRobotics/vision.git
 </pre></div>
 </div>
+</div><div aria-labelledby="tab-0-aHR0cHM=" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-0-aHR0cHM=" name="aHR0cHM=" role="tabpanel" tabindex="0"><div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/ros2/src<span class="w"> </span><span class="se">\</span>
+<span class="o">&amp;&amp;</span><span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>--recursive<span class="w"> </span>https://github.com/HippoCampusRobotics/hippo_core.git<span class="w"> </span><span class="se">\</span>
+<span class="o">&amp;&amp;</span><span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/HippoCampusRobotics/hippo_simulation.git<span class="w"> </span><span class="se">\</span>
+<span class="o">&amp;&amp;</span><span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/HippoCampusRobotics/state_estimation.git<span class="w"> </span><span class="se">\</span>
+<span class="o">&amp;&amp;</span><span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/HippoCampusRobotics/vision.git
+</pre></div>
+</div>
+</div></div>
 <div class="admonition-todo admonition" id="id1">
 <p class="admonition-title">Todo</p>
 <p>Add any other relevant packages as we continue our move to ROS2.</p>
@@ -208,7 +220,7 @@ git<span class="w"> </span>clone<span class="w"> </span>git@github.com:HippoCamp
 </pre></div>
 </div>
 <p>Now, source this workspace in your <code class="file docutils literal notranslate"><span class="pre">.zshrc</span></code>, too, using the local setup this time:</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;source </span><span class="nv">$HOME</span><span class="s2">/ros2/install/local_setup.zsh&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.zshrc
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;source $HOME/ros2/install/local_setup.zsh&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.zshrc
 </pre></div>
 </div>
 <p>Note that since this workspace overlays the <code class="file docutils literal notranslate"><span class="pre">ros2_underlay</span></code> workspace, this setup file needs to be sourced afterwards.</p>

@@ -66,7 +66,7 @@ Installation
 
    .. code-block:: sh
 
-      sudo apt install ros-dev-tools
+      sudo apt install ros-dev-tools python3-pip
 
 rosdep Initialization
 =====================
