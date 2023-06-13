@@ -93,13 +93,23 @@ Main Workspace
 
 Now, we can build our main workspace. Let's get our packages:
 
-.. code:: sh
+.. tabs::
 
-   cd ~/ros2/src
-   git clone git@github.com:HippoCampusRobotics/hippo_core.git
-   git clone git@github.com:HippoCampusRobotics/hippo_simulation.git
-   git clone git@github.com:HippoCampusRobotics/state_estimation.git
-   git clone git@github.com:HippoCampusRobotics/vision.git
+   .. code-tab:: sh ssh
+
+      cd ~/ros2/src \
+      && git clone --recursive git@github.com:HippoCampusRobotics/hippo_core.git \
+      && git clone git@github.com:HippoCampusRobotics/hippo_simulation.git \
+      && git clone git@github.com:HippoCampusRobotics/state_estimation.git \
+      && git clone git@github.com:HippoCampusRobotics/vision.git
+
+   .. code-tab:: sh https
+      
+      cd ~/ros2/src \
+      && git clone --recursive https://github.com/HippoCampusRobotics/hippo_core.git \
+      && git clone https://github.com/HippoCampusRobotics/hippo_simulation.git \
+      && git clone https://github.com/HippoCampusRobotics/state_estimation.git \
+      && git clone https://github.com/HippoCampusRobotics/vision.git
 
 .. todo:: 
 
