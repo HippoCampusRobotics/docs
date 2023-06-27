@@ -35,7 +35,9 @@ PX4-msg
 
 .. code:: sh
 
-   cd ~/ros2_underlay/src && git clone https://github.com/PX4/px4_msgs.git
+   cd ~/ros2_underlay/src && \
+   git clone https://github.com/PX4/px4_msgs.git && \
+   git checkout 8a7f3da
 
 AprilTag-ROS
 ************
@@ -43,8 +45,8 @@ There is a `PR <https://github.com/AprilRobotics/apriltag_ros/pull/114>`__ for p
 
 .. code:: sh
 
-   cd ~/ros2_underlay/src && git clone https://github.com/wep21/apriltag_ros.git
-   cd ~/ros2_underlay/src/apriltag_ros && git checkout ros2-port
+   cd ~/ros2_underlay/src && \
+   git clone --depth 1 --branch ros2-port https://github.com/wep21/apriltag_ros.git
 
 .. note::
    
