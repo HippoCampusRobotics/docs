@@ -50,6 +50,19 @@ There is a `PR <https://github.com/AprilRobotics/apriltag_ros/pull/114>`__ for p
    
    There is an alternative `package <https://github.com/christianrauch/apriltag_ros>`__ by Christian Rauch, that works somewhat different but has a simpler code base. Unfortunately it does not support tag bundles.
 
+PlotJugger
+**********
+
+.. note:: The packaged built of PlotJuggler seems to crash if loading a layout with a split. Building from source seems to fix the issue.
+
+.. code:: sh
+
+   cd ~/ros2_underlay/src && \
+   git clone https://github.com/PlotJuggler/plotjuggler_msgs.git && \
+   git clone --depth 1 --branch 1.7.3 https://github.com/PlotJuggler/plotjuggler-ros-plugins.git && \
+   git clone --depth 1 --branch 3.7.1 https://github.com/facontidavide/PlotJuggler.git
+
+
 Building the Workspaces
 -----------------------
 
