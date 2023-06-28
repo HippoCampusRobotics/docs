@@ -58,6 +58,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#getting-the-external-packages">2.2.2. Getting the external packages</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#px4-msg">PX4-msg</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#apriltag-ros">AprilTag-ROS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#plotjugger">PlotJugger</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#building-the-workspaces">2.2.3. Building the Workspaces</a><ul>
@@ -142,20 +143,35 @@ mkdir<span class="w"> </span>-p<span class="w"> </span>~/ros2_underlay/src
 <p class="admonition-title">Important</p>
 <p>See <a class="reference internal" href="px4_setup.html#px4-setup"><span class="std std-ref">PX4 Setup</span></a> for a tested commit of the repository.</p>
 </div>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/ros2_underlay/src<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/PX4/px4_msgs.git
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/ros2_underlay/src<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="se">\</span>
+git<span class="w"> </span>clone<span class="w"> </span>https://github.com/PX4/px4_msgs.git<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="se">\</span>
+git<span class="w"> </span>checkout<span class="w"> </span>8a7f3da
 </pre></div>
 </div>
 </section>
 <section id="apriltag-ros">
 <h3>AprilTag-ROS<a class="headerlink" href="#apriltag-ros" title="Permalink to this heading"></a></h3>
 <p>There is a <a class="reference external" href="https://github.com/AprilRobotics/apriltag_ros/pull/114">PR</a> for porting the good old <code class="code docutils literal notranslate"><span class="pre">apriltag_ros</span></code> package to ROS2.</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/ros2_underlay/src<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/wep21/apriltag_ros.git
-<span class="nb">cd</span><span class="w"> </span>~/ros2_underlay/src/apriltag_ros<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>git<span class="w"> </span>checkout<span class="w"> </span>ros2-port
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/ros2_underlay/src<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="se">\</span>
+git<span class="w"> </span>clone<span class="w"> </span>--depth<span class="w"> </span><span class="m">1</span><span class="w"> </span>--branch<span class="w"> </span>ros2-port<span class="w"> </span>https://github.com/wep21/apriltag_ros.git
 </pre></div>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>There is an alternative <a class="reference external" href="https://github.com/christianrauch/apriltag_ros">package</a> by Christian Rauch, that works somewhat different but has a simpler code base. Unfortunately it does not support tag bundles.</p>
+</div>
+</section>
+<section id="plotjugger">
+<h3>PlotJugger<a class="headerlink" href="#plotjugger" title="Permalink to this heading"></a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The packaged built of PlotJuggler seems to crash if loading a layout with a split. Building from source seems to fix the issue.</p>
+</div>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/ros2_underlay/src<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="se">\</span>
+git<span class="w"> </span>clone<span class="w"> </span>https://github.com/PlotJuggler/plotjuggler_msgs.git<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="se">\</span>
+git<span class="w"> </span>clone<span class="w"> </span>--depth<span class="w"> </span><span class="m">1</span><span class="w"> </span>--branch<span class="w"> </span><span class="m">1</span>.7.3<span class="w"> </span>https://github.com/PlotJuggler/plotjuggler-ros-plugins.git<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="se">\</span>
+git<span class="w"> </span>clone<span class="w"> </span>--depth<span class="w"> </span><span class="m">1</span><span class="w"> </span>--branch<span class="w"> </span><span class="m">3</span>.7.1<span class="w"> </span>https://github.com/facontidavide/PlotJuggler.git
+</pre></div>
 </div>
 </section>
 </section>
