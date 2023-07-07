@@ -59,7 +59,7 @@ Installation
       
       .. code-tab:: sh perception (e.g. for Raspberry Pi)
 
-         sudo apt install ros-humble-ros-perception
+         sudo apt install ros-humble-perception
 
 
 #. Install development tools
