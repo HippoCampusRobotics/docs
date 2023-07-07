@@ -59,6 +59,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#install-px4-msgs">2.3.3. Install px4_msgs</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#install-micro-ros">2.3.4. Install Micro-ROS</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#running-the-micro-ros-agent">2.3.5. Running the Micro-ROS-Agent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mavlink-router">2.3.6. MAVLink Router</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="installing_qgc.html">2.4. Installing QGroundControl</a></li>
@@ -201,6 +202,38 @@ ros2<span class="w"> </span>run<span class="w"> </span>micro_ros_setup<span clas
 /uuv00/fmu/out/vehicle_status<span class="w"> </span><span class="o">[</span>px4_msgs/msg/VehicleStatus<span class="o">]</span>
 </pre></div>
 </div>
+</section>
+<section id="mavlink-router">
+<h2><span class="section-number">2.3.6. </span>MAVLink Router<a class="headerlink" href="#mavlink-router" title="Permalink to this heading"></a></h2>
+<p>Nice to use QGroundcontrol for settings parameters and calibrating sensors. Otherwise, QGC will be probably not used at all.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/mavlink-router/mavlink-router.git<span class="w"> </span><span class="se">\</span>
+<span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>mavlink-router<span class="w"> </span><span class="se">\</span>
+<span class="o">&amp;&amp;</span><span class="w"> </span>git<span class="w"> </span>checkout<span class="w"> </span>3b48da1<span class="w"> </span><span class="se">\</span>
+</pre></div>
+</div>
+<p>Build and install the code following the <a class="reference external" href="https://github.com/mavlink-router/mavlink-router">official instructions</a>.</p>
+<p>The configuration file is at <code class="file docutils literal notranslate"><span class="pre">/etc/mavlink-router/main.conf</span></code> and can contain the following:</p>
+<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[General]</span>
+
+<span class="k">[UartEndpoint USB]</span>
+
+<span class="c1"># Path to UART device. like `/dev/ttyS0`</span>
+<span class="c1"># Mandatory, no default value</span>
+<span class="na">Device</span><span class="w"> </span><span class="o">=</span><span class="s">/dev/ttyACM0</span>
+<span class="na">Baud</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">921600</span>
+
+<span class="k">[UdpEndpoint lennart]</span>
+<span class="na">Mode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">normal</span>
+<span class="na">Address</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">192.168.0.128</span>
+<span class="na">Port</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">14550</span>
+</pre></div>
+</div>
+<p>You can add or change the UDP endpoint to match your requirements.</p>
+<p>Run the router via</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>mavlink-router
+</pre></div>
+</div>
+<p>Maybe one needs to add a connection manually in QGroundControl (Application settings -&gt; comm links).</p>
 </section>
 </section>
 

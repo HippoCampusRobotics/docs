@@ -119,3 +119,44 @@ If the setup is working, :code:`ros2 topic list` should show the FMUs in and out
    /uuv00/fmu/out/vehicle_status [px4_msgs/msg/VehicleStatus]
 
 
+MAVLink Router
+==============
+
+Nice to use QGroundcontrol for settings parameters and calibrating sensors. Otherwise, QGC will be probably not used at all.
+
+.. code-block:: sh
+
+   git clone https://github.com/mavlink-router/mavlink-router.git \
+   && cd mavlink-router \
+   && git checkout 3b48da1 \
+
+Build and install the code following the `official instructions <https://github.com/mavlink-router/mavlink-router>`__.
+
+
+The configuration file is at :file:`/etc/mavlink-router/main.conf` and can contain the following:
+
+.. code-block:: ini
+
+   [General]
+
+   [UartEndpoint USB]
+
+   # Path to UART device. like `/dev/ttyS0`
+   # Mandatory, no default value
+   Device =/dev/ttyACM0
+   Baud = 921600
+
+   [UdpEndpoint lennart]
+   Mode = normal
+   Address = 192.168.0.128
+   Port = 14550
+
+You can add or change the UDP endpoint to match your requirements.
+
+Run the router via
+
+.. code-block:: sh
+
+   mavlink-router
+
+Maybe one needs to add a connection manually in QGroundControl (Application settings -> comm links).
