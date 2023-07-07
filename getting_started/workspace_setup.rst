@@ -105,7 +105,8 @@ After a successful build, we can source this workspace in the :file:`.zshrc`, so
 
 .. code:: sh
 
-   echo 'source $HOME/ros2_underlay/install/setup.zsh' >> ~/.zshrc
+   echo 'source $HOME/ros2_underlay/install/setup.zsh' >> ~/.zshrc && \
+   source ~/.zshrc
 
 Main Workspace
 **************
