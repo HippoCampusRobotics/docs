@@ -44,6 +44,17 @@ Modify :file:`user-data` on the :file:`system-boot` partition to your liking. An
 
 .. note:: Make sure to connect the Raspberry Pi with the Internet via Ethernet before booting the first time.
 
+Boot Config
+===========
+See `the documentation <https://github.com/raspberrypi/firmware/blob/master/boot/overlays/README>`__ for details on device tree overlays.
+
+I2C
+***
+
+.. code-block:: sh
+
+   dtoverlay=i2c4,pins_6_7
+
 Create Workspace
 ================
 

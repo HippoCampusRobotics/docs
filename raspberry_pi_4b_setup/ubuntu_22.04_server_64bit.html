@@ -56,7 +56,11 @@
 <li class="toctree-l2"><a class="reference internal" href="quality_of_life_features.html">4.1. Quality-of-Life Features</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">4.2. Ubuntu 22.04 Server 64bit</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#modify-cloud-init">4.2.1. Modify Cloud-Init</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#create-workspace">4.2.2. Create Workspace</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#boot-config">4.2.2. Boot Config</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#i2c">I2C</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#create-workspace">4.2.3. Create Workspace</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#concept">Concept</a></li>
 </ul>
 </li>
@@ -153,8 +157,18 @@
 <p>Make sure to connect the Raspberry Pi with the Internet via Ethernet before booting the first time.</p>
 </div>
 </section>
+<section id="boot-config">
+<h2><span class="section-number">4.2.2. </span>Boot Config<a class="headerlink" href="#boot-config" title="Permalink to this heading"></a></h2>
+<p>See <a class="reference external" href="https://github.com/raspberrypi/firmware/blob/master/boot/overlays/README">the documentation</a> for details on device tree overlays.</p>
+<section id="i2c">
+<h3>I2C<a class="headerlink" href="#i2c" title="Permalink to this heading"></a></h3>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nv">dtoverlay</span><span class="o">=</span>i2c4,pins_6_7
+</pre></div>
+</div>
+</section>
+</section>
 <section id="create-workspace">
-<h2><span class="section-number">4.2.2. </span>Create Workspace<a class="headerlink" href="#create-workspace" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">4.2.3. </span>Create Workspace<a class="headerlink" href="#create-workspace" title="Permalink to this heading"></a></h2>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>-p<span class="w"> </span>~/ros2/src
 mkdir<span class="w"> </span>-p<span class="w"> </span>~/ros2_underlay/src
 </pre></div>

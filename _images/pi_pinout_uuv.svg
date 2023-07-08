@@ -26,17 +26,17 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="2.623387"
-     inkscape:cx="210.6056"
-     inkscape:cy="199.3606"
+     inkscape:cx="258.06334"
+     inkscape:cy="199.74178"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
      showguides="false"
      inkscape:guide-bbox="true"
-     inkscape:window-width="3840"
-     inkscape:window-height="2160"
-     inkscape:window-x="0"
-     inkscape:window-y="0"
+     inkscape:window-width="1884"
+     inkscape:window-height="2070"
+     inkscape:window-x="1926"
+     inkscape:window-y="60"
      inkscape:window-maximized="1"
      fit-margin-top="0"
      fit-margin-left="0"
@@ -204,6 +204,24 @@
      id="layer1"
      style="display:inline"
      transform="translate(2.7719009,-8.604167)">
+    <rect
+       style="display:inline;fill:#e5afe9;stroke-width:0.264583;fill-opacity:1"
+       id="rect6257-3-8-6-0-4-3"
+       width="60.980232"
+       height="3.6409693"
+       x="-2.7718997"
+       y="69.25695"
+       rx="1.3229166"
+       ry="1.3229166" />
+    <rect
+       style="display:inline;fill:#e5afe9;fill-opacity:1;stroke-width:0.264583"
+       id="rect6257-3-8-6-0-4-3-6"
+       width="60.980232"
+       height="3.6409693"
+       x="80.697914"
+       y="57.243954"
+       rx="1.3229166"
+       ry="1.3229166" />
     <rect
        style="display:inline;fill:#dde9af;stroke-width:0.26458332"
        id="rect6257-3-8-6-0-4-8"
@@ -1269,7 +1287,7 @@
          style="fill:#666666;stroke-width:0.264583">GPIO 8 (Tx 4)</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#cccccc;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#666666;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="82.020836"
        y="60.197914"
        id="text5218"><tspan
@@ -1277,7 +1295,7 @@
          id="tspan5216"
          x="82.020836"
          y="60.197914"
-         style="fill:#cccccc;stroke-width:0.264583">GPIO 7</tspan></text>
+         style="fill:#666666;fill-opacity:1;stroke-width:0.264583">GPIO 7 (SCL4)</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#cccccc;fill-opacity:1;stroke:none;stroke-width:0.264583"
@@ -1522,7 +1540,7 @@
          style="fill:#cccccc;stroke-width:0.264583">GPIO 5 (Rx 3)</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#cccccc;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#666666;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="56.885414"
        y="72.104164"
        id="text5310"><tspan
@@ -1530,7 +1548,7 @@
          id="tspan5308"
          x="56.885414"
          y="72.104164"
-         style="fill:#cccccc;stroke-width:0.264583">GPIO 6</tspan></text>
+         style="fill:#666666;fill-opacity:1;stroke-width:0.264583">GPIO 6 (SDA4)</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#666666;fill-opacity:1;stroke:none;stroke-width:0.264583"
@@ -1633,6 +1651,17 @@
          style="text-align:start;text-anchor:start;stroke-width:0.264583">FCU Debug Port Rx</tspan></text>
     <text
        xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="108.62521"
+       y="59.889938"
+       id="text5419-3"><tspan
+         sodipodi:role="line"
+         id="tspan5417-5"
+         x="108.62521"
+         y="59.889938"
+         style="text-align:start;text-anchor:start;stroke-width:0.264583">SCL ESCs</tspan></text>
+    <text
+       xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="30.426212"
        y="52.306061"
@@ -1664,6 +1693,17 @@
          x="30.426212"
          y="76.027267"
          style="stroke-width:0.264583">FCU Telem. (TL2) Tx</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="15.713274"
+       y="72.033112"
+       id="text5431-7"><tspan
+         sodipodi:role="line"
+         id="tspan5429-5"
+         x="15.713274"
+         y="72.033112"
+         style="stroke-width:0.264583">SDA ESCs</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:3.175px;line-height:1.25;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
