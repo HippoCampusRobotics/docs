@@ -21,6 +21,7 @@
         <script src="../_static/asciinema-player_2.6.1.js"></script>
         <script src="../_static/clipboard.min.js"></script>
         <script src="../_static/copybutton.js"></script>
+        <script src="../_static/tabs.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -131,11 +132,16 @@
 </pre></div>
 </div>
 <p>Build the firmware</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>make<span class="w"> </span>px4_fmu-v4
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-UGl4UmFjZXI=" aria-selected="true" class="sphinx-tabs-tab code-tab group-tab" id="tab-0-UGl4UmFjZXI=" name="UGl4UmFjZXI=" role="tab" tabindex="0">PixRacer</button><button aria-controls="panel-0-UGl4SGF3ayA2Qw==" aria-selected="false" class="sphinx-tabs-tab code-tab group-tab" id="tab-0-UGl4SGF3ayA2Qw==" name="UGl4SGF3ayA2Qw==" role="tab" tabindex="-1">PixHawk 6C</button></div><div aria-labelledby="tab-0-UGl4UmFjZXI=" class="sphinx-tabs-panel code-tab group-tab" id="panel-0-UGl4UmFjZXI=" name="UGl4UmFjZXI=" role="tabpanel" tabindex="0"><div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>make<span class="w"> </span>px4_fmu-v4
 </pre></div>
 </div>
+</div><div aria-labelledby="tab-0-UGl4SGF3ayA2Qw==" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-0-UGl4SGF3ayA2Qw==" name="UGl4SGF3ayA2Qw==" role="tabpanel" tabindex="0"><div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>make<span class="w"> </span>px4_fmu-v6c
+</pre></div>
+</div>
+</div></div>
 <p>Normally, the <code class="code docutils literal notranslate"><span class="pre">microdds_client</span></code> is started automatically, and no further actions are required. Anyhow, to manually start the <code class="code docutils literal notranslate"><span class="pre">microdds_client</span></code>, go to the <code class="code docutils literal notranslate"><span class="pre">nsh</span></code> terminal and run</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>microdds_client<span class="w"> </span>start<span class="w"> </span>-t<span class="w"> </span>serial<span class="w"> </span>-d<span class="w"> </span>/dev/ttyS2<span class="w"> </span>-b<span class="w"> </span><span class="m">921600</span><span class="w"> </span>-n<span class="w"> </span>uvv00
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>microdds_client<span class="w"> </span>start<span class="w"> </span>-t<span class="w"> </span>serial<span class="w"> </span>-d<span class="w"> </span>/dev/ttyS2<span class="w"> </span>-b<span class="w"> </span><span class="m">921600</span><span class="w"> </span>-n<span class="w"> </span>uuv00
 </pre></div>
 </div>
 </section>
@@ -146,6 +152,10 @@
 <p>Make sure you disable the GPS completely by changing its control mode parameter. Otherwise the the vision will be taken as odometry data instead of absolute positions.</p>
 </div>
 <p>Set <code class="code docutils literal notranslate"><span class="pre">XRCE_DDS_0_CFG</span></code> to <code class="code docutils literal notranslate"><span class="pre">TELEM2</span></code>, i.e. <code class="code docutils literal notranslate"><span class="pre">102</span></code>. If you want to, you can change the baudrate of TELEM2 at <code class="code docutils literal notranslate"><span class="pre">SER_TEL2_BAUD</span></code>. But the default of 921600 should be just fine.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Make sure you disable all MAVLink interfaces on <code class="code docutils literal notranslate"><span class="pre">TELEM2</span></code>.</p>
+</div>
 </section>
 <section id="install-px4-msgs">
 <h2><span class="section-number">2.3.3. </span>Install px4_msgs<a class="headerlink" href="#install-px4-msgs" title="Permalink to this heading"></a></h2>
@@ -155,7 +165,9 @@
 </div>
 <p>A commit that is tested to be working with the above-mentioned version of PX4 is <code class="code docutils literal notranslate"><span class="pre">8a7f3da</span></code>.</p>
 <p>Clone it into the ROS workspace</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/PX4/px4_msgs.git
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/PX4/px4_msgs.git<span class="w"> </span><span class="se">\</span>
+<span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>px4_msgs<span class="w"> </span><span class="se">\</span>
+<span class="o">&amp;&amp;</span><span class="w"> </span>checkout<span class="w"> </span>8a7f3da
 </pre></div>
 </div>
 </section>
@@ -163,7 +175,9 @@
 <h2><span class="section-number">2.3.4. </span>Install Micro-ROS<a class="headerlink" href="#install-micro-ros" title="Permalink to this heading"></a></h2>
 <p>A tested version is commit <code class="code docutils literal notranslate"><span class="pre">cdd082b</span></code>. Newer versions might work as well.</p>
 <p>Clone the repository into the ROS workspace.</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/micro-ROS/micro_ros_setup.git
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/micro-ROS/micro_ros_setup.git<span class="w"> </span><span class="se">\</span>
+<span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>micro_ros_setup<span class="w"> </span><span class="se">\</span>
+<span class="o">&amp;&amp;</span><span class="w"> </span>git<span class="w"> </span>checkout<span class="w"> </span>cdd082b
 </pre></div>
 </div>
 <p>and build the <code class="code docutils literal notranslate"><span class="pre">micro-ros-agent</span></code></p>
@@ -175,7 +189,7 @@ ros2<span class="w"> </span>run<span class="w"> </span>micro_ros_setup<span clas
 <section id="running-the-micro-ros-agent">
 <h2><span class="section-number">2.3.5. </span>Running the Micro-ROS-Agent<a class="headerlink" href="#running-the-micro-ros-agent" title="Permalink to this heading"></a></h2>
 <p>Replace device and baudrate with the correct values.</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>run<span class="w"> </span>micro_ros_agent<span class="w"> </span>micro_ros_agent<span class="w"> </span>serial<span class="w"> </span>--dev<span class="w"> </span>/dev/ttyUSB0<span class="w"> </span>-b<span class="w"> </span><span class="m">921600</span>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>run<span class="w"> </span>micro_ros_agent<span class="w"> </span>micro_ros_agent<span class="w"> </span>serial<span class="w"> </span>--dev<span class="w"> </span>/dev/fcu_data<span class="w"> </span>-b<span class="w"> </span><span class="m">921600</span>
 </pre></div>
 </div>
 <p>If the setup is working, <code class="code docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">topic</span> <span class="pre">list</span></code> should show the FMUs in and out topics.</p>
@@ -208,7 +222,7 @@ ros2<span class="w"> </span>run<span class="w"> </span>micro_ros_setup<span clas
 <p>Nice to use QGroundcontrol for settings parameters and calibrating sensors. Otherwise, QGC will be probably not used at all.</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/mavlink-router/mavlink-router.git<span class="w"> </span><span class="se">\</span>
 <span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>mavlink-router<span class="w"> </span><span class="se">\</span>
-<span class="o">&amp;&amp;</span><span class="w"> </span>git<span class="w"> </span>checkout<span class="w"> </span>3b48da1<span class="w"> </span><span class="se">\</span>
+<span class="o">&amp;&amp;</span><span class="w"> </span>git<span class="w"> </span>checkout<span class="w"> </span>3b48da1
 </pre></div>
 </div>
 <p>Build and install the code following the <a class="reference external" href="https://github.com/mavlink-router/mavlink-router">official instructions</a>.</p>
@@ -230,7 +244,7 @@ ros2<span class="w"> </span>run<span class="w"> </span>micro_ros_setup<span clas
 </div>
 <p>You can add or change the UDP endpoint to match your requirements.</p>
 <p>Run the router via</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>mavlink-router
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>mavlink-routerd
 </pre></div>
 </div>
 <p>Maybe one needs to add a connection manually in QGroundControl (Application settings -&gt; comm links).</p>

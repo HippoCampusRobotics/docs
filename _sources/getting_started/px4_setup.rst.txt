@@ -32,15 +32,21 @@ Also modify the autostart-line in :file:`src/modules/microdds_client/module.yaml
 
 Build the firmware
 
-.. code-block:: sh
+.. tabs::
 
-   make px4_fmu-v4
+   .. code-tab:: sh PixRacer
+
+      make px4_fmu-v4
+   
+   .. code-tab:: sh PixHawk 6C
+
+      make px4_fmu-v6c
 
 Normally, the :code:`microdds_client` is started automatically, and no further actions are required. Anyhow, to manually start the :code:`microdds_client`, go to the :code:`nsh` terminal and run
 
 .. code-block:: sh
 
-   microdds_client start -t serial -d /dev/ttyS2 -b 921600 -n uvv00
+   microdds_client start -t serial -d /dev/ttyS2 -b 921600 -n uuv00
 
 
 Configure the Firmware
@@ -49,6 +55,9 @@ Configure the Firmware
 .. attention:: Make sure you disable the GPS completely by changing its control mode parameter. Otherwise the the vision will be taken as odometry data instead of absolute positions.
 
 Set :code:`XRCE_DDS_0_CFG` to :code:`TELEM2`, i.e. :code:`102`. If you want to, you can change the baudrate of TELEM2 at :code:`SER_TEL2_BAUD`. But the default of 921600 should be just fine.
+
+.. note:: Make sure you disable all MAVLink interfaces on :code:`TELEM2`.
+
 
 Install px4_msgs
 ================
@@ -62,7 +71,9 @@ Clone it into the ROS workspace
 
 .. code-block:: sh
 
-   git clone https://github.com/PX4/px4_msgs.git
+   git clone https://github.com/PX4/px4_msgs.git \
+   && cd px4_msgs \
+   && checkout 8a7f3da
 
 Install Micro-ROS
 =================
@@ -73,7 +84,9 @@ Clone the repository into the ROS workspace.
 
 .. code-block:: sh
 
-   git clone https://github.com/micro-ROS/micro_ros_setup.git
+   git clone https://github.com/micro-ROS/micro_ros_setup.git \
+   && cd micro_ros_setup \
+   && git checkout cdd082b
 
 
 and build the :code:`micro-ros-agent`
@@ -90,7 +103,7 @@ Replace device and baudrate with the correct values.
 
 .. code-block:: sh
 
-   ros2 run micro_ros_agent micro_ros_agent serial --dev /dev/ttyUSB0 -b 921600
+   ros2 run micro_ros_agent micro_ros_agent serial --dev /dev/fcu_data -b 921600
 
 If the setup is working, :code:`ros2 topic list` should show the FMUs in and out topics.
 
@@ -128,7 +141,7 @@ Nice to use QGroundcontrol for settings parameters and calibrating sensors. Othe
 
    git clone https://github.com/mavlink-router/mavlink-router.git \
    && cd mavlink-router \
-   && git checkout 3b48da1 \
+   && git checkout 3b48da1
 
 Build and install the code following the `official instructions <https://github.com/mavlink-router/mavlink-router>`__.
 
@@ -157,6 +170,6 @@ Run the router via
 
 .. code-block:: sh
 
-   mavlink-router
+   mavlink-routerd
 
 Maybe one needs to add a connection manually in QGroundControl (Application settings -> comm links).
