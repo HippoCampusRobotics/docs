@@ -3,10 +3,10 @@ Getting Started
 
 
 .. attention::
-   We are moving to ROS2. This guide will be updated soon.
+   We are moving to ROS2. This guide is still in the process of being updated. There might be some construction works still going on here and there.
 
 .. note::
-   This guide assumes `Ubuntu 20.04 <https://releases.ubuntu.com/20.04/>`_ is used as OS.
+   This guide assumes `Ubuntu 22.04 <https://releases.ubuntu.com/22.04/>`_ is used as OS.
 
 .. toctree::
    :maxdepth: 2
