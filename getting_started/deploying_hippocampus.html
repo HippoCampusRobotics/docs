@@ -21,7 +21,6 @@
         <script src="../_static/asciinema-player_2.6.1.js"></script>
         <script src="../_static/clipboard.min.js"></script>
         <script src="../_static/copybutton.js"></script>
-        <script src="../_static/tabs.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -58,22 +57,9 @@
 <li class="toctree-l2"><a class="reference internal" href="installing_qgc.html">2.4. Installing QGroundControl</a></li>
 <li class="toctree-l2"><a class="reference internal" href="starting_gazebo_simulation.html">2.5. Starting Simulation</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">2.6. Deploying HippoCampus</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#flashing-the-pixracer">2.6.1. Flashing the PixRacer</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#px4-parameters">2.6.2. PX4 Parameters</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#pixracer-calibration">2.6.3. PixRacer Calibration</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#camera-calibration">2.6.4. Camera Calibration</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#launch-setup">2.6.5. Launch Setup</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#tethered-setup">Tethered Setup</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#autonomous-setup">Autonomous Setup</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#offboard-mode">2.6.6. Offboard Mode</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#arming-the-vehicle">2.6.7. Arming the Vehicle</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#force-arming-via-mavros">Force arming via mavros</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#force-disarming">Force disarming</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#final-steps">2.6.8. Final Steps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#start-everyting-check-list">2.6.1. Start-Everyting-Check-List</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#shutting-down-check-list">2.6.2. Shutting-Down-Check-List</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#final-steps">2.6.3. Final Steps</a></li>
 </ul>
 </li>
 </ul>
@@ -123,119 +109,77 @@
 <p class="admonition-title">Todo</p>
 <p>Rework for ROS2 needed.</p>
 </div>
-<section id="flashing-the-pixracer">
-<h2><span class="section-number">2.6.1. </span>Flashing the PixRacer<a class="headerlink" href="#flashing-the-pixracer" title="Permalink to this heading"></a></h2>
-<div class="admonition-todo admonition" id="id2">
-<p class="admonition-title">Todo</p>
-<p>Flash the PX4-Autopilot firmware onto the PixRacer. Select correct Airframe.</p>
-</div>
-</section>
-<section id="px4-parameters">
-<h2><span class="section-number">2.6.2. </span>PX4 Parameters<a class="headerlink" href="#px4-parameters" title="Permalink to this heading"></a></h2>
-<p>Set <code class="code docutils literal notranslate"><span class="pre">EKF2_AID_MASK</span></code> to <strong>vision position fusion</strong> and <strong>vision yaw fusion</strong>. This is probably a value of 24.</p>
-<p>Set <code class="code docutils literal notranslate"><span class="pre">EKF2_HGT_MODE</span></code> to <strong>Vision</strong></p>
-<p>Good starting gains for the Geometric Attitude Controller are:</p>
-<div class="sphinx-tabs docutils container">
-<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-0-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-0-0-0" name="0-0" role="tab" tabindex="0">Big Hippo (Alu)</button><button aria-controls="panel-0-0-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-1" name="0-1" role="tab" tabindex="-1">Hippo (Plastic)</button></div><div aria-labelledby="tab-0-0-0" class="sphinx-tabs-panel" id="panel-0-0-0" name="0-0" role="tabpanel" tabindex="0"><table class="docutils align-default">
-<thead>
-<tr class="row-odd"><th class="head"><p>Parameter</p></th>
-<th class="head"><p>Value</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>UUV_ROLL_P</p></td>
-<td><p>5.0</p></td>
-</tr>
-<tr class="row-odd"><td><p>UUV_ROLL_D</p></td>
-<td><p>0.5</p></td>
-</tr>
-<tr class="row-even"><td><p>UUV_PITCH_P</p></td>
-<td><p>5.0</p></td>
-</tr>
-<tr class="row-odd"><td><p>UUV_PITCH_D</p></td>
-<td><p>1.0</p></td>
-</tr>
-<tr class="row-even"><td><p>UUV_YAW_P</p></td>
-<td><p>8.0</p></td>
-</tr>
-<tr class="row-odd"><td><p>UUV_YAW_D</p></td>
-<td><p>1.0</p></td>
-</tr>
-</tbody>
-</table>
-</div><div aria-labelledby="tab-0-0-1" class="sphinx-tabs-panel" hidden="true" id="panel-0-0-1" name="0-1" role="tabpanel" tabindex="0"><div class="admonition-todo admonition" id="id3">
-<p class="admonition-title">Todo</p>
-<p>Find good basic values.</p>
-</div>
-</div></div>
-</section>
-<section id="pixracer-calibration">
-<h2><span class="section-number">2.6.3. </span>PixRacer Calibration<a class="headerlink" href="#pixracer-calibration" title="Permalink to this heading"></a></h2>
-<p>Just follow the steps in QGroundControl.
-Probably a good idea to step away from the steel water tank.</p>
-</section>
-<section id="camera-calibration">
-<h2><span class="section-number">2.6.4. </span>Camera Calibration<a class="headerlink" href="#camera-calibration" title="Permalink to this heading"></a></h2>
-<p><a class="reference external" href="http://wiki.ros.org/camera_calibration/Tutorials/MonocularCalibration">http://wiki.ros.org/camera_calibration/Tutorials/MonocularCalibration</a></p>
-<p>Copy file to <code class="file docutils literal notranslate"><span class="pre">~/catkin_ws/src/camera/config/calib_ov9281_00.yaml</span></code> on RaspberryPi.</p>
-</section>
-<section id="launch-setup">
-<h2><span class="section-number">2.6.5. </span>Launch Setup<a class="headerlink" href="#launch-setup" title="Permalink to this heading"></a></h2>
-<section id="tethered-setup">
-<h3>Tethered Setup<a class="headerlink" href="#tethered-setup" title="Permalink to this heading"></a></h3>
+<section id="start-everyting-check-list">
+<h2><span class="section-number">2.6.1. </span>Start-Everyting-Check-List<a class="headerlink" href="#start-everyting-check-list" title="Permalink to this heading"></a></h2>
 <ol class="arabic">
-<li><p><strong>ROS network setup</strong></p>
-<p>The ROS master will be running on the <em>main</em> RaspberryPi on HippoCampus. Set the ROS_MASTER_URI on your computer to <code class="code docutils literal notranslate"><span class="pre">http://hippo-main-XX.local:11311</span></code>.</p>
-<p>In case of errors, checklist to work through. Maybe this should be in a seperate debugging section.</p>
-</li>
-<li><p><strong>Start this on HippoCampus:</strong></p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>roslaunch<span class="w"> </span>hippocampus_common<span class="w"> </span>hardware_hippo.launch<span class="w"> </span>vehicle_name:<span class="o">=</span>uuv00
+<li><p><strong>Push Buttons</strong></p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>ssh<span class="w"> </span>pi@buttons-00.local
 </pre></div>
 </div>
-<p>IP address for QGC computer can be changed by adding</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>roslaunch<span class="w"> </span>hippocampus_common<span class="w"> </span>hardware_hippo.launch<span class="w"> </span>vehicle_name:<span class="o">=</span>uuv00<span class="w"> </span>qgc_ip:<span class="o">=</span><span class="m">192</span>.168.0.100
+<p>Replace the vehicle name with the one of the vehicle we are actually using.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>launch<span class="w"> </span>buttons<span class="w"> </span>button_1.launch.py<span class="w"> </span>vehicle_name:<span class="o">=</span>uuv02
+</pre></div>
+</div>
+<p>We can detach the session with <kbd class="kbd docutils literal notranslate">F6</kbd>, since we do not have to interact with it anymore.</p>
+</li>
+<li><p><strong>Start the onboard nodes</strong></p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>ssh<span class="w"> </span>pi@hippo-main-02.local
+</pre></div>
+</div>
+<p>We run at least two nodes: the <code class="code docutils literal notranslate"><span class="pre">esc_commander</span></code> and <code class="code docutils literal notranslate"><span class="pre">micro-ros</span></code></p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>run<span class="w"> </span>micro_ros_agent<span class="w"> </span>micro_ros_agent<span class="w"> </span>serial<span class="w"> </span>--dev<span class="w"> </span>/dev/fcu_data<span class="w"> </span>-b<span class="w"> </span><span class="m">921600</span>
+</pre></div>
+</div>
+<p>Open a new termianl window with <kbd class="kbd docutils literal notranslate">F2</kbd> (switch between them with <kbd class="kbd docutils literal notranslate">F3</kbd> and <kbd class="kbd docutils literal notranslate">F4</kbd>).</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>run<span class="w"> </span>esc<span class="w"> </span>esc_commander_node<span class="w"> </span>--ros-args<span class="w"> </span>-r<span class="w"> </span>__ns:<span class="o">=</span>/uuv02
+</pre></div>
+</div>
+<p>Open a new terminal once more and start the debug session for the FCU.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>screen<span class="w"> </span>/dev/fcu_debug<span class="w"> </span><span class="m">57600</span>
+</pre></div>
+</div>
+<p>We use this session to either reboot the vehicle by entering <code class="code docutils literal notranslate"><span class="pre">reboot</span></code> (it does not matter if there are messages popping up while entering this) or to reset the state estimtion by entering <code class="code docutils literal notranslate"><span class="pre">ekf2</span> <span class="pre">stop</span></code> and <code class="code docutils literal notranslate"><span class="pre">ekf2</span> <span class="pre">start</span></code>.</p>
+<p>We leave this session by hitting <kbd class="kbd docutils literal notranslate">Ctrl</kbd> + <kbd class="kbd docutils literal notranslate">A</kbd> followed by <kbd class="kbd docutils literal notranslate">k</kbd>. You have to confirm quitting the session by hitting <kbd class="kbd docutils literal notranslate">y</kbd>.</p>
+</li>
+<li><p>Launch the Qualisys MoCap-Bridge and replace the vehicle name so it matches our used vehicle.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>launch<span class="w"> </span>qualisys_bridge<span class="w"> </span>qualisys_bridge.launch.py<span class="w"> </span>vehicle_name:<span class="o">=</span>uuv02
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Make sure to use the correct IP address of the computer running the Qualisys Tracking Manager in the config file inside the <code class="file docutils literal notranslate"><span class="pre">qualisys_bridge</span></code> package. Check the address for the network interface, that connect the computer with the local network (not the one used to connect the cameras).</p>
+</div>
+</li>
+<li><p>Launch the specific setup we want to run, for example</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>launch<span class="w"> </span>hippo_control<span class="w"> </span>top_motor_failure_intra_process.launch.py<span class="w"> </span>vehicle_name:<span class="o">=</span>uuv02<span class="w"> </span>use_sim_time:<span class="o">=</span><span class="nb">false</span>
+</pre></div>
+</div>
+<p>For this specific launch setup also run the following command to set the desired thrust to  non-zero value</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>topic<span class="w"> </span>pub<span class="w"> </span>-r<span class="w"> </span><span class="m">50</span><span class="w"> </span>/uuv02/thrust_setpoint<span class="w"> </span>hippo_msgs/msg/ActuatorSetpoint<span class="w"> </span><span class="s1">&#39;x: 3.0&#39;</span>
 </pre></div>
 </div>
 </li>
-<li><p><strong>Start this on a computer of your choice:</strong></p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>roslaunch<span class="w"> </span>hippocampus_common<span class="w"> </span>offboard_hippo.launch<span class="w"> </span>vehicle_name:<span class="o">=</span>uuv00
-</pre></div>
+<li><p>Use the the green and red push button to arm/disarm the vehicle.</p></li>
+</ol>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>Always keep an eye on the battery level. There is a indicator light connected to the Raspberry Pi controlloing the buttons. Besides, the <cite>esc_commander</cite> node also publishes the battery voltage measured by the ESCs under <code class="file docutils literal notranslate"><span class="pre">/uuv02/battery_voltage</span></code>. Make sure to <strong>not</strong> discharge the battery below 3.5V (it is okay to have short voltage drops under heavy load until 3.3V) per cell. Otherwise tell Lennart and/or Nathalie about it.</p>
 </div>
-</li>
+</section>
+<section id="shutting-down-check-list">
+<h2><span class="section-number">2.6.2. </span>Shutting-Down-Check-List<a class="headerlink" href="#shutting-down-check-list" title="Permalink to this heading"></a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In general, please shutdown every Raspberry Pi with <code class="code docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">shutdown</span> <span class="pre">0</span></code> before disconnecting any power supply.</p>
+</div>
+<ol class="arabic simple">
+<li><p>Shutdown at least all battery powered Raspberry Pis (usually this means the one inside the vehicle) with <code class="code docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">shutdown</span> <span class="pre">0</span></code> (make sure you run this command on the Pi and not on your own device by accident).</p></li>
+<li><p>Disconnect all batteries and use the battery charger to charge the battery to storage voltage if you will not reuse it immediately.</p></li>
+<li><p>If you have any batteries left that are not charged to storage voltage after your experiments are done, charge them to storage voltage. Do not store them at a voltage level above or below it.</p></li>
 </ol>
 </section>
-<section id="autonomous-setup">
-<h3>Autonomous Setup<a class="headerlink" href="#autonomous-setup" title="Permalink to this heading"></a></h3>
-<p>Pretty much the same, this time just launch all necessary nodes on HippoCampus. It might be a good idea to make use of the <em>Buddy</em> RaspberryPi as well.</p>
-<div class="admonition-todo admonition" id="id4">
-<p class="admonition-title">Todo</p>
-<p>TBD</p>
-</div>
-</section>
-</section>
-<section id="offboard-mode">
-<h2><span class="section-number">2.6.6. </span>Offboard Mode<a class="headerlink" href="#offboard-mode" title="Permalink to this heading"></a></h2>
-<p>Set mode to Offboard in QGC.</p>
-</section>
-<section id="arming-the-vehicle">
-<h2><span class="section-number">2.6.7. </span>Arming the Vehicle<a class="headerlink" href="#arming-the-vehicle" title="Permalink to this heading"></a></h2>
-<p>Now, you can arm the vehicle in QGC. Try not to move the vehicle too much.
-If you absolutely cannot arm due to preflight errors, you can force arm using a rosservice.</p>
-<section id="force-arming-via-mavros">
-<h3>Force arming via mavros<a class="headerlink" href="#force-arming-via-mavros" title="Permalink to this heading"></a></h3>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>rosservice<span class="w"> </span>call<span class="w"> </span>/uuv00/mavros/cmd/command<span class="w"> </span><span class="s2">&quot;{broadcast: false, command: 400,confirmation: 0, param1: 1, param2: 21196, param3: 0.0, param4: 0.0,param5: 0.0, param6: 0.0, param7: 0.0}&quot;</span>
-</pre></div>
-</div>
-</section>
-<section id="force-disarming">
-<h3>Force disarming<a class="headerlink" href="#force-disarming" title="Permalink to this heading"></a></h3>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>rosservice<span class="w"> </span>call<span class="w"> </span>/uuv00/mavros/cmd/command<span class="w"> </span><span class="s2">&quot;{broadcast: false, command: 400,confirmation: 0, param1: 0, param2: 21196, param3: 0.0, param4: 0.0,param5: 0.0, param6: 0.0, param7: 0.0}&quot;</span>
-</pre></div>
-</div>
-</section>
-</section>
 <section id="final-steps">
-<h2><span class="section-number">2.6.8. </span>Final Steps<a class="headerlink" href="#final-steps" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">2.6.3. </span>Final Steps<a class="headerlink" href="#final-steps" title="Permalink to this heading"></a></h2>
 <p>Look! It’s running just perfectly fine without any trial and error.</p>
 <a class="reference internal image-reference" href="../_images/hippo_inf_path.gif"><img alt="../_images/hippo_inf_path.gif" class="align-center" src="../_images/hippo_inf_path.gif" style="width: 500px;" /></a>
 </section>
