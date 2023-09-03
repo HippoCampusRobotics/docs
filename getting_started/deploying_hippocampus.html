@@ -21,6 +21,7 @@
         <script src="../_static/asciinema-player_2.6.1.js"></script>
         <script src="../_static/clipboard.min.js"></script>
         <script src="../_static/copybutton.js"></script>
+        <script src="../_static/tabs.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -127,9 +128,14 @@
 </pre></div>
 </div>
 <p>We run at least two nodes: the <code class="code docutils literal notranslate"><span class="pre">esc_commander</span></code> and <code class="code docutils literal notranslate"><span class="pre">micro-ros</span></code></p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>run<span class="w"> </span>micro_ros_agent<span class="w"> </span>micro_ros_agent<span class="w"> </span>serial<span class="w"> </span>--dev<span class="w"> </span>/dev/fcu_data<span class="w"> </span>-b<span class="w"> </span><span class="m">921600</span>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-TWljcm9YUkNF" aria-selected="true" class="sphinx-tabs-tab code-tab group-tab" id="tab-0-TWljcm9YUkNF" name="TWljcm9YUkNF" role="tab" tabindex="0">MicroXRCE</button><button aria-controls="panel-0-bWljcm8tcm9z" aria-selected="false" class="sphinx-tabs-tab code-tab group-tab" id="tab-0-bWljcm8tcm9z" name="bWljcm8tcm9z" role="tab" tabindex="-1">micro-ros</button></div><div aria-labelledby="tab-0-TWljcm9YUkNF" class="sphinx-tabs-panel code-tab group-tab" id="panel-0-TWljcm9YUkNF" name="TWljcm9YUkNF" role="tabpanel" tabindex="0"><div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>MicroXRCEAgent<span class="w"> </span>serial<span class="w"> </span>--dev<span class="w"> </span>/dev/fcu_data<span class="w"> </span>-b<span class="w"> </span><span class="m">921600</span>
 </pre></div>
 </div>
+</div><div aria-labelledby="tab-0-bWljcm8tcm9z" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-0-bWljcm8tcm9z" name="bWljcm8tcm9z" role="tabpanel" tabindex="0"><div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>run<span class="w"> </span>micro_ros_agent<span class="w"> </span>micro_ros_agent<span class="w"> </span>serial<span class="w"> </span>--dev<span class="w"> </span>/dev/fcu_data<span class="w"> </span>-b<span class="w"> </span><span class="m">921600</span>
+</pre></div>
+</div>
+</div></div>
 <p>Open a new termianl window with <kbd class="kbd docutils literal notranslate">F2</kbd> (switch between them with <kbd class="kbd docutils literal notranslate">F3</kbd> and <kbd class="kbd docutils literal notranslate">F4</kbd>).</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>run<span class="w"> </span>esc<span class="w"> </span>esc_commander_node<span class="w"> </span>--ros-args<span class="w"> </span>-r<span class="w"> </span>__ns:<span class="o">=</span>/uuv02
 </pre></div>

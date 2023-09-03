@@ -75,35 +75,25 @@ Clone it into the ROS workspace
    && cd px4_msgs \
    && checkout 8a7f3da
 
-Install Micro-ROS
-=================
+Install Micro-XRCE-DDS-Agent
+============================
 
-A tested version is commit :code:`cdd082b`. Newer versions might work as well.
-
-Clone the repository into the ROS workspace.
+Clone and build the agent
 
 .. code-block:: sh
 
-   git clone https://github.com/micro-ROS/micro_ros_setup.git \
-   && cd micro_ros_setup \
-   && git checkout cdd082b
+   cd ~/ros2_underlay/src \
+   && git clone https://github.com/eProsima/Micro-XRCE-DDS-Agent.git \
+   && build_underlay
 
-
-and build the :code:`micro-ros-agent`
-
-.. code-block:: sh
-
-   ros2 run micro_ros_setup create_agent_ws.sh
-   ros2 run micro_ros_setup build_agent.sh
-
-Running the Micro-ROS-Agent
-===========================
+Running the Micro-XRCE-DDS-Agent
+================================
 
 Replace device and baudrate with the correct values.
 
 .. code-block:: sh
 
-   ros2 run micro_ros_agent micro_ros_agent serial --dev /dev/fcu_data -b 921600
+   MicroXRCEAgent serial --dev /dev/fcu_data -b 921600
 
 If the setup is working, :code:`ros2 topic list` should show the FMUs in and out topics.
 

@@ -58,8 +58,8 @@
 <li class="toctree-l3"><a class="reference internal" href="#building-the-firmware">2.3.1. Building the Firmware</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#configure-the-firmware">2.3.2. Configure the Firmware</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#install-px4-msgs">2.3.3. Install px4_msgs</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#install-micro-ros">2.3.4. Install Micro-ROS</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#running-the-micro-ros-agent">2.3.5. Running the Micro-ROS-Agent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#install-micro-xrce-dds-agent">2.3.4. Install Micro-XRCE-DDS-Agent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#running-the-micro-xrce-dds-agent">2.3.5. Running the Micro-XRCE-DDS-Agent</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#mavlink-router">2.3.6. MAVLink Router</a></li>
 </ul>
 </li>
@@ -171,25 +171,19 @@
 </pre></div>
 </div>
 </section>
-<section id="install-micro-ros">
-<h2><span class="section-number">2.3.4. </span>Install Micro-ROS<a class="headerlink" href="#install-micro-ros" title="Permalink to this heading"></a></h2>
-<p>A tested version is commit <code class="code docutils literal notranslate"><span class="pre">cdd082b</span></code>. Newer versions might work as well.</p>
-<p>Clone the repository into the ROS workspace.</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/micro-ROS/micro_ros_setup.git<span class="w"> </span><span class="se">\</span>
-<span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>micro_ros_setup<span class="w"> </span><span class="se">\</span>
-<span class="o">&amp;&amp;</span><span class="w"> </span>git<span class="w"> </span>checkout<span class="w"> </span>cdd082b
-</pre></div>
-</div>
-<p>and build the <code class="code docutils literal notranslate"><span class="pre">micro-ros-agent</span></code></p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>run<span class="w"> </span>micro_ros_setup<span class="w"> </span>create_agent_ws.sh
-ros2<span class="w"> </span>run<span class="w"> </span>micro_ros_setup<span class="w"> </span>build_agent.sh
+<section id="install-micro-xrce-dds-agent">
+<h2><span class="section-number">2.3.4. </span>Install Micro-XRCE-DDS-Agent<a class="headerlink" href="#install-micro-xrce-dds-agent" title="Permalink to this heading"></a></h2>
+<p>Clone and build the agent</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/ros2_underlay/src<span class="w"> </span><span class="se">\</span>
+<span class="o">&amp;&amp;</span><span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/eProsima/Micro-XRCE-DDS-Agent.git<span class="w"> </span><span class="se">\</span>
+<span class="o">&amp;&amp;</span><span class="w"> </span>build_underlay
 </pre></div>
 </div>
 </section>
-<section id="running-the-micro-ros-agent">
-<h2><span class="section-number">2.3.5. </span>Running the Micro-ROS-Agent<a class="headerlink" href="#running-the-micro-ros-agent" title="Permalink to this heading"></a></h2>
+<section id="running-the-micro-xrce-dds-agent">
+<h2><span class="section-number">2.3.5. </span>Running the Micro-XRCE-DDS-Agent<a class="headerlink" href="#running-the-micro-xrce-dds-agent" title="Permalink to this heading"></a></h2>
 <p>Replace device and baudrate with the correct values.</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>run<span class="w"> </span>micro_ros_agent<span class="w"> </span>micro_ros_agent<span class="w"> </span>serial<span class="w"> </span>--dev<span class="w"> </span>/dev/fcu_data<span class="w"> </span>-b<span class="w"> </span><span class="m">921600</span>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>MicroXRCEAgent<span class="w"> </span>serial<span class="w"> </span>--dev<span class="w"> </span>/dev/fcu_data<span class="w"> </span>-b<span class="w"> </span><span class="m">921600</span>
 </pre></div>
 </div>
 <p>If the setup is working, <code class="code docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">topic</span> <span class="pre">list</span></code> should show the FMUs in and out topics.</p>
