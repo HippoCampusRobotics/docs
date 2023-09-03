@@ -28,9 +28,15 @@ Start-Everyting-Check-List
 
    We run at least two nodes: the :code:`esc_commander` and :code:`micro-ros`
 
-   .. code-block:: sh
+   .. tabs::
 
-      ros2 run micro_ros_agent micro_ros_agent serial --dev /dev/fcu_data -b 921600
+      .. code-tab:: sh MicroXRCE
+
+         MicroXRCEAgent serial --dev /dev/fcu_data -b 921600
+      
+      .. code-tab:: sh micro-ros
+
+         ros2 run micro_ros_agent micro_ros_agent serial --dev /dev/fcu_data -b 921600
 
    Open a new termianl window with :kbd:`F2` (switch between them with :kbd:`F3` and :kbd:`F4`).
 
