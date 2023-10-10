@@ -31,9 +31,21 @@ We will need the following external packages that we will put into :file:`ros2_u
 PX4-msg
 *******
 
-.. hint::
-   We have a :download:`precompiled arm64 </res/misc/ros-humble-px4-msgs_2.0.1-0jammy_arm64.deb>` for the Raspberry Pi to skip the 20 minutes of manual compilation.
-   Lucky you, we now have a :download:`precompiled amd64 </res/misc/ros-humble-px4-msgs_2.0.1-0jammy_amd64.deb>` for your computer as well!
+Either install prebuilt package
+
+.. tabs::
+
+   .. group-tab:: Humble
+      
+      * :download:`amd64 </res/misc/ros-humble-px4-msgs_2.0.1-0jammy_amd64.deb>`
+      * :download:`arm64 </res/misc/ros-humble-px4-msgs_2.0.1-0jammy_arm64.deb>`
+
+   .. group-tab:: Iron
+      
+      * :download:`amd64 </res/misc/ros-iron-px4-msgs_2.0.1-0jammy_amd64.deb>`
+      * :download:`arm64 </res/misc/ros-iron-px4-msgs_2.0.1-0jammy_arm64.deb>`
+
+or build from source
 
 .. important:: See :ref:`getting_started/px4_setup:PX4 Setup` for a tested commit of the repository.
 
