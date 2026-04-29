@@ -63,7 +63,7 @@ Start-Everyting-Check-List
 
    .. code-block:: console
 
-      $ ros2 topic pub -r 50 /uuv02/thrust_setpoint hippo_msgs/msg/ActuatorSetpoint 'x: 0.3'
+      $ ros2 topic pub -r 50 /uuv02/thrust_setpoint hippo_control_msgs/msg/ActuatorSetpoint 'x: 0.3'
 
 #. Use the the green and red push button to arm/disarm the vehicle.
 
