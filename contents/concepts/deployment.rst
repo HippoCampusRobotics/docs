@@ -13,6 +13,15 @@ We use ``systemd`` for starting these nodes.
 
 In many cases no manual interaction with the Raspberry Pis inside the vehicles is required, since all required nodes are started automatically at boot.
 
+Github Repository
+=================
+
+The deployment-related files for the robot setup are collected in the
+hippo_deployment_ repository. This includes systemd service files, udev rules,
+and helper scripts used to start and monitor the ROS 2 nodes on the robot.
+
+.. _hippo_deployment: https://github.com/HippoCampusRobotics/hippo_deployment
+
 Where can I find the services that are starting the nodes?
 ==========================================================
 
