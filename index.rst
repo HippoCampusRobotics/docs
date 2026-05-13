@@ -37,6 +37,7 @@ Welcome to HippoCampusDocs's documentation!
    contents/getting_started/px4_setup
    contents/getting_started/installing_qgc
    contents/getting_started/deploying_hippocampus
+   contents/getting_started/apriltag_localization
    
 
 .. toctree:: 
