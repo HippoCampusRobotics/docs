@@ -33,6 +33,42 @@ Example for timeout errror for x-axis motor:
    [xyz_motors-1] [INFO] [1749641302.049688477] [gantry.motor_y]: Initialized.
    [xyz_motors-1] [INFO] [1749641302.053621334] [gantry.motor_z]: Initialized.
 
+Enable the Motors
+=================
+
+If the motors are enabled, you should not be able to move the x- and y-axis by hand. Do NOT test this for the z-axis! If you want to move one of the linear axis by hand, you have to turn the power supply off. 
+
+Sometimes, one of the motors is not automatically enabled again after turning the power supply back on. This tends to happen to the y-axis.
+You can check the motor status: 
+
+.. code-block:: console
+
+   pi@gantry ~
+   $ ros2 topic echo /gantry/motor_y/motor_status          
+   header:
+     stamp:
+       sec: 1787840867
+       nanosec: 376819798
+     frame_id: ''
+   homing: false
+   lower_limit_switch_pressed: false
+   upper_limit_switch_pressed: false
+   enabled: false
+   position_reached: true
+
+To manually enable a motor, in this example the y-axis, use: 
+
+.. code-block:: console
+
+   pi@gantry ~
+   $ ros2 service call /gantry/motor_y/enable std_srvs/srv/SetBool "{data: True}"
+   requester: making request: std_srvs.srv.SetBool_Request(data=True)
+   
+   response:
+   std_srvs.srv.SetBool_Response(success=True, message='')
+
+As a physical check, now the axis should not be movable by hand anymore.
+
 
 Home the Motors
 ===============
