@@ -9,7 +9,12 @@ Pinout
       .. image:: /res/images/pi_pinout_uuv.svg
          :width: 30000
          :align: center
-         
+      
+   .. tab:: UUV (IMU)
+      
+      .. image:: /res/images/pi_pinout_uuv2.svg
+         :width: 30000
+         :align: center
 
    .. tab:: BlueROV (main)
 
