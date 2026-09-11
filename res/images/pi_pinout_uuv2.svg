@@ -25,18 +25,18 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.8550147"
-     inkscape:cx="211.58862"
-     inkscape:cy="148.2468"
+     inkscape:zoom="1.3116935"
+     inkscape:cx="227.18722"
+     inkscape:cy="173.05872"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
      showguides="false"
      inkscape:guide-bbox="true"
-     inkscape:window-width="2560"
-     inkscape:window-height="1370"
-     inkscape:window-x="-7"
-     inkscape:window-y="8"
+     inkscape:window-width="1440"
+     inkscape:window-height="830"
+     inkscape:window-x="627"
+     inkscape:window-y="1448"
      inkscape:window-maximized="1"
      fit-margin-top="0"
      fit-margin-left="0"
@@ -213,7 +213,7 @@
      style="display:inline"
      transform="translate(2.7719009,-8.604167)">
     <rect
-       style="display:inline;fill:#a2c7ec;stroke-width:0.264583;fill-opacity:1"
+       style="display:inline;fill:#eceb91;stroke-width:0.264583;fill-opacity:1"
        id="rect6257-3-8-6-0-4-3"
        width="60.980232"
        height="3.6409693"
@@ -222,7 +222,7 @@
        rx="1.3229166"
        ry="1.3229166" />
     <rect
-       style="display:inline;fill:#a3bbeb;fill-opacity:1;stroke-width:0.264583"
+       style="display:inline;fill:#eceb91;fill-opacity:1;stroke-width:0.264583"
        id="rect6257-3-8-6-0-4-3-6"
        width="60.980232"
        height="3.6409693"
@@ -231,7 +231,7 @@
        rx="1.3229166"
        ry="1.3229166" />
     <rect
-       style="display:inline;fill:#bfbfbf;stroke-width:0.264583;fill-opacity:1"
+       style="display:inline;fill:#e1e1e1;stroke-width:0.264583;fill-opacity:1"
        id="rect6257-3-8"
        width="60.980232"
        height="3.6409693"
@@ -240,7 +240,7 @@
        rx="1.3229166"
        ry="1.3229166" />
     <rect
-       style="display:inline;fill:#ee909f;stroke-width:0.26458332;fill-opacity:1"
+       style="display:inline;fill:#e1e1e1;stroke-width:0.26458332;fill-opacity:1"
        id="rect6257-3"
        width="60.980232"
        height="3.6409693"
@@ -258,7 +258,7 @@
        rx="1.3229166"
        ry="1.3229166" />
     <rect
-       style="display:inline;fill:#bfbfbf;fill-opacity:1;stroke-width:0.264583"
+       style="display:inline;fill:#ee909f;fill-opacity:1;stroke-width:0.264583"
        id="rect6257-3-1-2"
        width="60.980232"
        height="3.6409693"
@@ -426,7 +426,7 @@
        inkscape:transform-center-x="-0.025056518"
        inkscape:transform-center-y="-0.016704346">
       <circle
-         style="fill:#abc837;stroke-width:0.13198209"
+         style="fill:#2c5aa0;stroke-width:0.13198209;fill-opacity:1"
          r="1.319821"
          cy="29.182636"
          cx="48.004601"
@@ -446,7 +446,7 @@
        inkscape:transform-center-x="-0.025056518"
        inkscape:transform-center-y="-0.016704346">
       <circle
-         style="fill:#abc837;stroke-width:0.13198209"
+         style="fill:#2c5aa0;stroke-width:0.13198209;fill-opacity:1"
          r="1.319821"
          cy="29.182636"
          cx="48.004601"
@@ -1590,7 +1590,7 @@
    style="font-weight:bold"
    id="tspan11">Power Supply </tspan>GND</tspan></text>
     <rect
-       style="display:inline;fill:#bfbfbf;fill-opacity:1;stroke-width:0.264583"
+       style="display:inline;fill:#b6ebbe;fill-opacity:1;stroke-width:0.264583"
        id="rect6257-3-1-2-5"
        width="60.980232"
        height="3.6409693"
@@ -1672,7 +1672,7 @@
    style="font-weight:bold"
    id="tspan7">ESCs</tspan></tspan></text>
     <rect
-       style="display:inline;fill:#a2c7ec;fill-opacity:1;stroke-width:0.263953"
+       style="display:inline;fill:#b6ebbe;fill-opacity:1;stroke-width:0.263953"
        id="rect6257-3-8-6-0-4-3-61"
        width="60.980232"
        height="3.6236653"
@@ -1732,7 +1732,7 @@
        inkscape:transform-center-x="-0.025056518"
        inkscape:transform-center-y="-0.016704346">
       <circle
-         style="fill:#abc837;stroke-width:0.13198209"
+         style="fill:#2c5aa0;stroke-width:0.13198209;fill-opacity:1"
          r="1.319821"
          cy="29.182636"
          cx="48.004601"
@@ -2177,7 +2177,7 @@
          cx="48.004601"
          cy="29.182636"
          r="1.319821"
-         style="fill:#c837ab;stroke-width:0.13198209" />
+         style="fill:#2c5aa0;stroke-width:0.13198209;fill-opacity:1" />
       <circle
          style="fill:#ffffff;stroke-width:0.26458332"
          id="path3724-0-1-4"
@@ -2403,7 +2403,7 @@
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccc" />
     <rect
-       style="display:inline;fill:#ea9b95;fill-opacity:1;stroke-width:0.264583"
+       style="display:inline;fill:#bfcff0;fill-opacity:1;stroke-width:0.264583"
        id="rect6257-3-8-6-7"
        width="60.980232"
        height="3.6409693"
@@ -2423,7 +2423,7 @@
          y="12.478931"
          style="fill:#333333;fill-opacity:1;stroke-width:0.264583">3.3V</tspan></text>
     <rect
-       style="display:inline;fill:#a2c7ec;fill-opacity:1;stroke-width:0.264583"
+       style="display:inline;fill:#bfcff0;fill-opacity:1;stroke-width:0.264583"
        id="rect6257-3-8-6-7-2"
        width="60.980232"
        height="3.6409693"
@@ -2443,7 +2443,7 @@
          y="16.447681"
          style="fill:#333333;fill-opacity:1;stroke-width:0.264583">GPIO 2</tspan></text>
     <rect
-       style="display:inline;fill:#a3bbeb;fill-opacity:1;stroke-width:0.264583"
+       style="display:inline;fill:#bfcff0;fill-opacity:1;stroke-width:0.264583"
        id="rect6257-3-8-6-7-2-1"
        width="60.980232"
        height="3.6409693"
@@ -2463,7 +2463,7 @@
          y="20.416433"
          style="fill:#333333;fill-opacity:1;stroke-width:0.264583">GPIO 3</tspan></text>
     <rect
-       style="display:inline;fill:#bfbfbf;fill-opacity:1;stroke-width:0.264583"
+       style="display:inline;fill:#bfcff0;fill-opacity:1;stroke-width:0.264583"
        id="rect6257-3-8-6-7-2-4"
        width="60.980232"
        height="3.6409693"
@@ -2509,7 +2509,7 @@
    style="font-weight:bold"
    id="tspan1">Baro</tspan></tspan></text>
     <rect
-       style="display:inline;fill:#ea9b95;fill-opacity:1;stroke-width:0.260893"
+       style="display:inline;fill:#b6ebbe;fill-opacity:1;stroke-width:0.260893"
        id="rect6257-3-8-6-7-8"
        width="60.980232"
        height="3.5401137"
@@ -2568,7 +2568,7 @@
          y="40.355377"
          style="fill:#333333;stroke-width:0.264583;fill-opacity:1">GPIO 22 (SDA6)</tspan></text>
     <rect
-       style="display:inline;fill:#a3bbeb;fill-opacity:1;stroke-width:0.264583"
+       style="display:inline;fill:#b6ebbe;fill-opacity:1;stroke-width:0.264583"
        id="rect6257-3-8-6-0-4-3-61-6"
        width="60.980232"
        height="3.6409693"
